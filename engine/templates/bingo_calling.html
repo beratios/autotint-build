@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block css %}
+body{background:#111;font-family:'Fredoka';color:#fff}
+.wrap{position:absolute;inset:.4in}
+h1{font-family:'Bungee';color:#ffd166;font-size:30pt;text-align:center;text-shadow:3px 3px 0 #ef476f}
+.sub{text-align:center;color:#06d6a0;font-family:'Bungee';font-size:11pt;margin:.04in 0 .18in}
+.g{display:grid;grid-template-columns:repeat(5,1fr);grid-auto-rows:1.25in;border-top:1.5px dashed #777;border-left:1.5px dashed #777}
+.c{border-right:1.5px dashed #777;border-bottom:1.5px dashed #777;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6px;background:#fff;color:#111;font-weight:600;font-size:11.5pt;line-height:1.15}
+.c i{font-style:normal;font-family:'Bungee';color:#ef476f;font-size:8pt;margin-bottom:4px}
+.ft{text-align:center;color:#aaa;font-size:10pt;margin-top:.12in}
+{% endblock %}
+{% block body %}<div class="wrap"><h1>CALLING CARDS</h1><div class="sub">{{ party }}</div>
+<div class="g">{% for sq in squares %}<div class="c"><i>NYE</i>{{ sq }}</div>{% endfor %}</div>
+<div class="ft">✂ Cut along the dashed lines · Put them in a hat · Draw one at a time</div></div>
+{% endblock %}

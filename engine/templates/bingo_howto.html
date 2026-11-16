@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block css %}
+body{background:#111;font-family:'Fredoka';color:#fff}
+.wrap{position:absolute;inset:.5in;border:4px solid #ffd166;border-radius:.15in;padding:.4in}
+h1{font-family:'Bungee';font-size:36pt;color:#ffd166;text-align:center;text-shadow:3px 3px 0 #ef476f}
+h2{font-family:'Bungee';color:#06d6a0;font-size:15pt;margin:.3in 0 .1in}
+p,li{font-size:14pt;line-height:1.5}
+ol,ul{margin-left:.3in}
+.ways{display:grid;grid-template-columns:repeat(4,1fr);gap:.2in;margin-top:.15in}
+.w{text-align:center;font-size:11pt}
+.mg{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;width:1.2in;margin:0 auto .08in}
+.mg div{aspect-ratio:1;background:#333;border-radius:2px}.mg .on{background:#ef476f}
+{% endblock %}
+{% block body %}<div class="wrap"><h1>HOW TO PLAY</h1>
+<h2>Setup</h2><ol><li>Print one card per guest (blank cards are included for extra guests).</li><li>Cut out the calling cards and put them in a hat or bowl.</li><li>Hand out cards and markers – coins, candy, confetti or a pen.</li></ol>
+<h2>Two ways to play</h2><ul><li><b>Live bingo:</b> mark a square when it really happens at the party.</li><li><b>Classic bingo:</b> the host draws calling cards and reads them out loud.</li></ul>
+<h2>Ways to win</h2>
+<div class="ways">
+{% for name,cells in [("Any line",[10,11,12,13,14]),("Four corners",[0,4,20,24]),("Big X",[0,6,12,18,24,4,8,16,20]),("Blackout",range(25))] %}
+<div class="w"><div class="mg">{% for k in range(25) %}<div class="{{ 'on' if k in cells else '' }}"></div>{% endfor %}</div>{{ name }}</div>{% endfor %}
+</div>
+<h2>Prize ideas</h2><p>Mini champagne, a party crown, first pick of dessert, or the honor of starting the countdown!</p>
+</div>{% endblock %}

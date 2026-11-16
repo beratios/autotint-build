@@ -107,5 +107,23 @@
     ]
    }
   ]
- }
+ },
+ "blank_cards": 4,
+ "extra_pages": [
+  {
+   "name": "calling",
+   "template": "bingo_calling.html",
+   "png": true
+  },
+  {
+   "name": "checklist",
+   "template": "bingo_checklist.html",
+   "png": true
+  },
+  {
+   "name": "howto",
+   "template": "bingo_howto.html",
+   "png": true
+  }
+ ]
 }

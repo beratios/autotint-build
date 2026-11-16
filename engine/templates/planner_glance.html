@@ -1,0 +1,12 @@
+{% extends "planner_base.html" %}
+{% block pcss %}
+.g{display:grid;grid-template-columns:repeat(3,1fr);gap:.22in .3in}
+.m h3{font-family:'DM Serif Display';font-weight:400;font-size:15pt;color:#b75d3f;margin-bottom:.04in}
+table{width:100%;border-collapse:collapse;font-size:10pt;text-align:center}
+th{font-weight:600;color:#a9573c;font-size:8.5pt}
+td{height:.2in}
+{% endblock %}
+{% block page %}<div class="hd"><h1>{{ year }}</h1><span>Year at a glance</span></div>
+<div class="g">{% for m in months %}<div class="m"><h3>{{ m.name }}</h3><table><tr>{% for d in "SMTWTFS" %}<th>{{ d }}</th>{% endfor %}</tr>
+{% for w in m.weeks %}<tr>{% for d in w %}<td>{{ d if d else '' }}</td>{% endfor %}</tr>{% endfor %}</table></div>{% endfor %}</div>
+{% endblock %}

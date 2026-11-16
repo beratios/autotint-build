@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block css %}
+body{background:#fff;font-family:'Fredoka';color:#111}
+.wrap{position:absolute;inset:.5in}
+h1{font-family:'Bungee';font-size:30pt;color:#111}
+h1 span{color:#ef476f}
+.sub{font-size:13pt;color:#555;margin:.04in 0 .25in}
+.cols{columns:2;column-gap:.4in}
+.it{display:flex;align-items:center;gap:.14in;font-size:13.5pt;padding:.075in 0;border-bottom:1px solid #eee;break-inside:avoid}
+.box{width:.22in;height:.22in;border:2px solid #111;border-radius:4px;flex:none}
+.n{font-family:'Bungee';color:#ef476f;font-size:10pt;width:.3in}
+{% endblock %}
+{% block body %}<div class="wrap"><h1>CALLER <span>CHECKLIST</span></h1><div class="sub">{{ party }} · Tick each square as you call it, then check the winner's card.</div>
+<div class="cols">{% for sq in squares %}<div class="it"><span class="n">{{ loop.index }}</span><span class="box"></span>{{ sq }}</div>{% endfor %}</div></div>
+{% endblock %}

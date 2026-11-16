@@ -58,5 +58,36 @@
     "word": "word of the year \u00b7 joy"
    }
   ]
- }
+ },
+ "calendar_year": 2027,
+ "extra_pages": [
+  {
+   "name": "glance",
+   "template": "planner_glance.html",
+   "png": true
+  },
+  {
+   "name": "goals",
+   "template": "planner_goals.html",
+   "png": true
+  },
+  {
+   "name": "month",
+   "template": "planner_month.html",
+   "repeat": "months",
+   "png": true
+  },
+  {
+   "name": "habits",
+   "template": "planner_habits.html"
+  },
+  {
+   "name": "notes",
+   "template": "planner_notes.html"
+  },
+  {
+   "name": "notes2",
+   "template": "planner_notes.html"
+  }
+ ]
 }

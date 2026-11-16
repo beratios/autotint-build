@@ -1,0 +1,17 @@
+{% extends "planner_base.html" %}
+{% block pcss %}
+.word{text-align:center;margin:.1in 0 .3in}
+.word small{display:block;letter-spacing:.35em;text-transform:uppercase;font-weight:600;font-size:11pt}
+.word b{font-family:'DM Serif Display';font-weight:400;font-size:44pt;color:#b75d3f}
+.box{border:1.5px solid #d9a384;border-radius:.6in .6in .08in .08in;padding:.25in .3in;margin-bottom:.25in}
+.box h3{font-family:'DM Serif Display';font-weight:400;font-size:17pt;color:#a9573c;margin-bottom:.08in}
+.ln{border-bottom:1px solid #e3c8b4;height:.34in}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:.25in}
+{% endblock %}
+{% block page %}<div class="hd"><h1>My {{ year }}</h1><span>Goals &amp; intentions</span></div>
+<div class="word"><small>word of the year</small><b>{{ word.split('·')[-1].strip() if word else '__________' }}</b></div>
+<div class="box"><h3>Top 3 goals</h3>{% for i in range(3) %}<div class="ln">{{ loop.index }}.</div>{% endfor %}</div>
+<div class="two"><div class="box"><h3>I want to feel</h3>{% for i in range(4) %}<div class="ln"></div>{% endfor %}</div>
+<div class="box"><h3>Habits to build</h3>{% for i in range(4) %}<div class="ln"></div>{% endfor %}</div></div>
+<div class="box"><h3>Places to go &amp; things to try</h3>{% for i in range(3) %}<div class="ln"></div>{% endfor %}</div>
+{% endblock %}

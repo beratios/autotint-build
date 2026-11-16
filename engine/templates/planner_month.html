@@ -1,0 +1,16 @@
+{% extends "planner_base.html" %}
+{% block pcss %}
+.wrap{display:grid;grid-template-columns:1fr 1.55in;gap:.2in;height:8.9in}
+table{width:100%;height:100%;border-collapse:collapse;table-layout:fixed}
+th{font-weight:600;letter-spacing:.15em;font-size:10pt;color:#a9573c;height:.3in}
+td{border:1px solid #e0c2ac;vertical-align:top;padding:4px 6px;font-size:12pt;font-weight:600}
+td.e{background:#f1e4d7}
+.side h3{font-family:'DM Serif Display';font-weight:400;font-size:15pt;color:#a9573c;margin:.05in 0 .06in}
+.ln{border-bottom:1px solid #e3c8b4;height:.3in}
+.cb{display:flex;gap:6px;align-items:center;border-bottom:1px solid #e3c8b4;height:.3in}.cb i{width:.13in;height:.13in;border:1.3px solid #c47a5a;border-radius:2px}
+{% endblock %}
+{% block page %}<div class="hd"><h1>{{ rep.name }}</h1><span>{{ rep.year }}</span></div>
+<div class="wrap"><table><tr>{% for d in ["SUN","MON","TUE","WED","THU","FRI","SAT"] %}<th>{{ d }}</th>{% endfor %}</tr>
+{% for w in rep.weeks %}<tr>{% for d in w %}<td class="{{ '' if d else 'e' }}">{{ d if d else '' }}</td>{% endfor %}</tr>{% endfor %}</table>
+<div class="side"><h3>Focus</h3>{% for i in range(4) %}<div class="ln"></div>{% endfor %}<h3>To do</h3>{% for i in range(9) %}<div class="cb"><i></i></div>{% endfor %}<h3>Notes</h3>{% for i in range(6) %}<div class="ln"></div>{% endfor %}</div></div>
+{% endblock %}

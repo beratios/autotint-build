@@ -1,0 +1,13 @@
+{% extends "planner_base.html" %}
+{% block pcss %}
+table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:8.5pt}
+th{font-weight:600;color:#a9573c;height:.28in}
+td{border:1px solid #e0c2ac;height:.33in}
+td.h{width:1.6in;font-size:11pt;padding-left:6px}
+.mo{display:flex;gap:.3in;margin-bottom:.2in;font-size:13pt}.mo span{border-bottom:1px solid #c47a5a;min-width:2.4in}
+{% endblock %}
+{% block page %}<div class="hd"><h1>Habit tracker</h1><span>{{ year }}</span></div>
+<div class="mo">Month: <span></span></div>
+<table><tr><th class="h" style="width:1.6in">Habit</th>{% for d in range(1,32) %}<th>{{ d }}</th>{% endfor %}</tr>
+{% for i in range(20) %}<tr><td class="h"></td>{% for d in range(31) %}<td></td>{% endfor %}</tr>{% endfor %}</table>
+{% endblock %}

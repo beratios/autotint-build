@@ -15,7 +15,7 @@ body{background:#111;font-family:'Bungee';color:#ffd166}
 <div class="wrap">
 <div class="party">{{ party }}</div>
 <div class="h">NYE BINGO</div>
-<div class="guest"><span>★</span> {{ item }} <span>★</span></div>
+{% if item %}<div class="guest"><span>★</span> {{ item }} <span>★</span></div>{% else %}<div class="guest">Name: ____________________</div>{% endif %}
 <div class="g">
 {% for j in range(25) %}{% if j == 12 %}<div class="c free">FREE</div>{% else %}<div class="c">{{ cells[j if j < 12 else j-1] }}</div>{% endif %}{% endfor %}
 </div>

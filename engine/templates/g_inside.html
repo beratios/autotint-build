@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block css %}
+body{width:2400px;height:1800px;background:{{bg}};font-family:'Fredoka';color:{{ink}};text-align:center}
+.tex{position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,0,.035) 1px,transparent 1.5px);background-size:9px 9px}
+h1{position:relative;font-family:'{{hfont}}';font-weight:400;font-size:{{hsize}}px;margin-top:60px}
+.sub{position:relative;font-size:46px;margin-top:10px;opacity:.85}
+.g{position:absolute;left:100px;right:100px;top:330px;display:flex;flex-wrap:wrap;justify-content:center;gap:34px}
+.g div{width:{{tw}}px;font-size:28px}
+.g img{width:100%;display:block;box-shadow:0 14px 30px rgba(0,0,0,.28);border-radius:3px;margin-bottom:10px}
+{% endblock %}
+{% block body %}<div class="tex"></div><h1>{{title}}</h1><div class="sub">{{sub}}</div>
+<div class="g">{% for im,lab in pages %}<div><img src="file://{{im}}">{{lab}}</div>{% endfor %}</div>
+{% endblock %}

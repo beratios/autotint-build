@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block css %}
+body{background:#f7efe6;font-family:'Cormorant Garamond',serif;color:#4a2c22}
+.pg{position:absolute;inset:.5in .55in .45in}
+.hd{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1.5px solid #c47a5a;padding-bottom:.06in;margin-bottom:.2in}
+.hd h1{font-family:'DM Serif Display';font-weight:400;font-size:40pt;color:#b75d3f;line-height:1}
+.hd span{font-weight:600;letter-spacing:.3em;font-size:12pt;text-transform:uppercase}
+.ft{position:absolute;left:.55in;right:.55in;bottom:.22in;display:flex;justify-content:space-between;font-size:10pt;letter-spacing:.2em;text-transform:uppercase;color:#a9573c}
+.arch{position:absolute;right:.55in;top:.25in}
+{% block pcss %}{% endblock %}
+{% endblock %}
+{% block body %}
+<svg class="arch" width="60" height="34" viewBox="0 0 60 34"><path d="M2 34 V30 a28 28 0 0 1 56 0 V34Z" fill="#d9a384"/><path d="M12 34 V30 a18 18 0 0 1 36 0 V34Z" fill="#c47a5a"/><path d="M22 34 V30 a8 8 0 0 1 16 0 V34Z" fill="#7d3b28"/></svg>
+<div class="pg">{% block page %}{% endblock %}</div>
+<div class="ft"><span>{{ name }}</span><span>{{ year }} planner</span></div>
+{% endblock %}
