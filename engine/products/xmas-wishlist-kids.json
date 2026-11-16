@@ -1,0 +1,89 @@
+{
+ "template": "kids_wishlist.html",
+ "w_in": 8.5,
+ "h_in": 11,
+ "fields": [
+  "child_name",
+  "age"
+ ],
+ "defaults": {
+  "child_name": "Lily",
+  "age": "6"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#ffe9e4",
+   "ink": "#3b3355",
+   "accent": "#ff5a5f",
+   "hfont": "Pacifico",
+   "hsize": 100
+  },
+  "size": "8.5x11 in (Letter, prints on A4)",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.15,
+    "frac": 0.45,
+    "caption": "Their name, big and bold",
+    "sub": "Cute festive characters"
+   },
+   {
+    "x": 0.5,
+    "y": 0.83,
+    "frac": 0.45,
+    "caption": "Nice, very nice, super nice!",
+    "sub": "Fun tick boxes for kids"
+   }
+  ],
+  "fields": [
+   [
+    "Child name",
+    0.5,
+    0.2
+   ],
+   [
+    "Age",
+    0.83,
+    0.08
+   ]
+  ],
+  "vtitle": "Made with YOUR child's name",
+  "variants": [
+   {},
+   {
+    "child_name": "Mateo",
+    "age": "5"
+   },
+   {
+    "child_name": "Harper",
+    "age": "8"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "letter",
+   "template": "kids_letter.html",
+   "png": true
+  },
+  {
+   "name": "coloring",
+   "template": "kids_color.html",
+   "png": true
+  },
+  {
+   "name": "countdown",
+   "template": "kids_countdown.html",
+   "png": true
+  }
+ ],
+ "hero": {
+  "headline": "Kids Christmas Wish List",
+  "short": "Kids Wish List Pack",
+  "bullets": [
+   "Wish list with their name",
+   "Dear Santa letter and coloring",
+   "Christmas countdown page"
+  ]
+ }
+}

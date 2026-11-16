@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block css %}
+body{background:#fbf7f0;font-family:'Cormorant Garamond';color:#3a2f2a}
+.bg{position:absolute;inset:0}
+.wrap{position:absolute;left:.95in;right:.95in;top:2.0in;bottom:1.05in}
+.head{position:absolute;top:.55in;left:0;right:0;text-align:center}
+.np{font-family:'Playfair Display';letter-spacing:.32em;font-size:11pt;color:#9c3a33;text-transform:uppercase}
+.from{font-family:'Great Vibes';font-size:48pt;color:#a8322c;line-height:1.05}
+.dear{font-family:'Great Vibes';font-size:36pt;color:#2f5a44;margin-bottom:.1in}
+p{font-size:17.5pt;line-height:1.55;margin-bottom:.18in}
+.ps{font-size:15pt;font-style:italic;color:#2f5a44}
+.hl{font-weight:600;color:#a8322c}
+.sig{position:absolute;right:0;bottom:0;text-align:right}
+.sig .l{font-size:14pt;font-style:italic}
+.sig .s{font-family:'Great Vibes';font-size:46pt;color:#a8322c;line-height:1}
+.stamp{position:absolute;left:0;bottom:-.05in;width:1.45in;height:1.45in;border-radius:50%;border:3px double #2f5a44;color:#2f5a44;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-12deg);font-family:'Playfair Display';text-align:center;opacity:.85}
+.stamp b{font-size:10pt;letter-spacing:.12em}.stamp span{font-size:22pt;font-weight:700}.stamp i{font-size:8pt;letter-spacing:.1em}
+{% endblock %}
+{% block body %}
+{% include "wc_defs.html" %}
+<svg class="bg" viewBox="0 0 816 1056" preserveAspectRatio="none">
+<rect width="816" height="1056" filter="url(#paper)"/>
+<g filter="url(#wc)" opacity=".5"><ellipse cx="70" cy="60" rx="190" ry="120" fill="#d9a3a0"/><ellipse cx="760" cy="40" rx="170" ry="110" fill="#a9c7b2"/><ellipse cx="770" cy="1020" rx="210" ry="120" fill="#d9a3a0"/><ellipse cx="40" cy="1030" rx="180" ry="110" fill="#a9c7b2"/></g>
+<g transform="translate(60 175) rotate(-50)">{% include "wc_holly.html" %}</g>
+<g transform="translate(770 1015) rotate(160)">{% include "wc_holly.html" %}</g>
+<g filter="url(#wc2)" fill="#c9a45c" opacity=".7">{% for x,y,r in [(640,150,6),(690,210,4),(170,930,5),(120,880,3),(600,90,3)] %}<circle cx="{{x}}" cy="{{y}}" r="{{r}}"/>{% endfor %}</g>
+</svg>
+<div class="head"><div class="np">The North Pole · Santa's Workshop</div><div class="from">A Letter from Santa</div></div>
+<div class="wrap">
+<div class="dear">Dear {{ child_name }},</div>
+<p>Ho ho ho! The elves and I have been watching from the North Pole, and I am so proud of you this year. Mrs. Claus told me all about how {{ good_deed }}. That made my jolly old heart very happy!</p>
+<p>I hear you are hoping for <span class="hl">{{ wish }}</span>. The elves are busy in the workshop, and Rudolph is ready to fly all the way to {{ town }}.</p>
+<p>Keep being kind, keep listening, and remember to leave a cookie or two by the tree. You are officially on my <span class="hl">Nice List</span>!</p>
+<p class="ps">P.S. Rudolph says hello! Look out for a little bit of North Pole sparkle on Christmas Eve.</p>
+<div class="stamp"><b>OFFICIAL</b><span>NICE</span><b>LIST</b><i>{{ year }}</i></div>
+<div class="sig"><div class="l">With love and Christmas magic,</div><div class="s">Santa Claus</div></div>
+</div>
+{% endblock %}

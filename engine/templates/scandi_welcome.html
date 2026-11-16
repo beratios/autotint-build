@@ -1,0 +1,10 @@
+{% extends "scandi_base.html" %}
+{% block art %}<g stroke="#2f5a4c" stroke-width="1.6" fill="none" stroke-linecap="round" transform="translate(240 150)"><path d="M0 -40 V40 M-40 0 H40 M-28 -28 L28 28 M28 -28 L-28 28"/><path d="M-9 -30 L0 -21 L9 -30 M-9 30 L0 21 L9 30 M-30 -9 L-21 0 L-30 9 M30 -9 L21 0 L30 9"/></g>
+<g fill="#2f5a4c">{% for i in range(9) %}<path d="M{{60+i*45}} 620 l12 -26 l12 26z" opacity="{{ 1 if i%2 else 0.55 }}"/>{% endfor %}</g>{% endblock %}
+{% block css2 %}
+.w{position:absolute;left:.4in;right:.4in;top:2.3in}
+.wel{font-size:10pt;letter-spacing:.5em;font-weight:600;color:#b4524a}
+h1{font-family:'DM Serif Display';font-weight:400;font-size:{{ 40 if family|length < 12 else 32 }}pt;line-height:1.05;margin:.12in 0}
+.s{font-family:'Cormorant Garamond';font-style:italic;font-size:16pt;color:#4d5c56}
+{% endblock %}
+{% block content %}<div class="w"><div class="wel">WELCOME TO</div><h1>{{ title }}</h1><div class="r"></div><div class="s">with love, the {{ family }} family</div><div class="k" style="margin-top:.3in">{{ date }}</div></div>{% endblock %}

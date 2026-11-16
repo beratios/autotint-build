@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block css %}
+body{background:#fdf1dc;font-family:'Fredoka';color:#3d2a1e;text-align:center}
+.bg{position:absolute;inset:0}
+.pac{font-family:'Pacifico';font-weight:400}
+{% block css2 %}{% endblock %}
+{% endblock %}
+
+
+
+{% block body %}<svg class="bg" viewBox="0 0 480 672" preserveAspectRatio="none">{% block art %}{% endblock %}</svg>{% block content %}{% endblock %}{% endblock %}

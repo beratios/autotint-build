@@ -1,0 +1,24 @@
+{
+ "template": "retro_cookie.html",
+ "w_in": 5, "h_in": 7,
+ "fields": ["title", "host", "date", "time", "address", "bring", "rsvp"],
+ "defaults": {"title": "Cookie Exchange", "host": "Megan and Tess", "date": "Saturday, December 12", "time": "2:00 PM", "address": "88 Birchwood Drive, Oakville", "bring": "Bring 3 dozen homemade cookies and your recipe. Go home with a box of everyone's treats!", "rsvp": "to Megan · 289 555 0177", "year": "2026"},
+ "gallery": {
+  "style": {"bg": "#f6e3c4", "ink": "#3d2a1e", "accent": "#e2463f", "hfont": "Pacifico", "hsize": 100},
+  "size": "5x7 in (all pieces)",
+  "zooms": [
+   {"x": 0.5, "y": 0.15, "frac": 0.65, "caption": "Retro 60s cookie vibes", "sub": "Starbursts and gingerbread"},
+   {"x": 0.5, "y": 0.58, "frac": 0.6, "caption": "All your party details", "sub": "Date, place, what to bring"}
+  ],
+  "fields": [["Party title", 0.5, 0.14], ["Host names", 0.5, 0.38], ["Date, time, address", 0.5, 0.52], ["What to bring", 0.5, 0.75], ["RSVP", 0.5, 0.93]],
+  "vtitle": "Your party. Your details.",
+  "variants": [{}, {"title": "Cookie Swap Party", "host": "The Patel Family", "date": "Sunday, December 13", "time": "1:00 PM", "address": "12 Cedar Court, Burlington", "bring": "One dozen cookies per person plus copies of your recipe", "rsvp": "to Nisha · 905 555 0110"}, {"title": "Cookies and Cocoa", "host": "Jenna", "date": "Friday, December 18", "time": "7:00 PM", "address": "The Clubhouse, 5 Lake Road", "bring": "Bring your best cookies, cozy socks and a mug!", "rsvp": "by Dec 10 to Jenna"}]
+ },
+ "extra_pages": [
+  {"name": "recipe", "template": "retro_recipe.html", "png": true},
+  {"name": "labels", "template": "retro_labels.html", "png": true},
+  {"name": "ballot", "template": "retro_ballot.html", "png": true},
+  {"name": "award", "template": "retro_award.html", "png": true}
+ ],
+ "hero": {"headline": "Cookie Exchange Party Invite", "short": "Cookie Exchange Pack", "bullets": ["Invite with your details", "Recipe cards, labels, ballots", "Cookie Champion award"]}
+}

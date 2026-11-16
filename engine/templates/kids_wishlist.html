@@ -1,0 +1,27 @@
+{% extends "base.html" %}{% import "kids_art.html" as a %}
+{% block css %}
+body{background:#fff6ec;font-family:'Fredoka';color:#3b3355}
+.bg{position:absolute;inset:0}
+.card{position:absolute;inset:.45in;border:5px solid #ff5a5f;border-radius:.35in;background:#fff;background-image:radial-gradient(#ffe3e3 2px,transparent 2.5px);background-size:22px 22px}
+.h{position:absolute;top:.85in;left:0;right:0;text-align:center}
+.h .k{font-weight:600;font-size:17pt;color:#2ec4b6;letter-spacing:.06em}
+.h .n{font-family:'Pacifico';font-size:{{ 50 if child_name|length < 9 else 40 }}pt;color:#ff5a5f;line-height:1.25}
+.h .t{font-weight:700;font-size:26pt;background:#ffd166;display:inline-block;padding:.02in .3in;border-radius:.3in;transform:rotate(-2deg)}
+.list{position:absolute;left:1.15in;right:1.15in;top:3.0in}
+.li{display:flex;align-items:flex-end;height:.6in;font-size:17pt;font-weight:600}
+.li .num{width:.42in;height:.42in;border-radius:50%;background:#2ec4b6;color:#fff;display:flex;align-items:center;justify-content:center;margin-right:.15in;flex:none}
+.li:nth-child(3n+2) .num{background:#ff5a5f}.li:nth-child(3n) .num{background:#3a86ff}
+.li .ln{flex:1;border-bottom:3px dotted #c9c2e0;height:.3in}
+.nice{position:absolute;left:1.15in;right:1.15in;bottom:1.55in;font-size:15pt;font-weight:600;display:flex;gap:.25in;align-items:center;justify-content:center}
+.nice span{display:flex;align-items:center;gap:.08in}.nice i{width:.26in;height:.26in;border:3px solid #3b3355;border-radius:.06in;display:inline-block}
+.age{position:absolute;right:.9in;top:.8in;width:1in;height:1in;border-radius:50%;background:#3a86ff;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(10deg);font-weight:700;font-size:11pt}
+.age b{font-size:28pt;line-height:1}
+{% endblock %}
+{% block body %}
+<div class="card"></div>
+<svg class="bg" viewBox="0 0 816 1056">{{ a.reindeer(118,135,1.1) }}{{ a.tree(95,930,1) }}{{ a.snowman(715,925,1) }}{{ a.gift(200,975,0.8,'#3a86ff') }}{{ a.gift(610,985,0.7,'#ff5a5f') }}</svg>
+<div class="age">AGE<b>{{ age }}</b></div>
+<div class="h"><div class="k">✶ MY CHRISTMAS WISH LIST ✶</div><div class="n">{{ child_name }}</div><div class="t">Dear Santa, I would love...</div></div>
+<div class="list">{% for i in range(9) %}<div class="li"><div class="num">{{ i+1 }}</div><div class="ln"></div></div>{% endfor %}</div>
+<div class="nice">This year I was: <span><i></i>nice</span><span><i></i>very nice</span><span><i></i>super nice!</span></div>
+{% endblock %}

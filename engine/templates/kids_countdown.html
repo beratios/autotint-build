@@ -1,0 +1,20 @@
+{% extends "base.html" %}{% import "kids_art.html" as a %}
+{% block css %}
+body{background:#f1fff9;font-family:'Fredoka';color:#3b3355;text-align:center}
+.card{position:absolute;inset:.45in;border:5px solid #2ec4b6;border-radius:.35in;background:#fff}
+.bg{position:absolute;inset:0}
+.k{position:absolute;top:.85in;left:0;right:0;font-weight:700;font-size:28pt;color:#2ec4b6}
+.n{position:absolute;top:1.45in;left:0;right:0;font-family:'Pacifico';font-size:30pt;color:#ff5a5f}
+.g{position:absolute;left:1in;right:1in;top:2.8in;display:grid;grid-template-columns:repeat(5,1fr);gap:.2in}
+.d{aspect-ratio:1;border-radius:50%;border:4px solid #ffd166;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:24pt;color:#3b3355}
+.d:nth-child(3n+2){border-color:#ff9aa2}.d:nth-child(3n){border-color:#9bd7ff}
+.d.x{background:#ff5a5f;border-color:#ff5a5f;color:#fff;font-size:13pt;line-height:1.1}
+.tip{position:absolute;left:1in;right:1in;bottom:1.0in;font-size:14pt;font-weight:600}
+{% endblock %}
+{% block body %}
+<div class="card"></div>
+<svg class="bg" viewBox="0 0 816 1056">{{ a.tree(110,140,0.8) }}{{ a.reindeer(705,135,0.9) }}</svg>
+<div class="k">COUNTDOWN TO CHRISTMAS</div><div class="n">{{ child_name }}'s Countdown</div>
+<div class="g">{% for i in range(1,25) %}<div class="d">{{ i }}</div>{% endfor %}<div class="d x">XMAS<br>DAY!</div></div>
+<div class="tip">Color one circle every day in December. When you reach the big red one, it is Christmas!</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "sweater_base.html" %}{% import "sweater_art.html" as k %}
+{% block art %}{{ k.knit(0,'#ffd23f','#ff3366') }}{{ k.knit(608,'#ffd23f','#ff3366') }}
+<g transform="translate(240 230)">{% for i in range(12) %}<rect x="-5" y="-120" width="10" height="40" rx="5" fill="#18e299" transform="rotate({{ i*30 }})"/>{% endfor %}<circle r="72" fill="#ff3366"/><circle r="58" fill="none" stroke="#ffd23f" stroke-width="4" stroke-dasharray="6 6"/></g>{{ k.pixtree(195,190,10) }}{% endblock %}
+{% block css2 %}
+.w{position:absolute;left:.35in;right:.35in;top:3.85in}
+.k{font-size:9pt;letter-spacing:.3em;font-weight:800;color:#18e299}
+h1{font-family:'Bungee';font-weight:400;font-size:26pt;line-height:1.05;color:#ffd23f;margin:.08in 0}
+.l{width:3.3in;margin:.2in auto 0;border-bottom:2px solid #fff;height:.35in}
+.s{font-size:9.5pt;margin-top:.06in;color:#c9c3ff;font-weight:600}
+{% endblock %}
+{% block content %}<div class="w"><div class="k">{{ title|upper }} PARTY · {{ year }}</div><h1>{{ rep }}</h1><div class="l"></div><div class="s">winner name</div></div>{% endblock %}

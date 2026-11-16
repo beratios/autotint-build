@@ -1,0 +1,110 @@
+{
+ "template": "santa_letter.html",
+ "w_in": 8.5,
+ "h_in": 11,
+ "fields": [
+  "child_name",
+  "good_deed",
+  "wish",
+  "town",
+  "open_on"
+ ],
+ "defaults": {
+  "child_name": "Olivia",
+  "good_deed": "you helped your little brother tidy his toys and shared your cookies",
+  "wish": "a cozy puppy plush and a craft kit",
+  "town": "Maple Creek",
+  "open_on": "Christmas morning",
+  "year": "2026"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#f4ece4",
+   "ink": "#3a2f2a",
+   "accent": "#a8322c",
+   "hfont": "Great Vibes",
+   "hsize": 120
+  },
+  "size": "8.5x11 in (Letter, prints on A4)",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.1,
+    "frac": 0.5,
+    "caption": "Soft watercolor details",
+    "sub": "Holly, berries and gold"
+   },
+   {
+    "x": 0.35,
+    "y": 0.42,
+    "frac": 0.45,
+    "caption": "Written just for your child",
+    "sub": "Name, good deed and wish"
+   }
+  ],
+  "fields": [
+   [
+    "Child name",
+    0.25,
+    0.21
+   ],
+   [
+    "Their good deed",
+    0.5,
+    0.3
+   ],
+   [
+    "Their Christmas wish",
+    0.5,
+    0.4
+   ],
+   [
+    "Your town",
+    0.5,
+    0.47
+   ]
+  ],
+  "vtitle": "Written for YOUR child",
+  "variants": [
+   {},
+   {
+    "child_name": "Noah",
+    "good_deed": "you were so brave at the dentist and helped Grandpa rake leaves",
+    "wish": "a red race car and a dinosaur book",
+    "town": "Lakeview"
+   },
+   {
+    "child_name": "Amelia",
+    "good_deed": "you read bedtime stories to your baby sister every night",
+    "wish": "a unicorn art set",
+    "town": "Pine Hollow"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "certificate",
+   "template": "santa_cert.html",
+   "png": true
+  },
+  {
+   "name": "envelope",
+   "template": "santa_envelope.html",
+   "png": true
+  },
+  {
+   "name": "thanks",
+   "template": "santa_thanks.html",
+   "png": true
+  }
+ ],
+ "hero": {
+  "headline": "Letter From Santa With Name",
+  "short": "Santa Letter Pack",
+  "bullets": [
+   "Letter, certificate and envelope",
+   "Cookie thank-you note too",
+   "Made for you within 24h"
+  ]
+ }
+}

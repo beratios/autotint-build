@@ -1,0 +1,16 @@
+{% extends "retro_base.html" %}{% import "retro_art.html" as self2 %}
+{% block css2 %}
+.c{position:absolute;left:.3in;right:.3in;height:3.05in;border:2px solid #1f8a88;border-radius:.15in;background:#fffaf0;text-align:left;padding:.15in .22in}
+.c1{top:.25in}.c2{top:3.6in}
+.c h2{font-family:'Pacifico';font-weight:400;font-size:17pt;color:#e2463f;line-height:1.2}
+.c .k{font-size:8pt;letter-spacing:.2em;font-weight:600;color:#1f8a88}
+.l{border-bottom:1.3px solid #e8d3ad;height:.25in;font-size:9.5pt;font-weight:600;display:flex;align-items:flex-end}
+.two{display:flex;gap:.2in}.two>div{flex:1}
+.cut{position:absolute;top:3.38in;left:0;right:0;font-size:7pt;color:#b9a27f;letter-spacing:.2em}
+{% endblock %}
+{% block content %}
+{% for cls in ['c1','c2'] %}<div class="c {{cls}}"><div class="k">{{ title|upper }} · {{ host|upper }}</div><h2>Recipe Card</h2>
+<div class="l">Cookie name:</div><div class="l">From the kitchen of:</div>
+<div class="two"><div><div class="l">Ingredients</div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div><div><div class="l">Directions</div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l">Bake at:          for:</div></div></div></div>{% endfor %}
+<div class="cut">✂ · · · · · · · · · · · · · · · · · · · ✂</div>
+{% endblock %}

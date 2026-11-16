@@ -1,0 +1,25 @@
+{% extends "retro_base.html" %}{% import "retro_art.html" as self2 %}
+{% block art %}
+<rect x="14" y="14" width="452" height="644" rx="22" fill="none" stroke="#1f8a88" stroke-width="5"/>
+<path d="M0 0 H480 V150 Q240 210 0 150Z" fill="#1f8a88"/>
+<g>{{ self2.star(60,60,16,'#f2b63d') }}{{ self2.star(420,70,20,'#f2b63d') }}{{ self2.star(380,40,8,'#fdf1dc') }}{{ self2.star(95,120,7,'#fdf1dc') }}{{ self2.star(420,600,14,'#e2463f') }}{{ self2.star(55,610,10,'#1f8a88') }}</g>
+<g>{{ self2.cookie(65,580,0.9) }}{{ self2.ginger(415,560,1.05) }}</g>
+{% endblock %}
+{% block css2 %}
+.top{position:absolute;top:.45in;left:0;right:0;color:#fdf1dc}
+.top .a{font-weight:600;font-size:10pt;letter-spacing:.3em}
+.top h1{font-family:'Pacifico';font-weight:400;font-size:42pt;line-height:1.05;color:#f2b63d;text-shadow:2px 3px 0 #a0302b}
+.w{position:absolute;left:.5in;right:.5in;top:2.3in}
+.host{font-size:13pt;font-weight:600;color:#e2463f;letter-spacing:.05em}
+.det{margin-top:.15in;font-size:15pt;line-height:1.5}
+.det b{display:inline-block;background:#f2b63d;color:#3d2a1e;font-size:9pt;letter-spacing:.2em;padding:.01in .1in;border-radius:.1in;margin-top:.07in}
+.bring{margin:.18in auto 0;max-width:3.0in;font-size:12pt;border:2px dashed #1f8a88;border-radius:.15in;padding:.08in .15in;line-height:1.35}
+.rsvp{position:absolute;bottom:.42in;left:0;right:0;font-size:10.5pt;font-weight:600;letter-spacing:.12em}
+{% endblock %}
+{% block content %}
+<div class="top"><div class="a">YOU'RE INVITED TO A</div><h1>{{ title }}</h1></div>
+<div class="w"><div class="host">hosted by {{ host }}</div>
+<div class="det"><b>WHEN</b><br>{{ date }} · {{ time }}<br><b>WHERE</b><br>{{ address }}</div>
+<div class="bring">{{ bring }}</div></div>
+<div class="rsvp">RSVP {{ rsvp }}</div>
+{% endblock %}

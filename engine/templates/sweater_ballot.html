@@ -1,0 +1,11 @@
+{% extends "sweater_base.html" %}
+{% block css2 %}
+body{background:#fff;color:#14112b}
+.g{position:absolute;inset:.25in;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:.15in}
+.b{border:3px solid #14112b;border-radius:.12in;padding:.12in .14in;text-align:left;background:linear-gradient(#ff3366 0 .5in,#fff .5in)}
+.b h3{font-family:'Bungee';font-weight:400;font-size:13pt;color:#fff;text-align:center;line-height:1.1;height:.38in}
+.b .k{text-align:center;font-size:7pt;letter-spacing:.15em;font-weight:700;margin:.06in 0}
+.b .l{border-bottom:1.5px solid #14112b;height:.42in;font-size:9.5pt;font-weight:700;display:flex;align-items:flex-end}
+{% endblock %}
+{% block content %}<div class="g">{% for i in range(4) %}<div class="b"><h3>OFFICIAL BALLOT</h3><div class="k">{{ title|upper }} PARTY</div>
+{% for a in ['Ugliest sweater','Most creative','Best DIY','Most lights','Funniest'] %}<div class="l">{{ a }}:</div>{% endfor %}</div>{% endfor %}</div>{% endblock %}

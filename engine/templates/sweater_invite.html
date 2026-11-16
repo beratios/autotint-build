@@ -1,0 +1,18 @@
+{% extends "sweater_base.html" %}{% import "sweater_art.html" as k %}
+{% block art %}{{ k.knit(0,'#ff3366','#ffd23f') }}{{ k.knit(608,'#18e299','#14112b') }}{{ k.pixtree(40,95,8) }}{{ k.pixtree(368,95,8) }}{% for i in range(5) %}{{ k.pixtree(30+i*86,500,7) }}{% endfor %}{% endblock %}
+{% block css2 %}
+.w{position:absolute;left:.4in;right:.4in;top:1.15in}
+.a{font-weight:800;font-size:10pt;letter-spacing:.35em;color:#18e299}
+h1{font-family:'Bungee';font-weight:400;font-size:{{ 46 if title|length < 13 else 34 }}pt;line-height:1;margin:.12in 0 .04in;color:#ffd23f;text-shadow:3px 3px 0 #ff3366}
+.p{font-family:'Bungee';font-size:20pt;color:#fff;letter-spacing:.04em}
+.host{margin-top:.12in;font-size:13pt;font-weight:600;color:#c9c3ff}
+.box{margin:.2in auto 0;border:2.5px solid #18e299;border-radius:.12in;padding:.12in;max-width:3.4in;box-shadow:0 0 18px rgba(24,226,153,.35)}
+.box .d{font-family:'Bungee';font-size:16pt;color:#fff}
+.box .ad{font-size:13.5pt;font-weight:600;margin-top:.04in}
+.note{margin-top:.2in;font-size:13pt;font-weight:700;color:#ffd23f;line-height:1.35}
+.rsvp{position:absolute;left:0;right:0;bottom:.72in;font-size:11pt;font-weight:700;letter-spacing:.14em}
+{% endblock %}
+{% block content %}<div class="w"><div class="a">GET READY FOR AN</div><h1>{{ title }}</h1><div class="p">PARTY</div>
+<div class="host">hosted by {{ host }}</div>
+<div class="box"><div class="d">{{ date }} · {{ time }}</div><div class="ad">{{ address }}</div></div>
+<div class="note">{{ note }}</div></div><div class="rsvp">RSVP {{ rsvp }}</div>{% endblock %}

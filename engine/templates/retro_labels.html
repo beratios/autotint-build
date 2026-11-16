@@ -1,0 +1,12 @@
+{% extends "retro_base.html" %}{% import "retro_art.html" as self2 %}
+{% block css2 %}
+.k{position:absolute;top:.2in;left:0;right:0;font-size:8pt;letter-spacing:.2em;font-weight:600;color:#1f8a88}
+.g{position:absolute;left:.25in;right:.25in;top:.45in;bottom:.25in;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr);gap:.12in}
+.t{border-radius:50%;background:#fffaf0;border:2.5px solid #e2463f;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.1in}
+.t:nth-child(2n){border-color:#1f8a88}
+.t .s{color:#f2b63d;font-size:13pt}
+.t h3{font-family:'Pacifico';font-weight:400;font-size:17pt;color:#e2463f;line-height:1.2}
+.t .l{width:80%;border-bottom:1.3px solid #d9bf93;height:.3in;font-size:9.5pt;font-weight:600;text-align:left}
+{% endblock %}
+{% block content %}<div class="k">COOKIE LABELS · {{ title|upper }}</div>
+<div class="g">{% for i in range(6) %}<div class="t"><div class="s">✦</div><h3>Freshly Baked</h3><div class="l">Cookie:</div><div class="l">Baked by:</div></div>{% endfor %}</div>{% endblock %}

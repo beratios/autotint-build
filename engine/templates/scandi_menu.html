@@ -1,0 +1,17 @@
+{% extends "scandi_base.html" %}
+{% block css2 %}
+.w{position:absolute;left:.45in;right:.45in;top:1.1in}
+h1{font-family:'DM Serif Display';font-weight:400;font-size:34pt;line-height:1;margin-top:.08in}
+.fam{font-family:'Cormorant Garamond';font-style:italic;font-size:15pt;color:#4d5c56;margin-top:.04in}
+.c{margin-top:.3in}
+.c b{display:block;font-size:8pt;letter-spacing:.38em;font-weight:600;color:#b4524a;margin-bottom:.03in}
+.c div{font-family:'Cormorant Garamond';font-size:15.5pt;line-height:1.25}
+.foot{position:absolute;bottom:.42in;left:0;right:0}
+.foot svg{display:block;margin:0 auto .06in}
+{% endblock %}
+{% block content %}
+<div class="w"><div class="k">{{ date }}</div><h1>{{ title }}</h1><div class="fam">at the {{ family }} table</div><div class="r"></div>
+{% for label,txt in courses %}<div class="c"><b>{{ label|upper }}</b><div>{{ txt }}</div></div>{% endfor %}
+</div>
+<div class="foot"><svg width="160" height="22" viewBox="0 0 160 22"><g fill="#2f5a4c">{% for i in range(5) %}<path d="M{{10+i*30}} 20 l8 -16 l8 16z"/>{% endfor %}</g></svg><div class="k">Merry Christmas · {{ year }}</div></div>
+{% endblock %}

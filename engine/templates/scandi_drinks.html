@@ -1,0 +1,10 @@
+{% extends "scandi_base.html" %}
+{% block css2 %}
+.w{position:absolute;left:.5in;right:.5in;top:1.3in}
+h1{font-family:'DM Serif Display';font-weight:400;font-size:30pt;margin-top:.06in}
+.d{margin-top:.38in}
+.d b{display:block;font-family:'DM Serif Display';font-weight:400;font-size:18pt}
+.d span{font-family:'Cormorant Garamond';font-style:italic;font-size:14.5pt;color:#4d5c56}
+{% endblock %}
+{% block content %}<div class="w"><div class="k">{{ family }} · {{ year }}</div><h1>Festive Drinks</h1><div class="r"></div>
+{% for n,d in drinks %}<div class="d"><b>{{ n }}</b><span>{{ d }}</span></div>{% endfor %}</div>{% endblock %}

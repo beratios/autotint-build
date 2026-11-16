@@ -1,0 +1,24 @@
+{
+ "template": "sweater_invite.html",
+ "w_in": 5, "h_in": 7,
+ "fields": ["title", "host", "date", "time", "address", "note", "rsvp", "award_time"],
+ "defaults": {"title": "Ugly Sweater", "host": "Jordan and Priya", "date": "Sat Dec 19", "time": "8 PM", "address": "214 Elm Street, Guelph", "note": "Wear your tackiest sweater. Prizes for the ugliest!", "rsvp": "to Jordan · 519 555 0193", "award_time": "10 PM", "year": "2026",
+  "awards": ["Ugliest Sweater", "Most Creative Sweater", "Best DIY Sweater"]},
+ "gallery": {
+  "style": {"bg": "#221d45", "ink": "#ffffff", "accent": "#ff3366", "hfont": "Bungee", "hsize": 84},
+  "size": "5x7 in (all pieces)",
+  "zooms": [
+   {"x": 0.5, "y": 0.2, "frac": 0.65, "caption": "Bold knit sweater pattern", "sub": "Neon colors that pop"},
+   {"x": 0.5, "y": 0.55, "frac": 0.65, "caption": "All your party details", "sub": "Date, time, place, note"}
+  ],
+  "fields": [["Party title", 0.5, 0.25], ["Host names", 0.5, 0.36], ["Date, time, address", 0.5, 0.45], ["Your note", 0.5, 0.58], ["RSVP", 0.5, 0.83]],
+  "vtitle": "Your party. Your details.",
+  "variants": [{}, {"title": "Tacky Sweater", "host": "The Mitchell Office Crew", "date": "Fri Dec 11", "time": "6 PM", "address": "Main Boardroom, 3rd Floor", "note": "Snacks, games and a sweater contest!", "rsvp": "to Dana by Dec 4"}, {"title": "Holiday Sweater", "host": "Chris", "date": "Sat Dec 12", "time": "7:30 PM", "address": "45 Harbour Road, Kingston", "note": "Bring a dish and your loudest knit", "rsvp": "to Chris · 613 555 0128"}]
+ },
+ "extra_pages": [
+  {"name": "sign", "template": "sweater_sign.html", "png": true},
+  {"name": "ballot", "template": "sweater_ballot.html", "png": true},
+  {"name": "award", "template": "sweater_award.html", "repeat": "awards", "png": true}
+ ],
+ "hero": {"headline": "Ugly Sweater Party Invite", "short": "Ugly Sweater Party Pack", "bullets": ["Invite with your details", "Ballots, vote sign, 3 awards", "Made for you within 24h"]}
+}

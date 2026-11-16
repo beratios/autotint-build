@@ -1,0 +1,9 @@
+{% extends "sweater_base.html" %}{% import "sweater_art.html" as k %}
+{% block art %}{{ k.knit(0,'#18e299','#14112b') }}{{ k.knit(608,'#ff3366','#ffd23f') }}{{ k.pixtree(205,120,10) }}{% endblock %}
+{% block css2 %}
+.w{position:absolute;left:.3in;right:.3in;top:2.35in}
+h1{font-family:'Bungee';font-weight:400;font-size:48pt;line-height:1;color:#ffd23f;text-shadow:4px 4px 0 #ff3366}
+.s{font-family:'Bungee';font-size:17pt;margin-top:.15in}
+.t{font-size:12pt;font-weight:600;color:#c9c3ff;margin-top:.25in;line-height:1.5}
+{% endblock %}
+{% block content %}<div class="w"><h1>VOTE<br>HERE</h1><div class="s">Ugliest Sweater Contest</div><div class="t">Grab a ballot, pick your favorites,<br>drop it in the box. Winners at {{ award_time }}!</div></div>{% endblock %}

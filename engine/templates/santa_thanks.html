@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block css %}
+body{background:#fbf7f0;font-family:'Cormorant Garamond';color:#3a2f2a;text-align:center}
+.bg{position:absolute;inset:0}
+.top{position:absolute;left:.8in;right:.8in;top:.75in;height:4.3in;border:1.5px solid #c9a45c;border-radius:.1in;padding:.45in .5in}
+h2{font-family:'Great Vibes';font-weight:400;font-size:44pt;color:#a8322c;line-height:1}
+.top p{font-size:15pt;line-height:1.5;margin-top:.15in}
+.top .s{font-family:'Great Vibes';font-size:34pt;color:#2f5a44;margin-top:.1in}
+.cut{position:absolute;left:0;right:0;top:5.35in;font-size:9pt;color:#999;letter-spacing:.12em}
+.tags{position:absolute;left:.8in;right:.8in;top:5.65in;bottom:.7in;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:.2in}
+.tg{border:1.5px dashed #a8322c;border-radius:.12in;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(169,199,178,.15)}
+.tg b{font-family:'Playfair Display';letter-spacing:.18em;font-size:12pt;color:#2f5a44}
+.tg .h{font-family:'Great Vibes';font-size:30pt;color:#a8322c;line-height:1.1}
+.tg i{font-size:11.5pt;line-height:1.3;padding:0 .2in}
+{% endblock %}
+{% block body %}
+{% include "wc_defs.html" %}
+<svg class="bg" viewBox="0 0 816 1056" preserveAspectRatio="none"><rect width="816" height="1056" filter="url(#paper)"/><g transform="translate(408 95)">{% include "wc_holly.html" %}</g></svg>
+<div class="top"><h2>Thank you for the cookies, {{ child_name }}!</h2>
+<p>They were the most delicious cookies in all of {{ town }}. Rudolph and the reindeer loved their treats too. I left your presents under the tree with lots of love.</p>
+<p>Merry Christmas, and see you next year!</p><div class="s">Santa</div></div>
+<div class="cut">✂ · · · MAGIC REINDEER FOOD TAGS · · · ✂</div>
+<div class="tags">{% for i in range(4) %}<div class="tg"><b>MAGIC</b><div class="h">Reindeer Food</div><i>Sprinkle on the lawn on Christmas Eve so the reindeer find {{ child_name }}'s house!</i></div>{% endfor %}</div>
+{% endblock %}

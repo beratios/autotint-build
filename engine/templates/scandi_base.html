@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block css %}
+body{background:#f7f5f1;font-family:'Inter';color:#22302c;text-align:center}
+.bg{position:absolute;inset:0}
+.k{font-size:7.5pt;letter-spacing:.42em;font-weight:500;text-transform:uppercase;color:#7c8c84}
+.serif{font-family:'DM Serif Display';font-weight:400}
+.r{width:.5in;height:1px;background:#b4524a;margin:.14in auto}
+{% block css2 %}{% endblock %}
+{% endblock %}
+{% block body %}
+<svg class="bg" viewBox="0 0 480 672" preserveAspectRatio="none">{% block art %}
+<g stroke="#2f5a4c" stroke-width="1.3" fill="none" stroke-linecap="round" transform="translate(240 58)"><path d="M0 -26 V26 M-26 0 H26 M-18 -18 L18 18 M18 -18 L-18 18"/><path d="M-6 -20 L0 -14 L6 -20 M-6 20 L0 14 L6 20 M-20 -6 L-14 0 L-20 6 M20 -6 L14 0 L20 6"/></g>
+<g fill="#b4524a"><circle cx="216" cy="58" r="2.4"/><circle cx="264" cy="58" r="2.4"/></g>
+{% endblock %}</svg>
+{% block content %}{% endblock %}
+{% endblock %}

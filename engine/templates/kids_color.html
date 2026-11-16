@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block css %}
+body{background:#fff;font-family:'Fredoka';color:#222;text-align:center}
+.k{position:absolute;top:.55in;left:0;right:0;font-weight:600;font-size:15pt;letter-spacing:.1em}
+.n{position:absolute;top:1.0in;left:0;right:0;font-family:'Fredoka';font-weight:700;font-size:{{ 96 if child_name|length < 7 else (76 if child_name|length < 10 else 60) }}pt;color:#fff;-webkit-text-stroke:3px #222;letter-spacing:.04em}
+svg{position:absolute;left:.5in;top:3.0in;width:7.5in;height:7.4in}
+{% endblock %}
+{% block body %}
+<div class="k">COLOR ME IN · MERRY CHRISTMAS</div><div class="n">{{ child_name }}</div>
+<svg viewBox="0 0 720 710" fill="none" stroke="#222" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M360 40 L470 220 L420 220 L520 380 L460 380 L580 560 L140 560 L260 380 L200 380 L300 220 L250 220Z"/>
+<path d="M330 560 h60 v70 h-60z"/>
+<path d="M360 0 l12 26 28 3 -21 19 6 28 -25 -14 -25 14 6 -28 -21 -19 28 -3z"/>
+{% for x,y in [(330,190),(400,250),(300,320),(420,340),(260,450),(360,430),(470,480),(220,520),(500,530),(350,510)] %}<circle cx="{{x}}" cy="{{y}}" r="16"/>{% endfor %}
+<path d="M290 280 Q360 300 440 270 M240 410 Q360 440 490 400 M190 520 Q360 545 540 510" stroke-dasharray="2 12"/>
+<rect x="40" y="560" width="110" height="90" rx="6"/><path d="M40 590 h110 M95 560 v90 M95 560 q-30 -40 -40 -10 q10 10 40 10 q30 0 40 -10 q-10 -30 -40 10"/>
+<rect x="560" y="580" width="120" height="70" rx="6"/><path d="M620 580 v70 M560 610 h120 M620 580 q-28 -36 -38 -8 q8 8 38 8 q30 0 38 -8 q-10 -28 -38 8"/>
+<path d="M110 300 l0 -40 M90 280 l40 0 M95 265 l30 30 M125 265 l-30 30"/>
+<path d="M620 220 l0 -40 M600 200 l40 0 M605 185 l30 30 M635 185 l-30 30"/>
+<path d="M80 120 q20 -30 50 -10 M590 90 q30 -25 50 5"/>
+<circle cx="640" cy="380" r="40"/><circle cx="640" cy="320" r="28"/><path d="M630 316 l0 0 M650 316 l0 0" stroke-width="9"/><path d="M640 326 l18 5 -18 5z"/>
+<circle cx="80" cy="420" r="40"/><circle cx="80" cy="360" r="28"/><path d="M70 356 l0 0 M90 356 l0 0" stroke-width="9"/><path d="M60 330 h40 v-30 h-40z"/>
+</svg>
+{% endblock %}

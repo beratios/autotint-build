@@ -1,0 +1,30 @@
+{% extends "base.html" %}{% import "kids_art.html" as a %}
+{% block css %}
+body{background:#eaf6ff;font-family:'Fredoka';color:#3b3355}
+.bg{position:absolute;inset:0}
+.card{position:absolute;inset:.45in;border:5px solid #3a86ff;border-radius:.35in;background:#fff}
+h1{position:absolute;top:.85in;left:0;right:0;text-align:center;font-family:'Pacifico';font-weight:400;font-size:44pt;color:#3a86ff}
+.body{position:absolute;left:1.1in;right:1.1in;top:2.25in;font-size:17pt;font-weight:600;line-height:.6in}
+.l{border-bottom:3px dotted #c9c2e0;height:.6in;display:flex;align-items:flex-end;gap:.1in}
+.l span{white-space:nowrap}.l em{font-style:normal;color:#ff5a5f;font-family:'Pacifico';font-weight:400;font-size:18pt}
+.draw{position:absolute;left:1.1in;right:1.1in;bottom:1.15in;height:1.9in;border:3px dashed #2ec4b6;border-radius:.2in;display:flex;align-items:flex-start;justify-content:center;padding-top:.1in;font-weight:600;color:#2ec4b6;font-size:14pt}
+.love{position:absolute;left:1.1in;bottom:.7in;font-size:16pt;font-weight:600}
+.love em{font-style:normal;font-family:'Pacifico';color:#ff5a5f}
+{% endblock %}
+{% block body %}
+<div class="card"></div>
+<svg class="bg" viewBox="0 0 816 1056">{{ a.snowman(110,140,0.9) }}{{ a.gift(712,150,0.9,'#ff5a5f') }}</svg>
+<h1>Dear Santa,</h1>
+<div class="body">
+<div class="l"><span>My name is <em>{{ child_name }}</em> and I am {{ age }} years old.</span></div>
+<div class="l"><span>This year I was very good because</span></div>
+<div class="l"></div><div class="l"></div>
+<div class="l"><span>My favorite thing about Christmas is</span></div>
+<div class="l"></div>
+<div class="l"></div>
+<div class="l"><span>I will leave you</span></div>
+<div class="l"><span>and a carrot for Rudolph!</span></div>
+</div>
+<div class="draw">Draw yourself and Santa here!</div>
+<div class="love">Love, <em>{{ child_name }}</em></div>
+{% endblock %}
