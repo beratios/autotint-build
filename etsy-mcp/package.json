@@ -1,0 +1,20 @@
+{
+ "name": "monarq-etsy-mcp",
+ "version": "1.0.0",
+ "description": "",
+ "scripts": {},
+ "keywords": [],
+ "author": "",
+ "license": "ISC",
+ "dependencies": {
+  "@modelcontextprotocol/server": "^2.4.0",
+  "@neondatabase/serverless": "^1.2.1",
+  "mcp-handler": "^2.4.0",
+  "zod": "^4.6.7"
+ },
+ "type": "module",
+ "engines": {
+  "node": "22.x"
+ },
+ "private": true
+}
