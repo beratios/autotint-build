@@ -23,6 +23,7 @@ FONT_SPECS = {
     "Pacifico": ("pacifico", [400]),
     "DM Serif Display": ("dm-serif-display", [400]),
     "Caveat": ("caveat", [400, 700]),
+    "Inter": ("inter", [400, 500, 600, 700, 800, 900]),
 }
 
 

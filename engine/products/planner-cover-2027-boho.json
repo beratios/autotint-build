@@ -89,5 +89,14 @@
    "name": "notes2",
    "template": "planner_notes.html"
   }
- ]
+ ],
+ "hero": {
+  "headline": "2027 Planner With Your Name",
+  "short": "2027 Planner \u00b7 18 Pages",
+  "bullets": [
+   "18 pages, 12 dated months",
+   "Goals, habits and notes",
+   "Your name on every page"
+  ]
+ }
 }

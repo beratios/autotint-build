@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block css %}
+body{width:2400px;height:1800px;overflow:hidden;background:linear-gradient(135deg,#ffcf5c 0%,#ff7aa2 45%,#7a6cff 100%);font-family:'Fredoka';color:#fff}
+.blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.55}
+.conf{position:absolute;width:26px;height:12px;border-radius:4px}
+.card{position:absolute;left:170px;top:50%;height:1420px;transform:translateY(-50%) rotate(-5deg);border:22px solid #fff;border-radius:18px;box-shadow:0 50px 90px rgba(40,0,80,.35)}
+.panel{position:absolute;right:110px;top:50%;transform:translateY(-50%);width:900px}
+.badge{display:inline-block;background:#fff;color:#ff4f81;font-weight:700;font-size:46px;padding:14px 36px;border-radius:99px;transform:rotate(-3deg)}
+.t{font-family:'Pacifico';font-size:118px;line-height:1.15;margin:40px 0;text-shadow:5px 5px 0 rgba(0,0,0,.15)}
+.li{font-size:52px;font-weight:600;line-height:1.7}
+.li b{display:inline-block;width:62px;height:62px;border-radius:50%;background:#fff;color:#7a6cff;text-align:center;line-height:62px;margin-right:18px;font-size:40px}
+{% endblock %}
+{% block body %}
+<div class="blob" style="left:-200px;top:-150px;width:700px;height:700px;background:#fff36b"></div>
+<div class="blob" style="right:-180px;bottom:-200px;width:800px;height:800px;background:#55e6c1"></div>
+{% for x,y,c,r in [(120,90,'#fff',20),(900,140,'#55e6c1',-30),(1300,80,'#fff36b',45),(2100,160,'#fff',10),(1050,1650,'#fff36b',-20),(1500,1700,'#fff',35),(2250,1500,'#ff4f81',60),(60,1600,'#55e6c1',-45),(1180,900,'#fff',15),(2000,820,'#fff36b',-60)] %}<div class="conf" style="left:{{x}}px;top:{{y}}px;background:{{c}};transform:rotate({{r}}deg)"></div>{% endfor %}
+<img class="card" src="file://{{img}}">
+<div class="panel"><div class="badge">✨ PERSONALIZED ✨</div><div class="t">{{headline}}</div>
+{% for b in bullets %}<div class="li"><b>✓</b>{{b}}</div>{% endfor %}</div>
+{% endblock %}

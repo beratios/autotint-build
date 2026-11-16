@@ -67,5 +67,14 @@
     "year": "2026"
    }
   ]
+ },
+ "hero": {
+  "headline": "Custom Family Christmas Card",
+  "short": "Family Christmas Card",
+  "bullets": [
+   "Your family name and message",
+   "5x7 print-ready PDF + PNG",
+   "Made for you within 24h"
+  ]
  }
 }

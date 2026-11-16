@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block css %}
+body{width:2400px;height:1800px;background:#fff;font-family:'Fredoka';color:#222}
+.top{position:absolute;left:0;right:0;top:0;height:200px;background:{{accent}};color:#fff;display:flex;align-items:center;justify-content:center;gap:40px;font-size:66px;font-weight:700}
+.top span{background:#fff;color:{{accent}};border-radius:99px;padding:8px 30px;font-size:40px}
+.main{position:absolute;left:90px;top:270px;height:1440px;box-shadow:0 20px 50px rgba(0,0,0,.2);border-radius:6px}
+.z{position:absolute;width:500px;height:500px;border-radius:50%;border:12px solid #fff;box-shadow:0 0 0 6px {{accent}},0 24px 50px rgba(0,0,0,.3);background-repeat:no-repeat}
+.zl{position:absolute;font-size:40px;font-weight:600;text-align:center;width:500px}
+.feat{position:absolute;right:50px;width:600px}
+.f{display:flex;gap:26px;align-items:center;margin-bottom:46px}
+.f i{flex:none;width:110px;height:110px;border-radius:24px;background:#f4f1ec;font-style:normal;font-size:58px;text-align:center;line-height:110px}
+.f b{display:block;font-size:46px}.f small{font-size:34px;color:#666}
+{% endblock %}
+{% block body %}
+<div class="top">{{headline}} <span>MADE FOR YOU</span></div>
+<img class="main" src="file://{{img}}" style="width:{{fw}}px">
+{% for z in zooms %}<div class="z" style="left:{{zx}}px;top:{{310+loop.index0*660}}px;background-image:url('file://{{img}}');background-size:{{z.bgw}}px {{z.bgh}}px;background-position:{{z.bx}}px {{z.by}}px"></div>
+<div class="zl" style="left:{{zx}}px;top:{{850+loop.index0*660}}px">{{z.caption}}</div>{% endfor %}
+<div class="feat" style="top:330px">
+<div class="f"><i>✏️</i><div><b>Your text</b><small>{{bullets[0]}}</small></div></div>
+<div class="f"><i>🖨️</i><div><b>Print-ready</b><small>300 DPI PDF + PNG</small></div></div>
+<div class="f"><i>⚡</i><div><b>Fast</b><small>Sent within 24 hours</small></div></div>
+<div class="f"><i>💬</i><div><b>Free typo fix</b><small>One revision included</small></div></div>
+<div class="f"><i>📱</i><div><b>Share or print</b><small>Phone, email or paper</small></div></div>
+</div>
+{% endblock %}

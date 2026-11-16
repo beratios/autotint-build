@@ -125,5 +125,14 @@
    "template": "bingo_howto.html",
    "png": true
   }
- ]
+ ],
+ "hero": {
+  "headline": "NYE Bingo With Guest Names",
+  "short": "NYE Bingo Party Pack",
+  "bullets": [
+   "A card for every guest",
+   "Calling cards and checklist",
+   "Made for you within 24h"
+  ]
+ }
 }
