@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block css %}
+body{background:#f3e7da;font-family:'DM Serif Display',serif;color:#4a2c22}
+.arches{position:absolute;left:50%;bottom:0;transform:translateX(-50%)}
+.yr{position:absolute;top:.9in;left:0;right:0;text-align:center;font-size:110pt;line-height:1;color:#b75d3f;letter-spacing:.02em}
+.lab{position:absolute;top:2.55in;left:0;right:0;text-align:center;font-family:'Cormorant Garamond';font-weight:600;letter-spacing:.5em;font-size:14pt;text-transform:uppercase}
+.name{position:absolute;bottom:1.1in;left:0;right:0;text-align:center;font-size:{{ 40 if name|length < 14 else 30 }}pt;color:#fff}
+.word{position:absolute;bottom:.75in;left:0;right:0;text-align:center;font-family:'Cormorant Garamond';font-style:italic;font-size:15pt;color:#f3e7da;letter-spacing:.08em}
+.sun{position:absolute;top:4.0in;left:50%;margin-left:-.45in;width:.9in;height:.9in;border-radius:50%;background:#e0a15a}
+{% endblock %}
+{% block body %}
+<div class="yr">{{ year }}</div><div class="lab">{{ label }}</div><div class="sun"></div>
+<svg class="arches" width="816" height="560" viewBox="0 0 816 560">
+<path d="M58 560 V330 a350 350 0 0 1 700 0 V560Z" fill="#d9a384"/>
+<path d="M128 560 V350 a280 280 0 0 1 560 0 V560Z" fill="#c47a5a"/>
+<path d="M198 560 V370 a210 210 0 0 1 420 0 V560Z" fill="#a9573c"/>
+<path d="M268 560 V390 a140 140 0 0 1 280 0 V560Z" fill="#7d3b28"/>
+</svg>
+<div class="name">{{ name }}</div><div class="word">{{ word }}</div>
+{% endblock %}

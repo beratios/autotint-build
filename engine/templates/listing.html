@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block css %}
+body{width:2400px;height:1800px;background:{{ bg }};font-family:'Fredoka';position:relative}
+.tex{position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,0,.035) 1px,transparent 1.5px);background-size:9px 9px}
+.art{position:absolute;top:50%;transform:translateY(-50%) rotate({{ rot }}deg);left:{{ left }}px;height:{{ ah }}px;box-shadow:0 40px 80px rgba(0,0,0,.28),0 8px 18px rgba(0,0,0,.18);border-radius:6px}
+.art2{position:absolute;top:50%;transform:translateY(-46%) rotate(-6deg);left:{{ left-140 }}px;height:{{ ah-80 }}px;box-shadow:0 30px 60px rgba(0,0,0,.25);border-radius:6px;opacity:.97}
+.panel{position:absolute;right:120px;top:50%;transform:translateY(-50%);width:820px;color:{{ ink }}}
+.badge{display:inline-block;background:{{ accent }};color:#fff;font-weight:700;font-size:44px;letter-spacing:.12em;padding:14px 34px;border-radius:99px}
+.t{font-family:'{{ hfont }}';font-size:{{ hsize }}px;line-height:1.05;margin:40px 0 30px}
+.li{font-size:46px;line-height:1.6;font-weight:500}
+.li span{color:{{ accent }};font-weight:700}
+{% endblock %}
+{% block body %}
+<div class="tex"></div>
+{% if img2 %}<img class="art2" src="file://{{ img2 }}">{% endif %}
+<img class="art" src="file://{{ img }}">
+<div class="panel"><div class="badge">PERSONALIZED</div>
+<div class="t">{{ headline }}</div>
+{% for b in bullets %}<div class="li"><span>✓</span> {{ b }}</div>{% endfor %}
+</div>
+{% endblock %}

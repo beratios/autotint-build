@@ -1,0 +1,15 @@
+{
+ "template": "boho_planner.html",
+ "w_in": 8.5,
+ "h_in": 11,
+ "fields": [
+  "name",
+  "word"
+ ],
+ "defaults": {
+  "year": "2027",
+  "label": "Planner",
+  "name": "Jessica Miller",
+  "word": "word of the year \u00b7 bloom"
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "template": "elegant_invite.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "title",
+  "host",
+  "date",
+  "time",
+  "address",
+  "rsvp"
+ ],
+ "defaults": {
+  "kicker": "You are cordially invited to",
+  "title": "Christmas Dinner",
+  "host": "The Anderson Family",
+  "date": "Saturday, December 20",
+  "time": "7:00 PM",
+  "address": "24 Maple Grove Lane, Hamilton",
+  "rsvp": "to Sarah \u00b7 905 555 0142"
+ }
+}

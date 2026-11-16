@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block css %}
+body{background:radial-gradient(ellipse at 50% 30%,#17513f 0%,#0d3326 70%,#0a281e 100%);color:#e9d8a6;font-family:'Cormorant Garamond',serif;text-align:center}
+.frame{position:absolute;inset:.28in;border:1.5px solid #c9a45c}
+.frame2{position:absolute;inset:.36in;border:.6px solid rgba(201,164,92,.6)}
+.wrap{position:absolute;inset:.6in .55in;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.kicker{letter-spacing:.26em;font-size:10.5pt;white-space:nowrap;text-transform:uppercase;font-weight:600;color:#c9a45c}
+.title{font-family:'Great Vibes';font-size:{{ 58 if title|length < 16 else 46 }}pt;line-height:1;color:#e8c77a;margin:.12in 0 .06in;text-shadow:0 1px 0 rgba(0,0,0,.25)}
+.host{font-size:15pt;font-style:italic;margin-bottom:.22in}
+.rule{width:1.4in;height:1px;background:#c9a45c;margin:.14in auto}
+.det{font-size:15pt;letter-spacing:.06em;line-height:1.45}
+.det b{font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:12pt;color:#c9a45c;display:block;margin-top:.08in}
+.rsvp{margin-top:.22in;font-size:11pt;letter-spacing:.18em;text-transform:uppercase}
+svg{display:block;margin:0 auto .08in}
+{% endblock %}
+{% block body %}
+<div class="frame"></div><div class="frame2"></div>
+<div class="wrap">
+<svg width="120" height="70" viewBox="0 0 120 70" fill="none" stroke="#c9a45c" stroke-width="1.4">
+<path d="M60 4 L64 16 L77 16 L66 24 L70 37 L60 29 L50 37 L54 24 L43 16 L56 16Z" fill="#e8c77a" stroke="none"/>
+<path d="M8 52 Q34 40 60 52 Q86 64 112 52"/><path d="M20 58 Q40 50 60 58 Q80 66 100 58" stroke-width=".8"/>
+<circle cx="60" cy="52" r="2.5" fill="#e8c77a" stroke="none"/></svg>
+<div class="kicker">{{ kicker }}</div>
+<div class="title">{{ title }}</div>
+<div class="host">hosted by {{ host }}</div>
+<div class="rule"></div>
+<div class="det"><b>When</b>{{ date }} · {{ time }}<b>Where</b>{{ address }}</div>
+<div class="rule"></div>
+<div class="rsvp">RSVP {{ rsvp }}</div>
+</div>
+{% endblock %}

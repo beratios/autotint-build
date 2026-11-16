@@ -1,0 +1,26 @@
+{
+ "template": "rustic_tags.html",
+ "w_in": 8.5,
+ "h_in": 11,
+ "fields": [
+  "names (up to 12)",
+  "sender"
+ ],
+ "defaults": {
+  "names": [
+   "Emma",
+   "Noah",
+   "Grandma",
+   "Liam",
+   "Olivia",
+   "Uncle Joe",
+   "Ava",
+   "Mason",
+   "Sophia",
+   "Lucas",
+   "Mia",
+   "Dad"
+  ],
+  "sender": "Santa"
+ }
+}

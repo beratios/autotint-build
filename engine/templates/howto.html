@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block css %}
+body{width:2400px;height:1800px;background:#fbf6ef;font-family:'Fredoka';color:#2b2b2b;text-align:center}
+h1{font-family:'Playfair Display';font-size:120px;margin-top:150px}
+.s{display:flex;justify-content:center;gap:90px;margin-top:140px}
+.c{width:560px}
+.n{width:190px;height:190px;border-radius:50%;background:#c0392b;color:#fff;font-weight:700;font-size:100px;line-height:190px;margin:0 auto 50px}
+.c b{display:block;font-size:58px;margin-bottom:20px}
+.c p{font-size:42px;line-height:1.4;color:#555}
+.f{margin-top:130px;font-size:44px;color:#c0392b;font-weight:600}
+{% endblock %}
+{% block body %}
+<h1>How It Works</h1>
+<div class="s">
+<div class="c"><div class="n">1</div><b>Add your details</b><p>Type names, date & text in the personalization box</p></div>
+<div class="c"><div class="n">2</div><b>We design it</b><p>Your custom file is sent via Etsy message within 24 hours</p></div>
+<div class="c"><div class="n">3</div><b>Print or share</b><p>High-res PDF + PNG. Print at home, at a print shop, or send digitally</p></div>
+</div>
+<div class="f">Digital file only · No physical item will be shipped</div>
+{% endblock %}

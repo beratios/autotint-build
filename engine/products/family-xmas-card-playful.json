@@ -1,0 +1,17 @@
+{
+ "template": "playful_card.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "family",
+  "message",
+  "year"
+ ],
+ "defaults": {
+  "greeting": "Merry & Bright",
+  "subline": "Season's Greetings",
+  "family": "Love, The Johnsons",
+  "message": "Wishing you a cozy, joyful holiday season!",
+  "year": "2026"
+ }
+}

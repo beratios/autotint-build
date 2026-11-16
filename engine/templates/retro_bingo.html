@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block css %}
+body{background:#111;font-family:'Bungee';color:#ffd166}
+.wrap{position:absolute;inset:.4in;border:4px solid #ffd166;border-radius:.15in;padding:.3in .3in;background:repeating-linear-gradient(45deg,#151515 0 12px,#1b1b1b 12px 24px)}
+.party{text-align:center;font-size:16pt;color:#06d6a0;letter-spacing:.08em}
+.h{text-align:center;font-size:54pt;line-height:1;margin:.06in 0;color:#ffd166;text-shadow:4px 4px 0 #ef476f}
+.guest{text-align:center;font-family:'Fredoka';font-weight:700;font-size:26pt;color:#fff;margin-bottom:.18in}
+.guest span{color:#ef476f}
+.g{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.c{aspect-ratio:1;background:#fff;color:#111;border-radius:6px;display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Fredoka';font-weight:600;font-size:13pt;line-height:1.15;padding:7px}
+.c.free{background:#ef476f;color:#fff;font-family:'Bungee';font-size:12pt}
+.ft{text-align:center;font-family:'Fredoka';color:#aaa;font-size:10pt;margin-top:.15in}
+{% endblock %}
+{% block body %}
+<div class="wrap">
+<div class="party">{{ party }}</div>
+<div class="h">NYE BINGO</div>
+<div class="guest"><span>★</span> {{ item }} <span>★</span></div>
+<div class="g">
+{% for j in range(25) %}{% if j == 12 %}<div class="c free">FREE</div>{% else %}<div class="c">{{ cells[j if j < 12 else j-1] }}</div>{% endif %}{% endfor %}
+</div>
+<div class="ft">Mark a square when it happens · First full row shouts BINGO!</div>
+</div>
+{% endblock %}

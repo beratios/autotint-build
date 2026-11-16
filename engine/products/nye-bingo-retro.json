@@ -1,0 +1,54 @@
+{
+ "template": "retro_bingo.html",
+ "w_in": 8.5,
+ "h_in": 11,
+ "fields": [
+  "party",
+  "guests (one card each)"
+ ],
+ "pages_from": "guests",
+ "shuffle_field": "squares",
+ "defaults": {
+  "party": "The Garcia New Year's Bash 2027",
+  "guests": [
+   "Maria",
+   "Carlos",
+   "Ben",
+   "Priya",
+   "Jake",
+   "Lena"
+  ],
+  "squares": [
+   "Someone spills a drink",
+   "Countdown starts early",
+   "Cheesy toast",
+   "Selfie with host",
+   "Party hat on a pet",
+   "Someone dances alone",
+   "Champagne pop",
+   "Resolution shared",
+   "Fake midnight kiss",
+   "Wrong year said",
+   "Phone dies",
+   "Fireworks heard",
+   "Someone falls asleep",
+   "Ugly sweater",
+   "Song request denied",
+   "Group photo",
+   "Midnight snack run",
+   "Someone says 'new year new me'",
+   "Glitter everywhere",
+   "Toast gets emotional",
+   "Someone arrives late",
+   "Karaoke moment",
+   "Confetti cannon",
+   "Lost shoe",
+   "Ex mentioned",
+   "Dessert first",
+   "Game argument",
+   "Hug from a stranger",
+   "Noisemaker blown",
+   "Dance-off"
+  ]
+ }
+}
