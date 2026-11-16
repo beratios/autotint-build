@@ -18,5 +18,75 @@
   "time": "7:00 PM",
   "address": "24 Maple Grove Lane, Hamilton",
   "rsvp": "to Sarah \u00b7 905 555 0142"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#efe7da",
+   "ink": "#1d3b30",
+   "accent": "#b8893d",
+   "hfont": "Playfair Display",
+   "hsize": 96
+  },
+  "size": "5x7 in",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.33,
+    "frac": 0.55,
+    "caption": "Elegant script title"
+   },
+   {
+    "x": 0.5,
+    "y": 0.62,
+    "frac": 0.6,
+    "caption": "Clear, classic details"
+   }
+  ],
+  "fields": [
+   [
+    "Event title",
+    0.5,
+    0.33
+   ],
+   [
+    "Host name",
+    0.5,
+    0.41
+   ],
+   [
+    "Date & time",
+    0.5,
+    0.56
+   ],
+   [
+    "Address",
+    0.5,
+    0.66
+   ],
+   [
+    "RSVP details",
+    0.5,
+    0.8
+   ]
+  ],
+  "variants": [
+   {},
+   {
+    "title": "Holiday Soir\u00e9e",
+    "host": "Mark & Elena",
+    "date": "Friday, December 19",
+    "time": "8:00 PM",
+    "address": "The Oak Room, Toronto",
+    "rsvp": "by Dec 12"
+   },
+   {
+    "title": "Christmas Eve",
+    "host": "Grandma Rose",
+    "date": "Wednesday, December 24",
+    "time": "5:30 PM",
+    "address": "18 Willow Street, Burlington",
+    "rsvp": "to Rose \u00b7 289 555 0199"
+   }
+  ]
  }
 }

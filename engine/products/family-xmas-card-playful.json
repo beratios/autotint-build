@@ -13,5 +13,59 @@
   "family": "Love, The Johnsons",
   "message": "Wishing you a cozy, joyful holiday season!",
   "year": "2026"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#e8f4f2",
+   "ink": "#1d3557",
+   "accent": "#e63946",
+   "hfont": "Pacifico",
+   "hsize": 90
+  },
+  "size": "5x7 in",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.2,
+    "frac": 0.65,
+    "caption": "Bold, cheerful lettering"
+   },
+   {
+    "x": 0.5,
+    "y": 0.86,
+    "frac": 0.65,
+    "caption": "Your family name & message"
+   }
+  ],
+  "fields": [
+   [
+    "Family name",
+    0.5,
+    0.8
+   ],
+   [
+    "Your message",
+    0.5,
+    0.86
+   ],
+   [
+    "Year",
+    0.5,
+    0.92
+   ]
+  ],
+  "variants": [
+   {},
+   {
+    "family": "Love, The Patels",
+    "message": "Peace, love & lots of cookies!",
+    "year": "2026"
+   },
+   {
+    "family": "From Liam, Ava & Max",
+    "message": "Happy holidays from our home to yours",
+    "year": "2026"
+   }
+  ]
  }
 }

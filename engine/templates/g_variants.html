@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block css %}
+body{width:2400px;height:1800px;background:{{bg}};font-family:'Fredoka';color:{{ink}};text-align:center}
+.tex{position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,0,.035) 1px,transparent 1.5px);background-size:9px 9px}
+h1{font-family:'{{hfont}}';font-size:96px;font-weight:400;margin-top:70px;position:relative}
+.row{position:absolute;left:0;right:0;top:300px;display:flex;justify-content:center;gap:70px}
+.row img{height:{{vh}}px;box-shadow:0 30px 60px rgba(0,0,0,.25);border-radius:4px}
+.row img:nth-child(1){transform:rotate(-3deg)}.row img:nth-child(3){transform:rotate(3deg)}
+.f{position:absolute;bottom:60px;left:0;right:0;font-size:46px}
+{% endblock %}
+{% block body %}<div class="tex"></div><h1>{{title}}</h1>
+<div class="row">{% for i in imgs %}<img src="file://{{i}}">{% endfor %}</div>
+<div class="f">{{foot}}</div>
+{% endblock %}

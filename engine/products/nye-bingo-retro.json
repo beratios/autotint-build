@@ -50,5 +50,62 @@
    "Noisemaker blown",
    "Dance-off"
   ]
+ },
+ "gallery": {
+  "style": {
+   "bg": "#2b2b2b",
+   "ink": "#ffffff",
+   "accent": "#ef476f",
+   "hfont": "Bungee",
+   "hsize": 84
+  },
+  "size": "8.5x11 in, 1 card per guest",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.12,
+    "frac": 0.6,
+    "caption": "Every guest's name on top",
+    "sub": "Party name included"
+   },
+   {
+    "x": 0.32,
+    "y": 0.45,
+    "frac": 0.4,
+    "caption": "Unique squares per card",
+    "sub": "No two cards alike"
+   }
+  ],
+  "fields": [
+   [
+    "Party name",
+    0.5,
+    0.07
+   ],
+   [
+    "Guest name on each card",
+    0.5,
+    0.17
+   ]
+  ],
+  "vtitle": "One card per guest",
+  "vfoot": "Every card has a different mix of squares",
+  "variants": [
+   {
+    "guests": [
+     "Maria"
+    ]
+   },
+   {
+    "guests": [
+     "Daniel"
+    ]
+   },
+   {
+    "guests": [
+     "Aisha"
+    ]
+   }
+  ]
  }
 }

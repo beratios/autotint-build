@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block css %}
+body{width:2400px;height:1800px;background:{{bg}};font-family:'Fredoka';color:{{ink}}}
+.tex{position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,0,.035) 1px,transparent 1.5px);background-size:9px 9px}
+.wrap{position:absolute;left:220px;top:150px}
+.wrap img{height:1500px;display:block;box-shadow:0 30px 60px rgba(0,0,0,.25);border-radius:4px}
+.pin:after{content:"";position:absolute;left:96px;top:44px;width:60px;height:8px;background:{{accent}}}
+.pin{position:absolute;width:96px;height:96px;margin:-48px 0 0 -48px;border-radius:50%;background:{{accent}};color:#fff;font-weight:700;font-size:56px;line-height:96px;text-align:center;box-shadow:0 0 0 8px #fff,0 10px 20px rgba(0,0,0,.3)}
+.panel{position:absolute;left:{{px}}px;top:250px;right:120px}
+h1{font-family:'{{hfont}}';font-weight:400;font-size:{{hsize}}px;line-height:1.05;margin-bottom:60px}
+.it{display:flex;align-items:center;gap:30px;font-size:52px;margin-bottom:34px;font-weight:500}
+.it b{flex:none;width:80px;height:80px;border-radius:50%;background:{{accent}};color:#fff;text-align:center;line-height:80px;font-size:44px}
+.note{margin-top:60px;font-size:40px;opacity:.75}
+{% endblock %}
+{% block body %}<div class="tex"></div>
+<div class="wrap"><img src="file://{{img}}">{% for f in fields %}<div class="pin" style="left:-70px;top:{{f[2]*100}}%">{{loop.index}}</div>{% endfor %}</div>
+<div class="panel"><h1>What we personalize for you</h1>
+{% for f in fields %}<div class="it"><b>{{loop.index}}</b>{{f[0]}}</div>{% endfor %}
+<div class="note">Just type it at checkout – we do the design.</div></div>
+{% endblock %}

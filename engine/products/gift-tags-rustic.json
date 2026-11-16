@@ -22,5 +22,78 @@
    "Dad"
   ],
   "sender": "Santa"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#f2ece2",
+   "ink": "#3b2a1a",
+   "accent": "#a4161a",
+   "hfont": "Amatic SC",
+   "hsize": 130
+  },
+  "size": "8.5x11 in, 12 tags",
+  "zooms": [
+   {
+    "x": 0.19,
+    "y": 0.14,
+    "frac": 0.3,
+    "caption": "Hand-lettered names"
+   },
+   {
+    "x": 0.5,
+    "y": 0.38,
+    "frac": 0.3,
+    "caption": "Rustic kraft texture"
+   }
+  ],
+  "fields": [
+   [
+    "Up to 12 names",
+    0.19,
+    0.15
+   ],
+   [
+    "From name",
+    0.19,
+    0.2
+   ]
+  ],
+  "variants": [
+   {},
+   {
+    "names": [
+     "Oliver",
+     "Chloe",
+     "Nana",
+     "Papa",
+     "Ethan",
+     "Zoe",
+     "Aunt Kim",
+     "Leo",
+     "Ruby",
+     "Jack",
+     "Ella",
+     "Mom"
+    ],
+    "sender": "Mom & Dad"
+   },
+   {
+    "names": [
+     "Sam",
+     "Grace",
+     "Henry",
+     "Lily",
+     "Owen",
+     "Nora",
+     "Coach",
+     "Theo",
+     "Ivy",
+     "Finn",
+     "Rosie",
+     "Gramps"
+    ],
+    "sender": "The Elves"
+   }
+  ]
  }
 }

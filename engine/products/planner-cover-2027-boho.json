@@ -11,5 +11,52 @@
   "label": "Planner",
   "name": "Jessica Miller",
   "word": "word of the year \u00b7 bloom"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#e9dccd",
+   "ink": "#4a2c22",
+   "accent": "#b75d3f",
+   "hfont": "DM Serif Display",
+   "hsize": 96
+  },
+  "size": "8.5x11 in (Letter)",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.14,
+    "frac": 0.5,
+    "caption": "Modern serif year"
+   },
+   {
+    "x": 0.5,
+    "y": 0.87,
+    "frac": 0.5,
+    "caption": "Your name, beautifully set"
+   }
+  ],
+  "fields": [
+   [
+    "Your name",
+    0.5,
+    0.87
+   ],
+   [
+    "Word of the year",
+    0.5,
+    0.92
+   ]
+  ],
+  "variants": [
+   {},
+   {
+    "name": "Amara Johnson",
+    "word": "word of the year \u00b7 grow"
+   },
+   {
+    "name": "Sofia Reyes",
+    "word": "word of the year \u00b7 joy"
+   }
+  ]
  }
 }
