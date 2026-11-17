@@ -1,0 +1,9 @@
+{% extends theme %}
+{% block mode %}welcome{% endblock %}
+{% block content %}
+<div class="t-k" style="font-size:2.6vmin">Welcome to</div>
+<div class="t-h" style="font-size:{{ 13 if title|length < 18 else 10 }}vmin;margin-top:2.5vmin">{{ title }}</div>
+<div class="t-rule"></div>
+<div class="t-s" style="font-size:8vmin">with love, the {{ family }} family</div>
+<div class="t-k" style="margin-top:4vmin;font-size:2.4vmin">{{ date }}</div>
+{% endblock %}

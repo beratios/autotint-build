@@ -1,0 +1,23 @@
+{% extends "scandi_base.html" %}
+{% block art %}{% endblock %}
+{% block css2 %}
+.top{position:absolute;top:.55in;left:0;right:0}
+h1{font-family:'DM Serif Display';font-weight:400;font-size:38pt;line-height:1;margin-top:.1in}
+.fam{font-family:'Cormorant Garamond';font-style:italic;font-size:17pt;color:#4d5c56;margin-top:.05in}
+.two{position:absolute;left:.75in;right:.75in;top:2.75in;display:flex;gap:.55in;text-align:left}
+.h2{font-size:8pt;letter-spacing:.42em;font-weight:600;color:#b4524a;margin-bottom:.2in}
+.c{margin-bottom:.36in}.c b{display:block;font-size:7.5pt;letter-spacing:.35em;font-weight:600;color:#2f5a4c}
+.c .d{font-family:'DM Serif Display';font-size:18pt;line-height:1.15;margin:.05in 0}
+.c .x{font-family:'Cormorant Garamond';font-style:italic;font-size:14.5pt;color:#5d6b65;line-height:1.25}
+.c .p{font-size:7pt;letter-spacing:.2em;color:#b4524a;margin-top:.04in;text-transform:uppercase}
+.tl{border-left:1px solid #b4524a;padding-left:.22in}.tl div{margin-bottom:.3in}.tl b{display:block;font-size:8pt;letter-spacing:.25em;color:#b4524a;font-weight:600}.tl span{font-family:'Cormorant Garamond';font-size:16pt}
+.foot{position:absolute;bottom:.5in;left:0;right:0}
+{% endblock %}
+{% block content %}
+<div class="top"><svg width="56" height="56" viewBox="-30 -30 60 60" stroke="#2f5a4c" stroke-width="1.4" fill="none"><path d="M0 -26 V26 M-26 0 H26 M-18 -18 L18 18 M18 -18 L-18 18"/><path d="M-6 -20 L0 -14 L6 -20 M-6 20 L0 14 L6 20 M-20 -6 L-14 0 L-20 6 M20 -6 L14 0 L20 6"/></svg>
+<div class="k" style="margin-top:.1in">{{ date }}</div><h1>{{ title }}</h1><div class="fam">hosted by the {{ family }} family</div><div class="r"></div></div>
+<div class="two"><div style="flex:1.6"><div class="h2">THE MENU</div>
+{% for c in courses[:5] %}<div class="c"><b>{{ c[0]|upper }}</b><div class="d">{{ c[1] }}</div>{% if c|length > 2 and c[2] %}<div class="x">{{ c[2] }}</div>{% endif %}{% if c|length > 3 and c[3] %}<div class="p">Paired with · {{ c[3] }}</div>{% endif %}</div>{% endfor %}</div>
+<div style="flex:1"><div class="h2">THE EVENING</div><div class="tl">{% for t,e in timeline[:7] %}<div><b>{{ t }}</b><span>{{ e }}</span></div>{% endfor %}</div></div></div>
+<div class="foot"><svg width="220" height="22" viewBox="0 0 220 22"><g fill="#2f5a4c">{% for i in range(7) %}<path d="M{{10+i*30}} 20 l8 -16 l8 16z" opacity="{{ 1 if i%2 else 0.55 }}"/>{% endfor %}</g></svg><div class="k" style="margin-top:.06in">Merry Christmas · {{ year }}</div></div>
+{% endblock %}

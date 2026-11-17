@@ -1,0 +1,13 @@
+{% extends "th_cinema.html" %}
+{% from "cinema_art.html" import popcorn %}
+{% block mode %}place{% endblock %}
+{% block lcss %}body{background:#fff}.page{inset:0;display:block}
+.cut{position:absolute;top:2.2vmin;left:0;right:0;font-family:'Inter';font-size:1.5vmin;letter-spacing:.25em;color:#999}
+.g{position:absolute;left:4vmin;right:4vmin;top:5vmin;bottom:4vmin;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,1fr);gap:2vmin}
+.card{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:3vmin;background:#1a0d22;border:1.2vmin solid #b5162a;outline:2px solid #f2c14e;outline-offset:-1.6vmin}
+.fold{position:absolute;left:0;right:0;top:50%;border-top:1px dashed rgba(255,255,255,.5)}
+.nm{font-family:'Bungee';font-size:4.4vmin;color:#ffe9b0;line-height:1.1}
+.e{border-bottom:1.5px solid #ffe9b0;width:60%;height:4.5vmin}
+.sm{font-family:'Caveat';font-size:3vmin;color:#ffd36b}{% endblock %}
+{% block content %}<div class="cut">✂ SNACK BAR TENT CARDS · CUT ON THE EDGE, FOLD ON THE DASHED LINE</div>
+<div class="g">{% for i in range(8) %}{% set n = snacks[i] if snacks|length > i else '' %}<div class="card"><div class="fold"></div>{{ popcorn('7vmin') }}{% if n %}<div class="nm">{{ n }}</div>{% else %}<div class="e"></div>{% endif %}<div class="sm">{{ family }} snack bar</div></div>{% endfor %}</div>{% endblock %}

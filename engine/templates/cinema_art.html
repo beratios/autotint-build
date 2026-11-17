@@ -1,0 +1,9 @@
+{% macro popcorn(w) %}<svg viewBox="0 0 160 190" style="width:{{w}}">
+{% for x,y,r in [(40,58,16),(62,44,18),(88,40,19),(112,50,17),(128,66,14),(30,74,13),(52,70,15),(78,62,16),(104,70,15),(120,82,12),(66,30,14),(96,24,13)] %}<circle cx="{{x}}" cy="{{y}}" r="{{r}}" fill="#fff6dc" stroke="#e8c98a" stroke-width="2"/><circle cx="{{x+3}}" cy="{{y+4}}" r="{{r*0.35}}" fill="#f4d58a" opacity=".7"/>{% endfor %}
+<path d="M22 80 L138 80 L124 186 L36 186 Z" fill="#fff"/>
+<clipPath id="pcb"><path d="M22 80 L138 80 L124 186 L36 186 Z"/></clipPath>
+<g clip-path="url(#pcb)" fill="#d81f2a">{% for i in range(6) %}<rect x="{{ 22 + i*22 }}" y="78" width="11" height="110"/>{% endfor %}</g>
+<rect x="18" y="76" width="124" height="10" rx="3" fill="#b5121d"/>
+<rect x="48" y="112" width="64" height="34" rx="4" fill="#fff3d6" stroke="#b5121d" stroke-width="2"/><text x="80" y="135" text-anchor="middle" font-family="Bungee" font-size="16" fill="#b5121d">POP</text>
+</svg>{% endmacro %}
+{% macro bulbs(n, horiz) %}{% for i in range(n) %}<i style="{{ 'left' if horiz else 'top' }}:{{ (i+0.5)*100/n }}%"></i>{% endfor %}{% endmacro %}

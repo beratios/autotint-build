@@ -1,0 +1,11 @@
+{% extends "th_cocoa.html" %}
+{% from "cocoa_art.html" import mug %}
+{% block mode %}drinks{% endblock %}
+{% block lcss %}.dr{margin-top:3vmin}.dr .t-h{font-family:'Fredoka';font-weight:600;font-size:4.8vmin;color:#c8102e}.dr .t-b{font-size:3.4vmin;margin-top:.4vmin;color:var(--muted)}{% endblock %}
+{% block content %}
+<div class="t-k" style="color:#2f8f6b">the {{ family }} cocoa bar</div>
+<div class="t-h" style="font-size:9vmin;margin-top:1.5vmin">Cocoa Menu</div>
+<div class="t-rule"></div>
+{% for n,d in flavors[:5] %}<div class="dr"><div class="t-h">{{ n }}</div><div class="t-b">{{ d }}</div></div>{% endfor %}
+<div style="margin-top:3vmin">{{ mug('26vmin') }}</div>
+{% endblock %}

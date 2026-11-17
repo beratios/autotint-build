@@ -1,0 +1,19 @@
+{% extends "mp_base.html" %}
+{% from "cocoa_art.html" import mug, mint %}
+{% block tcss %}
+:root{--bg:#fff7ee;--ink:#4a2a1a;--muted:#8a6450;--acc:#c8102e;--hc:#5a2e1a;--hf:'Pacifico';--hw:400;--sf:'Caveat';--bf:'Fredoka';--sx:9vmin;--st:9vmin;--sb:9vmin}
+body{background:#fff7ee}
+.stripe{position:absolute;inset:0;border:3.2vmin solid transparent;border-image:repeating-linear-gradient(45deg,#c8102e 0 2.2vmin,#fff 2.2vmin 4.4vmin) 30}
+.dots{position:absolute;inset:3.2vmin;background:radial-gradient(#f2d9c9 1.1px,transparent 1.6px) 0 0/3vmin 3vmin;opacity:.7}
+.t-s{font-weight:700}
+.t-l{color:#2f8f6b}
+.t-rule{background:#2f8f6b}.t-rule:after{background:#c8102e;border-radius:50%}
+.card{background:#fff;color:#4a2a1a;border:2px solid #c8102e;box-shadow:inset 0 0 0 1.1vmin #fff,inset 0 0 0 calc(1.1vmin + 1.5px) #f1c7cd}
+.card .nm{font-family:'Pacifico'}
+{% endblock %}
+{% block art %}{% set mode = self.mode()|trim %}
+<div class="stripe"></div><div class="dots"></div>
+{% for i in range(10) %}{% set x = (i*43+6)%100 %}{% set y = (i*67+12)%100 %}{% if x<14 or x>86 or y<12 or y>88 %}<svg viewBox="-10 -10 20 20" style="position:absolute;left:{{x}}%;top:{{y}}%;width:{{ 3 + (i%3) }}vmin" stroke="#9fc9df" stroke-width="1.4" stroke-linecap="round"><path d="M0 -8 V8 M-7 -4 L7 4 M-7 4 L7 -4"/></svg>{% endif %}{% endfor %}
+{% if mode in ['menu','post','story'] %}<div style="position:absolute;left:7vmin;bottom:6vmin">{{ mint('9vmin') }}</div><div style="position:absolute;right:8vmin;bottom:9vmin">{{ mint('6.5vmin') }}</div><div style="position:absolute;right:6.5vmin;top:6.5vmin">{{ mint('7vmin') }}</div>{% endif %}
+{% endblock %}
+{% block cardart %}<div style="width:30%;margin-bottom:.5vmin">{{ mint('100%') }}</div>{% endblock %}

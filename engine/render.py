@@ -38,6 +38,8 @@ def font_css():
 
 
 env = Environment(loader=FileSystemLoader(str(ROOT / "templates")), autoescape=True)
+import math as _m
+env.globals.update(cos=lambda a: round(_m.cos(_m.radians(a)), 3), sin=lambda a: round(_m.sin(_m.radians(a)), 3))
 
 
 def load_product(pid):
@@ -52,7 +54,8 @@ def html_for(template, data, extra=None):
 
 
 def render(page, html, path_png=None, path_pdf=None, w_in=None, h_in=None, scale=1):
-    tmp = ROOT / "_tmp.html"
+    import os
+    tmp = ROOT / f"_tmp{os.getpid()}.html"
     tmp.write_text(html)
     if w_in:
         page.set_viewport_size({"width": int(w_in * 96), "height": int(h_in * 96)})
@@ -91,7 +94,7 @@ def fulfill(pid, data, outdir):
         if pages and p.get("blank_cards"):
             items += [""] * p["blank_cards"]
         for i, item in enumerate(items):
-            extra = {"item": item, "index": i}
+            extra = {"item": item, "index": i, "W_IN": p["w_in"], "H_IN": p["h_in"]}
             if p.get("shuffle_field"):
                 import random
                 extra["cells"] = random.Random(f"{item}-{i}").sample(merged[p["shuffle_field"]], 24)
@@ -106,7 +109,7 @@ def fulfill(pid, data, outdir):
             reps = merged[ep["repeat"]] if ep.get("repeat") else [None]
             for rep in reps:
                 n += 1
-                html = html_for(ep["template"], merged, {"rep": rep})
+                html = html_for(ep["template"], merged, dict(ep.get("vars", {}), rep=rep, W_IN=ep.get("w_in", p["w_in"]), H_IN=ep.get("h_in", p["h_in"])))
                 stem = f"{pid}_p{n:02d}-{ep['name']}"
                 render(page, html, outdir / f"{stem}.png" if ep.get("png") else None, outdir / f"{stem}.pdf", ep.get("w_in", p["w_in"]), ep.get("h_in", p["h_in"]))
                 pdfs.append(outdir / f"{stem}.pdf")

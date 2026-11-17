@@ -1,0 +1,10 @@
+{% extends theme %}
+{% block mode %}post{% endblock %}
+{% block lcss %}.crs{margin-top:2.2vmin}.crs .t-b{font-size:3.6vmin;margin-top:.3vmin}{% endblock %}
+{% block content %}
+<div class="t-k" style="font-size:2.4vmin">{{ date }}</div>
+<div class="t-h" style="font-size:{{ 8 if title|length < 18 else 6.5 }}vmin;margin-top:1.2vmin">{{ title }}</div>
+<div class="t-s" style="font-size:5.4vmin">the {{ family }} family</div>
+<div class="t-rule" style="margin:1.6vmin auto"></div>
+{% for c in courses[:4] %}<div class="crs"><div class="t-l" style="font-size:1.9vmin">{{ c[0] }}</div><div class="t-b">{{ c[1] }}</div></div>{% endfor %}
+{% endblock %}

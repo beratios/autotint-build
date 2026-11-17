@@ -1,0 +1,17 @@
+{% extends "scandi_base.html" %}
+{% block art %}{% endblock %}
+{% block css2 %}
+.w{position:absolute;left:9vmin;right:9vmin;top:0;bottom:14vmin;display:flex;flex-direction:column;align-items:center;justify-content:center}
+h1{font-family:'DM Serif Display';font-weight:400;font-size:13vmin;line-height:1}
+.fam{font-family:'Cormorant Garamond';font-style:italic;font-size:7vmin;color:#4d5c56;margin-top:1vmin}
+.k{font-size:3vmin}
+.c{margin-top:4vmin}.c b{display:block;font-size:2.7vmin;letter-spacing:.35em;font-weight:600;color:#b4524a}.c div{font-family:'Cormorant Garamond';font-size:5.2vmin;line-height:1.2;margin-top:.5vmin}
+.r{margin:4vmin auto;width:14vmin}
+.trees{position:absolute;bottom:4vmin;left:0;right:0}
+{% endblock %}
+{% block content %}
+<div class="w"><svg width="22%" viewBox="-30 -30 60 60" stroke="#2f5a4c" stroke-width="1.6" fill="none"><path d="M0 -26 V26 M-26 0 H26 M-18 -18 L18 18 M18 -18 L-18 18"/><path d="M-6 -20 L0 -14 L6 -20 M-6 20 L0 14 L6 20 M-20 -6 L-14 0 L-20 6 M20 -6 L14 0 L20 6"/></svg>
+<div class="k" style="margin-top:4vmin">you are invited to</div><h1 style="margin-top:2vmin">{{ title }}</h1><div class="fam">at the {{ family }} table</div><div class="r"></div><div class="k">{{ date }}</div>
+{% for c in courses[:4] %}{% set label, txt = c[0], c[1] %}<div class="c"><b>{{ label|upper }}</b><div>{{ txt }}</div></div>{% endfor %}</div>
+<svg class="trees" viewBox="0 0 300 30" width="100%"><g fill="#2f5a4c">{% for i in range(9) %}<path d="M{{ 20+i*30 }} 28 l10 -24 l10 24z" opacity="{{ 1 if i%2 else 0.55 }}"/>{% endfor %}</g></svg>
+{% endblock %}

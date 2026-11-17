@@ -1,0 +1,11 @@
+{% extends theme %}
+{% block mode %}story{% endblock %}
+{% block lcss %}.crs{margin-top:3.4vmin}.crs .t-b{font-size:4.7vmin;margin-top:.6vmin}.page{top:calc(var(--st) + 10vmin);bottom:calc(var(--sb) + 6vmin)}{% endblock %}
+{% block content %}
+<div class="t-k" style="font-size:3.2vmin">you are invited to</div>
+<div class="t-h" style="font-size:{{ 13 if title|length < 18 else 10.5 }}vmin;margin-top:3vmin">{{ title }}</div>
+<div class="t-s" style="font-size:9vmin;margin-top:1vmin">at the {{ family }} table</div>
+<div class="t-rule"></div>
+<div class="t-k" style="font-size:3.2vmin">{{ date }}</div>
+{% for c in courses[:4] %}<div class="crs"><div class="t-l" style="font-size:2.9vmin">{{ c[0] }}</div><div class="t-b">{{ c[1] }}</div></div>{% endfor %}
+{% endblock %}

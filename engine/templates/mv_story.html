@@ -1,0 +1,16 @@
+{% extends "th_cinema.html" %}
+{% from "cinema_art.html" import popcorn, bulbs %}
+{% block mode %}story{% endblock %}
+{% block lcss %}.page{left:13vmin;right:13vmin;top:12vmin;bottom:8vmin}{% endblock %}
+{% block content %}
+<div class="t-k" style="font-size:2.8vmin">{{ presenter }}</div>
+<div class="mq" style="width:100%;margin-top:4vmin;padding:5vmin 4vmin"><div class="bt">{{ bulbs(9, true) }}</div><div class="bb">{{ bulbs(9, true) }}</div>
+<div class="t-k" style="color:#1a0d22;font-size:2.8vmin">now showing</div>
+<div class="t-h" style="font-size:{{ 10 if title|length < 20 else 8.5 }}vmin;line-height:1.1;margin-top:1.5vmin">{{ title }}</div>
+<div class="t-k" style="color:#1a0d22;font-size:2.8vmin;margin-top:1.5vmin">at the {{ family }} house</div></div>
+<div class="t-s" style="font-size:7vmin;margin-top:4vmin">{{ tagline }}</div>
+<div style="margin-top:3vmin">{{ popcorn('26vmin') }}</div>
+<div class="t-k" style="font-size:3.4vmin;color:#fff3d6;margin-top:3.5vmin">{{ date }}</div>
+<div class="t-k" style="font-size:3vmin;margin-top:1.5vmin">{{ time }} · {{ place }}</div>
+<div class="t-k" style="font-size:2.6vmin;color:#e6cfa3;margin-top:3vmin">{{ note }}</div>
+{% endblock %}

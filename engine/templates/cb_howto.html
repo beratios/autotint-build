@@ -1,0 +1,11 @@
+{% extends "th_cocoa.html" %}
+{% from "cocoa_art.html" import mug %}
+{% block mode %}drinks{% endblock %}
+{% block lcss %}.st{display:flex;align-items:center;gap:3vmin;text-align:left;margin-top:3.2vmin;width:100%}.st b{flex:none;width:9vmin;height:9vmin;border-radius:50%;background:#c8102e;color:#fff;font-family:'Fredoka';font-size:5vmin;display:flex;align-items:center;justify-content:center}.st span{font-size:4.2vmin;line-height:1.2}{% endblock %}
+{% block content %}
+<div class="t-k" style="color:#2f8f6b">the {{ family }} cocoa bar</div>
+<div class="t-h" style="font-size:8vmin;margin-top:1.5vmin">Build Your Cocoa</div>
+<div class="t-rule"></div>
+{% for s in steps[:5] %}<div class="st"><b>{{ loop.index }}</b><span class="t-b">{{ s }}</span></div>{% endfor %}
+<div style="margin-top:3vmin">{{ mug('26vmin') }}</div>
+{% endblock %}

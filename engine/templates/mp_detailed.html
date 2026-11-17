@@ -1,0 +1,27 @@
+{% extends theme %}
+{% block mode %}detailed{% endblock %}
+{% block lcss %}
+.page{top:calc(var(--st) + 10vmin);bottom:calc(var(--sb) + 3vmin);justify-content:flex-start}
+.two{display:flex;gap:6vmin;width:100%;margin-top:3vmin;text-align:left}
+.two>div{flex:1}
+.crs{margin-bottom:2vmin}
+.crs .d{font-family:var(--df,var(--hf));font-size:2.75vmin;line-height:1.15;margin:.5vmin 0 .4vmin;color:var(--ink)}
+.crs .x{font-family:var(--bf);font-style:italic;font-size:2.15vmin;line-height:1.3;color:var(--muted)}
+.crs .p{font-family:'Inter';font-size:1.75vmin;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);margin-top:.6vmin}
+.tl{border-left:1.5px solid var(--acc);padding-left:3vmin}
+.tl div{margin-bottom:2.3vmin}
+.tl b{display:block;font-family:'Inter';font-size:1.9vmin;letter-spacing:.2em;color:var(--acc)}
+.tl span{font-family:var(--bf);font-size:2.6vmin}
+.h2{font-family:'Inter';font-weight:700;font-size:1.9vmin;letter-spacing:.4em;color:var(--acc);margin-bottom:2.4vmin;text-transform:uppercase}
+{% endblock %}
+{% block content %}
+<div class="t-k">{{ date }}</div>
+<div class="t-h" style="font-size:5.6vmin;margin-top:1vmin">{{ title }}</div>
+<div class="t-s" style="font-size:5vmin;margin-top:.5vmin">hosted by the {{ family }} family</div>
+<div class="t-rule"></div>
+<div class="two">
+<div style="flex:1.6"><div class="h2">The Menu</div>
+{% for c in courses[:5] %}<div class="crs"><div class="t-l">{{ c[0] }}</div><div class="d">{{ c[1] }}</div>{% if c|length > 2 and c[2] %}<div class="x">{{ c[2] }}</div>{% endif %}{% if c|length > 3 and c[3] %}<div class="p">Paired with · {{ c[3] }}</div>{% endif %}</div>{% endfor %}</div>
+<div><div class="h2">The Evening</div><div class="tl">{% for t,e in timeline[:7] %}<div><b>{{ t }}</b><span>{{ e }}</span></div>{% endfor %}</div></div>
+</div>
+{% endblock %}

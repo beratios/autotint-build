@@ -1,0 +1,12 @@
+{% extends "th_cocoa.html" %}
+{% from "cocoa_art.html" import mug, mint %}
+{% block mode %}story{% endblock %}
+{% block content %}
+<div class="t-k" style="font-size:3.4vmin;color:#2f8f6b">you are invited to the</div>
+<div class="t-h" style="font-size:15vmin;margin-top:2vmin;transform:rotate(-3deg)">{{ title }}</div>
+<div class="t-s" style="font-size:9vmin;margin-top:2vmin">at the {{ family }} house</div>
+<div style="margin:5vmin 0">{{ mug('58vmin') }}</div>
+<div class="t-k" style="font-size:3.6vmin">{{ date }}</div>
+<div class="t-k" style="font-size:3.6vmin;margin-top:1.5vmin;color:#4a2a1a">{{ time }} · {{ place }}</div>
+<div class="t-s" style="font-size:7vmin;margin-top:3vmin">{{ tagline }}</div>
+{% endblock %}

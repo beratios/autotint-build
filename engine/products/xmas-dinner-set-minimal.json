@@ -1,27 +1,248 @@
 {
  "template": "scandi_menu.html",
- "w_in": 5, "h_in": 7,
- "fields": ["title", "family", "date", "courses", "drinks", "guests (up to 16)"],
- "defaults": {"title": "Christmas Dinner", "family": "Lindqvist", "date": "December 25, 2026", "year": "2026",
-  "courses": [["To start", "Roasted butternut soup, warm rosemary bread"], ["Main", "Herb roasted turkey, cranberry glaze"], ["On the side", "Garlic mashed potatoes, honey carrots, green beans"], ["Dessert", "Gingerbread cheesecake, whipped cream"]],
-  "drinks": [["Mulled Wine", "red wine, orange, cinnamon, star anise"], ["Cranberry Spritz", "cranberry, prosecco, fresh rosemary"], ["Hot Cocoa Bar", "for the little ones, with marshmallows"], ["Winter Punch", "apple, ginger, sparkling water"]],
-  "guests": ["Anna", "Erik", "Grandma Ingrid", "Grandpa Lars", "Sofia", "Oskar", "Aunt Maja", "Uncle Nils", "Elsa", "Felix"]},
- "gallery": {
-  "style": {"bg": "#e9e6df", "ink": "#22302c", "accent": "#b4524a", "hfont": "DM Serif Display", "hsize": 96},
-  "size": "5x7 in (all pieces)",
-  "zooms": [
-   {"x": 0.5, "y": 0.2, "frac": 0.6, "caption": "Clean Scandinavian design", "sub": "Your family name included"},
-   {"x": 0.5, "y": 0.55, "frac": 0.6, "caption": "Your own menu", "sub": "Any courses, any dishes"}
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "title",
+  "family",
+  "date",
+  "courses (with optional description + drink pairing)",
+  "drinks",
+  "evening timeline",
+  "guests (up to 16)"
+ ],
+ "defaults": {
+  "title": "Christmas Dinner",
+  "family": "Lindqvist",
+  "date": "December 25, 2026",
+  "year": "2026",
+  "courses": [
+   [
+    "To start",
+    "Roasted butternut soup, warm rosemary bread",
+    "Velvety soup finished with sage brown butter",
+    "Sparkling brut"
+   ],
+   [
+    "Main",
+    "Herb roasted turkey, cranberry glaze",
+    "Slow roasted with thyme and orange",
+    "Pinot noir"
+   ],
+   [
+    "On the side",
+    "Garlic mashed potatoes, honey carrots, green beans",
+    "Family recipes, made the way grandma did",
+    ""
+   ],
+   [
+    "Dessert",
+    "Gingerbread cheesecake, whipped cream",
+    "Served with spiced coffee and hot cocoa",
+    "Tawny port"
+   ]
   ],
-  "fields": [["Title and date", 0.5, 0.2], ["Family name", 0.5, 0.27], ["Your courses", 0.5, 0.5], ["Year", 0.5, 0.94]],
+  "drinks": [
+   [
+    "Mulled Wine",
+    "red wine, orange, cinnamon, star anise"
+   ],
+   [
+    "Cranberry Spritz",
+    "cranberry, prosecco, fresh rosemary"
+   ],
+   [
+    "Hot Cocoa Bar",
+    "for the little ones, with marshmallows"
+   ],
+   [
+    "Winter Punch",
+    "apple, ginger, sparkling water"
+   ]
+  ],
+  "guests": [
+   "Anna",
+   "Erik",
+   "Grandma Ingrid",
+   "Grandpa Lars",
+   "Sofia",
+   "Oskar",
+   "Aunt Maja",
+   "Uncle Nils",
+   "Elsa",
+   "Felix"
+  ],
+  "timeline": [
+   [
+    "5:00 PM",
+    "Welcome drinks"
+   ],
+   [
+    "5:45 PM",
+    "Toast and starters"
+   ],
+   [
+    "6:30 PM",
+    "Christmas dinner"
+   ],
+   [
+    "8:00 PM",
+    "Dessert by the tree"
+   ],
+   [
+    "8:45 PM",
+    "Gifts and games"
+   ]
+  ]
+ },
+ "gallery": {
+  "style": {
+   "bg": "#e9e6df",
+   "ink": "#22302c",
+   "accent": "#b4524a",
+   "hfont": "DM Serif Display",
+   "hsize": 96
+  },
+  "size": "5x7, 8.5x11 + Instagram post and story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.2,
+    "frac": 0.6,
+    "caption": "Clean Scandinavian design",
+    "sub": "Your family name included"
+   },
+   {
+    "x": 0.5,
+    "y": 0.55,
+    "frac": 0.6,
+    "caption": "Your own menu",
+    "sub": "Any courses, any dishes"
+   }
+  ],
+  "fields": [
+   [
+    "Title and date",
+    0.5,
+    0.2
+   ],
+   [
+    "Family name",
+    0.5,
+    0.27
+   ],
+   [
+    "Your courses",
+    0.5,
+    0.5
+   ],
+   [
+    "Year",
+    0.5,
+    0.94
+   ]
+  ],
   "vtitle": "Your menu. Your family.",
-  "variants": [{}, {"title": "Christmas Eve Supper", "family": "Bennett", "date": "December 24, 2026", "courses": [["Starter", "Shrimp cocktail, lemon aioli"], ["Main", "Glazed ham, pineapple salsa"], ["Sides", "Scalloped potatoes, roasted sprouts"], ["Dessert", "Yule log, vanilla ice cream"]]}, {"title": "Friendsmas Feast", "family": "Okafor", "date": "December 19, 2026", "courses": [["Bites", "Baked brie, fig jam, crackers"], ["Main", "Beef wellington, red wine jus"], ["Sides", "Truffle mac and cheese, winter salad"], ["Sweet", "Peppermint brownies"]]}]
+  "variants": [
+   {},
+   {
+    "title": "Christmas Eve Supper",
+    "family": "Bennett",
+    "date": "December 24, 2026",
+    "courses": [
+     [
+      "Starter",
+      "Shrimp cocktail, lemon aioli"
+     ],
+     [
+      "Main",
+      "Glazed ham, pineapple salsa"
+     ],
+     [
+      "Sides",
+      "Scalloped potatoes, roasted sprouts"
+     ],
+     [
+      "Dessert",
+      "Yule log, vanilla ice cream"
+     ]
+    ]
+   },
+   {
+    "title": "Friendsmas Feast",
+    "family": "Okafor",
+    "date": "December 19, 2026",
+    "courses": [
+     [
+      "Bites",
+      "Baked brie, fig jam, crackers"
+     ],
+     [
+      "Main",
+      "Beef wellington, red wine jus"
+     ],
+     [
+      "Sides",
+      "Truffle mac and cheese, winter salad"
+     ],
+     [
+      "Sweet",
+      "Peppermint brownies"
+     ]
+    ]
+   }
+  ]
  },
  "extra_pages": [
-  {"name": "welcome", "template": "scandi_welcome.html", "png": true},
-  {"name": "drinks", "template": "scandi_drinks.html", "png": true},
-  {"name": "place1", "template": "scandi_place.html", "png": true},
-  {"name": "place2", "template": "scandi_place2.html", "png": true}
+  {
+   "name": "detailed",
+   "template": "scandi_detailed.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true
+  },
+  {
+   "name": "welcome",
+   "template": "scandi_welcome.html",
+   "png": true
+  },
+  {
+   "name": "drinks",
+   "template": "scandi_drinks.html",
+   "png": true
+  },
+  {
+   "name": "place1",
+   "template": "scandi_place.html",
+   "png": true
+  },
+  {
+   "name": "place2",
+   "template": "scandi_place2.html",
+   "png": true
+  },
+  {
+   "name": "instagram-post",
+   "template": "scandi_post.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true
+  },
+  {
+   "name": "instagram-story",
+   "template": "scandi_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true
+  }
  ],
- "hero": {"headline": "Christmas Dinner Menu Set", "short": "Christmas Dinner Set", "bullets": ["Menu, welcome sign, drinks", "16 name place cards", "Made for you within 24h"]}
+ "hero": {
+  "headline": "Christmas Dinner Menu Set",
+  "short": "Christmas Dinner Set",
+  "bullets": [
+   "Menu, welcome sign, drinks",
+   "16 name place cards",
+   "Made for you within 24h"
+  ]
+ }
 }

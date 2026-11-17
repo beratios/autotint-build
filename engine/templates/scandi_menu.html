@@ -11,7 +11,7 @@ h1{font-family:'DM Serif Display';font-weight:400;font-size:34pt;line-height:1;m
 {% endblock %}
 {% block content %}
 <div class="w"><div class="k">{{ date }}</div><h1>{{ title }}</h1><div class="fam">at the {{ family }} table</div><div class="r"></div>
-{% for label,txt in courses %}<div class="c"><b>{{ label|upper }}</b><div>{{ txt }}</div></div>{% endfor %}
+{% for c in courses %}{% set label, txt = c[0], c[1] %}<div class="c"><b>{{ label|upper }}</b><div>{{ txt }}</div></div>{% endfor %}
 </div>
 <div class="foot"><svg width="160" height="22" viewBox="0 0 160 22"><g fill="#2f5a4c">{% for i in range(5) %}<path d="M{{10+i*30}} 20 l8 -16 l8 16z"/>{% endfor %}</g></svg><div class="k">Merry Christmas · {{ year }}</div></div>
 {% endblock %}

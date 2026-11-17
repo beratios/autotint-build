@@ -1,0 +1,11 @@
+{% extends "th_cocoa.html" %}
+{% from "cocoa_art.html" import mug, mint %}
+{% block mode %}menu{% endblock %}
+{% block lcss %}.page{justify-content:flex-start;top:11vmin}{% endblock %}
+{% block content %}
+<div class="t-k" style="font-size:2.4vmin;color:#2f8f6b">the {{ family }} family</div>
+<div class="t-h" style="font-size:{{ 13 if title|length < 15 else 10 }}vmin;margin-top:2vmin;transform:rotate(-3deg)">{{ title }}</div>
+<div class="t-s" style="font-size:6.5vmin;margin-top:2vmin">{{ tagline }}</div>
+<div style="margin-top:2vmin">{{ mug('46vmin') }}</div>
+<div class="t-k" style="margin-top:1vmin;font-size:2.2vmin">{{ footer }}</div>
+{% endblock %}

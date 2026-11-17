@@ -1,0 +1,26 @@
+{% extends "mp_base.html" %}
+{% block tcss %}
+:root{--bg:#1a0d22;--ink:#fff3d6;--muted:#e6cfa3;--acc:#f2c14e;--hc:#fff3d6;--hf:'Bungee';--hw:400;--sf:'Caveat';--bf:'Inter';--sx:17vmin;--st:8vmin;--sb:8vmin}
+body{background:radial-gradient(ellipse at 50% 30%,#3a1a44 0%,#1a0d22 60%,#0e0614 100%)}
+.cur{position:absolute;top:0;bottom:0;width:15vmin;background:repeating-linear-gradient(90deg,#7a0c18 0 1.6vmin,#b5162a 1.6vmin 3.4vmin,#8e0f1d 3.4vmin 5vmin);box-shadow:0 0 3vmin rgba(0,0,0,.6)}
+.cur.l{left:0;border-radius:0 0 60% 0}.cur.r{right:0;border-radius:0 0 0 60%}
+.val{position:absolute;left:0;right:0;top:0;height:6vmin;background:repeating-linear-gradient(90deg,#b5162a 0 4vmin,#8e0f1d 4vmin 8vmin);border-bottom:.8vmin solid #f2c14e;border-radius:0 0 50% 50%/0 0 40% 40%}
+.tie{position:absolute;width:3vmin;height:1.8vmin;background:#f2c14e;border-radius:40%}
+.spot{position:absolute;left:50%;top:0;width:90vmin;height:120%;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 0%,rgba(255,240,200,.16),transparent 60%)}
+.st{position:absolute;color:#f2c14e}
+.t-h{color:#ffe9b0;text-shadow:0 0 1.5vmin rgba(242,193,78,.6),0 .4vmin 0 #b5162a}
+.t-s{color:#ffd36b}
+.mq{position:relative;background:#fff3d6;border-radius:2vmin;padding:3.4vmin 4vmin;box-shadow:0 0 0 1.2vmin #b5162a,0 0 0 1.6vmin #f2c14e,0 1.5vmin 3vmin rgba(0,0,0,.5)}
+.mq .t-h{color:#b5162a;text-shadow:none}
+.mq i{position:absolute;width:1.5vmin;height:1.5vmin;border-radius:50%;background:radial-gradient(circle,#fffbe6 30%,#ffd36b 60%,#e09a1c);box-shadow:0 0 1vmin #ffd36b;transform:translate(-50%,-50%)}
+.mq .bt i{top:1.3vmin}.mq .bb i{top:calc(100% - 1.3vmin)}
+.mq .bl i{left:1.3vmin}.mq .br i{left:calc(100% - 1.3vmin)}
+.mq .bt,.mq .bb,.mq .bl,.mq .br{position:absolute;inset:0}
+.card{background:#1a0d22;color:#fff3d6}
+{% endblock %}
+{% block art %}{% set mode = self.mode()|trim %}
+<div class="spot"></div>
+{% for i in range(12) %}{% set x = (i*41+30)%60 + 20 %}{% set y = (i*53+5)%100 %}<div class="st" style="left:{{x}}%;top:{{y}}%;font-size:{{ 1.6 + (i%3)*0.8 }}vmin;opacity:{{ 0.35 + (i%3)*0.2 }}">✦</div>{% endfor %}
+<div class="cur l"></div><div class="cur r"></div><div class="val"></div>
+<div class="tie" style="left:11vmin;top:48%"></div><div class="tie" style="right:11vmin;top:48%"></div>
+{% endblock %}

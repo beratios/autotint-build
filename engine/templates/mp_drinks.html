@@ -1,0 +1,9 @@
+{% extends theme %}
+{% block mode %}drinks{% endblock %}
+{% block lcss %}.dr{margin-top:3.6vmin}.dr .t-h{font-size:4.6vmin;text-transform:none;letter-spacing:.01em}.dr .t-b{font-style:italic;font-size:3.3vmin;margin-top:.6vmin;color:var(--muted)}{% endblock %}
+{% block content %}
+<div class="t-k">{{ family }} · {{ year }}</div>
+<div class="t-h" style="font-size:8.5vmin;margin-top:1.6vmin">{{ drinks_title|default('Festive Drinks') }}</div>
+<div class="t-rule"></div>
+{% for n,d in drinks[:6] %}<div class="dr"><div class="t-h">{{ n }}</div><div class="t-b">{{ d }}</div></div>{% endfor %}
+{% endblock %}

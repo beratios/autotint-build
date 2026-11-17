@@ -1,0 +1,14 @@
+{% macro mug(w) %}<svg viewBox="0 0 220 230" style="width:{{w}}">
+<defs><linearGradient id="mg" x1="0" x2="1"><stop offset="0" stop-color="#b30d28"/><stop offset=".45" stop-color="#e2233f"/><stop offset="1" stop-color="#a00b22"/></linearGradient></defs>
+<g fill="none" stroke="#d9c2b4" stroke-width="5" stroke-linecap="round" opacity=".8"><path d="M80 52 q-14 -18 0 -32 q14 -14 0 -30"/><path d="M118 46 q-14 -18 0 -32 q14 -14 0 -30"/></g>
+<path d="M176 108 q40 0 38 34 q-2 34 -44 34" fill="none" stroke="#b30d28" stroke-width="15"/>
+<path d="M40 92 h140 l-10 112 q-2 18 -20 18 h-80 q-18 0 -20 -18z" fill="url(#mg)"/>
+<g fill="#fff" opacity=".95">{% for x,y in [(66,130),(110,160),(150,128),(82,190),(140,190)] %}<path d="M{{x}} {{y-9}} l2.5 6.5 l6.8 .4 l-5.3 4.3 l1.8 6.6 l-5.8 -3.8 l-5.8 3.8 l1.8 -6.6 l-5.3 -4.3 l6.8 -.4z"/>{% endfor %}</g>
+<ellipse cx="110" cy="92" rx="70" ry="12" fill="#5a2e1a"/>
+<path d="M50 92 q-6 -26 22 -26 q4 -22 34 -18 q20 -20 42 2 q30 -2 26 26 q16 6 4 16z" fill="#fffaf3" stroke="#f0dccb" stroke-width="2"/>
+<path d="M72 80 q20 -14 40 -2 q22 -14 42 0" fill="none" stroke="#f0dccb" stroke-width="3"/>
+{% for x,y,r in [(64,62,-10),(98,48,8),(132,58,-4),(150,74,12),(86,76,4)] %}<rect x="{{x}}" y="{{y}}" width="20" height="17" rx="4" fill="#fff" stroke="#e9d3c4" stroke-width="2" transform="rotate({{r}} {{x+10}} {{y+8}})"/>{% endfor %}
+<g transform="translate(160 18) rotate(18)"><path d="M0 80 V18 q0 -18 -16 -18 q-16 0 -16 16" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"/><path d="M0 80 V18 q0 -18 -16 -18 q-16 0 -16 16" fill="none" stroke="#c8102e" stroke-width="10" stroke-linecap="round" stroke-dasharray="7 7"/></g>
+<g fill="#f3a8b6">{% for x in [70,104,132,150] %}<circle cx="{{x}}" cy="{{70 + (x%3)*4}}" r="2.2"/>{% endfor %}</g><g fill="#7dd3b0">{% for x in [84,118,142] %}<circle cx="{{x}}" cy="{{62 + (x%4)*3}}" r="2.2"/>{% endfor %}</g>
+</svg>{% endmacro %}
+{% macro mint(s) %}<svg viewBox="-20 -20 40 40" style="width:{{s}}"><circle r="18" fill="#fff" stroke="#e9d3d6"/>{% for a in range(0,360,60) %}<path d="M0 0 L{{18*cos(a)}} {{18*sin(a)}} A18 18 0 0 1 {{18*cos(a+30)}} {{18*sin(a+30)}} Z" fill="#c8102e"/>{% endfor %}<circle r="4" fill="#fff"/></svg>{% endmacro %}

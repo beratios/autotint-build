@@ -1,0 +1,259 @@
+{
+ "template": "mp_menu.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "title",
+  "family",
+  "date",
+  "courses (with optional description + drink pairing)",
+  "drinks",
+  "evening timeline",
+  "guests (up to 24)"
+ ],
+ "defaults": {
+  "title": "Christmas Dinner",
+  "family": "Whitmore",
+  "date": "December 25, 2026",
+  "year": "2026",
+  "courses": [
+   [
+    "To start",
+    "Roasted butternut soup, warm rosemary bread",
+    "Velvety soup finished with sage brown butter",
+    "Sparkling brut"
+   ],
+   [
+    "Main",
+    "Herb roasted turkey, cranberry glaze",
+    "Slow roasted with thyme and orange, carved at the table",
+    "Pinot noir"
+   ],
+   [
+    "On the side",
+    "Garlic mashed potatoes, honey carrots, green beans",
+    "Family recipes, made the way grandma did",
+    ""
+   ],
+   [
+    "Dessert",
+    "Gingerbread cheesecake, whipped cream",
+    "Served with spiced coffee and hot cocoa",
+    "Tawny port"
+   ]
+  ],
+  "drinks": [
+   [
+    "Mulled Wine",
+    "red wine, orange, cinnamon, star anise"
+   ],
+   [
+    "Cranberry Spritz",
+    "cranberry, prosecco, fresh rosemary"
+   ],
+   [
+    "Hot Cocoa",
+    "for the little ones, with marshmallows"
+   ],
+   [
+    "Winter Punch",
+    "apple, ginger, sparkling water"
+   ]
+  ],
+  "timeline": [
+   [
+    "5:00 PM",
+    "Welcome drinks"
+   ],
+   [
+    "5:45 PM",
+    "Toast and starters"
+   ],
+   [
+    "6:30 PM",
+    "Christmas dinner"
+   ],
+   [
+    "8:00 PM",
+    "Dessert by the tree"
+   ],
+   [
+    "8:45 PM",
+    "Gifts and games"
+   ]
+  ],
+  "guests": [
+   "Olivia",
+   "James",
+   "Grandma Rose",
+   "Grandpa Joe",
+   "Emma",
+   "Noah",
+   "Aunt Claire",
+   "Uncle Mark",
+   "Lily",
+   "Ben"
+  ],
+  "place_sheets": [
+   0,
+   8,
+   16
+  ],
+  "theme": "th_luxgold.html"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#111013",
+   "ink": "#efe2bf",
+   "accent": "#d6b46a",
+   "hfont": "Playfair Display",
+   "hsize": 96
+  },
+  "size": "5x7, 8x10, 8.5x11 + Instagram post and story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.24,
+    "frac": 0.62,
+    "caption": "Gold foil art deco look",
+    "sub": "Your title and family name"
+   },
+   {
+    "x": 0.5,
+    "y": 0.6,
+    "frac": 0.62,
+    "caption": "Your own menu",
+    "sub": "Any courses, any dishes"
+   }
+  ],
+  "fields": [
+   [
+    "Date",
+    0.5,
+    0.2
+   ],
+   [
+    "Title",
+    0.5,
+    0.25
+   ],
+   [
+    "Family name",
+    0.5,
+    0.31
+   ],
+   [
+    "Your courses",
+    0.5,
+    0.55
+   ]
+  ],
+  "vtitle": "Black tie. Your table.",
+  "variants": [
+   {},
+   {
+    "title": "Christmas Eve Supper",
+    "family": "Bennett",
+    "date": "December 24, 2026",
+    "courses": [
+     [
+      "Starter",
+      "Shrimp cocktail, lemon aioli"
+     ],
+     [
+      "Main",
+      "Glazed ham, pineapple salsa"
+     ],
+     [
+      "Sides",
+      "Scalloped potatoes, roasted sprouts"
+     ],
+     [
+      "Dessert",
+      "Yule log, vanilla ice cream"
+     ]
+    ]
+   },
+   {
+    "title": "Friendsmas Feast",
+    "family": "Okafor",
+    "date": "December 19, 2026",
+    "courses": [
+     [
+      "Bites",
+      "Baked brie, fig jam, crackers"
+     ],
+     [
+      "Main",
+      "Beef wellington, red wine jus"
+     ],
+     [
+      "Sides",
+      "Truffle mac and cheese, winter salad"
+     ],
+     [
+      "Sweet",
+      "Peppermint brownies"
+     ]
+    ]
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "detailed",
+   "template": "mp_detailed.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true
+  },
+  {
+   "name": "drinks",
+   "template": "mp_drinks.html",
+   "png": true
+  },
+  {
+   "name": "welcome",
+   "template": "mp_welcome.html",
+   "w_in": 8,
+   "h_in": 10,
+   "png": true
+  },
+  {
+   "name": "place",
+   "template": "mp_place.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "place_sheets",
+   "png": true
+  },
+  {
+   "name": "guest-menu",
+   "template": "mp_guest.html",
+   "repeat": "guests"
+  },
+  {
+   "name": "instagram-post",
+   "template": "mp_post.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true
+  },
+  {
+   "name": "instagram-story",
+   "template": "mp_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true
+  }
+ ],
+ "hero": {
+  "headline": "Black Gold Christmas Dinner Menu",
+  "short": "Luxury Dinner Set",
+  "bullets": [
+   "Menu, detailed menu, drinks",
+   "24 place cards + guest menus",
+   "Instagram post and story"
+  ]
+ }
+}

@@ -1,0 +1,12 @@
+{% extends "th_cinema.html" %}
+{% block mode %}place{% endblock %}
+{% block lcss %}body{background:#fff}.page{inset:0;display:block}
+.cut{position:absolute;top:2.2vmin;left:0;right:0;font-family:'Inter';font-size:1.5vmin;letter-spacing:.25em;color:#999}
+.g{position:absolute;left:4vmin;right:4vmin;top:5vmin;bottom:4vmin;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2.4vmin}
+.c{border:2px solid #b5162a;border-radius:2vmin;padding:3vmin;text-align:left;color:#1a0d22;font-family:'Inter';display:flex;flex-direction:column;gap:2vmin;box-shadow:inset 0 0 0 .8vmin #fff,inset 0 0 0 calc(.8vmin + 1px) #f2c14e}
+.c h3{font-family:'Bungee';font-weight:400;font-size:4.2vmin;color:#b5162a;text-align:center;line-height:1.1}
+.c .k{font-size:1.6vmin;letter-spacing:.25em;color:#8a6a2a;text-align:center;font-weight:700}
+.ln{font-size:2.2vmin;font-weight:600}.ln span{display:block;border-bottom:1.5px solid #c9b48a;height:3.4vmin}
+.stars{font-size:5vmin;letter-spacing:1vmin;color:#fff;-webkit-text-stroke:1.5px #b5162a;text-align:center}{% endblock %}
+{% block content %}<div class="cut">✂ RATE THE MOVIE CARDS · 4 PER PAGE</div>
+<div class="g">{% for i in range(4) %}<div class="c"><div class="k">{{ title|upper }}</div><h3>Rate the Movie</h3><div class="ln">Movie<span></span></div><div class="ln">Rated by<span></span></div><div class="stars">★★★★★</div><div class="ln">Favorite part<span></span><span></span></div></div>{% endfor %}</div>{% endblock %}

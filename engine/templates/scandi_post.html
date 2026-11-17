@@ -1,0 +1,16 @@
+{% extends "scandi_base.html" %}
+{% block art %}{% endblock %}
+{% block css2 %}
+body{font-size:3.456px}
+.w{position:absolute;inset:7vmin;border:1px solid #c9d1cc;display:flex;flex-direction:column;align-items:center;justify-content:center}
+h1{font-family:'DM Serif Display';font-weight:400;font-size:9vmin;line-height:1}
+.fam{font-family:'Cormorant Garamond';font-style:italic;font-size:5vmin;color:#4d5c56}
+.k{font-size:2.2vmin}
+.c{margin-top:2.2vmin}.c b{display:block;font-size:1.9vmin;letter-spacing:.35em;font-weight:600;color:#b4524a}.c div{font-family:'Cormorant Garamond';font-size:3.9vmin;line-height:1.2}
+.r{margin:1.6vmin auto;width:10vmin}
+{% endblock %}
+{% block content %}
+<div class="w"><svg width="9%" viewBox="-30 -30 60 60" stroke="#2f5a4c" stroke-width="2" fill="none"><path d="M0 -26 V26 M-26 0 H26 M-18 -18 L18 18 M18 -18 L-18 18"/></svg>
+<div class="k" style="margin-top:1.5vmin">{{ date }}</div><h1>{{ title }}</h1><div class="fam">at the {{ family }} table</div><div class="r"></div>
+{% for c in courses[:4] %}{% set label, txt = c[0], c[1] %}<div class="c"><b>{{ label|upper }}</b><div>{{ txt }}</div></div>{% endfor %}</div>
+{% endblock %}

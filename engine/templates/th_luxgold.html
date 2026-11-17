@@ -1,0 +1,36 @@
+{% extends "mp_base.html" %}
+{% block tcss %}
+:root{--bg:#0c0c0e;--ink:#efe6d2;--muted:#b9ab8c;--acc:#d6b46a;--hc:#e9cf8f;--hf:'Playfair Display';--hw:400;--sf:'Great Vibes';--bf:'Cormorant Garamond';--sx:13vmin;--st:13vmin;--sb:13vmin}
+body{background:radial-gradient(ellipse at 50% 40%,#1d1b1a 0%,#0c0c0e 70%)}
+.t-h{text-transform:uppercase;letter-spacing:.06em;background:linear-gradient(120deg,#9b7533 0%,#f6e3a6 30%,#c49a4a 50%,#fff3c9 66%,#a8823a 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.t-s{background:linear-gradient(120deg,#b88d43,#f7e6ae 45%,#c79d4c);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 .2em}
+.t-rule{background:linear-gradient(90deg,transparent,#d6b46a,transparent);height:1.5px;width:30vmin}
+.fr{position:absolute;border:solid #c9a65c}
+.fr1{inset:4vmin;border-width:2px}
+.fr2{inset:5.6vmin;border-width:.8px;border-color:#8c7340}
+.fan{position:absolute;width:15vmin;height:15vmin}
+.spk{position:absolute;background:#f3dc9a;border-radius:50%;box-shadow:0 0 1.2vmin #f3dc9a}
+.orn{position:absolute;left:50%;transform:translateX(-50%);width:44vmin}
+.card{background:#0f0f11;color:#efe6d2;border:1px solid #c9a65c;outline:.6vmin solid #0f0f11;box-shadow:inset 0 0 0 .8vmin #0f0f11,inset 0 0 0 calc(.8vmin + 1px) #8c7340}
+.card .nm{font-family:'Playfair Display';text-transform:uppercase;letter-spacing:.08em;color:#e9cf8f}
+{% endblock %}
+{% block art %}{% set mode = self.mode()|trim %}
+<svg width="0" height="0" style="position:absolute"><defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9b7533"/><stop offset=".35" stop-color="#f6e3a6"/><stop offset=".6" stop-color="#c49a4a"/><stop offset=".8" stop-color="#fff0c0"/><stop offset="1" stop-color="#a8823a"/></linearGradient></defs></svg>
+<div class="fr fr1"></div><div class="fr fr2"></div>
+{% for pos in ['left:2.3vmin;top:2.3vmin','right:2.3vmin;top:2.3vmin;transform:scaleX(-1)','left:2.3vmin;bottom:2.3vmin;transform:scaleY(-1)','right:2.3vmin;bottom:2.3vmin;transform:scale(-1,-1)'] %}
+<svg class="fan" style="{{pos}}" viewBox="0 0 100 100" fill="none" stroke="#d8b768" stroke-width="1.4">
+<path d="M8 50 A42 42 0 0 1 50 8"/><path d="M8 36 A28 28 0 0 1 36 8"/><path d="M8 24 A16 16 0 0 1 24 8"/>
+{% for a in [15,30,45,60,75] %}<line x1="8" y1="8" x2="{{ 8 + 42*cos(a) }}" y2="{{ 8 + 42*sin(a) }}"/>{% endfor %}
+<path d="M8 66 V96 M66 8 H96" stroke-width="1"/><rect x="4" y="4" width="8" height="8" transform="rotate(45 8 8)" fill="url(#gold)" stroke="none"/></svg>{% endfor %}
+{% if mode in ['menu','drinks','welcome','detailed','guest','post','story'] %}
+<svg class="orn" style="top:{{ '7.5vmin' if mode!='story' else '9vmin' }}" viewBox="0 0 220 60" fill="none" stroke="#d8b768" stroke-width="1.2">
+{% for a in range(195, 346, 15) %}<line x1="110" y1="52" x2="{{ 110 + 40*cos(a) }}" y2="{{ 52 + 40*sin(a) }}"/>{% endfor %}
+<path d="M70 52 A40 40 0 0 1 150 52"/><path d="M84 52 A26 26 0 0 1 136 52"/>
+<path d="M10 52 H64 M156 52 H210 M30 56 H64 M156 56 H190"/><rect x="104" y="46" width="12" height="12" transform="rotate(45 110 52)" fill="url(#gold)" stroke="none"/>
+<circle cx="10" cy="52" r="2" fill="url(#gold)"/><circle cx="210" cy="52" r="2" fill="url(#gold)"/></svg>
+<svg class="orn" style="bottom:7.5vmin;width:36vmin" viewBox="0 0 220 30" fill="none" stroke="#d8b768" stroke-width="1.2">
+<path d="M10 15 H85 M135 15 H210"/><path d="M110 3 L122 15 L110 27 L98 15 Z"/><path d="M110 9 L116 15 L110 21 L104 15 Z" fill="url(#gold)"/><path d="M88 15 L94 9 M88 15 L94 21 M132 15 L126 9 M132 15 L126 21"/></svg>
+{% endif %}
+{% for i in range(26) %}{% set x = (i*37+11)%100 %}{% set y = (i*61+7)%100 %}{% if x<16 or x>84 or y<10 or y>90 %}<div class="spk" style="left:{{x}}%;top:{{y}}%;width:{{ 0.35 + (i%3)*0.25 }}vmin;height:{{ 0.35 + (i%3)*0.25 }}vmin;opacity:{{ 0.5 + (i%4)*0.15 }}"></div>{% endif %}{% endfor %}
+{% endblock %}
+{% block cardart %}<svg width="15%" viewBox="0 0 220 30" fill="none" stroke="#d6b46a" stroke-width="2"><path d="M10 15 H85 M135 15 H210"/><path d="M110 3 L122 15 L110 27 L98 15 Z" fill="#d6b46a"/></svg>{% endblock %}

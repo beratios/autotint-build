@@ -1,0 +1,22 @@
+{# Shared skeleton for themed menu/party packs. Themes extend this and fill: tcss (vars+fonts), art (full-page art), cardart (small ornament). Layouts extend a theme via {% extends theme %} and fill: mode, lcss, content. #}
+{% extends "base.html" %}
+{% block css %}
+body{position:relative;background:var(--bg);color:var(--ink);font-family:var(--bf);text-align:center}
+.art{position:absolute;inset:0;overflow:hidden}
+.page{position:absolute;left:var(--sx);right:var(--sx);top:var(--st);bottom:var(--sb);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.t-k{font-family:'Inter';font-weight:600;text-transform:uppercase;letter-spacing:.38em;color:var(--acc);font-size:2.1vmin}
+.t-h{font-family:var(--hf);font-weight:var(--hw);line-height:1.02;color:var(--hc)}
+.t-s{font-family:var(--sf);color:var(--acc);line-height:1.1}
+.t-l{font-family:'Inter';font-weight:700;text-transform:uppercase;letter-spacing:.32em;color:var(--acc);font-size:2vmin}
+.t-b{font-family:var(--bf);line-height:1.25}
+.t-m{color:var(--muted)}
+.t-rule{width:14vmin;height:2px;background:var(--acc);margin:2.4vmin auto;position:relative}
+.t-rule:after{content:"";position:absolute;left:50%;top:50%;width:1.3vmin;height:1.3vmin;background:var(--acc);transform:translate(-50%,-50%) rotate(45deg)}
+{% block tcss %}{% endblock %}
+{% block lcss %}{% endblock %}
+{% endblock %}
+{% block body %}{% set mode = self.mode()|trim %}
+<!--{% block mode %}menu{% endblock %}-->
+{% if mode != 'place' %}<div class="art a-{{ mode }}">{% block art %}{% endblock %}</div>{% endif %}
+<div class="page m-{{ mode }}">{% block content %}{% endblock %}</div>
+{% endblock %}

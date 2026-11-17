@@ -1,0 +1,12 @@
+{% extends "th_cocoa.html" %}
+{% block mode %}place{% endblock %}
+{% block lcss %}body{background:#fff}.page{inset:0;display:block}
+.cut{position:absolute;top:2.2vmin;left:0;right:0;font-family:'Inter';font-size:1.5vmin;letter-spacing:.25em;color:#999}
+.g{position:absolute;left:5vmin;right:5vmin;top:6vmin;bottom:5vmin;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,1fr);gap:2.4vmin}
+.card{border-radius:2vmin;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
+.card:before{content:"";position:absolute;top:1.6vmin;width:1.8vmin;height:1.8vmin;border-radius:50%;border:1.5px solid #c8102e}
+.nm{font-size:4vmin;line-height:1.05;padding:0 1vmin;margin-top:2vmin}
+.sm{font-family:'Caveat';font-size:2.8vmin;color:#2f8f6b}
+.e{width:60%;border-bottom:1.5px solid #c8102e;height:4.5vmin}{% endblock %}
+{% block content %}<div class="cut">✂ MUG TAGS · PUNCH THE HOLE, TIE TO A MUG OR CUP WITH TWINE</div>
+<div class="g">{% for i in range(16) %}{% set n = guests[i] if guests|length > i else '' %}<div class="card">{% if n %}<div class="nm">{{ n }}</div>{% else %}<div class="e"></div>{% endif %}<div class="sm">{{ mugline }}</div></div>{% endfor %}</div>{% endblock %}

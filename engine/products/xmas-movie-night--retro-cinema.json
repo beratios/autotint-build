@@ -1,0 +1,191 @@
+{
+ "template": "mv_invite.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "title",
+  "family name",
+  "date, time, place",
+  "tagline",
+  "movie lineup with times",
+  "guest names for tickets (up to 10)",
+  "snack bar items"
+ ],
+ "defaults": {
+  "title": "Christmas Movie Night",
+  "family": "Johnson",
+  "presenter": "the Johnson family presents",
+  "tagline": "cozy blankets, popcorn and holiday classics",
+  "date": "Friday, December 18",
+  "time": "7:00 PM",
+  "place": "our living room",
+  "note": "pajamas required \u00b7 snacks provided",
+  "guests": [
+   "Mom",
+   "Dad",
+   "Ella",
+   "Max",
+   "Grandma Sue",
+   "Leo",
+   "Aunt Kim",
+   "Ruby"
+  ],
+  "lineup": [
+   [
+    "6:30 PM",
+    "Doors open \u00b7 snack bar",
+    "grab your popcorn"
+   ],
+   [
+    "7:00 PM",
+    "Movie 1 \u00b7 Kids pick",
+    "the little ones choose"
+   ],
+   [
+    "8:45 PM",
+    "Intermission",
+    "hot cocoa refill"
+   ],
+   [
+    "9:00 PM",
+    "Movie 2 \u00b7 Family classic",
+    "everyone's favorite"
+   ],
+   [
+    "11:00 PM",
+    "Movie 3 \u00b7 Grown ups pick",
+    "for the night owls"
+   ]
+  ],
+  "snacks": [
+   "Popcorn",
+   "Hot Cocoa",
+   "Candy",
+   "Nachos",
+   "Cookies",
+   "Drinks"
+  ]
+ },
+ "gallery": {
+  "style": {
+   "bg": "#1a0d22",
+   "ink": "#fff3d6",
+   "accent": "#f2c14e",
+   "hfont": "Bungee",
+   "hsize": 80
+  },
+  "size": "5x7 invite, 8x10 lineup sign, 8.5x11 sheets, Instagram post and story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.25,
+    "frac": 0.62,
+    "caption": "Retro marquee lights",
+    "sub": "Your family name on the sign"
+   },
+   {
+    "x": 0.5,
+    "y": 0.62,
+    "frac": 0.62,
+    "caption": "Your date, time and place",
+    "sub": "Plus your own tagline"
+   }
+  ],
+  "fields": [
+   [
+    "Presenter line",
+    0.5,
+    0.1
+   ],
+   [
+    "Movie night title",
+    0.5,
+    0.22
+   ],
+   [
+    "Tagline",
+    0.5,
+    0.43
+   ],
+   [
+    "Date, time, place",
+    0.5,
+    0.52
+   ]
+  ],
+  "vtitle": "Your movie night. Your guests.",
+  "variants": [
+   {},
+   {
+    "title": "Holiday Film Fest",
+    "family": "Nguyen",
+    "presenter": "the Nguyen family presents",
+    "date": "Saturday, December 12",
+    "place": "the backyard screen",
+    "tagline": "lights down, cocoa up"
+   },
+   {
+    "title": "Christmas Eve Cinema",
+    "family": "Rossi",
+    "presenter": "the Rossi family presents",
+    "date": "Thursday, December 24",
+    "time": "6:00 PM",
+    "place": "Nonna's house",
+    "tagline": "one more movie before Santa"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "admit-one-tickets",
+   "template": "mv_tickets.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true
+  },
+  {
+   "name": "lineup-sign",
+   "template": "mv_lineup.html",
+   "w_in": 8,
+   "h_in": 10,
+   "png": true
+  },
+  {
+   "name": "snack-bar-cards",
+   "template": "mv_snacks.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true
+  },
+  {
+   "name": "rate-the-movie",
+   "template": "mv_rate.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true
+  },
+  {
+   "name": "instagram-post",
+   "template": "mv_post.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true
+  },
+  {
+   "name": "invite-story",
+   "template": "mv_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true
+  }
+ ],
+ "hero": {
+  "headline": "Christmas Movie Night Pack",
+  "short": "Movie Night Pack",
+  "bullets": [
+   "Invite, lineup sign, snack cards",
+   "10 name tickets + rating cards",
+   "Instagram post and story invite"
+  ]
+ }
+}

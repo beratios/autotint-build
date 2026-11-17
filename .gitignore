@@ -1,0 +1,5 @@
+engine/fonts/
+engine/gallery/
+engine/samples/
+engine/__pycache__/
+engine/_tmp*.html

@@ -1,0 +1,191 @@
+{
+ "template": "cb_sign.html",
+ "w_in": 8,
+ "h_in": 10,
+ "fields": [
+  "family name",
+  "title",
+  "tagline",
+  "toppings (up to 12)",
+  "cocoa flavors",
+  "guest names for mug tags (up to 16)",
+  "party date, time, place (for invites)"
+ ],
+ "defaults": {
+  "title": "Hot Cocoa Bar",
+  "family": "Miller",
+  "tagline": "grab a mug and add some cheer",
+  "footer": "sip \u00b7 stir \u00b7 top \u00b7 enjoy",
+  "date": "Saturday, December 19",
+  "time": "6:00 PM",
+  "place": "12 Maple Lane",
+  "mugline": "cocoa cutie",
+  "year": "2026",
+  "toppings": [
+   "Marshmallows",
+   "Whipped Cream",
+   "Crushed Peppermint",
+   "Sprinkles",
+   "Chocolate Chips",
+   "Caramel Sauce",
+   "Mini Candy Canes",
+   "Cinnamon",
+   "Toffee Bits",
+   "Mini Cookies"
+  ],
+  "flavors": [
+   [
+    "Classic Cocoa",
+    "rich milk chocolate, a pinch of sea salt"
+   ],
+   [
+    "Peppermint Mocha",
+    "dark chocolate, peppermint, espresso"
+   ],
+   [
+    "Salted Caramel",
+    "caramel swirl, flaky salt"
+   ],
+   [
+    "White Chocolate",
+    "creamy white cocoa, vanilla bean"
+   ]
+  ],
+  "steps": [
+   "Pick your mug",
+   "Pour in hot cocoa",
+   "Add a flavor shot",
+   "Pile on the toppings",
+   "Stir with a candy cane and enjoy"
+  ],
+  "guests": [
+   "Ava",
+   "Liam",
+   "Mia",
+   "Lucas",
+   "Grandma",
+   "Grandpa",
+   "Chloe",
+   "Henry",
+   "Zoe",
+   "Jack",
+   "Ella",
+   "Owen"
+  ]
+ },
+ "gallery": {
+  "style": {
+   "bg": "#fff3e6",
+   "ink": "#4a2a1a",
+   "accent": "#c8102e",
+   "hfont": "Pacifico",
+   "hsize": 96
+  },
+  "size": "8x10 sign, 5x7 cards, 8.5x11 label sheets, Instagram post and story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.25,
+    "frac": 0.62,
+    "caption": "Your family name",
+    "sub": "Big, cheerful lettering"
+   },
+   {
+    "x": 0.5,
+    "y": 0.66,
+    "frac": 0.55,
+    "caption": "Illustrated cocoa mug",
+    "sub": "Candy cane and marshmallows"
+   }
+  ],
+  "fields": [
+   [
+    "Family name",
+    0.5,
+    0.13
+   ],
+   [
+    "Title",
+    0.5,
+    0.24
+   ],
+   [
+    "Your tagline",
+    0.5,
+    0.36
+   ],
+   [
+    "Footer line",
+    0.5,
+    0.93
+   ]
+  ],
+  "vtitle": "Your family. Your cocoa bar.",
+  "variants": [
+   {},
+   {
+    "family": "Garcia",
+    "title": "Cocoa Bar",
+    "tagline": "warm hearts, cold nights"
+   },
+   {
+    "family": "Patel",
+    "title": "Hot Chocolate Bar",
+    "tagline": "stir up some joy"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "topping-labels",
+   "template": "cb_labels.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true
+  },
+  {
+   "name": "cocoa-menu",
+   "template": "cb_menu.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true
+  },
+  {
+   "name": "build-your-cocoa",
+   "template": "cb_howto.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true
+  },
+  {
+   "name": "mug-tags",
+   "template": "cb_mugtags.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true
+  },
+  {
+   "name": "instagram-post",
+   "template": "cb_post.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true
+  },
+  {
+   "name": "invite-story",
+   "template": "cb_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true
+  }
+ ],
+ "hero": {
+  "headline": "Hot Cocoa Bar Sign Set",
+  "short": "Hot Cocoa Bar Kit",
+  "bullets": [
+   "Sign, menu, how-to card",
+   "12 topping labels + 16 mug tags",
+   "Invite for Instagram and text"
+  ]
+ }
+}

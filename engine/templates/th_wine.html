@@ -1,0 +1,65 @@
+{% extends "mp_base.html" %}
+{% block tcss %}
+:root{--bg:#2c0a12;--ink:#f6e8d6;--muted:#d9b9a6;--acc:#e8b66e;--hc:#fbeedd;--hf:'Great Vibes';--hw:400;--sf:'Cormorant Garamond';--bf:'Cormorant Garamond';--sx:10vmin;--st:14vmin;--sb:46vmin}
+body{background:radial-gradient(ellipse at 50% 92%,#7a2230 0%,#4a1220 30%,#2c0a12 62%,#1a050a 100%)}
+.t-h{text-shadow:0 0 2.5vmin rgba(255,190,110,.35)}
+.t-s{font-style:italic}
+.t-k{color:#f0c27e}
+.bk{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,206,130,.85),rgba(255,170,90,.25) 45%,transparent 70%)}
+.scene{position:absolute;left:0;right:0;bottom:0;width:100%}
+.lights{position:absolute;left:0;right:0;top:0;width:100%}
+.m-detailed{bottom:33vmin!important;top:13vmin!important}
+.a-detailed .scene{left:15%;width:70%}
+:root{--df:'Cormorant Garamond'}
+.card{background:radial-gradient(ellipse at 50% 120%,#6a1c2a,#2c0a12 70%);color:#fbeedd;border:1px solid #c9935a}
+.card .nm{font-family:'Great Vibes';font-size:7.5vmin!important;color:#fbeedd}
+{% endblock %}
+{% block art %}{% set mode = self.mode()|trim %}
+{% for i in range(14) %}{% set x = (i*41+9)%100 %}{% set y = (i*29+5)%38 %}<div class="bk" style="left:{{x}}%;top:{{y+8}}%;width:{{ 3 + (i%4)*2.2 }}vmin;height:{{ 3 + (i%4)*2.2 }}vmin;opacity:{{ 0.25 + (i%3)*0.12 }}"></div>{% endfor %}
+<svg class="lights" viewBox="0 0 600 70" preserveAspectRatio="xMidYMin meet">
+<path d="M-5 8 Q75 48 150 18 Q225 52 300 18 Q375 52 450 18 Q525 48 605 8" stroke="#1a0a06" stroke-width="1.6" fill="none"/>
+{% for i in range(17) %}{% set t = i/16 %}{% set x = -5 + 610*t %}{% set seg = (t*4)|int %}{% set lt = t*4 - seg %}{% set y = (8 if seg==0 else 18) + ( (36 if seg in [0,3] else 34) * (4*lt*(1-lt)) ) %}
+<circle cx="{{x}}" cy="{{y+6}}" r="9" fill="#ffcf7a" opacity=".22"/><ellipse cx="{{x}}" cy="{{y+5}}" rx="2.6" ry="4" fill="#ffe2a6"/><rect x="{{x-1.6}}" y="{{y-1}}" width="3.2" height="2.6" fill="#3a2a1a"/>{% endfor %}
+</svg>
+<svg class="scene" viewBox="0 0 600 270" preserveAspectRatio="xMidYMax meet">
+<defs>
+<radialGradient id="glow"><stop offset="0" stop-color="#ffd78a" stop-opacity=".75"/><stop offset=".4" stop-color="#ffb35c" stop-opacity=".25"/><stop offset="1" stop-color="#ff9a40" stop-opacity="0"/></radialGradient>
+<linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a2414"/><stop offset="1" stop-color="#1c0c06"/></linearGradient>
+<linearGradient id="wax" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e9d9bf"/><stop offset=".5" stop-color="#fff6e6"/><stop offset="1" stop-color="#cdb796"/></linearGradient>
+<linearGradient id="wine" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9e1b32"/><stop offset="1" stop-color="#4d0614"/></linearGradient>
+<linearGradient id="flame" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff8a1f"/><stop offset=".5" stop-color="#ffd25e"/><stop offset="1" stop-color="#fff8d8"/></linearGradient>
+</defs>
+<ellipse cx="300" cy="120" rx="230" ry="120" fill="url(#glow)" opacity=".55"/>
+<rect x="0" y="212" width="600" height="58" fill="url(#wood)"/>
+<rect x="0" y="210" width="600" height="4" fill="#6b3a22"/>
+<rect x="120" y="211" width="360" height="59" fill="#7d1626"/><g stroke="#e8b66e" stroke-width="1.2" opacity=".7"><line x1="128" y1="211" x2="128" y2="270"/><line x1="472" y1="211" x2="472" y2="270"/></g>
+<g stroke="#5a0f1b" stroke-width="5" opacity=".6">{% for x in range(140,480,24) %}<line x1="{{x}}" y1="211" x2="{{x}}" y2="270"/>{% endfor %}</g>
+{% for cx,h in [(255,95),(300,130),(345,75)] %}
+<ellipse cx="{{cx}}" cy="{{210-h-14}}" rx="40" ry="50" fill="url(#glow)"/>
+<rect x="{{cx-13}}" y="{{210-h}}" width="26" height="{{h}}" rx="3" fill="url(#wax)"/>
+<path d="M{{cx-13}} {{213-h}} q6 7 10 1 q4 9 9 2 q4 5 7 -3" fill="#fff6e6"/>
+<line x1="{{cx}}" y1="{{210-h}}" x2="{{cx}}" y2="{{204-h}}" stroke="#2a1a10" stroke-width="1.5"/>
+<path d="M{{cx}} {{176-h}} C{{cx+8}} {{190-h}} {{cx+7}} {{203-h}} {{cx}} {{204-h}} C{{cx-7}} {{203-h}} {{cx-8}} {{190-h}} {{cx}} {{176-h}}Z" fill="url(#flame)"/>
+<ellipse cx="{{cx}}" cy="211" rx="22" ry="4" fill="#c9935a"/>
+{% endfor %}
+{% for gx,flip in [(150,1),(450,-1)] %}
+<g transform="translate({{gx}} 0)">
+<path d="M-24 120 Q-26 172 0 178 Q26 172 24 120 Z" fill="rgba(255,240,230,.12)" stroke="#f3dccb" stroke-width="1.6"/>
+<path d="M-25 146 Q-22 174 0 178 Q22 174 25 146 Z" fill="url(#wine)"/>
+<ellipse cx="0" cy="146" rx="25" ry="3.5" fill="#b8263d"/>
+<path d="M{{-14*flip}} 128 q{{-4*flip}} 18 {{0}} 34" stroke="#fff" stroke-width="2.4" fill="none" opacity=".55"/>
+<rect x="-1.6" y="178" width="3.2" height="30" fill="#f3dccb"/>
+<ellipse cx="0" cy="209" rx="16" ry="3.5" fill="#f3dccb" opacity=".9"/>
+</g>{% endfor %}
+{% for sx,dir in [(0,1),(600,-1)] %}
+<g transform="translate({{sx}} 222) scale({{dir}} 1)" stroke="#1f4d35" stroke-width="2.2" stroke-linecap="round">
+<path d="M0 0 Q60 -10 115 -2" fill="none" stroke="#3a2412" stroke-width="2.6"/>
+{% for i in range(18) %}{% set x = i*6.4 %}<line x1="{{x}}" y1="{{-0.08*x}}" x2="{{x+9}}" y2="{{-14 - (i%3)*2}}"/><line x1="{{x}}" y1="{{-0.08*x}}" x2="{{x+9}}" y2="{{10 + (i%3)*2}}" stroke="#2c6446"/>{% endfor %}
+<path d="M20 -2 Q55 -40 95 -38" fill="none" stroke="#3a2412" stroke-width="2"/>
+{% for i in range(10) %}{% set x = 22 + i*7.5 %}{% set y = -4 - i*3.6 %}<line x1="{{x}}" y1="{{y}}" x2="{{x+5}}" y2="{{y-12}}"/><line x1="{{x}}" y1="{{y}}" x2="{{x+10}}" y2="{{y+5}}" stroke="#2c6446"/>{% endfor %}
+<g stroke="none">{% for bx,by in [(70,-6),(77,-1),(64,1),(100,-34),(94,-29)] %}<circle cx="{{bx}}" cy="{{by}}" r="4.2" fill="#c8102e"/><circle cx="{{bx-1.2}}" cy="{{by-1.4}}" r="1.2" fill="#ff8a8a"/>{% endfor %}</g>
+<g stroke="none"><circle cx="40" cy="-14" r="9" fill="#c9935a"/><circle cx="37" cy="-17" r="2.6" fill="#ffe6b8"/><rect x="37" y="-25" width="6" height="4" fill="#8d6738"/></g>
+</g>{% endfor %}
+</svg>
+{% endblock %}
+{% block cardart %}<svg width="18%" viewBox="0 0 40 30"><ellipse cx="20" cy="10" rx="8" ry="10" fill="#ffcf7a" opacity=".3"/><path d="M20 2 C24 8 24 13 20 14 C16 13 16 8 20 2Z" fill="#ffd25e"/><rect x="15" y="15" width="10" height="14" rx="1.5" fill="#f3e3c8"/></svg>{% endblock %}

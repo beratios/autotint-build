@@ -1,0 +1,11 @@
+{% extends "th_cinema.html" %}
+{% from "cinema_art.html" import popcorn, bulbs %}
+{% block mode %}post{% endblock %}
+{% block content %}
+<div class="mq" style="width:100%;padding:3vmin"><div class="bt">{{ bulbs(9, true) }}</div><div class="bb">{{ bulbs(9, true) }}</div>
+<div class="t-h" style="font-size:{{ 7 if title|length < 20 else 6 }}vmin;line-height:1.1">{{ title }}</div>
+<div class="t-k" style="color:#1a0d22;font-size:2.2vmin;margin-top:1vmin">at the {{ family }} house</div></div>
+<div style="margin-top:3vmin">{{ popcorn('16vmin') }}</div>
+<div class="t-k" style="font-size:2.8vmin;color:#fff3d6;margin-top:2vmin">{{ date }}</div>
+<div class="t-k" style="font-size:2.5vmin;margin-top:1vmin">{{ time }} · {{ place }}</div>
+{% endblock %}

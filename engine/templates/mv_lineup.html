@@ -1,0 +1,11 @@
+{% extends "th_cinema.html" %}
+{% from "cinema_art.html" import popcorn, bulbs %}
+{% block mode %}welcome{% endblock %}
+{% block lcss %}.page{top:11vmin;bottom:5vmin}.row{display:flex;align-items:center;gap:3vmin;width:100%;background:rgba(255,243,214,.08);border:1px solid rgba(242,193,78,.5);border-radius:1.5vmin;padding:2vmin 3vmin;margin-top:2.4vmin;text-align:left}.row b{font-family:'Bungee';font-weight:400;color:#f2c14e;font-size:3.4vmin;width:17vmin;flex:none}.row span{font-family:'Inter';font-weight:600;font-size:3.4vmin}.row em{display:block;font-family:'Caveat';font-style:normal;font-size:3.4vmin;color:#ffd36b;font-weight:400}{% endblock %}
+{% block content %}
+<div class="mq" style="width:100%"><div class="bt">{{ bulbs(11, true) }}</div><div class="bb">{{ bulbs(11, true) }}</div>
+<div class="t-k" style="color:#1a0d22">the {{ family }} family presents</div>
+<div class="t-h" style="font-size:7vmin;margin-top:1vmin">Tonight's Lineup</div></div>
+{% for t,m,n in lineup[:5] %}<div class="row"><b>{{ t }}</b><span>{{ m }}<em>{{ n }}</em></span></div>{% endfor %}
+<div style="margin-top:3vmin">{{ popcorn('16vmin') }}</div>
+{% endblock %}

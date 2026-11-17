@@ -1,0 +1,11 @@
+{% extends "th_cocoa.html" %}
+{% block mode %}place{% endblock %}
+{% block lcss %}body{background:#fff}.page{inset:0;display:block}
+.cut{position:absolute;top:2.2vmin;left:0;right:0;font-family:'Inter';font-size:1.5vmin;letter-spacing:.25em;color:#999}
+.g{position:absolute;left:5vmin;right:5vmin;top:6vmin;bottom:5vmin;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));place-items:center;gap:2.4vmin}
+.card{border-radius:50%;height:100%;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.nm{font-size:3.5vmin;line-height:1.05;padding:0 3.5vmin}
+.sm{font-family:'Inter';font-size:1.3vmin;letter-spacing:.12em;color:#2f8f6b;margin-top:.8vmin;text-transform:uppercase}
+.e{width:60%;border-bottom:1.5px solid #c8102e;height:4.5vmin}{% endblock %}
+{% block content %}<div class="cut">✂ TOPPING LABELS · CUT OUT AND TAPE TO JARS OR TENT CARDS</div>
+<div class="g">{% for i in range(12) %}{% set n = toppings[i] if toppings|length > i else '' %}<div class="card">{{ self.cardart() }}{% if n %}<div class="nm">{{ n }}</div>{% else %}<div class="e"></div>{% endif %}<div class="sm">{{ family }} cocoa bar</div></div>{% endfor %}</div>{% endblock %}
