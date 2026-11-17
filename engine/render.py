@@ -108,7 +108,7 @@ def fulfill(pid, data, outdir):
                 n += 1
                 html = html_for(ep["template"], merged, {"rep": rep})
                 stem = f"{pid}_p{n:02d}-{ep['name']}"
-                render(page, html, outdir / f"{stem}.png" if ep.get("png") else None, outdir / f"{stem}.pdf", p["w_in"], p["h_in"])
+                render(page, html, outdir / f"{stem}.png" if ep.get("png") else None, outdir / f"{stem}.pdf", ep.get("w_in", p["w_in"]), ep.get("h_in", p["h_in"]))
                 pdfs.append(outdir / f"{stem}.pdf")
         b.close()
     if len(pdfs) > 1:

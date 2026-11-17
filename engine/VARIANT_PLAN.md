@@ -7,6 +7,23 @@ Berat: "Yılbaşı yaklaşıyor, daha çok bununla ilgili içerik üret. Bir ür
 - Everything is Christmas / New Year until Dec 31. Timing: Christmas items until ~Dec 20, then NYE + 2027 items; from ~Jan 2 Valentine.
 - Nov 17–22 only: 1 US Thanksgiving dinner menu variant per day is allowed (Thanksgiving Nov 26).
 
+## PACK STANDARD (Berat, Nov 17): one listing = one BIG pack. The more we give in one product, the better.
+Every pack includes several FORMATS of the same design, all personalized, e.g. for a dinner menu:
+- Classic menu (5x7 or 4x9 tall) – simple course list
+- Detailed menu (8.5x11) – courses with descriptions, wine/drink pairing, timeline of the evening
+- Drinks / cocktail menu, Welcome sign (8x10), Place cards (sheet), Table numbers or food labels
+- Instagram POST version 1080x1080 (extra_pages entry with "w_in":3.6,"h_in":3.6,"png":true)
+- Instagram/WhatsApp STORY version 1080x1920 ("w_in":3.6,"h_in":6.4,"png":true) – for sending the menu/invite digitally
+- Phone/text-message version where it makes sense
+Apply the same idea to every family (invites: printable + story + post + RSVP card + thank-you card; Santa letter: letter + envelope + certificate + story video-style image; gift tags: several sizes + stickers; etc.).
+List every format in WHAT IS INSIDE and show them in the "what's inside" photo. Price can go up a little for bigger packs but stay below comparable competitors.
+render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages are merged into <id>-complete.pdf and PNGs are delivered for pages with "png": true.
+
+## UPGRADE EXISTING (do these first, before new listings, one per day until done)
+- [ ] xmas-dinner-set-minimal (4618730967): add detailed menu page, Instagram post + story versions; update description, "what's inside" photo (rank 7 overwrite) and title if needed.
+- [ ] xmas-invite-elegant (4618250503): add Instagram story + post invite, RSVP card, thank-you card.
+- [ ] family-xmas-card-playful (4618256578): add Instagram post + story versions, gift tag set in same design.
+
 ## Variant rules
 - Product id = <family>--<concept>, e.g. xmas-dinner-menu--luxury-gold. Record the family in PUBLISHED.md (product id prefix).
 - A variant must look different at thumbnail size: different palette, typography, illustration/background scene, layout. Not just a recolor.
