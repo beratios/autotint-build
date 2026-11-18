@@ -40,14 +40,14 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 - [ ] kids Christmas dinner: cute cartoon, kids menu + coloring placemat + activity page + place cards
 - [x] (4619559532) rustic farmhouse: kraft, buffalo plaid, pine
 - [ ] watercolor botanical: eucalyptus, berries, white
-- [ ] cozy fireplace / cabin scene
-- [ ] Christmas Eve dinner (navy + silver stars)
+- [x] cozy fireplace / cabin scene (4620388082)
+- [x] Christmas Eve dinner (navy + silver stars) (4620388102)
 - [ ] Christmas morning brunch menu
 - [ ] New Years Eve dinner menu (black gold confetti, champagne)
 - [ ] Thanksgiving dinner menu (US) — Nov 17–22 only: autumn leaves / pumpkin farmhouse
 ### Christmas party invitation
 - [x] elegant green gold (4618250503)
-- [ ] luxury black tie gala, [ ] cozy pajama party, [ ] kids Christmas party, [ ] office holiday party (modern), [ ] watercolor winter wonderland
+- [x] luxury black tie gala (4620388124), [ ] cozy pajama party, [ ] kids Christmas party, [ ] office holiday party (modern), [ ] watercolor winter wonderland
 ### Letter from Santa pack
 - [x] watercolor (4618736968)
 - [ ] vintage North Pole parchment + wax seal, [ ] cute cartoon (toddlers), [ ] elf-on-the-shelf style arrival letter (generic elf, no brand)
@@ -64,4 +64,11 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 - [x] retro bingo (4618256700)
 - [ ] NYE trivia with party name, [ ] NYE "who's most likely to", [ ] NYE dinner/cocktail menu, [ ] 2027 resolution cards, [ ] NYE countdown kids pack
 ### Other holiday families to start
-- [x] hot cocoa bar candy cane (4619552325) / [ ] mimosa bar sign set, [ ] Secret Santa wish list forms (office), [ ] Christmas place cards only (cheap entry item), [x] Christmas movie night retro cinema (4619552347), [ ] Christmas recipe card set with family name
+- [x] hot cocoa bar candy cane (4619552325) / [ ] mimosa bar sign set, [x] Secret Santa kit modern red (4620381113), [ ] Christmas place cards only (cheap entry item), [x] Christmas movie night retro cinema (4619552347), [ ] Christmas recipe card set with family name
+
+### Christmas game night (new family, 11-18)
+- [x] frosty gingerbread game night (4620381127)
+- [ ] plaid cabin game night, [ ] NYE game night version, [ ] kids Christmas party games
+### Notes for next runs
+- Invitation engine pi_* works with ANY th_* theme -> cheap invite variants: th_fireplace (cozy party), th_navy (Christmas Eve), th_wine, th_rustic.
+- Secret Santa ss_* can take a second theme (e.g. kraft/minimal office).

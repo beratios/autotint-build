@@ -16,3 +16,8 @@
 | 2026-11-18 | 4619559532 | xmas-dinner-menu--rustic-farmhouse (built 11-17, activated 11-18) | 11.99 | colorful |
 | 2026-11-18 | 4619552325 | hot-cocoa-bar--candy-cane (built 11-17, activated 11-18) | 8.99 | calm |
 | 2026-11-18 | 4619552347 | xmas-movie-night--retro-cinema (built 11-17, activated 11-18) | 7.99 | detailed |
+| 2026-11-18 | 4620388082 | xmas-dinner-menu--cozy-fireplace | 12.99 | minimal |
+| 2026-11-18 | 4620388102 | xmas-dinner-menu--christmas-eve-navy | 12.99 | bold |
+| 2026-11-18 | 4620388124 | xmas-invite--black-tie-gala (invite set, theme th_luxgold) | 12.99 | doodle |
+| 2026-11-18 | 4620381113 | secret-santa--modern-red (new family) | 9.99 | colorful |
+| 2026-11-18 | 4620381127 | xmas-games--frosty-game-night (new family) | 9.99 | calm |
