@@ -1,0 +1,14 @@
+{% extends theme %}
+{% block mode %}sheet{% endblock %}
+{% block lcss %}.page{top:5vmin;bottom:12vmin;left:8vmin;right:8vmin;justify-content:flex-start}
+.box{width:100%;margin-top:2.4vmin;padding:2.4vmin 4vmin;display:grid;grid-template-columns:1fr 1fr;gap:0 5vmin}
+.w{display:flex;align-items:flex-end;gap:2vmin;padding:2.2vmin 0;font-family:'Fredoka';text-align:left}
+.w b{font-size:1.8vmin;color:#d2363f;width:3vmin}.w span{font-weight:700;font-size:3.1vmin;letter-spacing:.16em;color:#1c3b6e;width:45%}.w i{flex:1;border-bottom:1.5px solid #1c3b6e;height:3vmin;font-style:normal;font-size:2vmin;color:#d2363f;text-align:center}
+{% endblock %}
+{% block content %}
+<div class="t-k" style="letter-spacing:.3em;text-transform:uppercase;font-size:2vmin">the {{ family }} family · christmas {{ year }}</div>
+<div class="t-h" style="font-size:6.4vmin;margin-top:.6vmin">Christmas Word Scramble</div>
+<div class="t-s" style="font-size:3.6vmin">unscramble the festive words, fastest elf wins!</div>
+<div class="box">{% for w,s in scramble %}<div class="w"><b>{{ loop.index }}</b><span>{{ s }}</span><i>{{ w if key else '' }}</i></div>{% endfor %}</div>
+{% if key %}<div class="t-k" style="margin-top:1.6vmin;font-size:1.8vmin">answer key · fold this part back before playing</div>{% endif %}
+{% endblock %}

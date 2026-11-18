@@ -1,0 +1,10 @@
+{% extends theme %}{% from "pi_macros.html" import bowtie %}
+{% block mode %}rsvp{% endblock %}
+{% block lcss %}.page{top:9vmin;bottom:9vmin;left:12vmin;right:12vmin}.ln{display:flex;align-items:flex-end;gap:2vmin;width:100%;font-family:var(--bf);font-size:4.4vmin;margin-top:3.4vmin;text-align:left}.ln i{flex:1;border-bottom:1.5px solid var(--acc);height:4vmin}.ck{display:flex;gap:6vmin;justify-content:center;margin-top:3.4vmin;font-family:var(--bf);font-size:4.2vmin}.ck span:before{content:"";display:inline-block;width:3vmin;height:3vmin;border:1.5px solid var(--acc);margin-right:1.4vmin;vertical-align:-.3vmin}{% endblock %}
+{% block content %}
+<div class="t-h" style="font-size:9vmin">Kindly Reply</div>
+<div class="t-k" style="margin-top:1.4vmin;font-size:2.2vmin">by {{ rsvp_by }} · {{ title }}</div>
+<div class="ln">Name(s)<i></i></div>
+<div class="ck"><span>Joyfully accepts</span><span>Regretfully declines</span></div>
+<div class="ln">Number attending<i></i></div>
+{% endblock %}

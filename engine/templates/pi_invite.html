@@ -1,0 +1,14 @@
+{% extends theme %}{% from "pi_macros.html" import bowtie, coupes, baubles %}
+{% block mode %}menu{% endblock %}
+{% block lcss %}.ln{font-family:var(--bf);font-size:4.3vmin;line-height:1.3}.dc{display:inline-block;margin-top:2.6vmin;padding:1.1vmin 3vmin;border:1px solid var(--acc);font-family:'Inter';font-weight:600;font-size:1.9vmin;letter-spacing:.35em;color:var(--acc);text-transform:uppercase}{% endblock %}
+{% block content %}
+{% if theme == 'th_luxgold.html' %}{{ baubles() }}{% endif %}
+<div style="margin-top:6vmin">{{ coupes('26vmin') }}</div>
+<div class="t-k" style="margin-top:2vmin">{{ host_line|default('you are cordially invited to') }}</div>
+<div class="t-h" style="font-size:{{ 10 if title|length < 15 else 7.6 }}vmin;margin-top:1.6vmin">{{ title }}</div>
+<div class="t-s" style="font-size:6vmin;margin-top:.6vmin">hosted by {{ host }}</div>
+<div class="t-rule"></div>
+<div class="ln">{{ date }}</div><div class="ln">{{ time }}</div><div class="ln" style="margin-top:1.4vmin">{{ place }}</div><div class="ln t-m" style="font-size:3.1vmin;color:var(--muted)">{{ address }}</div>
+<div class="dc">{{ dress }}</div>
+<div class="t-k" style="margin-top:2.6vmin;font-size:1.8vmin">RSVP {{ rsvp }}</div>
+{% endblock %}

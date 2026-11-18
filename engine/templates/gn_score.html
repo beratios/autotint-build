@@ -1,0 +1,14 @@
+{% extends theme %}
+{% block mode %}tracker{% endblock %}
+{% block lcss %}.page{top:5vmin;bottom:12vmin;left:6vmin;right:6vmin;justify-content:flex-start}
+table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;font-family:'Fredoka';font-size:2.2vmin;margin-top:2.4vmin;border-radius:2vmin;overflow:hidden;box-shadow:0 .8vmin 0 #bfe0f3}
+th{background:#1c3b6e;color:#fff;font-weight:600;padding:1.3vmin .8vmin;font-size:1.8vmin;letter-spacing:.05em}
+td{border-bottom:1px solid #d6e9f5;border-right:1px solid #eef6fb;height:{{ 3.6 if players|length > 10 else 4.4 }}vmin;color:#1c3b6e}
+td.n{text-align:left;padding-left:1.6vmin;font-weight:600}tr:nth-child(odd) td{background:#f5fafe}td.t{background:#fdecee!important}
+{% endblock %}
+{% block content %}
+<div class="t-k" style="letter-spacing:.3em;text-transform:uppercase;font-size:2vmin">{{ title }} · {{ year }}</div>
+<div class="t-h" style="font-size:6.4vmin;margin-top:.6vmin">Official Scoreboard</div>
+<table><tr><th style="width:26%;text-align:left;padding-left:1.6vmin">Player</th>{% for g in game_names %}<th>{{ g }}</th>{% endfor %}<th>Total</th></tr>
+{% for i in range([players|length, 10]|max) %}<tr><td class="n">{{ players[i] if players|length > i else '' }}</td>{% for g in game_names %}<td></td>{% endfor %}<td class="t"></td></tr>{% endfor %}</table>
+{% endblock %}

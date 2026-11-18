@@ -1,0 +1,11 @@
+{% extends theme %}{% from "pi_macros.html" import coupes %}
+{% block mode %}post{% endblock %}
+{% block content %}
+<div class="t-k" style="font-size:2.4vmin">you are invited to</div>
+<div class="t-h" style="font-size:{{ 9.5 if title|length < 15 else 7.5 }}vmin;margin-top:1.5vmin">{{ title }}</div>
+<div class="t-s" style="font-size:5.4vmin">hosted by {{ host }}</div>
+<div class="t-rule" style="margin:2vmin auto"></div>
+<div class="t-b" style="font-size:4.4vmin">{{ date }} · {{ time }}</div>
+<div class="t-b" style="font-size:4.4vmin">{{ place }}</div>
+<div class="t-k" style="margin-top:2.4vmin;font-size:1.9vmin">{{ dress }}</div><div class="t-k" style="margin-top:1vmin;font-size:1.9vmin">RSVP {{ rsvp }}</div>
+{% endblock %}

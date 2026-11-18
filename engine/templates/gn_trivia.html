@@ -1,0 +1,15 @@
+{% extends theme %}
+{% block mode %}sheet{% endblock %}
+{% block lcss %}.page{top:5vmin;bottom:12vmin;left:7vmin;right:7vmin;justify-content:flex-start}
+.box{width:100%;margin-top:2vmin;padding:2.4vmin 3.4vmin;text-align:left;columns:{{ 1 if key else 1 }}}
+.q{display:flex;gap:1.6vmin;font-family:'Fredoka';font-size:2vmin;line-height:1.15;padding:.6vmin 0;align-items:center;border-bottom:1px dashed #cfe3f0}
+.q b{flex:none;width:3vmin;height:3vmin;border-radius:50%;background:#d2363f;color:#fff;font-size:1.6vmin;display:flex;align-items:center;justify-content:center}
+.q .t{flex:1}.q .a{flex:none;width:{{ 28 if key else 16 }}vmin;height:2.6vmin;border-bottom:1.5px solid #1c3b6e;color:#d2363f;font-weight:600;text-align:center}
+.nm{display:flex;gap:2vmin;align-items:flex-end;font-family:'Fredoka';font-size:2.4vmin;width:60%;margin-top:1.4vmin}.nm i{flex:1;border-bottom:1.5px solid #1c3b6e;height:3vmin}
+{% endblock %}
+{% block content %}
+<div class="t-k" style="letter-spacing:.3em;text-transform:uppercase;font-size:2vmin">the {{ family }} family · christmas {{ year }}</div>
+<div class="t-h" style="font-size:6.4vmin;margin-top:.6vmin">{{ 'Trivia Answer Key' if key else 'Christmas Trivia' }}</div>
+{% if not key %}<div class="nm">Player<i></i>Score<i style="flex:.4"></i></div>{% endif %}
+<div class="box">{% for q,a in (trivia + custom_questions)[:24] %}<div class="q"><b>{{ loop.index }}</b><span class="t">{{ q.replace('{family}', family) }}</span><span class="a">{{ a if key else '' }}</span></div>{% endfor %}</div>
+{% endblock %}

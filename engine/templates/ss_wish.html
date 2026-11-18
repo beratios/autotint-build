@@ -1,0 +1,15 @@
+{% extends theme %}
+{% block mode %}guest{% endblock %}
+{% block lcss %}.page{top:5vmin;bottom:7vmin;left:7vmin;right:7vmin;justify-content:flex-start}
+.panel{width:100%;flex:1;margin-top:2.4vmin;padding:2.8vmin 4.6vmin;text-align:left;display:flex;flex-direction:column;justify-content:space-between}
+.q{font-family:'Fredoka';font-weight:600;font-size:2.7vmin;color:#c8102e}
+.q i{display:block;border-bottom:1.5px dashed #d9b3b8;height:4.2vmin}
+{% endblock %}
+{% block content %}
+<div class="t-k" style="font-family:'Fredoka';font-weight:600;letter-spacing:.25em;font-size:2.4vmin;text-transform:uppercase">{{ group }} · Secret Santa {{ year }}</div>
+<div class="t-h" style="font-size:7.6vmin;margin-top:.6vmin">{% if rep %}{{ rep }}'s Wish List{% else %}My Wish List{% endif %}</div>
+<div class="panel">
+{% for q,n in wish_questions %}<div class="q">{{ q }}{% for k in range(n) %}<i></i>{% endfor %}</div>{% endfor %}
+</div>
+<div class="t-k" style="font-family:'Fredoka';font-size:2.2vmin;letter-spacing:.12em;margin-top:1.6vmin">Budget {{ budget }} · return this by {{ deadline }}</div>
+{% endblock %}

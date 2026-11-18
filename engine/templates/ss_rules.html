@@ -1,0 +1,9 @@
+{% extends theme %}{% from "jolly_art.html" import stack %}
+{% block mode %}welcome{% endblock %}
+{% block lcss %}.page{justify-content:flex-start;top:9vmin}.r{display:flex;align-items:center;gap:3vmin;text-align:left;margin-top:2.4vmin;width:100%}.r b{flex:none;width:7vmin;height:7vmin;border-radius:50%;background:#ffe9a8;color:#c8102e;font-family:'Fredoka';font-weight:700;font-size:4vmin;display:flex;align-items:center;justify-content:center}.r span{font-family:'Fredoka';font-size:3.4vmin;font-weight:500;line-height:1.2}{% endblock %}
+{% block content %}
+{{ stack('34vmin') }}
+<div class="t-s" style="font-size:5vmin;margin-top:1.4vmin">{{ group }}</div>
+<div class="t-h" style="font-size:8.5vmin;line-height:1">{{ title }} Rules</div>
+<div style="width:100%;margin-top:1.4vmin">{% for r in rules[:6] %}<div class="r"><b>{{ loop.index }}</b><span>{{ r.replace("{budget}", budget).replace("{date}", date) }}</span></div>{% endfor %}</div>
+{% endblock %}

@@ -1,0 +1,252 @@
+{
+ "template": "pi_invite.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "event title",
+  "host name",
+  "date",
+  "time",
+  "venue name",
+  "address",
+  "dress code",
+  "RSVP details",
+  "evening schedule",
+  "guest names for place cards (up to 24)",
+  "number of tables"
+ ],
+ "defaults": {
+  "theme": "th_luxgold.html",
+  "title": "Christmas Gala",
+  "host": "Sterling & Co.",
+  "date": "Saturday, December 12, 2026",
+  "time": "7:00 PM until midnight",
+  "place": "The Grand Ballroom",
+  "address": "240 King Street West, Toronto",
+  "dress": "Black Tie",
+  "rsvp": "to Claire by December 1",
+  "rsvp_by": "December 1",
+  "year": "2026",
+  "schedule": [
+   [
+    "7:00 PM",
+    "Champagne reception"
+   ],
+   [
+    "8:00 PM",
+    "Dinner is served"
+   ],
+   [
+    "9:30 PM",
+    "Awards and toasts"
+   ],
+   [
+    "10:00 PM",
+    "Live band and dancing"
+   ],
+   [
+    "Midnight",
+    "Last dance"
+   ]
+  ],
+  "thanks_note": "Your company made our night sparkle. Wishing you a joyful holiday season and a wonderful new year.",
+  "guests": [
+   "Olivia",
+   "James",
+   "Sophia",
+   "Liam",
+   "Ava",
+   "Noah",
+   "Mia",
+   "Ethan",
+   "Amelia",
+   "Lucas",
+   "Harper",
+   "Mason"
+  ],
+  "place_sheets": [
+   0,
+   8,
+   16
+  ],
+  "tables": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12"
+  ],
+  "courses": [],
+  "family": ""
+ },
+ "gallery": {
+  "style": {
+   "bg": "#111013",
+   "ink": "#efe2bf",
+   "accent": "#d6b46a",
+   "hfont": "Playfair Display",
+   "hsize": 96
+  },
+  "size": "5x7 invite, 5x3.5 cards, 8x10 sign, 4x6 table numbers, Instagram post and story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.3,
+    "frac": 0.62,
+    "caption": "Gold foil look",
+    "sub": "Your event title and host"
+   },
+   {
+    "x": 0.5,
+    "y": 0.72,
+    "frac": 0.62,
+    "caption": "All your details",
+    "sub": "Date, venue, dress code, RSVP"
+   }
+  ],
+  "fields": [
+   [
+    "Event title",
+    0.5,
+    0.3
+   ],
+   [
+    "Host",
+    0.5,
+    0.38
+   ],
+   [
+    "Date and time",
+    0.5,
+    0.47
+   ],
+   [
+    "Venue and address",
+    0.5,
+    0.56
+   ],
+   [
+    "Dress code",
+    0.5,
+    0.66
+   ],
+   [
+    "RSVP",
+    0.5,
+    0.73
+   ]
+  ],
+  "vtitle": "Black tie. Your night.",
+  "variants": [
+   {},
+   {
+    "title": "Holiday Soiree",
+    "host": "the Whitfields",
+    "date": "Friday, December 18, 2026",
+    "time": "8:00 PM",
+    "place": "Our Home",
+    "address": "14 Maple Crescent, Oakville",
+    "dress": "Cocktail Attire",
+    "rsvp": "to Anna by December 10"
+   },
+   {
+    "title": "Winter Ball",
+    "host": "Northbridge Partners",
+    "date": "Saturday, December 5, 2026",
+    "time": "6:30 PM",
+    "place": "Riverside Hall",
+    "address": "88 Harbour Road, Vancouver",
+    "dress": "Black Tie Optional",
+    "rsvp": "to events@northbridge.com"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "rsvp",
+   "template": "pi_rsvp.html",
+   "w_in": 5,
+   "h_in": 3.5,
+   "png": true,
+   "label": "RSVP card 5x3.5"
+  },
+  {
+   "name": "details",
+   "template": "pi_details.html",
+   "w_in": 5,
+   "h_in": 3.5,
+   "png": true,
+   "label": "Details card 5x3.5"
+  },
+  {
+   "name": "welcome",
+   "template": "pi_welcome.html",
+   "w_in": 8,
+   "h_in": 10,
+   "png": true,
+   "label": "Welcome sign 8x10"
+  },
+  {
+   "name": "place",
+   "template": "mp_place.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "place_sheets",
+   "png": true,
+   "label": "Place cards"
+  },
+  {
+   "name": "table",
+   "template": "pi_table.html",
+   "w_in": 4,
+   "h_in": 6,
+   "repeat": "tables",
+   "png": true,
+   "label": "Table numbers 4x6"
+  },
+  {
+   "name": "thank-you",
+   "template": "pi_thanks.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true,
+   "label": "Thank-you card 5x7"
+  },
+  {
+   "name": "instagram-post",
+   "template": "pi_post.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true,
+   "label": "Instagram post"
+  },
+  {
+   "name": "instagram-story",
+   "template": "pi_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Instagram story"
+  }
+ ],
+ "main_label": "Invitation 5x7",
+ "hero": {
+  "headline": "Black Tie Christmas Gala Invitation",
+  "short": "Black Tie Gala Invite Set",
+  "bullets": [
+   "Invite, RSVP and details cards",
+   "Welcome sign, table numbers, place cards",
+   "Thank-you card, Instagram post and story"
+  ]
+ },
+ "inside_sub": "9 designs \u00b7 12 table numbers \u00b7 24 place cards",
+ "detail_page": "welcome",
+ "detail_title": "Matching 8x10 welcome sign"
+}

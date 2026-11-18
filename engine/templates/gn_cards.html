@@ -1,0 +1,18 @@
+{% extends theme %}
+{% block mode %}place{% endblock %}
+{% block lcss %}
+body{background:#fff}.page{inset:0;display:block}
+.cut{position:absolute;top:2.2vmin;left:0;right:0;font-family:'Inter';font-size:1.5vmin;letter-spacing:.25em;color:#999}
+.g{position:absolute;left:4vmin;right:4vmin;top:5vmin;bottom:4vmin;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,1fr);gap:1.6vmin}
+.card{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.6vmin;gap:1vmin;background:linear-gradient(180deg,#e3f2fb,#fff)}
+.card .k{font-family:'Fredoka';font-weight:600;font-size:1.75vmin;letter-spacing:.16em;text-transform:uppercase;color:#d2363f}
+.card .p{font-family:'Fredoka';font-weight:600;font-size:3.1vmin;line-height:1.15;color:#1c3b6e}
+.card .or{font-family:'Caveat';font-weight:700;font-size:3vmin;color:#d2363f;line-height:.9}
+.card .f{font-family:'Caveat';font-size:2.2vmin;color:#4e6a96}
+{% endblock %}
+{% block content %}{% set deck = vars_deck|default('likely') %}{% set items = (likely if deck=='likely' else rather) %}{% set off = rep or 0 %}
+<div class="cut">✂ {{ 'WHO IS MOST LIKELY TO' if deck=='likely' else 'WOULD YOU RATHER' }} CARDS · CUT ON THE LINES</div>
+<div class="g">{% for i in range(12) %}{% set it = items[off+i] if items|length > off+i else none %}<div class="card">{{ self.cardart() }}
+{% if deck=='likely' %}<div class="k">who is most likely to</div><div class="p">{{ it if it else '' }}</div>{% else %}<div class="k">would you rather</div>{% if it %}<div class="p">{{ it[0] }}</div><div class="or">or</div><div class="p">{{ it[1] }}</div>{% endif %}{% endif %}
+<div class="f">{{ family }} family · {{ year }}</div></div>{% endfor %}</div>
+{% endblock %}

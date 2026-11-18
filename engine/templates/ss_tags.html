@@ -1,0 +1,15 @@
+{% extends theme %}
+{% block mode %}place{% endblock %}
+{% block lcss %}
+body{background:#fff}.page{inset:0;display:block}
+.cut{position:absolute;top:2.2vmin;left:0;right:0;font-family:'Inter';font-size:1.5vmin;letter-spacing:.25em;color:#999}
+.g{position:absolute;left:5vmin;right:5vmin;top:5.5vmin;bottom:4vmin;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,1fr);gap:2.4vmin 3vmin}
+.tag{position:relative;background:#c8102e;color:#fff;clip-path:polygon(16% 0,100% 0,100% 100%,16% 100%,0 50%);display:flex;flex-direction:column;justify-content:center;padding-left:8vmin;text-align:left;font-family:'Fredoka'}
+.tag:before{content:"";position:absolute;left:5%;top:50%;width:2vmin;height:2vmin;border-radius:50%;background:#fff;transform:translateY(-50%)}
+.tag b{font-weight:500;font-size:1.8vmin;letter-spacing:.2em;color:#ffe9a8}.tag span{font-weight:700;font-size:4vmin;line-height:1.05;margin-bottom:1vmin}
+.tag:nth-child(3n+2){background:#0f7a4a}
+{% endblock %}
+{% block content %}{% set off = rep|default(0) %}
+<div class="cut">✂ GIFT TAGS · CUT OUT, PUNCH THE HOLE, TIE ON WITH RIBBON</div>
+<div class="g">{% for i in range(12) %}{% set n = participants[off+i] if participants|length > off+i else '' %}<div class="tag"><b>TO</b><span>{{ n if n else '' }}{% if not n %}<i style="display:block;width:80%;border-bottom:1.5px solid #fff;height:3.5vmin"></i>{% endif %}</span><b>FROM</b><span style="font-family:'Pacifico';font-weight:400;font-size:2.5vmin;white-space:nowrap;color:#ffe9a8">your Secret Santa</span></div>{% endfor %}</div>
+{% endblock %}

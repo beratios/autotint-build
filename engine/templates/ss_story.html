@@ -1,0 +1,12 @@
+{% extends theme %}{% from "jolly_art.html" import stack %}
+{% block mode %}story{% endblock %}
+{% block content %}
+{{ stack('62vmin') }}
+<div class="t-s" style="font-size:7vmin;margin-top:3vmin">{{ group }}</div>
+<div class="t-h" style="font-size:{{ 14 if title|length < 14 else 11 }}vmin;line-height:.95;margin-top:1vmin">{{ title }}</div>
+<div class="t-k" style="font-family:'Fredoka';font-weight:600;letter-spacing:.2em;font-size:3.4vmin;margin-top:2vmin;text-transform:uppercase">gift exchange</div>
+<div class="t-rule" style="height:.6vmin;border-radius:1vmin"></div>
+<div class="t-b" style="font-size:5.6vmin;font-weight:500">{{ date }}</div><div class="t-b" style="font-size:5.6vmin;font-weight:500">{{ time }}</div><div class="t-b" style="font-size:5.6vmin;font-weight:500">{{ place }}</div>
+<div style="margin-top:4vmin"><span class="pill" style="font-size:5vmin">Budget {{ budget }}</span></div>
+<div class="t-k" style="font-family:'Fredoka';font-size:4vmin;margin-top:4vmin">Wish lists due {{ deadline }}</div>
+{% endblock %}

@@ -1,0 +1,425 @@
+{
+ "template": "gn_sign.html",
+ "w_in": 8,
+ "h_in": 10,
+ "fields": [
+  "family or party name",
+  "date and time",
+  "player names for the scoreboard (up to 14)",
+  "up to 4 custom family trivia questions with answers (optional)"
+ ],
+ "defaults": {
+  "theme": "th_frost.html",
+  "title": "Christmas Game Night",
+  "subtitle": "games, cocoa and cookies",
+  "family": "Bennett",
+  "date": "Saturday, December 19",
+  "time": "6:00 PM",
+  "year": "2026",
+  "players": [
+   "Mom",
+   "Dad",
+   "Ella",
+   "Jack",
+   "Grandma",
+   "Grandpa",
+   "Uncle Ray",
+   "Aunt Mia"
+  ],
+  "game_names": [
+   "Trivia",
+   "Most Likely To",
+   "Would You Rather",
+   "Word Scramble"
+  ],
+  "trivia": [
+   [
+    "Which country started the tradition of the Christmas tree?",
+    "Germany"
+   ],
+   [
+    "In The Twelve Days of Christmas, what is given on the fifth day?",
+    "Five gold rings"
+   ],
+   [
+    "How many reindeer traditionally pull Santa's sleigh?",
+    "Eight"
+   ],
+   [
+    "What color are mistletoe berries?",
+    "White"
+   ],
+   [
+    "Which red-leaved plant is a classic Christmas flower?",
+    "Poinsettia"
+   ],
+   [
+    "What cake is shaped like a log at Christmas?",
+    "Yule log"
+   ],
+   [
+    "A candy cane is shaped like what?",
+    "A shepherd's crook"
+   ],
+   [
+    "In which country is fried chicken a popular Christmas meal?",
+    "Japan"
+   ],
+   [
+    "What is Santa called in the United Kingdom?",
+    "Father Christmas"
+   ],
+   [
+    "What is Scrooge's first name in A Christmas Carol?",
+    "Ebenezer"
+   ],
+   [
+    "How many spirits visit Scrooge after Marley?",
+    "Three"
+   ],
+   [
+    "What do children leave out for Santa in many homes?",
+    "Milk and cookies"
+   ],
+   [
+    "On which date is Boxing Day?",
+    "December 26"
+   ],
+   [
+    "What were the three gifts of the Wise Men?",
+    "Gold, frankincense, myrrh"
+   ],
+   [
+    "Which creamy drink is made with eggs, milk and nutmeg?",
+    "Eggnog"
+   ],
+   [
+    "Where does Santa live?",
+    "The North Pole"
+   ],
+   [
+    "Which sparkly decoration was first made from real silver?",
+    "Tinsel"
+   ],
+   [
+    "What do you call a group of people singing door to door?",
+    "Carolers"
+   ],
+   [
+    "Bonus: who in the {family} family opens presents first?",
+    "You decide!"
+   ],
+   [
+    "Bonus: what is the {family} family's favorite Christmas movie?",
+    "You decide!"
+   ]
+  ],
+  "custom_questions": [],
+  "likely": [
+   "open a gift early",
+   "burn the Christmas cookies",
+   "fall asleep during the movie",
+   "wear pajamas all day",
+   "start singing carols first",
+   "eat the last cookie",
+   "re-gift a present",
+   "forget where they hid the gifts",
+   "win tonight's game night",
+   "take 100 photos of the tree",
+   "cry at a Christmas movie",
+   "get tangled in the lights",
+   "buy gifts on Christmas Eve",
+   "use way too much tape",
+   "build the best snowman",
+   "sneak a peek at presents",
+   "end up on the naughty list",
+   "dance at the party",
+   "ask for seconds of dessert",
+   "leave the tree up until February",
+   "slip on the ice",
+   "win the ugly sweater contest",
+   "spoil the pets with gifts",
+   "hide in the kitchen all day"
+  ],
+  "rather": [
+   [
+    "build a snowman",
+    "have a snowball fight"
+   ],
+   [
+    "drink hot cocoa",
+    "drink eggnog"
+   ],
+   [
+    "get one big gift",
+    "get ten small gifts"
+   ],
+   [
+    "spend Christmas at the beach",
+    "spend it in a snowy cabin"
+   ],
+   [
+    "wrap all the gifts",
+    "cook the whole dinner"
+   ],
+   [
+    "be one of Santa's elves",
+    "be a reindeer"
+   ],
+   [
+    "have a real tree",
+    "have a fake tree"
+   ],
+   [
+    "open gifts on Christmas Eve",
+    "open them Christmas morning"
+   ],
+   [
+    "sing a carol solo",
+    "dance in front of everyone"
+   ],
+   [
+    "eat only cookies all day",
+    "eat only candy canes"
+   ],
+   [
+    "go ice skating",
+    "go sledding"
+   ],
+   [
+    "get socks every year",
+    "get coal just once"
+   ]
+  ],
+  "scramble": [
+   [
+    "SNOWMAN",
+    "ANMSWNO"
+   ],
+   [
+    "REINDEER",
+    "NIREERDE"
+   ],
+   [
+    "STOCKING",
+    "GKOITSCN"
+   ],
+   [
+    "ORNAMENT",
+    "AENRTMNO"
+   ],
+   [
+    "MISTLETOE",
+    "ESTELOIMT"
+   ],
+   [
+    "GINGERBREAD",
+    "BGDGARREIEN"
+   ],
+   [
+    "SLEIGH",
+    "LIHGSE"
+   ],
+   [
+    "CANDY CANE",
+    "CAANEYCND"
+   ],
+   [
+    "PRESENTS",
+    "TSPESREN"
+   ],
+   [
+    "SNOWFLAKE",
+    "NSFAWLOKE"
+   ],
+   [
+    "WREATH",
+    "ERHATW"
+   ],
+   [
+    "CHIMNEY",
+    "YNICEMH"
+   ],
+   [
+    "TINSEL",
+    "TSINLE"
+   ],
+   [
+    "CAROLS",
+    "ARCSOL"
+   ],
+   [
+    "NORTH POLE",
+    "TORENOPLH"
+   ],
+   [
+    "COCOA",
+    "CCOOA"
+   ]
+  ],
+  "likely_sheets": [
+   0,
+   12
+  ],
+  "key": false
+ },
+ "gallery": {
+  "style": {
+   "bg": "#e3f2fb",
+   "ink": "#1c3b6e",
+   "accent": "#d2363f",
+   "hfont": "Caveat",
+   "hsize": 120
+  },
+  "size": "8x10 sign, 8.5x11 game sheets and card sheets, 5x7 story invite",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.3,
+    "frac": 0.62,
+    "caption": "Your family name",
+    "sub": "Title, subtitle and date"
+   },
+   {
+    "x": 0.25,
+    "y": 0.85,
+    "frac": 0.5,
+    "caption": "Gingerbread and snow",
+    "sub": "Cute frosty illustrations"
+   }
+  ],
+  "fields": [
+   [
+    "Family name",
+    0.5,
+    0.2
+   ],
+   [
+    "Title",
+    0.5,
+    0.3
+   ],
+   [
+    "Date",
+    0.5,
+    0.47
+   ],
+   [
+    "Games list",
+    0.5,
+    0.56
+   ]
+  ],
+  "vtitle": "Your family. Your game night.",
+  "variants": [
+   {},
+   {
+    "family": "Nguyen",
+    "title": "Christmas Eve Games",
+    "subtitle": "cousins vs grown-ups",
+    "date": "Thursday, December 24"
+   },
+   {
+    "family": "O'Connor",
+    "title": "Holiday Game Night",
+    "subtitle": "winner picks the movie",
+    "date": "Sunday, December 27"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "trivia",
+   "template": "gn_trivia.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Christmas trivia 20 questions"
+  },
+  {
+   "name": "trivia-key",
+   "template": "gn_trivia.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "vars": {
+    "key": true
+   },
+   "label": "Trivia answer key"
+  },
+  {
+   "name": "most-likely",
+   "template": "gn_cards.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "likely_sheets",
+   "png": true,
+   "label": "24 Most Likely To cards"
+  },
+  {
+   "name": "would-you-rather",
+   "template": "gn_cards.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "vars": {
+    "vars_deck": "rather"
+   },
+   "png": true,
+   "label": "12 Would You Rather cards"
+  },
+  {
+   "name": "scramble",
+   "template": "gn_scramble.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Word scramble"
+  },
+  {
+   "name": "scramble-key",
+   "template": "gn_scramble.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "vars": {
+    "key": true
+   },
+   "label": "Scramble answer key"
+  },
+  {
+   "name": "scoreboard",
+   "template": "gn_score.html",
+   "w_in": 11,
+   "h_in": 8.5,
+   "png": true,
+   "label": "Scoreboard with names"
+  },
+  {
+   "name": "champion",
+   "template": "gn_cert.html",
+   "w_in": 11,
+   "h_in": 8.5,
+   "png": true,
+   "label": "Champion certificate"
+  },
+  {
+   "name": "story-invite",
+   "template": "gn_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Story invite for phones"
+  }
+ ],
+ "main_label": "Game night sign 8x10",
+ "hero": {
+  "headline": "Personalized Christmas Game Night",
+  "short": "Family Game Night Pack",
+  "bullets": [
+   "Trivia, Most Likely To, Would You Rather",
+   "Word scramble, scoreboard with names",
+   "Champion certificate + phone invite"
+  ]
+ },
+ "inside_sub": "4 games \u00b7 36 cards \u00b7 answer keys \u00b7 scoreboard \u00b7 certificate",
+ "detail_page": "most-likely",
+ "detail_title": "24 Most Likely To cards"
+}

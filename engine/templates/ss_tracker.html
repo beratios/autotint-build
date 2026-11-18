@@ -1,0 +1,14 @@
+{% extends theme %}
+{% block mode %}tracker{% endblock %}
+{% block lcss %}.page{top:5vmin;bottom:5vmin;left:6vmin;right:6vmin;justify-content:flex-start}
+table{width:100%;border-collapse:collapse;background:#fffaf2;color:#3a1218;font-family:'Fredoka';font-size:2.3vmin;margin-top:2vmin;border-radius:2vmin;overflow:hidden}
+th{background:#0f7a4a;color:#fff;font-weight:600;padding:1.4vmin;letter-spacing:.08em;text-align:left}
+td{border-bottom:1px solid #ecd3d6;padding:0 1.4vmin;height:{{ 3.2 if participants|length > 18 else 3.6 }}vmin;text-align:left}
+td.c{text-align:center}td.c:before{content:"";display:inline-block;width:2.2vmin;height:2.2vmin;border:1.5px solid #c8102e;border-radius:.4vmin}
+{% endblock %}
+{% block content %}
+<div class="t-h" style="font-size:6vmin">Organizer Tracker</div>
+<div class="t-k" style="font-family:'Fredoka';font-size:2.2vmin;margin-top:.6vmin">{{ group }} · {{ title }} · budget {{ budget }} · {{ date }}</div>
+<table><tr><th style="width:4%">#</th><th style="width:30%">Participant</th><th style="width:30%">Has drawn</th><th>Wish list</th><th>Gift ready</th><th>Thanked</th></tr>
+{% for i in range([participants|length, 16]|max) %}<tr><td>{{ i+1 }}</td><td>{{ participants[i] if participants|length > i else '' }}</td><td></td><td class="c"></td><td class="c"></td><td class="c"></td></tr>{% endfor %}</table>
+{% endblock %}

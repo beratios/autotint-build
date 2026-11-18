@@ -1,0 +1,9 @@
+{% extends theme %}{% from "jolly_art.html" import stack %}
+{% block mode %}post{% endblock %}
+{% block content %}
+{{ stack('34vmin') }}
+<div class="t-s" style="font-size:4.6vmin;margin-top:1vmin">{{ group }}</div>
+<div class="t-h" style="font-size:9vmin;line-height:.95">{{ title }}</div>
+<div class="t-b" style="font-size:3.8vmin;margin-top:1.6vmin;font-weight:500">{{ date }} · {{ time }}</div>
+<div style="margin-top:1.8vmin"><span class="pill" style="font-size:3vmin">Budget {{ budget }}</span></div>
+{% endblock %}

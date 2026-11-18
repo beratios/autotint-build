@@ -1,0 +1,271 @@
+{
+ "template": "mp_menu.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "title",
+  "family",
+  "date",
+  "courses (with optional description + drink pairing)",
+  "drinks",
+  "evening timeline",
+  "guests (up to 24)"
+ ],
+ "defaults": {
+  "title": "Christmas Eve Dinner",
+  "family": "Laurent",
+  "date": "December 24, 2026",
+  "year": "2026",
+  "courses": [
+   [
+    "To start",
+    "Smoked salmon blinis, dill creme fraiche",
+    "Light and bright, served with chilled bubbles",
+    "Champagne"
+   ],
+   [
+    "Main",
+    "Beef tenderloin, red wine jus",
+    "Slow roasted, sliced at the table",
+    "Cabernet sauvignon"
+   ],
+   [
+    "On the side",
+    "Truffle potato gratin, glazed winter greens",
+    "",
+    ""
+   ],
+   [
+    "Dessert",
+    "White chocolate snowball cake",
+    "With vanilla bean cream and hot coffee",
+    "Ice wine"
+   ]
+  ],
+  "drinks": [
+   [
+    "Silent Night Spritz",
+    "elderflower, prosecco, rosemary"
+   ],
+   [
+    "Midnight Martini",
+    "vodka, blackberry, lemon"
+   ],
+   [
+    "Starlight Cocoa",
+    "white chocolate, vanilla, whipped cream"
+   ],
+   [
+    "Winter Lemonade",
+    "lemon, honey, sparkling water"
+   ]
+  ],
+  "timeline": [
+   [
+    "6:00 PM",
+    "Welcome drinks by the tree"
+   ],
+   [
+    "6:45 PM",
+    "Toast and starters"
+   ],
+   [
+    "7:30 PM",
+    "Christmas Eve dinner"
+   ],
+   [
+    "9:00 PM",
+    "Dessert and carols"
+   ],
+   [
+    "10:30 PM",
+    "One gift each before bed"
+   ]
+  ],
+  "guests": [
+   "Olivia",
+   "James",
+   "Grandma Rose",
+   "Grandpa Joe",
+   "Emma",
+   "Noah",
+   "Aunt Claire",
+   "Uncle Mark",
+   "Lily",
+   "Ben"
+  ],
+  "place_sheets": [
+   0,
+   8,
+   16
+  ],
+  "theme": "th_navy.html",
+  "drinks_title": "Christmas Eve Drinks"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#0f2150",
+   "ink": "#eef2fb",
+   "accent": "#e9d9a8",
+   "hfont": "Great Vibes",
+   "hsize": 120
+  },
+  "size": "5x7, 8x10, 8.5x11 + Instagram post and story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.25,
+    "frac": 0.62,
+    "caption": "Silver starlit title",
+    "sub": "Your title and family name"
+   },
+   {
+    "x": 0.5,
+    "y": 0.86,
+    "frac": 0.62,
+    "caption": "Snowy village scene",
+    "sub": "Warm windows on a starry night"
+   }
+  ],
+  "fields": [
+   [
+    "Date",
+    0.5,
+    0.19
+   ],
+   [
+    "Title",
+    0.5,
+    0.25
+   ],
+   [
+    "Family name",
+    0.5,
+    0.31
+   ],
+   [
+    "Your courses",
+    0.5,
+    0.47
+   ]
+  ],
+  "vtitle": "Silent night. Your table.",
+  "variants": [
+   {},
+   {
+    "title": "Christmas Eve Supper",
+    "family": "Novak",
+    "date": "December 24, 2026",
+    "courses": [
+     [
+      "Starter",
+      "French onion soup, gruyere toast"
+     ],
+     [
+      "Main",
+      "Roast duck, cherry sauce"
+     ],
+     [
+      "Sides",
+      "Herb potatoes, green beans almondine"
+     ],
+     [
+      "Dessert",
+      "Chocolate yule log"
+     ]
+    ]
+   },
+   {
+    "title": "Holy Night Dinner",
+    "family": "Rivera",
+    "date": "December 24, 2026",
+    "courses": [
+     [
+      "Starter",
+      "Shrimp ceviche, tostadas"
+     ],
+     [
+      "Main",
+      "Tamales and slow cooked pork"
+     ],
+     [
+      "Sides",
+      "Mexican rice, charro beans"
+     ],
+     [
+      "Dessert",
+      "Churros, hot chocolate"
+     ]
+    ]
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "detailed",
+   "template": "mp_detailed.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Detailed menu 8.5x11"
+  },
+  {
+   "name": "drinks",
+   "template": "mp_drinks.html",
+   "png": true,
+   "label": "Drinks menu 5x7"
+  },
+  {
+   "name": "welcome",
+   "template": "mp_welcome.html",
+   "w_in": 8,
+   "h_in": 10,
+   "png": true,
+   "label": "Welcome sign 8x10"
+  },
+  {
+   "name": "place",
+   "template": "mp_place.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "place_sheets",
+   "png": true,
+   "label": "Place cards"
+  },
+  {
+   "name": "guest-menu",
+   "template": "mp_guest.html",
+   "repeat": "guests",
+   "label": "Guest name menus"
+  },
+  {
+   "name": "instagram-post",
+   "template": "mp_post.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true,
+   "label": "Instagram post"
+  },
+  {
+   "name": "instagram-story",
+   "template": "mp_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Instagram story"
+  }
+ ],
+ "hero": {
+  "headline": "Christmas Eve Dinner Menu Set",
+  "short": "Christmas Eve Dinner Set",
+  "bullets": [
+   "Menu, detailed menu, drinks",
+   "24 place cards + guest menus",
+   "Instagram post and story"
+  ]
+ },
+ "main_label": "Dinner menu 5x7",
+ "inside_sub": "11 designs \u00b7 24 place cards \u00b7 a name menu for every guest",
+ "detail_page": "detailed",
+ "detail_title": "Detailed menu with pairings and timeline"
+}

@@ -1,0 +1,13 @@
+{% extends theme %}
+{% block mode %}place{% endblock %}
+{% block lcss %}
+body{background:#fff}.page{inset:0;display:block}
+.cut{position:absolute;top:2.2vmin;left:0;right:0;font-family:'Inter';font-size:1.5vmin;letter-spacing:.25em;color:#999}
+.g{position:absolute;left:4vmin;right:4vmin;top:5vmin;bottom:4vmin;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,1fr);gap:1.6vmin}
+.card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.2vmin;border-radius:1.4vmin}
+.nm{font-size:4.4vmin;line-height:1.05;padding:0 1.5vmin}.lb{font-family:'Fredoka';font-size:1.8vmin;letter-spacing:.2em;text-transform:uppercase;color:#ffe9a8}
+{% endblock %}
+{% block content %}{% set off = rep|default(0) %}
+<div class="cut">✂ NAME DRAW SLIPS · CUT, FOLD AND PUT THEM IN A HAT</div>
+<div class="g">{% for i in range(12) %}{% set n = participants[off+i] if participants|length > off+i else '' %}<div class="card">{{ self.cardart() }}<div class="lb">you are the Secret Santa for</div><div class="nm">{{ n if n else '' }}</div>{% if not n %}<div style="width:60%;border-bottom:2px solid #fff;height:3vmin"></div>{% endif %}</div>{% endfor %}</div>
+{% endblock %}

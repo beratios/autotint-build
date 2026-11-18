@@ -1,0 +1,23 @@
+{% extends "mp_base.html" %}
+{# Frosty game night: icy blue, snowflakes, gingerbread men + cookies, snowy hills; navy + red type #}
+{% block tcss %}
+:root{--bg:#e3f2fb;--ink:#1c3b6e;--muted:#4e6a96;--acc:#d2363f;--hc:#1c3b6e;--hf:'Fredoka';--hw:700;--sf:'Caveat';--bf:'Fredoka';--sx:9vmin;--st:9vmin;--sb:14vmin;--df:'Fredoka'}
+body{background:linear-gradient(180deg,#cfe8f7 0%,#e9f6fd 45%,#f6fbff 100%)}
+.t-h{text-shadow:.5vmin .5vmin 0 #fff,.9vmin .9vmin 0 rgba(210,54,63,.25)}
+.t-s{font-weight:700;color:#d2363f}
+.t-k{color:#d2363f;font-family:'Fredoka';font-weight:600}
+.t-l{color:#d2363f;font-family:'Fredoka'}
+.t-rule{background:#d2363f;height:.5vmin;border-radius:1vmin}
+.fl{position:absolute;color:#fff;filter:drop-shadow(0 0 .3vmin rgba(28,59,110,.25))}
+.hills{position:absolute;left:0;right:0;bottom:0;width:100%}
+.gb{position:absolute}
+.card{background:#fff;color:#1c3b6e;border:.5vmin solid #bfe0f3;border-radius:1.6vmin}
+.card .nm{font-family:'Fredoka';font-weight:700;color:#1c3b6e}
+.box{background:#fff;border-radius:2.4vmin;box-shadow:0 .8vmin 0 #bfe0f3;color:#1c3b6e}
+{% endblock %}
+{% block art %}{% set mode = self.mode()|trim %}{% from 'frost_art.html' import flake, gingerman, cookie %}
+{% for x,y,s,r in [(3,2,8,0),(13,8,4,20),(86,2,9,10),(78,9,4,30),(2,30,5,15),(93,28,6,5),(4,58,4,25),(92,55,5,0),(8,78,5,10),(90,76,4,20),(50,1.5,3.5,0),(30,4,3,10),(68,5,3,15)] %}{{ flake(x,y,s,r) }}{% endfor %}
+<svg class="hills" viewBox="0 0 600 70" preserveAspectRatio="none" style="height:12vmin"><path d="M0 30 Q90 0 200 26 Q320 52 420 20 Q520 -6 600 24 V70 H0Z" fill="#fff"/><path d="M0 50 Q150 30 300 48 Q450 64 600 42 V70 H0Z" fill="#e8f4fc"/></svg>
+{% if mode not in ['tracker','sheet'] %}{{ gingerman('3vmin','1.5vmin','15vmin',-8) }}{{ cookie('4vmin','2vmin','12vmin') }}{% endif %}
+{% endblock %}
+{% block cardart %}<svg width="10%" viewBox="0 0 40 40" fill="none" stroke="#7fb8dc" stroke-width="2.4" stroke-linecap="round"><path d="M20 3V37M5 11.5L35 28.5M5 28.5L35 11.5M20 9l-4-4M20 9l4-4M20 31l-4 4M20 31l4 4"/></svg>{% endblock %}

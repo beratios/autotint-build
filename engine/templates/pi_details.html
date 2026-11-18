@@ -1,0 +1,7 @@
+{% extends theme %}
+{% block mode %}rsvp{% endblock %}
+{% block lcss %}.page{top:8vmin;bottom:8vmin;left:12vmin;right:12vmin}.row{display:flex;width:100%;text-align:left;margin-top:2.2vmin;font-family:var(--bf);font-size:3.9vmin}.row b{font-family:'Inter';font-weight:600;font-size:2vmin;letter-spacing:.25em;color:var(--acc);width:30%;padding-top:1vmin;text-transform:uppercase}{% endblock %}
+{% block content %}
+<div class="t-h" style="font-size:7.5vmin">The Evening</div>
+{% for t,e in schedule[:5] %}<div class="row"><b>{{ t }}</b><span>{{ e }}</span></div>{% endfor %}
+{% endblock %}

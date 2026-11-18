@@ -1,0 +1,14 @@
+{% macro gift(x,y,s,rot) %}<svg class="pat" style="left:{{x}}%;top:{{y}}%;width:{{s}}vmin;transform:rotate({{rot}}deg)" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="5" y="15" width="30" height="21" rx="1.5"/><rect x="3" y="10" width="34" height="6" rx="1.5"/><path d="M20 10V36"/><path d="M20 10C14 2 7 5 11 10M20 10C26 2 33 5 29 10"/></svg>{% endmacro %}
+{% macro star(x,y,s,rot) %}<svg class="pat" style="left:{{x}}%;top:{{y}}%;width:{{s}}vmin;transform:rotate({{rot}}deg)" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M20 3l4.9 10.6 11.6 1.3-8.6 7.9 2.4 11.4L20 28.4 9.7 34.2l2.4-11.4-8.6-7.9 11.6-1.3Z"/></svg>{% endmacro %}
+{% macro flake(x,y,s,rot) %}<svg class="pat" style="left:{{x}}%;top:{{y}}%;width:{{s}}vmin;transform:rotate({{rot}}deg)" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 3V37M5 11.5L35 28.5M5 28.5L35 11.5M20 9l-4-4M20 9l4-4M20 31l-4 4M20 31l4 4"/></svg>{% endmacro %}
+{% macro stack(w='44vmin') %}<svg style="width:{{w}}" viewBox="0 0 220 150">
+<ellipse cx="110" cy="144" rx="100" ry="6" fill="#000" opacity=".18"/>
+<g><rect x="20" y="70" width="90" height="74" rx="4" fill="#0f7a4a"/><rect x="14" y="58" width="102" height="18" rx="4" fill="#139a5d"/><rect x="58" y="58" width="14" height="86" fill="#ffe9a8"/>
+{% for x,y in [(30,90),(90,92),(34,124),(92,128)] %}<circle cx="{{x}}" cy="{{y}}" r="3" fill="#fff" opacity=".7"/>{% endfor %}</g>
+<g><rect x="104" y="40" width="96" height="104" rx="4" fill="#fffaf2"/><rect x="98" y="26" width="108" height="20" rx="4" fill="#fff"/>
+{% for x in range(110,200,14) %}<path d="M{{x}} 46 l10 98" stroke="#c8102e" stroke-width="5" opacity=".9"/>{% endfor %}<rect x="144" y="26" width="16" height="118" fill="#0f7a4a"/>
+<path d="M152 26 C132 0 112 10 128 24 C136 30 148 28 152 26 C156 28 168 30 176 24 C192 10 172 0 152 26Z" fill="#0f7a4a"/><circle cx="152" cy="24" r="6" fill="#139a5d"/></g>
+<g><rect x="40" y="104" width="62" height="40" rx="3" fill="#ffe9a8"/><rect x="36" y="96" width="70" height="12" rx="3" fill="#ffd56b"/><rect x="66" y="96" width="10" height="48" fill="#c8102e"/>
+<path d="M71 96 C58 80 46 88 58 96M71 96 C84 80 96 88 84 96" fill="none" stroke="#c8102e" stroke-width="4"/></g>
+<g fill="#fff"><path d="M30 30 l3 7 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1Z" opacity=".9"/><circle cx="196" cy="12" r="3"/><circle cx="12" cy="56" r="2.4"/></g></svg>{% endmacro %}
+{% macro qmark(w='10vmin') %}<svg style="width:{{w}}" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#ffe9a8"/><text x="20" y="28" text-anchor="middle" font-family="Fredoka" font-weight="700" font-size="24" fill="#c8102e">?</text></svg>{% endmacro %}
