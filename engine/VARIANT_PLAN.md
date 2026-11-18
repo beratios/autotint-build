@@ -20,7 +20,7 @@ List every format in WHAT IS INSIDE and show them in the "what's inside" photo. 
 render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages are merged into <id>-complete.pdf and PNGs are delivered for pages with "png": true.
 
 ## UPGRADE EXISTING (do these first, before new listings, one per day until done)
-- [ ] xmas-dinner-set-minimal (4618730967): add detailed menu page, Instagram post + story versions; update description, "what's inside" photo (rank 7 overwrite) and title if needed.
+- [x] xmas-dinner-set-minimal (4618730967): add detailed menu page, Instagram post + story versions; update description, "what's inside" photo (rank 7 overwrite) and title if needed.
 - [ ] xmas-invite-elegant (4618250503): add Instagram story + post invite, RSVP card, thank-you card.
 - [ ] family-xmas-card-playful (4618256578): add Instagram post + story versions, gift tag set in same design.
 
@@ -35,10 +35,10 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 ## Family backlog (pick from top; mark done)
 ### Christmas dinner menu set (menu + welcome sign + drinks menu + place cards)
 - [x] scandinavian minimal (4618730967)
-- [ ] luxury black + gold foil, art deco frame
-- [ ] wine & candlelight: dark burgundy, illustrated wine glasses/candles/table runner
+- [x] luxury black + gold foil, art deco frame (4619558974)
+- [x] (4619552281) wine & candlelight: dark burgundy, illustrated wine glasses/candles/table runner
 - [ ] kids Christmas dinner: cute cartoon, kids menu + coloring placemat + activity page + place cards
-- [ ] rustic farmhouse: kraft, buffalo plaid, pine
+- [x] (4619559532) rustic farmhouse: kraft, buffalo plaid, pine
 - [ ] watercolor botanical: eucalyptus, berries, white
 - [ ] cozy fireplace / cabin scene
 - [ ] Christmas Eve dinner (navy + silver stars)
@@ -64,4 +64,4 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 - [x] retro bingo (4618256700)
 - [ ] NYE trivia with party name, [ ] NYE "who's most likely to", [ ] NYE dinner/cocktail menu, [ ] 2027 resolution cards, [ ] NYE countdown kids pack
 ### Other holiday families to start
-- [ ] hot cocoa bar / mimosa bar sign set, [ ] Secret Santa wish list forms (office), [ ] Christmas place cards only (cheap entry item), [ ] Christmas movie night tickets, [ ] Christmas recipe card set with family name
+- [x] hot cocoa bar candy cane (4619552325) / [ ] mimosa bar sign set, [ ] Secret Santa wish list forms (office), [ ] Christmas place cards only (cheap entry item), [x] Christmas movie night retro cinema (4619552347), [ ] Christmas recipe card set with family name
