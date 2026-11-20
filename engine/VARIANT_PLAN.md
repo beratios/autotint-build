@@ -39,21 +39,21 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 - [x] (4619552281) wine & candlelight: dark burgundy, illustrated wine glasses/candles/table runner
 - [ ] kids Christmas dinner: cute cartoon, kids menu + coloring placemat + activity page + place cards
 - [x] (4619559532) rustic farmhouse: kraft, buffalo plaid, pine
-- [ ] watercolor botanical: eucalyptus, berries, white
+- [x] watercolor botanical: eucalyptus, berries, white (4621661003)
 - [x] cozy fireplace / cabin scene (4620388082)
 - [x] Christmas Eve dinner (navy + silver stars) (4620388102)
 - [ ] Christmas morning brunch menu
-- [ ] New Years Eve dinner menu (black gold confetti, champagne)
+- [x] New Years Eve dinner menu, plum + gold midnight clock, champagne (4621668518)
 - [ ] Thanksgiving dinner menu (US) — Nov 17–22 only: autumn leaves / pumpkin farmhouse
 ### Christmas party invitation
 - [x] elegant green gold (4618250503)
-- [x] luxury black tie gala (4620388124), [ ] cozy pajama party, [ ] kids Christmas party, [ ] office holiday party (modern), [ ] watercolor winter wonderland
+- [x] luxury black tie gala (4620388124), [x] cozy pajama party (4621661325), [ ] kids Christmas party, [ ] office holiday party (modern), [ ] watercolor winter wonderland
 ### Letter from Santa pack
 - [x] watercolor (4618736968)
 - [ ] vintage North Pole parchment + wax seal, [ ] cute cartoon (toddlers), [ ] elf-on-the-shelf style arrival letter (generic elf, no brand)
 ### Kids wish list / activity
 - [x] colorful pack (4618730313)
-- [ ] Christmas Eve box labels + reindeer food bags, [ ] kids Christmas placemat with name, [ ] Christmas countdown calendar with name
+- [x] Christmas Eve box kit north pole (4621668530) – own family xmas-eve-box, [ ] kids Christmas placemat with name, [ ] Christmas countdown calendar with name
 ### Gift tags
 - [x] rustic kraft (4618256616)
 - [ ] luxury gold foil, [ ] cute kids characters, [ ] Scandi minimal, [ ] stocking name tags
@@ -62,7 +62,7 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 - [ ] elegant photo-less typography, [ ] watercolor wreath, [ ] funny family card
 ### NYE party
 - [x] retro bingo (4618256700)
-- [ ] NYE trivia with party name, [ ] NYE "who's most likely to", [ ] NYE dinner/cocktail menu, [ ] 2027 resolution cards, [ ] NYE countdown kids pack
+- [ ] NYE trivia with party name, [ ] NYE "who's most likely to", [ ] NYE dinner/cocktail menu, [x] 2027 family time capsule incl. resolution cards (4621668536, family nye-time-capsule), [ ] NYE countdown kids pack
 ### Other holiday families to start
 - [x] hot cocoa bar candy cane (4619552325) / [ ] mimosa bar sign set, [x] Secret Santa kit modern red (4620381113), [ ] Christmas place cards only (cheap entry item), [x] Christmas movie night retro cinema (4619552347), [ ] Christmas recipe card set with family name
 
@@ -70,5 +70,7 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 - [x] frosty gingerbread game night (4620381127)
 - [ ] plaid cabin game night, [ ] NYE game night version, [ ] kids Christmas party games
 ### Notes for next runs
+- 11-20: new themes th_botanical (watercolor greenery), th_pajama (cute cozy), th_nye (plum midnight clock + champagne), th_northpole (kids cartoon). pi_* now use topicon(theme) macro (mugs for th_pajama, coupes otherwise). Cheap next variants: NYE party invite = pi_* + th_nye; Christmas Eve box 2nd concept = xe_* + new kid theme; watercolor invite = pi_* + th_botanical; time capsule kids-only bright version.
+- Upgrade backlog (xmas-invite-elegant, family-xmas-card-playful) still open – not done on 11-19/11-20.
 - Invitation engine pi_* works with ANY th_* theme -> cheap invite variants: th_fireplace (cozy party), th_navy (Christmas Eve), th_wine, th_rustic.
 - Secret Santa ss_* can take a second theme (e.g. kraft/minimal office).

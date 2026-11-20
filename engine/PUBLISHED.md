@@ -21,3 +21,8 @@
 | 2026-11-18 | 4620388124 | xmas-invite--black-tie-gala (invite set, theme th_luxgold) | 12.99 | doodle |
 | 2026-11-18 | 4620381113 | secret-santa--modern-red (new family) | 9.99 | colorful |
 | 2026-11-18 | 4620381127 | xmas-games--frosty-game-night (new family) | 9.99 | calm |
+| 2026-11-20 | 4621661003 | xmas-dinner-menu--watercolor-botanical (theme th_botanical) | 12.99 | detailed |
+| 2026-11-20 | 4621661325 | xmas-invite--cozy-pajama-party (theme th_pajama) | 11.99 | minimal |
+| 2026-11-20 | 4621668518 | xmas-dinner-menu--nye-champagne (theme th_nye) | 12.99 | bold |
+| 2026-11-20 | 4621668530 | xmas-eve-box--north-pole (new family, xe_* + th_northpole) | 9.99 | doodle |
+| 2026-11-20 | 4621668536 | nye-time-capsule--midnight-gold (new family, tc_* + th_nye) | 8.99 | colorful |
