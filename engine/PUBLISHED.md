@@ -26,3 +26,8 @@
 | 2026-11-20 | 4621668518 | xmas-dinner-menu--nye-champagne (theme th_nye) | 12.99 | bold |
 | 2026-11-20 | 4621668530 | xmas-eve-box--north-pole (new family, xe_* + th_northpole) | 9.99 | doodle |
 | 2026-11-20 | 4621668536 | nye-time-capsule--midnight-gold (new family, tc_* + th_nye) | 8.99 | colorful |
+| 2026-11-20 | 4621675058 | xmas-dinner-menu--thanksgiving-harvest (catch-up 11-19, th_harvest) | 11.99 | calm |
+| 2026-11-20 | 4621675068 | xmas-dinner-menu--kids-gingerbread (catch-up 11-19, th_kidsmenu + placemat/word search) | 9.99 | detailed |
+| 2026-11-20 | 4621675086 | xmas-invite--nye-midnight-party (catch-up 11-19, pi_* + th_nye) | 11.99 | minimal |
+| 2026-11-20 | 4621667939 | nye-games--most-likely-disco (catch-up 11-19, new family, ml_* + th_disco) | 7.99 | bold |
+| 2026-11-20 | 4621675110 | christmas-recipes--cozy-kitchen (catch-up 11-19, new family, rc_* + th_kitchen) | 8.99 | doodle |

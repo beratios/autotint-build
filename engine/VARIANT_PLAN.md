@@ -21,7 +21,7 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 
 ## UPGRADE EXISTING (do these first, before new listings, one per day until done)
 - [x] xmas-dinner-set-minimal (4618730967): add detailed menu page, Instagram post + story versions; update description, "what's inside" photo (rank 7 overwrite) and title if needed.
-- [ ] xmas-invite-elegant (4618250503): add Instagram story + post invite, RSVP card, thank-you card.
+- [x] xmas-invite-elegant (4618250503): done 11-20 – theme th_emerald + pi_* (RSVP, schedule, welcome, place cards, thank-you, post, story); inside photo rank 7, detail rank 10; title/desc/tags updated, price 14.99 -> 12.99.
 - [ ] family-xmas-card-playful (4618256578): add Instagram post + story versions, gift tag set in same design.
 
 ## Variant rules
@@ -37,17 +37,17 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 - [x] scandinavian minimal (4618730967)
 - [x] luxury black + gold foil, art deco frame (4619558974)
 - [x] (4619552281) wine & candlelight: dark burgundy, illustrated wine glasses/candles/table runner
-- [ ] kids Christmas dinner: cute cartoon, kids menu + coloring placemat + activity page + place cards
+- [x] kids Christmas dinner: gingerbread kids menu + coloring placemat + word search + place cards (4621675068)
 - [x] (4619559532) rustic farmhouse: kraft, buffalo plaid, pine
 - [x] watercolor botanical: eucalyptus, berries, white (4621661003)
 - [x] cozy fireplace / cabin scene (4620388082)
 - [x] Christmas Eve dinner (navy + silver stars) (4620388102)
 - [ ] Christmas morning brunch menu
 - [x] New Years Eve dinner menu, plum + gold midnight clock, champagne (4621668518)
-- [ ] Thanksgiving dinner menu (US) — Nov 17–22 only: autumn leaves / pumpkin farmhouse
+- [x] Thanksgiving dinner menu autumn harvest (4621675058)
 ### Christmas party invitation
 - [x] elegant green gold (4618250503)
-- [x] luxury black tie gala (4620388124), [x] cozy pajama party (4621661325), [ ] kids Christmas party, [ ] office holiday party (modern), [ ] watercolor winter wonderland
+- [x] luxury black tie gala (4620388124), [x] cozy pajama party (4621661325), [x] NYE midnight party (4621675086), [ ] kids Christmas party, [ ] office holiday party (modern), [ ] watercolor winter wonderland
 ### Letter from Santa pack
 - [x] watercolor (4618736968)
 - [ ] vintage North Pole parchment + wax seal, [ ] cute cartoon (toddlers), [ ] elf-on-the-shelf style arrival letter (generic elf, no brand)
@@ -62,15 +62,16 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 - [ ] elegant photo-less typography, [ ] watercolor wreath, [ ] funny family card
 ### NYE party
 - [x] retro bingo (4618256700)
-- [ ] NYE trivia with party name, [ ] NYE "who's most likely to", [ ] NYE dinner/cocktail menu, [x] 2027 family time capsule incl. resolution cards (4621668536, family nye-time-capsule), [ ] NYE countdown kids pack
+- [ ] NYE trivia with party name, [x] NYE "who's most likely to" disco (4621667939, family nye-games), [ ] NYE dinner/cocktail menu, [x] 2027 family time capsule incl. resolution cards (4621668536, family nye-time-capsule), [ ] NYE countdown kids pack
 ### Other holiday families to start
-- [x] hot cocoa bar candy cane (4619552325) / [ ] mimosa bar sign set, [x] Secret Santa kit modern red (4620381113), [ ] Christmas place cards only (cheap entry item), [x] Christmas movie night retro cinema (4619552347), [ ] Christmas recipe card set with family name
+- [x] hot cocoa bar candy cane (4619552325) / [ ] mimosa bar sign set, [x] Secret Santa kit modern red (4620381113), [ ] Christmas place cards only (cheap entry item), [x] Christmas movie night retro cinema (4619552347), [x] Christmas recipe book kit cozy kitchen (4621675110, family christmas-recipes)
 
 ### Christmas game night (new family, 11-18)
 - [x] frosty gingerbread game night (4620381127)
 - [ ] plaid cabin game night, [ ] NYE game night version, [ ] kids Christmas party games
 ### Notes for next runs
 - 11-20: new themes th_botanical (watercolor greenery), th_pajama (cute cozy), th_nye (plum midnight clock + champagne), th_northpole (kids cartoon). pi_* now use topicon(theme) macro (mugs for th_pajama, coupes otherwise). Cheap next variants: NYE party invite = pi_* + th_nye; Christmas Eve box 2nd concept = xe_* + new kid theme; watercolor invite = pi_* + th_botanical; time capsule kids-only bright version.
-- Upgrade backlog (xmas-invite-elegant, family-xmas-card-playful) still open – not done on 11-19/11-20.
+- Upgrade backlog: only family-xmas-card-playful left (add Instagram post + story, gift tag set).
+- New themes 11-20 catch-up: th_emerald (matches elegant_invite), th_harvest, th_kidsmenu (+kd_placemat, kd_activity), th_disco (ml_* most likely to), th_kitchen (rc_* recipes). th_disco can host other NYE games (trivia, bingo variant).
 - Invitation engine pi_* works with ANY th_* theme -> cheap invite variants: th_fireplace (cozy party), th_navy (Christmas Eve), th_wine, th_rustic.
 - Secret Santa ss_* can take a second theme (e.g. kraft/minimal office).
