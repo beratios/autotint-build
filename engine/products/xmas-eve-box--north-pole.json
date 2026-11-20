@@ -1,0 +1,155 @@
+{
+ "template": "xe_label.html",
+ "w_in": 8,
+ "h_in": 10,
+ "fields": [
+  "child names (one or more)",
+  "family name",
+  "year",
+  "optional: a short personal note from Santa",
+  "optional: elf name"
+ ],
+ "defaults": {
+  "theme": "th_northpole.html",
+  "kids": [
+   "Emma",
+   "Noah"
+  ],
+  "family": "Walker",
+  "year": "2026"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#fdf6ea",
+   "ink": "#4a2a1c",
+   "accent": "#d2343f",
+   "hfont": "Fredoka",
+   "hsize": 96
+  },
+  "size": "8x10 box labels, 8.5x11 sheets, 5x7 note",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.35,
+    "frac": 0.62,
+    "caption": "Your child's name",
+    "sub": "Christmas Eve box label"
+   },
+   {
+    "x": 0.5,
+    "y": 0.84,
+    "frac": 0.62,
+    "caption": "Cute North Pole scene",
+    "sub": "Reindeer, signpost and gifts"
+   }
+  ],
+  "fields": [
+   [
+    "Christmas Eve Box",
+    0.5,
+    0.25
+   ],
+   [
+    "Child names",
+    0.5,
+    0.4
+   ],
+   [
+    "Year",
+    0.5,
+    0.5
+   ]
+  ],
+  "vtitle": "Made for your little ones.",
+  "variants": [
+   {},
+   {
+    "kids": [
+     "Olivia"
+    ],
+    "family": "Chen"
+   },
+   {
+    "kids": [
+     "Liam",
+     "Ava",
+     "Mia"
+    ],
+    "family": "Murphy"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "label",
+   "template": "xe_label.html",
+   "w_in": 8,
+   "h_in": 10,
+   "repeat": "kids",
+   "png": true,
+   "label": "Name label for each child"
+  },
+  {
+   "name": "letter",
+   "template": "xe_letter.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Special delivery elf letter"
+  },
+  {
+   "name": "nice-list",
+   "template": "xe_cert.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "kids",
+   "png": true,
+   "label": "Nice List certificate"
+  },
+  {
+   "name": "reindeer-food",
+   "template": "xe_reindeer.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Reindeer food toppers"
+  },
+  {
+   "name": "santa-key",
+   "template": "xe_keys.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Magic Santa key tags"
+  },
+  {
+   "name": "santa-note",
+   "template": "xe_note.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true,
+   "label": "Cookies for Santa note"
+  },
+  {
+   "name": "gift-tags",
+   "template": "xe_tags.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "From Santa gift tags"
+  }
+ ],
+ "main_label": "Box label 8x10",
+ "hero": {
+  "headline": "Personalized Christmas Eve Box Kit",
+  "short": "Christmas Eve Box Kit",
+  "bullets": [
+   "Box labels with your kids names",
+   "Elf letter, Nice List, reindeer food",
+   "Santa key, cookie note, gift tags"
+  ]
+ },
+ "inside_sub": "8 designs \u00b7 every page with your names",
+ "detail_page": "reindeer-food",
+ "detail_title": "Magic reindeer food toppers"
+}

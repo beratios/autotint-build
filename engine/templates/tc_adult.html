@@ -1,0 +1,17 @@
+{% extends theme %}
+{% block mode %}q{% endblock %}
+{% block lcss %}{% include "tc_css.html" %}{% endblock %}
+{% block content %}{% set y2 = year|int + 1 %}
+<div class="t-k">{{ family }} family time capsule · {{ year }}</div>
+<div class="t-h" style="font-size:9vmin;margin-top:.6vmin">{{ rep }}</div>
+<div class="qs">
+<div class="row2"><div class="q"><b>Age today</b><i></i></div><div class="q"><b>Where we live</b><i></i></div></div>
+<div class="q"><b>My favorite memory of {{ year }}</b><i></i><i></i></div>
+<div class="q"><b>What I am most proud of this year</b><i></i></div>
+<div class="row2"><div class="q"><b>Song of the year</b><i></i></div><div class="q"><b>Favorite show or movie</b><i></i></div></div>
+<div class="row2"><div class="q"><b>Favorite food right now</b><i></i></div><div class="q"><b>A word for {{ year }}</b><i></i></div></div>
+<div class="q"><b>My goals for {{ y2 }}</b><i></i><i></i></div>
+<div class="q"><b>I predict that in {{ y2 }}...</b><i></i></div>
+<div class="q"><b>A note to my future self</b><i></i><i></i></div>
+</div>
+{% endblock %}

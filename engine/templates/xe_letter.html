@@ -1,0 +1,15 @@
+{% extends theme %}
+{% block mode %}letter{% endblock %}
+{% block lcss %}.ltr{font-family:'Fredoka';font-size:2.85vmin;line-height:1.55;text-align:left;margin-top:2.4vmin}.ltr p{margin-top:1.6vmin}.sig{font-family:'Amatic SC';font-weight:700;font-size:6.5vmin;color:#d2343f;text-align:right;margin-top:1.4vmin;width:100%}{% endblock %}
+{% block content %}{% set who = kids|join(' and ') %}
+<div class="t-k">north pole · official elf mail</div>
+<div class="t-h" style="font-size:7.5vmin;margin-top:1.4vmin">Special Delivery!</div>
+<div class="t-rule" style="margin:2vmin auto"></div>
+<div class="ltr">
+<p>Dear {{ who }},</p>
+<p>Santa asked me to bring this Christmas Eve box all the way from the North Pole, just for you. The reindeer have been practicing their flying all week and the workshop is busy, busy, busy!</p>
+<p>{{ note|default('Santa says you have been kind, helpful and so much fun this year. Inside your box you will find a few cozy surprises for tonight. Put on your pajamas, sprinkle the magic reindeer food outside, leave a treat for Santa, and get some good sleep.') }}</p>
+<p>See you very soon. Merry Christmas to the whole {{ family }} family!</p>
+</div>
+<div class="sig">{{ elf|default('Twinkle, Head Elf') }}</div>
+{% endblock %}

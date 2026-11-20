@@ -1,0 +1,46 @@
+{% extends "mp_base.html" %}
+{# North Pole cartoon: candy-stripe frame, cream snow paper with falling snowflakes, bottom scene with snowy hills, striped North Pole signpost, cute reindeer, little pines and gifts #}
+{% block tcss %}
+:root{--bg:#fdf6ea;--ink:#4a2a1c;--muted:#8a6a58;--acc:#1f6b4e;--hc:#d2343f;--hf:'Fredoka';--hw:700;--sf:'Amatic SC';--bf:'Fredoka';--df:'Fredoka';--sx:12vmin;--st:16vmin;--sb:38vmin}
+body{background:repeating-linear-gradient(45deg,#d2343f 0 2.6vmin,#fff 2.6vmin 5.2vmin)}
+.t-h{line-height:1.02;text-shadow:.45vmin .45vmin 0 #ffd9d2;letter-spacing:-.01em}
+.t-s{font-weight:700;color:#1f6b4e;line-height:1}
+.t-k,.t-l{color:#1f6b4e}
+.t-b{font-weight:400}
+.t-rule{height:1.2vmin;width:24vmin;border-radius:1vmin;background:repeating-linear-gradient(90deg,#1f6b4e 0 2vmin,#fdf6ea 2vmin 2.6vmin,#d2343f 2.6vmin 4.6vmin,#fdf6ea 4.6vmin 5.2vmin)}
+.t-rule:after{display:none}
+.paper{position:absolute;inset:2.6vmin;background:#fdf6ea;border-radius:3vmin;box-shadow:inset 0 0 0 .8vmin #fdf6ea,inset 0 0 0 1.2vmin #1f6b4e}
+.sn{position:absolute;color:#b9d7e8;transform:translate(-50%,-50%)}
+.scene{position:absolute;left:2.6vmin;right:2.6vmin;bottom:2.6vmin;width:calc(100% - 5.2vmin);border-radius:0 0 3vmin 3vmin}
+.a-letter .scene,.a-cert .scene{left:20%;width:60%}
+.m-letter{top:14vmin!important;bottom:26vmin!important}
+.card{background:#fdf6ea;color:#4a2a1c;border:1px dashed #1f6b4e}
+.card .nm{font-family:'Fredoka';font-weight:700;color:#d2343f}
+{% endblock %}
+{% block art %}{% set mode = self.mode()|trim %}
+<div class="paper"></div>
+{% for i in range(26) %}{% set x = (i*37+9)%100 %}{% set y = (i*53+5)%70 %}{% if x<14 or x>86 or y<9 %}<div class="sn" style="left:{{x}}%;top:{{ y + 3 }}%;font-size:{{ 2 + (i%3)*1.2 }}vmin">❄</div>{% endif %}{% endfor %}
+<svg class="scene" viewBox="0 0 600 230" preserveAspectRatio="xMidYMax meet">
+<path d="M0 150 Q140 100 300 140 Q450 175 600 120 V230 H0Z" fill="#e3eef6"/>
+{% for x,h in [(40,60),(70,80),(560,70),(530,92),(480,54)] %}<path d="M{{x}} {{200-h}} L{{x+18}} {{200-h*0.45}} H{{x+9}} L{{x+22}} 200 H{{x-22}} L{{x-9}} {{200-h*0.45}} H{{x-18}}Z" fill="#1f6b4e"/><path d="M{{x}} {{200-h}} L{{x+8}} {{200-h*0.7}} H{{x-8}}Z" fill="#fff"/><circle cx="{{x}}" cy="{{198-h}}" r="4" fill="#ffd54a"/>{% endfor %}
+<!-- signpost -->
+<g transform="translate(200 70)"><rect x="-6" y="0" width="12" height="140" fill="#fff"/>{% for k in range(9) %}<path d="M-6 {{ k*16 }} L6 {{ k*16 - 8 }} V{{ k*16 }} L-6 {{ k*16 + 8 }}Z" fill="#d2343f"/>{% endfor %}<circle cx="0" cy="-6" r="10" fill="#ffd54a"/>
+<g transform="rotate(-6)"><path d="M10 18 H100 L114 32 L100 46 H10Z" fill="#8b5a3c"/><text x="58" y="38" text-anchor="middle" font-family="Fredoka" font-weight="700" font-size="17" fill="#fff">NORTH POLE</text></g>
+<g transform="rotate(5)"><path d="M-10 56 H-96 L-108 68 L-96 80 H-10Z" fill="#a8693f"/><text x="-58" y="73" text-anchor="middle" font-family="Fredoka" font-weight="600" font-size="13" fill="#fff">WORKSHOP</text></g></g>
+<!-- reindeer body peeking -->
+<g transform="translate(380 82) scale(.62)">
+<g stroke="#6b4226" stroke-width="8" stroke-linecap="round" fill="none"><path d="M70 60 Q50 30 58 6 M60 34 Q40 30 34 16 M56 18 Q66 10 72 2"/><path d="M130 60 Q150 30 142 6 M140 34 Q160 30 166 16 M144 18 Q134 10 128 2"/></g>
+<ellipse cx="52" cy="78" rx="22" ry="11" transform="rotate(-25 52 78)" fill="#a8693f"/><ellipse cx="148" cy="78" rx="22" ry="11" transform="rotate(25 148 78)" fill="#a8693f"/>
+<rect x="66" y="150" width="70" height="120" rx="30" fill="#a8693f"/>
+<ellipse cx="100" cy="112" rx="50" ry="56" fill="#a8693f"/><ellipse cx="100" cy="140" rx="34" ry="28" fill="#e8c9a4"/>
+<circle cx="80" cy="100" r="8" fill="#2b1a10"/><circle cx="120" cy="100" r="8" fill="#2b1a10"/><circle cx="83" cy="97" r="3" fill="#fff"/><circle cx="123" cy="97" r="3" fill="#fff"/>
+<ellipse cx="100" cy="128" rx="14" ry="10" fill="#4a2a18"/><path d="M90 148 Q100 156 110 148" stroke="#4a2a18" stroke-width="3" fill="none"/>
+<circle cx="70" cy="122" r="7" fill="#f28b8b" opacity=".6"/><circle cx="130" cy="122" r="7" fill="#f28b8b" opacity=".6"/>
+<path d="M60 168 Q100 190 140 168 L136 182 Q100 198 64 182Z" fill="#d2343f"/>{% for k in range(5) %}<circle cx="{{ 72 + k*14 }}" cy="181" r="4" fill="#ffd54a"/>{% endfor %}</g>
+<!-- gifts -->
+{% for gx,gw,gh,c,rb in [(250,46,40,'#d2343f','#ffd54a'),(292,36,30,'#1f6b4e','#fff'),(470,40,44,'#4fa3d1','#fff')] %}<g transform="translate({{gx}} {{200-gh}})"><rect width="{{gw}}" height="{{gh}}" rx="3" fill="{{c}}"/><rect x="{{gw/2-4}}" width="8" height="{{gh}}" fill="{{rb}}"/><path d="M{{gw/2}} 0 q-14 -14 -16 -2 q2 6 16 2 q14 -14 16 -2 q-2 6 -16 2Z" fill="{{rb}}"/></g>{% endfor %}
+<path d="M0 196 Q150 184 300 198 Q450 210 600 192 V230 H0Z" fill="#fff"/>
+{% for i in range(18) %}<circle cx="{{ (i*53)%600 }}" cy="{{ 210 + (i*7)%16 }}" r="{{ 2 + i%3 }}" fill="#e3eef6"/>{% endfor %}
+</svg>
+{% endblock %}
+{% block cardart %}<svg width="14%" viewBox="0 0 40 40"><path d="M20 2 V38 M4 11 L36 29 M4 29 L36 11" stroke="#4fa3d1" stroke-width="3" stroke-linecap="round"/></svg>{% endblock %}

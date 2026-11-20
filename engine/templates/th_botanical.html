@@ -1,0 +1,71 @@
+{% extends "mp_base.html" %}
+{# Watercolor botanical: warm white paper, soft eucalyptus + pine + red berry garland on top, sprig cluster at the bottom, sage ink #}
+{% block tcss %}
+:root{--bg:#fbf8f2;--ink:#2f4438;--muted:#6d7f72;--acc:#7c9a84;--hc:#2b4234;--hf:'DM Serif Display';--hw:400;--sf:'Great Vibes';--bf:'Cormorant Garamond';--df:'DM Serif Display';--sx:11vmin;--st:37vmin;--sb:24vmin}
+body{background:#fbf8f2}
+.t-s{color:#a3364a}
+.t-k,.t-l{color:#6f8f78}
+.t-rule{background:#b9c9bc;height:1.5px;width:22vmin}
+.t-rule:after{background:#b8434f;border-radius:50%;transform:translate(-50%,-50%)}
+.paper{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 30%,rgba(214,226,214,.35),transparent 55%),radial-gradient(ellipse at 85% 75%,rgba(238,214,206,.35),transparent 50%)}
+.top{position:absolute;left:-2%;right:-2%;top:-1vmin;width:104%}
+.bot{position:absolute;left:50%;bottom:-1vmin;transform:translateX(-50%);width:78%}
+.a-detailed .top{left:12%;right:12%;width:76%}.m-detailed{top:31vmin!important;bottom:5vmin!important}
+.a-detailed .bot{display:none}
+.a-post .top{left:14%;width:72%}.m-post{top:24vmin!important;bottom:13vmin!important}
+.a-post .bot{width:34%}
+.a-story .top{top:4vmin}.m-story{top:44vmin!important;bottom:36vmin!important}.m-story .crs{margin-top:2.6vmin!important}.m-story .crs .t-b{font-size:4.3vmin!important}.a-story .bot{width:70%}
+.a-welcome .bot{width:56%}
+.a-rsvp .top{left:20%;width:60%}.a-rsvp .bot{display:none}
+.card{background:#fbf8f2;color:#2f4438;border:1px solid #d6dfd6}
+.card .nm{font-family:'Great Vibes';font-size:7.5vmin!important;color:#2b4234}
+{% endblock %}
+{% macro defs() %}<defs>
+<filter id="wc" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="3" seed="4"/><feDisplacementMap in="SourceGraphic" scale="5"/><feGaussianBlur stdDeviation=".35"/></filter>
+<filter id="wash"><feGaussianBlur stdDeviation="7"/></filter>
+<radialGradient id="leafA" cx=".35" cy=".35"><stop offset="0" stop-color="#c9dccf"/><stop offset=".7" stop-color="#8fb0a0"/><stop offset="1" stop-color="#6f9585"/></radialGradient>
+<radialGradient id="leafB" cx=".35" cy=".35"><stop offset="0" stop-color="#dde8e0"/><stop offset=".7" stop-color="#a9c3b6"/><stop offset="1" stop-color="#84a898"/></radialGradient>
+<radialGradient id="berry" cx=".35" cy=".3"><stop offset="0" stop-color="#f08a8a"/><stop offset=".5" stop-color="#c3283b"/><stop offset="1" stop-color="#7d1222"/></radialGradient>
+</defs>{% endmacro %}
+{% macro euc(x, y, ang, n=7, len=110, s=1, g='leafA') %}{# eucalyptus stem: round coin leaves along a slightly curved stem #}
+<g transform="translate({{x}} {{y}}) rotate({{ang}}) scale({{s}})" filter="url(#wc)">
+<path d="M0 0 Q{{len*0.5}} -8 {{len}} 4" stroke="#7d8f6e" stroke-width="1.6" fill="none"/>
+{% for i in range(n) %}{% set t = (i+0.7)/n %}{% set lx = len*t %}{% set ly = -8*4*t*(1-t) + 4*t %}{% set side = 1 if i%2 else -1 %}{% set r = 13 - 6*t %}
+<ellipse cx="{{lx}}" cy="{{ly + side*(r*0.9)}}" rx="{{r}}" ry="{{r*0.92}}" fill="url(#{{g}})" opacity=".88" transform="rotate({{ side*18 }} {{lx}} {{ly}})"/>
+<path d="M{{lx}} {{ly}} L{{lx + side*2}} {{ly + side*(r*0.9)}}" stroke="#7f9e8e" stroke-width=".8" opacity=".6"/>{% endfor %}
+<ellipse cx="{{len+4}}" cy="5" rx="5" ry="4.4" fill="url(#{{g}})" opacity=".9"/>
+</g>{% endmacro %}
+{% macro pine(x, y, ang, len=90, s=1, c='#3f6b55') %}<g transform="translate({{x}} {{y}}) rotate({{ang}}) scale({{s}})" stroke="{{c}}" stroke-linecap="round" filter="url(#wc)" opacity=".92">
+<path d="M0 0 L{{len}} 0" stroke-width="1.8" stroke="#5b4a36"/>
+{% for i in range(((len/5))|int) %}{% set px = 4 + i*5 %}{% set l = 13 - 8*(i*5/len) %}<line x1="{{px}}" y1="0" x2="{{px + l*0.55}}" y2="{{-l}}" stroke-width="1.6"/><line x1="{{px}}" y1="0" x2="{{px + l*0.55}}" y2="{{l}}" stroke-width="1.6" stroke="#4f7d66"/>{% endfor %}
+</g>{% endmacro %}
+{% macro berries(x, y, s=1) %}<g transform="translate({{x}} {{y}}) scale({{s}})">
+<path d="M0 0 L-6 -14 M0 0 L7 -12 M0 0 L1 -18" stroke="#6b4a3a" stroke-width="1"/>
+{% for bx,by,r in [(-6,-14,5.2),(7,-12,4.8),(1,-19,5.4),(-11,-6,4.2),(10,-3,4)] %}<circle cx="{{bx}}" cy="{{by}}" r="{{r}}" fill="url(#berry)"/><circle cx="{{bx-1.6}}" cy="{{by-1.7}}" r="{{r*0.3}}" fill="#fff" opacity=".55"/>{% endfor %}
+</g>{% endmacro %}
+{% macro wleaf(x, y, ang, s=1, c='#5d8a74') %}<g transform="translate({{x}} {{y}}) rotate({{ang}}) scale({{s}})" filter="url(#wc)"><path d="M0 0 C10 -12 34 -12 46 0 C34 10 10 10 0 0Z" fill="{{c}}" opacity=".78"/><path d="M2 0 H42" stroke="#e7efe9" stroke-width=".9" opacity=".7"/></g>{% endmacro %}
+{% block art %}{% set mode = self.mode()|trim %}
+<div class="paper"></div>
+<svg class="top" viewBox="0 0 600 190" preserveAspectRatio="xMidYMin meet">{{ defs() }}
+<ellipse cx="150" cy="50" rx="170" ry="55" fill="#d4e3d8" opacity=".6" filter="url(#wash)"/>
+<ellipse cx="450" cy="50" rx="170" ry="55" fill="#f0d9d0" opacity=".55" filter="url(#wash)"/>
+<ellipse cx="300" cy="120" rx="90" ry="40" fill="#e6efe8" opacity=".7" filter="url(#wash)"/>
+{% for i in range(13) %}{% set t = i/12 %}{% set x = -10 + 620*t %}{% set y = 8 + 100*(4*t*(1-t))**1.2 %}{% set out = 90 if t==0.5 else (60 - 150*t if t<0.5 else 60 + 150*(1-t)) %}
+{% set k = i % 3 %}
+{% if k == 0 %}{{ pine(x, y, 180 + out - 40, 95, 1.25) }}{{ euc(x, y, out + 40, 8, 120, 1.25, 'leafA') }}
+{% elif k == 1 %}{{ euc(x, y, 180 + out - 30, 7, 110, 1.2, 'leafB') }}{{ wleaf(x, y, out + 20, 1.5) }}{{ pine(x, y, out + 70, 80, 1.1, '#4f7d66') }}
+{% else %}{{ wleaf(x, y, 180 + out - 20, 1.6, '#6f9a84') }}{{ euc(x, y, out + 55, 7, 115, 1.25, 'leafA') }}{{ wleaf(x, y, out - 10, 1.3, '#4f7d66') }}{% endif %}
+{% endfor %}
+{% for i in range(13) %}{% set t = i/12 %}{% set x = -10 + 620*t %}{% set y = 8 + 100*(4*t*(1-t))**1.2 %}{% if i % 2 == 1 %}{{ berries(x, y + 6, 1.35) }}{% endif %}{% endfor %}
+{{ euc(300, 112, 200, 6, 95, 1.2, 'leafA') }}{{ euc(300, 112, -20, 6, 95, 1.2, 'leafA') }}{{ wleaf(300, 112, 60, 1.7) }}{{ wleaf(300, 112, 120, 1.7, '#6f9a84') }}{{ pine(300, 112, 95, 70, 1.1) }}
+{{ berries(300, 128, 1.9) }}{{ berries(276, 120, 1.3) }}{{ berries(324, 120, 1.3) }}
+</svg>
+{% if mode not in ['rsvp'] %}
+<svg class="bot" viewBox="0 0 400 130" preserveAspectRatio="xMidYMax meet">{{ defs() }}
+<ellipse cx="200" cy="110" rx="190" ry="34" fill="#d4e3d8" opacity=".65" filter="url(#wash)"/>
+{% for a,kind,s in [(185,'p',1.25),(200,'e',1.25),(212,'w',1.6),(228,'e',1.1),(245,'p',1.1),(262,'w',1.5),(278,'e',1.15),(295,'w',1.6),(310,'e',1.1),(325,'p',1.1),(340,'e',1.25),(355,'p',1.25)] %}
+{% if kind=='p' %}{{ pine(200, 128, a, 120, s) }}{% elif kind=='e' %}{{ euc(200, 128, a, 8, 140, s, 'leafA' if loop.index%2 else 'leafB') }}{% else %}{{ wleaf(200, 128, a, s, '#6f9a84' if loop.index%2 else '#4f7d66') }}{% endif %}{% endfor %}
+{{ berries(200, 112, 2) }}{{ berries(165, 118, 1.4) }}{{ berries(235, 118, 1.4) }}{{ berries(130, 122, 1.1) }}{{ berries(270, 122, 1.1) }}
+</svg>{% endif %}
+{% endblock %}
+{% block cardart %}<svg width="52%" viewBox="0 0 400 90">{{ defs() }}{{ euc(200, 80, 200, 6, 120, 0.8, 'leafA') }}{{ euc(200, 80, -20, 6, 120, 0.8, 'leafA') }}{{ wleaf(200, 78, -90, 0.9) }}{{ berries(200, 72, 1.1) }}</svg>{% endblock %}

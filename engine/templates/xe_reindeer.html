@@ -1,0 +1,22 @@
+{% extends theme %}{% from "xe_macros.html" import deer %}
+{% block mode %}place{% endblock %}
+{% block lcss %}
+body{background:#fff}.page{inset:0;display:block}
+.cut{position:absolute;top:1.8vmin;left:0;right:0;font-family:'Inter';font-size:1.4vmin;letter-spacing:.22em;color:#999}
+.g{position:absolute;left:3.5vmin;right:3.5vmin;top:4.5vmin;bottom:3.5vmin;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2vmin}
+.tp{position:relative;border:1px dashed #bbb;background:#fdf6ea;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:3vmin;overflow:hidden}
+.fold{position:absolute;left:0;right:0;top:50%;border-top:1px dashed #bbb}
+.tp .bot{position:absolute;top:50%;left:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2vmin 4vmin}
+.str{position:absolute;left:0;right:0;top:0;height:1.6vmin;background:repeating-linear-gradient(45deg,#d2343f 0 1.2vmin,#fff 1.2vmin 2.4vmin)}
+{% endblock %}
+{% block content %}
+<div class="cut">✂ MAGIC REINDEER FOOD BAG TOPPERS · CUT, FOLD ON THE DASHED LINE, STAPLE OVER A SMALL BAG</div>
+<div class="g">{% for i in range(4) %}{% set n = kids[i % kids|length] if kids else '' %}<div class="tp"><div class="str"></div>
+<div class="t-k" style="font-size:1.6vmin;margin-top:.6vmin">{{ n ~ "'s" if n else 'my' }} magic</div>
+<div class="t-h" style="font-size:5.4vmin;margin-top:.6vmin">Reindeer Food</div>
+<div style="margin-top:.6vmin">{{ deer('17vmin') }}</div>
+<div class="fold"></div>
+<div class="bot"><div class="t-b" style="font-size:2.3vmin;line-height:1.45">Sprinkle on the lawn at night,<br>the moon will make it sparkle bright.<br>As the reindeer fly and roam,<br>this will guide them to your home!</div>
+<div class="t-s" style="font-size:4.4vmin;margin-top:1.4vmin;color:#d2343f">the {{ family }} family</div></div>
+</div>{% endfor %}</div>
+{% endblock %}

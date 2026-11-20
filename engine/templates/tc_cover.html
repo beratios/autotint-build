@@ -1,0 +1,10 @@
+{% extends theme %}
+{% block mode %}welcome{% endblock %}
+{% block content %}{% set y2 = year|int + 1 %}
+<div class="t-k" style="font-size:2.4vmin">the {{ family }} family</div>
+<div class="t-h" style="font-size:14vmin;margin-top:2vmin">Time Capsule</div>
+<div class="t-s" style="font-size:7vmin;margin-top:1vmin">{{ year }} &rarr; {{ y2 }}</div>
+<div class="t-rule"></div>
+<div class="t-b" style="font-size:3.4vmin;line-height:1.4">sealed on New Years Eve {{ year }}<br>to be opened on New Years Eve {{ y2 }}</div>
+<div class="t-k" style="margin-top:3vmin;font-size:1.9vmin">{{ (adults + kids)|join(' · ') }}</div>
+{% endblock %}

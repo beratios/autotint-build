@@ -1,0 +1,158 @@
+{
+ "template": "tc_cover.html",
+ "w_in": 8.5,
+ "h_in": 11,
+ "fields": [
+  "family name",
+  "adult names (each gets a page)",
+  "kids names (each gets an All About Me page)",
+  "year"
+ ],
+ "defaults": {
+  "theme": "th_nye.html",
+  "family": "Bennett",
+  "year": "2026",
+  "adults": [
+   "Sarah",
+   "David"
+  ],
+  "kids": [
+   "Lily",
+   "Owen"
+  ]
+ },
+ "gallery": {
+  "style": {
+   "bg": "#160b26",
+   "ink": "#f6ecdf",
+   "accent": "#e6c27a",
+   "hfont": "Great Vibes",
+   "hsize": 120
+  },
+  "size": "8.5x11 pages, 4x6 seal label, Instagram story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.42,
+    "frac": 0.62,
+    "caption": "Your family name",
+    "sub": "Gold foil look time capsule cover"
+   },
+   {
+    "x": 0.5,
+    "y": 0.85,
+    "frac": 0.62,
+    "caption": "Champagne toast scene",
+    "sub": "Midnight clock and confetti"
+   }
+  ],
+  "fields": [
+   [
+    "Family name",
+    0.5,
+    0.33
+   ],
+   [
+    "Year",
+    0.5,
+    0.47
+   ],
+   [
+    "Everyone's names",
+    0.5,
+    0.62
+   ]
+  ],
+  "vtitle": "Seal this year. Open the next.",
+  "variants": [
+   {},
+   {
+    "family": "Garcia",
+    "adults": [
+     "Maria",
+     "Luis"
+    ],
+    "kids": [
+     "Sofia"
+    ]
+   },
+   {
+    "family": "Thompson",
+    "adults": [
+     "Kate",
+     "Ryan",
+     "Grandma Jo"
+    ],
+    "kids": [
+     "Ella",
+     "Max"
+    ]
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "adult",
+   "template": "tc_adult.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "adults",
+   "png": true,
+   "label": "Personal page for every adult"
+  },
+  {
+   "name": "kid",
+   "template": "tc_kid.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "kids",
+   "png": true,
+   "label": "All About Me page for every kid"
+  },
+  {
+   "name": "predictions",
+   "template": "tc_predict.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Family predictions sheet"
+  },
+  {
+   "name": "resolutions",
+   "template": "tc_cards.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Resolution cards with names"
+  },
+  {
+   "name": "seal-label",
+   "template": "tc_label.html",
+   "w_in": 4,
+   "h_in": 6,
+   "png": true,
+   "label": "Do not open seal label 4x6"
+  },
+  {
+   "name": "instagram-story",
+   "template": "tc_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Happy New Year story"
+  }
+ ],
+ "main_label": "Time capsule cover",
+ "hero": {
+  "headline": "Family New Years Eve Time Capsule",
+  "short": "NYE Family Time Capsule",
+  "bullets": [
+   "Cover and seal label with your name",
+   "A page for every adult and kid",
+   "Predictions, resolution cards, story"
+  ]
+ },
+ "inside_sub": "7 designs \u00b7 a personal page for everyone",
+ "detail_page": "kid",
+ "detail_title": "All About Me page for every kid"
+}

@@ -1,0 +1,15 @@
+{% extends theme %}
+{% block mode %}q{% endblock %}
+{% block lcss %}{% include "tc_css.html" %}
+table{width:100%;border-collapse:collapse;margin-top:3vmin;font-family:var(--bf)}
+th{font-family:'Great Vibes';font-weight:400;font-size:4.4vmin;color:var(--hc);padding-bottom:1vmin}
+td{border:1px solid rgba(230,194,122,.45);height:7.6vmin;font-size:2.4vmin}
+td.l{width:30%;padding:0 1.4vmin;font-family:'Inter';font-size:1.6vmin;letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}
+{% endblock %}
+{% block content %}{% set y2 = year|int + 1 %}{% set ppl = (adults + kids)[:5] %}
+<div class="t-k">the {{ family }} family</div>
+<div class="t-h" style="font-size:8vmin;margin-top:.6vmin">Predictions for {{ y2 }}</div>
+<table><tr><th></th>{% for n in ppl %}<th>{{ n }}</th>{% endfor %}</tr>
+{% for q in ['A gallon of milk will cost','The most popular song','Where we will travel','Someone will learn to','Biggest family news','Who will grow the most','Our new favorite food','At midnight we will be'] %}<tr><td class="l">{{ q }}</td>{% for n in ppl %}<td></td>{% endfor %}</tr>{% endfor %}
+</table>
+{% endblock %}

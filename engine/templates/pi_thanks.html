@@ -1,8 +1,8 @@
-{% extends theme %}{% from "pi_macros.html" import coupes, baubles %}
+{% extends theme %}{% from "pi_macros.html" import coupes, topicon, baubles %}
 {% block mode %}welcome{% endblock %}
 {% block content %}
 {% if theme == 'th_luxgold.html' %}{{ baubles() }}{% endif %}
-{{ coupes('24vmin') }}
+{{ topicon(theme, '24vmin') }}
 <div class="t-h" style="font-size:12vmin;margin-top:3vmin">Thank You</div>
 <div class="t-s" style="font-size:6.5vmin;margin-top:1vmin">for celebrating with us</div>
 <div class="t-rule"></div>

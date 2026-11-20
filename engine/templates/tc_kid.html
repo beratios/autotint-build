@@ -1,0 +1,16 @@
+{% extends theme %}
+{% block mode %}q{% endblock %}
+{% block lcss %}{% include "tc_css.html" %}.draw{border:1.5px dashed var(--acc);border-radius:2vmin;height:30vmin;display:flex;align-items:flex-end;justify-content:center;padding-bottom:1.4vmin;font-family:'Inter';font-size:1.6vmin;letter-spacing:.2em;color:var(--acc);text-transform:uppercase}{% endblock %}
+{% block content %}{% set y2 = year|int + 1 %}
+<div class="t-k">all about me · new years eve {{ year }}</div>
+<div class="t-h" style="font-size:9vmin;margin-top:.6vmin">{{ rep }}</div>
+<div class="qs">
+<div class="row2"><div class="q"><b>I am this old</b><i></i></div><div class="q"><b>I am this tall</b><i></i></div></div>
+<div class="row2"><div class="q"><b>My best friend</b><i></i></div><div class="q"><b>My favorite color</b><i></i></div></div>
+<div class="row2"><div class="q"><b>Favorite toy or game</b><i></i></div><div class="q"><b>Favorite food</b><i></i></div></div>
+<div class="q"><b>The best thing that happened this year</b><i></i></div>
+<div class="q"><b>When I grow up I want to be</b><i></i></div>
+<div class="q"><b>In {{ y2 }} I want to learn</b><i></i></div>
+<div class="row2" style="margin-top:2.6vmin"><div class="draw">draw yourself</div><div class="draw">my handprint</div></div>
+</div>
+{% endblock %}

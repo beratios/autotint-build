@@ -1,0 +1,12 @@
+{% extends theme %}
+{% block mode %}cert{% endblock %}
+{% block lcss %}.m-cert{top:12vmin!important;bottom:28vmin!important}.seal{width:20vmin;height:20vmin;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff6b6b,#d2343f 55%,#9a1c26);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Fredoka';font-weight:700;font-size:2.4vmin;line-height:1.1;box-shadow:0 0 0 1vmin #ffd54a;margin-top:3vmin}{% endblock %}
+{% block content %}
+<div class="t-k" style="font-size:2.4vmin">official certificate · north pole</div>
+<div class="t-h" style="font-size:10vmin;margin-top:2vmin">Nice List</div>
+<div class="t-b" style="font-size:3.4vmin;margin-top:2vmin">this certifies that</div>
+<div class="t-s" style="font-size:{{ 13 if rep|length < 12 else 10 }}vmin;margin-top:1.4vmin;color:#d2343f">{{ rep }}</div>
+<div class="t-rule" style="margin:2.4vmin auto"></div>
+<div class="t-b" style="font-size:3.2vmin;line-height:1.45;max-width:66vmin">has been checked twice by Santa and is officially on the Nice List for Christmas {{ year }}</div>
+<div class="seal">APPROVED<br>BY SANTA</div>
+{% endblock %}

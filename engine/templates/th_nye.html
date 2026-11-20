@@ -1,0 +1,65 @@
+{% extends "mp_base.html" %}
+{# New Years Eve midnight: plum-to-black night, gold clock striking midnight on top, metallic confetti (gold, rose, silver), curly streamers, champagne bottle popping + clinking coupes at the bottom #}
+{% block tcss %}
+:root{--bg:#160b26;--ink:#f6ecdf;--muted:#cbb9c9;--acc:#e6c27a;--hc:#f3d58e;--hf:'Great Vibes';--hw:400;--sf:'Cormorant Garamond';--bf:'Cormorant Garamond';--df:'Playfair Display';--sx:11vmin;--st:33vmin;--sb:27vmin}
+body{background:radial-gradient(ellipse at 50% 18%,#3b1d4f 0%,#24113a 35%,#140a22 70%,#09050f 100%)}
+.t-h{background:linear-gradient(120deg,#a87b35 0%,#fbe6a8 30%,#d4a556 52%,#fff2c8 70%,#b88a3e 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 .25em .1em;filter:drop-shadow(0 0 1.2vmin rgba(255,210,130,.3))}
+.t-s{color:#f2c6b4;font-style:italic}
+.t-k,.t-l{color:#e6c27a}
+.t-rule{background:linear-gradient(90deg,transparent,#e6c27a,transparent);width:30vmin;height:1.5px}
+.t-rule:after{background:#f2c6b4}
+.cf{position:absolute;border-radius:.2vmin}
+.clock{position:absolute;left:50%;top:2.5vmin;transform:translateX(-50%);width:28vmin}
+.scene{position:absolute;left:7%;bottom:0;width:86%}
+.str{position:absolute;width:26vmin}
+.a-detailed .clock{width:22vmin}.m-detailed{top:27vmin!important;bottom:22vmin!important}.a-detailed .scene{left:25%;width:50%}
+.a-post .clock{width:20vmin;top:2vmin}.m-post{top:23vmin!important;bottom:15vmin!important}.m-post .crs{margin-top:1.3vmin!important}.a-post .scene{left:30%;width:40%}
+.a-story .clock{width:40vmin;top:7vmin}.m-story{top:52vmin!important;bottom:38vmin!important}.m-story .crs{margin-top:2.4vmin!important}.m-story .crs .t-b{font-size:4.2vmin!important}.a-story .scene{left:10%;width:80%}
+.a-rsvp .scene,.a-rsvp .clock{display:none}
+.card{background:radial-gradient(ellipse at 50% 0%,#3b1d4f,#140a22 75%);color:#f6ecdf;border:1px solid #c9a65c}
+.card .nm{font-family:'Great Vibes';font-size:7.5vmin!important;color:#f3d58e}
+{% endblock %}
+{% block art %}{% set mode = self.mode()|trim %}
+<svg width="0" height="0" style="position:absolute"><defs>
+<linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a87b35"/><stop offset=".35" stop-color="#fbe6a8"/><stop offset=".6" stop-color="#d4a556"/><stop offset=".85" stop-color="#fff2c8"/><stop offset="1" stop-color="#b88a3e"/></linearGradient>
+<linearGradient id="bottle" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0c2a1c"/><stop offset=".45" stop-color="#1f5a3e"/><stop offset=".6" stop-color="#3e8a64"/><stop offset="1" stop-color="#0a2216"/></linearGradient>
+<linearGradient id="fizz" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#e9c46a"/><stop offset="1" stop-color="#fff3c4"/></linearGradient>
+</defs></svg>
+{% for i in range(70) %}{% set x = (i*37+11)%100 %}{% set y = (i*53+7)%100 %}{% set c = ['#e6c27a','#f2c6b4','#d9dce6','#fbe6a8','#c99a5a'][i%5] %}{% if x<12 or x>88 or y<7 or (y>12 and (x<18 or x>82)) %}<div class="cf" style="left:{{x}}%;top:{{y}}%;width:{{ 0.6 + (i%3)*0.35 }}vmin;height:{{ 1.4 if i%2 else 0.6 + (i%3)*0.35 }}vmin;background:{{c}};transform:rotate({{ (i*47)%180 }}deg);opacity:{{ 0.55 + (i%4)*0.12 }};{{ 'border-radius:50%' if i%4==0 else '' }}"></div>{% endif %}{% endfor %}
+{% for pos in ['left:-3vmin;top:16vmin','right:-3vmin;top:16vmin;transform:scaleX(-1)'] %}
+<svg class="str" style="{{pos}}" viewBox="0 0 120 120" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M0 10 C40 0 30 40 60 30 S70 70 100 62" stroke="#e6c27a"/><path d="M0 40 C30 40 20 70 50 66 S60 100 90 104" stroke="#f2c6b4"/><path d="M0 72 C20 74 14 96 34 100" stroke="#d9dce6"/></svg>{% endfor %}
+{% if mode not in ['rsvp'] %}
+<svg class="clock" viewBox="0 0 200 200">
+<circle cx="100" cy="100" r="96" fill="#fbe6a8" opacity=".08"/>
+<circle cx="100" cy="100" r="86" fill="#1c0f2e" stroke="url(#ng)" stroke-width="7"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#e6c27a" stroke-width="1" opacity=".6"/>
+{% for k in range(60) %}{% set a = k*6 - 90 %}<line x1="{{ 100 + 72*cos(a) }}" y1="{{ 100 + 72*sin(a) }}" x2="{{ 100 + (64 if k%5==0 else 69)*cos(a) }}" y2="{{ 100 + (64 if k%5==0 else 69)*sin(a) }}" stroke="#e6c27a" stroke-width="{{ 2.6 if k%5==0 else 1 }}"/>{% endfor %}
+{% for n in range(1,13) %}{% set a = n*30 - 90 %}<text x="{{ 100 + 53*cos(a) }}" y="{{ 100 + 53*sin(a) + 5 }}" text-anchor="middle" font-family="Playfair Display" font-size="13" fill="#f3d58e">{{ ['I','II','III','IIII','V','VI','VII','VIII','IX','X','XI','XII'][n-1] }}</text>{% endfor %}
+<line x1="100" y1="100" x2="{{ 100 + 38*cos(-92) }}" y2="{{ 100 + 38*sin(-92) }}" stroke="url(#ng)" stroke-width="6" stroke-linecap="round"/>
+<line x1="100" y1="100" x2="{{ 100 + 60*cos(-96) }}" y2="{{ 100 + 60*sin(-96) }}" stroke="#fbe6a8" stroke-width="3.4" stroke-linecap="round"/>
+<circle cx="100" cy="100" r="6" fill="url(#ng)"/>
+</svg>{% endif %}
+{% if mode not in ['rsvp'] %}
+<svg class="scene" viewBox="0 0 600 220" preserveAspectRatio="xMidYMax meet">
+<ellipse cx="300" cy="230" rx="260" ry="70" fill="#e6c27a" opacity=".12"/>
+<!-- bottle popping -->
+<g transform="translate(150 210) rotate(-28)">
+<path d="M-26 0 V-110 Q-26 -140 -10 -160 V-196 H10 V-160 Q26 -140 26 -110 V0Z" fill="url(#bottle)"/>
+<path d="M-12 -168 V-200 H12 V-168 Q14 -150 22 -140 H-22 Q-14 -150 -12 -168Z" fill="url(#ng)"/>
+<rect x="-26" y="-100" width="52" height="46" fill="#f6ecdf"/><rect x="-26" y="-100" width="52" height="5" fill="url(#ng)"/><rect x="-26" y="-59" width="52" height="5" fill="url(#ng)"/>
+<text x="0" y="-72" text-anchor="middle" font-family="Great Vibes" font-size="20" fill="#7a5520">{{ year|default('2026')|int + 1 }}</text>
+<path d="M-6 -110 Q-4 -60 -6 -10" stroke="#fff" stroke-width="3" opacity=".25" fill="none"/>
+</g>
+{% for k in range(26) %}{% set a = -78 - 34 + (k*53)%70 %}{% set r = 40 + (k*29)%110 %}<circle cx="{{ 60 + r*cos(a) }}" cy="{{ 30 + r*sin(a) + 30 }}" r="{{ 1.6 + (k%3) }}" fill="#fbe6a8" opacity="{{ 0.4 + (k%4)*0.15 }}"/>{% endfor %}
+<path d="M58 34 q-20 -30 -10 -60 q8 20 22 -10 q2 30 18 10 q-8 30 -20 60Z" fill="url(#fizz)" opacity=".85"/>
+<g transform="translate(40 -6) rotate(-20)"><rect x="0" y="0" width="14" height="18" rx="3" fill="#c99a5a"/><rect x="-2" y="16" width="18" height="5" rx="2" fill="#e6c27a"/></g>
+<!-- coupes clinking -->
+{% for gx,rot in [(380,-14),(452,14)] %}<g transform="translate({{gx}} 210) rotate({{rot}} 0 -60)">
+<path d="M-40 -112 Q0 -64 40 -112Z" fill="url(#fizz)" opacity=".85"/><path d="M-42 -114 Q0 -60 42 -114" stroke="#fbe6a8" stroke-width="2.4" fill="none"/><line x1="-42" y1="-114" x2="42" y2="-114" stroke="#fbe6a8" stroke-width="2"/>
+<rect x="-2" y="-82" width="4" height="74" fill="#fbe6a8"/><ellipse cx="0" cy="-6" rx="24" ry="5" fill="#fbe6a8"/>
+{% for b in range(5) %}<circle cx="{{ -18 + b*9 }}" cy="{{ -100 + (b%2)*8 }}" r="1.6" fill="#fff"/>{% endfor %}</g>{% endfor %}
+<g fill="#fff3c4">{% for sx,sy,s in [(416,62,10),(398,44,6),(440,40,7),(420,26,4)] %}<path d="M{{sx}} {{sy-s}} L{{sx+s*0.25}} {{sy-s*0.25}} L{{sx+s}} {{sy}} L{{sx+s*0.25}} {{sy+s*0.25}} L{{sx}} {{sy+s}} L{{sx-s*0.25}} {{sy+s*0.25}} L{{sx-s}} {{sy}} L{{sx-s*0.25}} {{sy-s*0.25}}Z"/>{% endfor %}</g>
+<g stroke-width="2.2" fill="none" stroke-linecap="round"><path d="M230 210 C250 170 290 200 300 160 S340 150 350 120" stroke="#f2c6b4"/><path d="M520 210 C540 180 510 160 550 140 S560 100 590 96" stroke="#e6c27a"/></g>
+</svg>{% endif %}
+{% endblock %}
+{% block cardart %}<svg width="16%" viewBox="0 0 80 50"><g transform="translate(26 4) rotate(-12)"><path d="M-14 4 Q0 22 14 4Z" fill="#e6c27a"/><rect x="-1" y="14" width="2" height="22" fill="#e6c27a"/><ellipse cx="0" cy="36" rx="9" ry="2" fill="#e6c27a"/></g><g transform="translate(54 4) rotate(12)"><path d="M-14 4 Q0 22 14 4Z" fill="#e6c27a"/><rect x="-1" y="14" width="2" height="22" fill="#e6c27a"/><ellipse cx="0" cy="36" rx="9" ry="2" fill="#e6c27a"/></g></svg>{% endblock %}

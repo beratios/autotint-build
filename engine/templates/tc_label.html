@@ -1,0 +1,10 @@
+{% extends theme %}
+{% block mode %}welcome{% endblock %}
+{% block lcss %}.a-welcome .scene{display:none}.m-welcome{top:30vmin!important;bottom:8vmin!important}{% endblock %}
+{% block content %}{% set y2 = year|int + 1 %}
+<div class="t-k" style="font-size:3vmin">do not open until</div>
+<div class="t-h" style="font-size:14vmin;margin-top:2vmin">Dec 31, {{ y2 }}</div>
+<div class="t-rule"></div>
+<div class="t-s" style="font-size:7vmin">the {{ family }} family</div>
+<div class="t-k" style="font-size:2.6vmin;margin-top:2vmin">time capsule · sealed {{ year }}</div>
+{% endblock %}

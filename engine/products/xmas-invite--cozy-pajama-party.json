@@ -1,0 +1,247 @@
+{
+ "template": "pi_invite.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "event title",
+  "host name",
+  "date",
+  "time",
+  "venue name",
+  "address",
+  "dress code",
+  "RSVP details",
+  "evening schedule",
+  "guest names for place cards (up to 24)",
+  "number of tables"
+ ],
+ "defaults": {
+  "theme": "th_pajama.html",
+  "title": "Christmas Pajama Party",
+  "host": "the Carters",
+  "date": "Saturday, December 19, 2026",
+  "time": "6:00 PM until late",
+  "place": "The Carter House",
+  "address": "42 Birchwood Lane, Calgary",
+  "dress": "Christmas pajamas required",
+  "rsvp": "to Jenna by December 14",
+  "rsvp_by": "December 14",
+  "year": "2026",
+  "schedule": [
+   [
+    "6:00 PM",
+    "Cocoa bar and cookies"
+   ],
+   [
+    "7:00 PM",
+    "Cozy dinner"
+   ],
+   [
+    "8:00 PM",
+    "Christmas movie marathon"
+   ],
+   [
+    "9:30 PM",
+    "Ugly pj contest and games"
+   ],
+   [
+    "10:30 PM",
+    "Gift swap"
+   ]
+  ],
+  "thanks_note": "Thank you for the cocoa, the laughs and the cozy memories. Wishing you a warm and happy holiday season!",
+  "guests": [
+   "Jenna",
+   "Mike",
+   "Sophie",
+   "Liam",
+   "Ava",
+   "Noah",
+   "Chloe",
+   "Ethan",
+   "Mia",
+   "Lucas",
+   "Zoe",
+   "Ben"
+  ],
+  "place_sheets": [
+   0,
+   8,
+   16
+  ],
+  "tables": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "courses": [],
+  "family": "",
+  "host_line": "cozy up and join us for a"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#c3273b",
+   "ink": "#fff7ee",
+   "accent": "#ffd54a",
+   "hfont": "Pacifico",
+   "hsize": 92
+  },
+  "size": "5x7 invite, 5x3.5 cards, 8x10 sign, 4x6 table signs, Instagram post and story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.3,
+    "frac": 0.62,
+    "caption": "Cozy and cute",
+    "sub": "String lights, cocoa and pj print"
+   },
+   {
+    "x": 0.5,
+    "y": 0.86,
+    "frac": 0.62,
+    "caption": "Illustrated cozy scene",
+    "sub": "Slippers, mugs and gingerbread"
+   }
+  ],
+  "fields": [
+   [
+    "Event title",
+    0.5,
+    0.3
+   ],
+   [
+    "Host",
+    0.5,
+    0.38
+   ],
+   [
+    "Date and time",
+    0.5,
+    0.46
+   ],
+   [
+    "Venue and address",
+    0.5,
+    0.53
+   ],
+   [
+    "Dress code",
+    0.5,
+    0.6
+   ],
+   [
+    "RSVP",
+    0.5,
+    0.66
+   ]
+  ],
+  "vtitle": "Pajamas on. Cocoa ready.",
+  "variants": [
+   {},
+   {
+    "title": "Girls Night In",
+    "host": "Ashley and Kim",
+    "date": "Friday, December 11, 2026",
+    "time": "7:00 PM",
+    "place": "Ashleys Place",
+    "address": "9 Orchard Court, Ottawa",
+    "dress": "Fuzzy socks and pjs",
+    "rsvp": "to Ashley by December 6"
+   },
+   {
+    "title": "Family PJ Night",
+    "host": "the Nguyens",
+    "date": "Christmas Eve, December 24",
+    "time": "5:30 PM",
+    "place": "Grandmas House",
+    "address": "310 Elm Street, Halifax",
+    "dress": "Matching pjs welcome",
+    "rsvp": "to Linh by December 18"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "rsvp",
+   "template": "pi_rsvp.html",
+   "w_in": 5,
+   "h_in": 3.5,
+   "png": true,
+   "label": "RSVP card 5x3.5"
+  },
+  {
+   "name": "details",
+   "template": "pi_details.html",
+   "w_in": 5,
+   "h_in": 3.5,
+   "png": true,
+   "label": "Details card 5x3.5"
+  },
+  {
+   "name": "welcome",
+   "template": "pi_welcome.html",
+   "w_in": 8,
+   "h_in": 10,
+   "png": true,
+   "label": "Welcome sign 8x10"
+  },
+  {
+   "name": "place",
+   "template": "mp_place.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "place_sheets",
+   "png": true,
+   "label": "Place cards"
+  },
+  {
+   "name": "table",
+   "template": "pi_table.html",
+   "w_in": 4,
+   "h_in": 6,
+   "repeat": "tables",
+   "png": true,
+   "label": "Table signs 4x6"
+  },
+  {
+   "name": "thank-you",
+   "template": "pi_thanks.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true,
+   "label": "Thank-you card 5x7"
+  },
+  {
+   "name": "instagram-post",
+   "template": "pi_post.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true,
+   "label": "Instagram post"
+  },
+  {
+   "name": "instagram-story",
+   "template": "pi_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Instagram story"
+  }
+ ],
+ "main_label": "Invitation 5x7",
+ "hero": {
+  "headline": "Christmas Pajama Party Invitation",
+  "short": "Pajama Party Invite Set",
+  "bullets": [
+   "Invite, RSVP and schedule cards",
+   "Welcome sign, table signs, name cards",
+   "Thank-you card, Instagram post and story"
+  ]
+ },
+ "inside_sub": "9 designs \u00b7 table signs \u00b7 24 name cards",
+ "detail_page": "welcome",
+ "detail_title": "Matching 8x10 welcome sign"
+}

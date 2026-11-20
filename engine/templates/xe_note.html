@@ -1,0 +1,11 @@
+{% extends theme %}{% from "xe_macros.html" import cookie, milk, carrot %}
+{% block mode %}welcome{% endblock %}
+{% block lcss %}.m-welcome{bottom:30vmin!important}.ic{display:flex;gap:3vmin;align-items:flex-end;justify-content:center}{% endblock %}
+{% block content %}
+<div class="ic">{{ cookie('13vmin') }}{{ milk('9vmin') }}{{ carrot('9vmin') }}</div>
+<div class="t-h" style="font-size:10vmin;margin-top:2vmin">For Santa</div>
+<div class="t-s" style="font-size:7vmin">and his reindeer</div>
+<div class="t-rule" style="margin:2.4vmin auto"></div>
+<div class="t-b" style="font-size:3.6vmin;line-height:1.45;max-width:70vmin">Dear Santa, we left you cookies and milk, and carrots for the reindeer. Thank you for visiting our home tonight!</div>
+<div class="t-s" style="font-size:6.6vmin;margin-top:2.4vmin;color:#d2343f">love, {{ kids|join(' & ') }}</div>
+{% endblock %}

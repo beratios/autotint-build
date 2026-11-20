@@ -1,0 +1,16 @@
+{% extends theme %}{% from "xe_macros.html" import deer %}
+{% block mode %}place{% endblock %}
+{% block lcss %}
+body{background:#fff}.page{inset:0;display:block}
+.cut{position:absolute;top:1.8vmin;left:0;right:0;font-family:'Inter';font-size:1.4vmin;letter-spacing:.22em;color:#999}
+.g{position:absolute;left:4vmin;right:4vmin;top:4.5vmin;bottom:3.5vmin;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,1fr);gap:2vmin}
+.tg{position:relative;border:1px dashed #bbb;border-radius:2vmin;background:#fdf6ea;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
+.tg .str{position:absolute;left:0;right:0;top:0;height:1.4vmin;background:repeating-linear-gradient(45deg,#1f6b4e 0 1vmin,#fff 1vmin 2vmin)}
+{% endblock %}
+{% block content %}
+<div class="cut">✂ GIFT TAGS FROM SANTA · CUT OUT AND ATTACH TO GIFTS</div>
+<div class="g">{% for i in range(12) %}{% set n = kids[i % kids|length] if kids else '' %}<div class="tg"><div class="str"></div>
+<div class="t-k" style="font-size:1.4vmin">to</div><div class="t-s" style="font-size:5.4vmin;color:#d2343f">{{ n }}</div>
+<div class="t-k" style="font-size:1.4vmin;margin-top:.6vmin">from</div><div class="t-h" style="font-size:3.8vmin">Santa</div>
+</div>{% endfor %}</div>
+{% endblock %}

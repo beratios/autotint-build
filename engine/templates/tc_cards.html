@@ -1,0 +1,17 @@
+{% extends theme %}
+{% block mode %}place{% endblock %}
+{% block lcss %}
+body{background:#fff}.page{inset:0;display:block}
+.cut{position:absolute;top:1.8vmin;left:0;right:0;font-family:'Inter';font-size:1.4vmin;letter-spacing:.22em;color:#999}
+.g{position:absolute;left:4vmin;right:4vmin;top:4.5vmin;bottom:3.5vmin;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr);gap:2vmin}
+.card{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2vmin 4vmin}
+.card i{display:block;width:100%;border-bottom:1px solid rgba(230,194,122,.6);height:3.6vmin}
+{% endblock %}
+{% block content %}{% set ppl = adults + kids %}{% set y2 = year|int + 1 %}
+<div class="cut">✂ RESOLUTION CARDS · CUT OUT, FILL IN, SEAL IN THE TIME CAPSULE</div>
+<div class="g">{% for i in range(6) %}{% set n = ppl[i] if ppl|length > i else '' %}<div class="card">
+<div class="t-k" style="font-size:1.5vmin">my {{ y2 }} resolution</div>
+{% if n %}<div class="nm" style="font-size:6vmin">{{ n }}</div>{% else %}<div style="width:60%;border-bottom:1px solid #e6c27a;height:5vmin"></div>{% endif %}
+<i></i><i></i><i></i>
+</div>{% endfor %}</div>
+{% endblock %}

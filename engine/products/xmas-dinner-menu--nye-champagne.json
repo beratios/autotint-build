@@ -1,0 +1,272 @@
+{
+ "template": "mp_menu.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "title",
+  "family",
+  "date",
+  "courses (with optional description + drink pairing)",
+  "drinks",
+  "evening timeline",
+  "guests (up to 24)"
+ ],
+ "defaults": {
+  "title": "New Years Eve Dinner",
+  "family": "Laurent",
+  "date": "December 31, 2026",
+  "year": "2026",
+  "courses": [
+   [
+    "To start",
+    "Oysters, champagne mignonette",
+    "Fresh oysters with shallot and champagne vinegar",
+    "Brut champagne"
+   ],
+   [
+    "Main",
+    "Beef tenderloin, red wine jus",
+    "Served with truffle mashed potatoes and roasted asparagus",
+    "Cabernet sauvignon"
+   ],
+   [
+    "Cheese",
+    "Brie, aged gouda, fig jam",
+    "A little board to slow down the evening",
+    "Tawny port"
+   ],
+   [
+    "Dessert",
+    "Dark chocolate mousse, gold leaf",
+    "Light, rich and sparkly, just like the new year",
+    "Rose champagne"
+   ]
+  ],
+  "drinks": [
+   [
+    "French 75",
+    "gin, lemon, sugar, champagne"
+   ],
+   [
+    "Midnight Kiss",
+    "vodka, blackberry, prosecco"
+   ],
+   [
+    "Pomegranate Spritz",
+    "pomegranate, aperol, soda"
+   ],
+   [
+    "Sparkling Cider",
+    "alcohol free, for everyone"
+   ]
+  ],
+  "timeline": [
+   [
+    "7:30 PM",
+    "Champagne welcome"
+   ],
+   [
+    "8:00 PM",
+    "Dinner is served"
+   ],
+   [
+    "10:00 PM",
+    "Games and dancing"
+   ],
+   [
+    "11:45 PM",
+    "Glasses filled"
+   ],
+   [
+    "Midnight",
+    "Countdown and toast"
+   ]
+  ],
+  "guests": [
+   "Claire",
+   "Julien",
+   "Maya",
+   "Theo",
+   "Sofia",
+   "Leo",
+   "Nina",
+   "Max",
+   "Elena",
+   "Sam"
+  ],
+  "place_sheets": [
+   0,
+   8,
+   16
+  ],
+  "theme": "th_nye.html",
+  "drinks_title": "Midnight Cocktails"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#160b26",
+   "ink": "#f6ecdf",
+   "accent": "#e6c27a",
+   "hfont": "Great Vibes",
+   "hsize": 120
+  },
+  "size": "5x7, 8x10, 8.5x11 + Instagram post and story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.2,
+    "frac": 0.62,
+    "caption": "Midnight clock and confetti",
+    "sub": "Gold foil look on deep plum"
+   },
+   {
+    "x": 0.5,
+    "y": 0.85,
+    "frac": 0.62,
+    "caption": "Champagne toast scene",
+    "sub": "Popping bottle and clinking coupes"
+   }
+  ],
+  "fields": [
+   [
+    "Date",
+    0.5,
+    0.2
+   ],
+   [
+    "Title",
+    0.5,
+    0.25
+   ],
+   [
+    "Family name",
+    0.5,
+    0.31
+   ],
+   [
+    "Your courses",
+    0.5,
+    0.55
+   ]
+  ],
+  "vtitle": "Raise a glass to 2027.",
+  "variants": [
+   {},
+   {
+    "title": "Midnight Supper",
+    "family": "Patel",
+    "date": "December 31, 2026",
+    "courses": [
+     [
+      "Starter",
+      "Burrata, roasted grapes"
+     ],
+     [
+      "Main",
+      "Salmon, lemon butter, wild rice"
+     ],
+     [
+      "Sides",
+      "Charred broccolini, herb potatoes"
+     ],
+     [
+      "Dessert",
+      "Champagne cupcakes"
+     ]
+    ]
+   },
+   {
+    "title": "NYE Dinner Party",
+    "family": "Morgan",
+    "date": "December 31, 2026",
+    "courses": [
+     [
+      "Bites",
+      "Shrimp cocktail, deviled eggs"
+     ],
+     [
+      "Main",
+      "Short ribs, creamy polenta"
+     ],
+     [
+      "Sides",
+      "Caesar salad, garlic bread"
+     ],
+     [
+      "Sweet",
+      "Tiramisu"
+     ]
+    ]
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "detailed",
+   "template": "mp_detailed.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Detailed menu 8.5x11"
+  },
+  {
+   "name": "drinks",
+   "template": "mp_drinks.html",
+   "png": true,
+   "label": "Cocktail menu 5x7"
+  },
+  {
+   "name": "welcome",
+   "template": "mp_welcome.html",
+   "w_in": 8,
+   "h_in": 10,
+   "png": true,
+   "label": "Welcome sign 8x10"
+  },
+  {
+   "name": "place",
+   "template": "mp_place.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "place_sheets",
+   "png": true,
+   "label": "Place cards"
+  },
+  {
+   "name": "guest-menu",
+   "template": "mp_guest.html",
+   "repeat": "guests",
+   "label": "Guest name menus",
+   "png": false
+  },
+  {
+   "name": "instagram-post",
+   "template": "mp_post.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true,
+   "label": "Instagram post"
+  },
+  {
+   "name": "instagram-story",
+   "template": "mp_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Instagram story"
+  }
+ ],
+ "hero": {
+  "headline": "New Years Eve Dinner Menu",
+  "short": "NYE Dinner Menu Set",
+  "bullets": [
+   "Menu, wine pairing, countdown timeline",
+   "Cocktail menu, welcome sign, 24 place cards",
+   "Guest name menus, Instagram post and story"
+  ]
+ },
+ "main_label": "Dinner menu 5x7",
+ "inside_sub": "10 designs \u00b7 guest name menus \u00b7 24 place cards",
+ "detail_page": "detailed",
+ "detail_title": "Detailed menu with wine pairing"
+}

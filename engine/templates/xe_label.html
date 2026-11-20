@@ -1,0 +1,9 @@
+{% extends theme %}{% from "xe_macros.html" import deer %}
+{% block mode %}welcome{% endblock %}
+{% block content %}{% set who = rep if rep else kids|join(' & ') %}
+<div class="t-k" style="font-size:2.3vmin">special delivery · north pole</div>
+<div class="t-h" style="font-size:15vmin;margin-top:2.4vmin">Christmas<br>Eve Box</div>
+<div class="t-s" style="font-size:{{ 11 if who|length < 16 else 8.5 if who|length < 26 else 6.5 }}vmin;margin-top:2.6vmin">for {{ who }}</div>
+<div class="t-rule" style="margin:3vmin auto"></div>
+<div class="t-b" style="font-size:3.2vmin">do not open until Christmas Eve {{ year }}</div>
+{% endblock %}
