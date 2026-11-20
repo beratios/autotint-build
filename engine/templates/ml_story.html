@@ -1,0 +1,9 @@
+{% extends theme %}
+{% block mode %}story{% endblock %}
+{% block content %}
+<div class="t-k" style="font-size:3vmin">tonight at {{ party }}</div>
+<div class="t-h" style="font-size:11vmin;margin-top:2vmin">Who's Most Likely To</div>
+<div class="t-rule"></div>
+<div class="t-s" style="font-size:7vmin">{{ questions[0] }}</div>
+<div class="t-k" style="font-size:2.6vmin;margin-top:3vmin">happy new year {{ year|int + 1 }}</div>
+{% endblock %}

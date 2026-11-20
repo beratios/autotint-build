@@ -1,0 +1,172 @@
+{
+ "template": "ml_sign.html",
+ "w_in": 8,
+ "h_in": 10,
+ "fields": [
+  "party name",
+  "year",
+  "optional: your own custom questions with friends inside jokes (up to 40)",
+  "optional: award titles"
+ ],
+ "defaults": {
+  "theme": "th_disco.html",
+  "party": "The Rossi NYE Party",
+  "year": "2026",
+  "questions": [
+   "dance on the table before midnight",
+   "forget their resolution by January 2",
+   "cry during the countdown",
+   "kiss a stranger at midnight",
+   "fall asleep before the ball drops",
+   "post 50 photos tonight",
+   "start a conga line",
+   "text their ex at 12:01",
+   "spill champagne on someone",
+   "still be here at 3 AM",
+   "make the best toast",
+   "lose their phone tonight",
+   "become famous in 2027",
+   "run a marathon in 2027",
+   "start a business this year",
+   "get engaged in 2027",
+   "sing karaoke without being asked",
+   "eat all the snacks",
+   "wear glitter until February",
+   "learn a new language in 2027",
+   "move to another country",
+   "win the lottery",
+   "bring the best dessert",
+   "adopt a pet this year",
+   "organize next years party",
+   "show up late to their own party",
+   "be first on the dance floor",
+   "fall in love in 2027",
+   "take the most selfies",
+   "quote a movie all night",
+   "finish a book a week",
+   "become a millionaire",
+   "start a podcast",
+   "go viral on social media",
+   "plan a surprise trip",
+   "get lost on the way home",
+   "break a resolution first",
+   "be the last one dancing",
+   "give the best hug",
+   "make everyone laugh"
+  ],
+  "card_sheets": [
+   0,
+   8,
+   16,
+   24,
+   32
+  ],
+  "awards": [
+   "Best Dance Moves",
+   "Life of the Party",
+   "Best Dressed",
+   "Midnight Kiss Champion"
+  ]
+ },
+ "gallery": {
+  "style": {
+   "bg": "#2a0838",
+   "ink": "#fff2fb",
+   "accent": "#ffd36a",
+   "hfont": "Bungee",
+   "hsize": 84
+  },
+  "size": "8x10 sign, 8.5x11 card sheets, score sheet, awards, Instagram story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.18,
+    "frac": 0.62,
+    "caption": "Retro disco ball",
+    "sub": "Neon pink, gold and aqua"
+   },
+   {
+    "x": 0.5,
+    "y": 0.6,
+    "frac": 0.62,
+    "caption": "Your party name",
+    "sub": "Plus easy how-to-play rules"
+   }
+  ],
+  "fields": [
+   [
+    "Your party name",
+    0.5,
+    0.36
+   ],
+   [
+    "Game title",
+    0.5,
+    0.45
+   ],
+   [
+    "How to play",
+    0.5,
+    0.68
+   ]
+  ],
+  "vtitle": "The game everyone talks about.",
+  "variants": [
+   {},
+   {
+    "party": "Friendsgiving NYE Crew"
+   },
+   {
+    "party": "The Office NYE Bash"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "cards",
+   "template": "ml_cards.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "card_sheets",
+   "png": true,
+   "label": "40 question cards with your party name"
+  },
+  {
+   "name": "score-sheet",
+   "template": "ml_vote.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Vote and score sheet"
+  },
+  {
+   "name": "awards",
+   "template": "ml_awards.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Party award cards"
+  },
+  {
+   "name": "instagram-story",
+   "template": "ml_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Instagram story"
+  }
+ ],
+ "main_label": "Game sign 8x10",
+ "hero": {
+  "headline": "NYE Who's Most Likely To Game",
+  "short": "NYE Most Likely To Game",
+  "bullets": [
+   "40 question cards with your party name",
+   "Add your own inside joke questions",
+   "Game sign, score sheet, party awards"
+  ]
+ },
+ "inside_sub": "40 cards + sign, score sheet, awards and story",
+ "detail_page": "cards",
+ "detail_title": "40 question cards, your party name on each"
+}

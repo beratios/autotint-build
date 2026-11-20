@@ -1,0 +1,272 @@
+{
+ "template": "mp_menu.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "title",
+  "family",
+  "date",
+  "courses (with optional description + drink pairing)",
+  "drinks",
+  "evening timeline",
+  "guests (up to 24)"
+ ],
+ "defaults": {
+  "title": "Thanksgiving Dinner",
+  "family": "Mitchell",
+  "date": "November 26, 2026",
+  "year": "2026",
+  "courses": [
+   [
+    "To start",
+    "Butternut squash soup, toasted pepitas",
+    "Silky soup with a touch of maple and sage",
+    "Chardonnay"
+   ],
+   [
+    "Main",
+    "Herb roasted turkey, pan gravy",
+    "Roasted with butter, thyme and orange",
+    "Pinot noir"
+   ],
+   [
+    "On the side",
+    "Cornbread stuffing, mashed potatoes, green bean casserole",
+    "Grandmas recipes, made with love",
+    "Apple cider"
+   ],
+   [
+    "Dessert",
+    "Pumpkin pie, pecan pie, whipped cream",
+    "Served with coffee by the fire",
+    "Tawny port"
+   ]
+  ],
+  "drinks": [
+   [
+    "Apple Cider Sangria",
+    "white wine, cider, apples, cinnamon"
+   ],
+   [
+    "Maple Old Fashioned",
+    "bourbon, maple, orange"
+   ],
+   [
+    "Cranberry Mule",
+    "vodka, cranberry, ginger beer"
+   ],
+   [
+    "Warm Spiced Cider",
+    "for the kids and everyone"
+   ]
+  ],
+  "timeline": [
+   [
+    "2:00 PM",
+    "Arrivals and appetizers"
+   ],
+   [
+    "3:00 PM",
+    "Football and games"
+   ],
+   [
+    "4:30 PM",
+    "Thanksgiving dinner"
+   ],
+   [
+    "6:00 PM",
+    "Pie and coffee"
+   ],
+   [
+    "7:00 PM",
+    "Gratitude toast"
+   ]
+  ],
+  "guests": [
+   "Grandma Jean",
+   "Grandpa Bill",
+   "Emily",
+   "Jacob",
+   "Hannah",
+   "Tyler",
+   "Aunt Lisa",
+   "Uncle Rob",
+   "Chloe",
+   "Sam"
+  ],
+  "place_sheets": [
+   0,
+   8,
+   16
+  ],
+  "theme": "th_harvest.html",
+  "drinks_title": "Harvest Drinks"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#fbf3e4",
+   "ink": "#4a2a18",
+   "accent": "#b5651d",
+   "hfont": "Playfair Display",
+   "hsize": 100
+  },
+  "size": "5x7, 8x10, 8.5x11 + Instagram post and story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.15,
+    "frac": 0.62,
+    "caption": "Autumn leaf garland",
+    "sub": "Maple, oak and acorns"
+   },
+   {
+    "x": 0.5,
+    "y": 0.88,
+    "frac": 0.62,
+    "caption": "Pumpkins and wheat",
+    "sub": "Illustrated harvest scene"
+   }
+  ],
+  "fields": [
+   [
+    "Date",
+    0.5,
+    0.2
+   ],
+   [
+    "Title",
+    0.5,
+    0.25
+   ],
+   [
+    "Family name",
+    0.5,
+    0.31
+   ],
+   [
+    "Your courses",
+    0.5,
+    0.55
+   ]
+  ],
+  "vtitle": "Gather. Give thanks. Feast.",
+  "variants": [
+   {},
+   {
+    "title": "Friendsgiving",
+    "family": "Rivera",
+    "date": "November 21, 2026",
+    "courses": [
+     [
+      "Starter",
+      "Baked brie, cranberry jam"
+     ],
+     [
+      "Main",
+      "Maple glazed turkey"
+     ],
+     [
+      "Sides",
+      "Mac and cheese, roasted sweet potatoes"
+     ],
+     [
+      "Dessert",
+      "Apple crumble"
+     ]
+    ]
+   },
+   {
+    "title": "Thanksgiving Feast",
+    "family": "Johnson",
+    "date": "November 26, 2026",
+    "courses": [
+     [
+      "Starter",
+      "Charcuterie board"
+     ],
+     [
+      "Main",
+      "Honey baked ham"
+     ],
+     [
+      "Sides",
+      "Stuffing, corn casserole, rolls"
+     ],
+     [
+      "Dessert",
+      "Pecan pie"
+     ]
+    ]
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "detailed",
+   "template": "mp_detailed.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Detailed menu 8.5x11"
+  },
+  {
+   "name": "drinks",
+   "template": "mp_drinks.html",
+   "png": true,
+   "label": "Harvest drinks menu 5x7"
+  },
+  {
+   "name": "welcome",
+   "template": "mp_welcome.html",
+   "w_in": 8,
+   "h_in": 10,
+   "png": true,
+   "label": "Welcome sign 8x10"
+  },
+  {
+   "name": "place",
+   "template": "mp_place.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "place_sheets",
+   "png": true,
+   "label": "Place cards"
+  },
+  {
+   "name": "guest-menu",
+   "template": "mp_guest.html",
+   "repeat": "guests",
+   "label": "Guest name menus",
+   "png": false
+  },
+  {
+   "name": "instagram-post",
+   "template": "mp_post.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true,
+   "label": "Instagram post"
+  },
+  {
+   "name": "instagram-story",
+   "template": "mp_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Instagram story"
+  }
+ ],
+ "hero": {
+  "headline": "Thanksgiving Dinner Menu",
+  "short": "Thanksgiving Menu Set",
+  "bullets": [
+   "Menu, wine pairing, timeline",
+   "24 place cards + guest name menus",
+   "Welcome sign, Instagram post and story"
+  ]
+ },
+ "main_label": "Dinner menu 5x7",
+ "inside_sub": "10 designs \u00b7 guest name menus \u00b7 24 place cards",
+ "detail_page": "detailed",
+ "detail_title": "Detailed menu with wine pairing"
+}

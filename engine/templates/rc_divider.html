@@ -1,0 +1,9 @@
+{% extends theme %}
+{% block mode %}cover{% endblock %}
+{% block lcss %}.m-cover{top:24vmin!important;bottom:32vmin!important}{% endblock %}
+{% block content %}
+<div class="t-k" style="font-size:2.4vmin">the {{ family }} family recipes</div>
+<div class="t-h" style="font-size:14vmin;margin-top:1vmin">{{ rep }}</div>
+<div class="t-rule" style="margin:3vmin auto"></div>
+<div style="width:60%;text-align:left;font-family:'Fredoka';font-size:2.4vmin;color:#8a6a58">{% for k in range(8) %}<div style="border-bottom:1px solid #e3cdb4;height:5vmin;padding-top:2vmin">{{ k+1 }}.</div>{% endfor %}</div>
+{% endblock %}

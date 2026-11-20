@@ -5,7 +5,7 @@
 {% if theme == 'th_luxgold.html' %}{{ baubles() }}{% endif %}
 <div style="margin-top:6vmin">{{ topicon(theme, '26vmin') }}</div>
 <div class="t-k" style="margin-top:2vmin">{{ host_line|default('you are cordially invited to') }}</div>
-<div class="t-h" style="font-size:{{ 10 if title|length < 15 else 7.6 }}vmin;margin-top:1.6vmin">{{ title }}</div>
+<div class="t-h" style="font-size:{{ 10 if title|length < 15 else 8.6 if title|length < 21 else 7.6 }}vmin;margin-top:1.6vmin">{{ title }}</div>
 <div class="t-s" style="font-size:6vmin;margin-top:.6vmin">hosted by {{ host }}</div>
 <div class="t-rule"></div>
 <div class="ln">{{ date }}</div><div class="ln">{{ time }}</div><div class="ln" style="margin-top:1.4vmin">{{ place }}</div><div class="ln t-m" style="font-size:3.1vmin;color:var(--muted)">{{ address }}</div>

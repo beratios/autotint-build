@@ -1,0 +1,16 @@
+{% extends theme %}
+{% block mode %}card{% endblock %}
+{% block lcss %}.m-card{top:10vmin!important;bottom:4vmin!important;left:6vmin!important;right:6vmin!important;justify-content:flex-start!important}
+.row{display:flex;gap:3vmin;width:100%;text-align:left;font-family:'Fredoka';font-size:2.8vmin;margin-top:2vmin}
+.row span{flex:1;border-bottom:1px solid #c9a98a;padding-bottom:.4vmin;color:#8a6a58}
+.cols{display:flex;gap:4vmin;width:100%;margin-top:2.4vmin;text-align:left}
+.cols>div{flex:1}.cols b{font-family:'Inter';font-size:1.9vmin;letter-spacing:.22em;color:#c62f3a}
+.cols i{display:block;border-bottom:1px solid #e3cdb4;height:5.2vmin}
+{% endblock %}
+{% block content %}
+<div class="t-k" style="font-size:2.2vmin">from the kitchen of</div>
+<div class="t-h" style="font-size:7.4vmin">{{ kitchen }}</div>
+<div class="row"><span>Recipe:</span></div>
+<div class="row"><span>Serves:</span><span>Prep:</span><span>Bake:</span></div>
+<div class="cols"><div><b>INGREDIENTS</b>{% for k in range(6) %}<i></i>{% endfor %}</div><div style="flex:1.5"><b>DIRECTIONS</b>{% for k in range(6) %}<i></i>{% endfor %}</div></div>
+{% endblock %}

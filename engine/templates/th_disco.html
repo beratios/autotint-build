@@ -1,0 +1,35 @@
+{% extends "mp_base.html" %}
+{# Retro disco NYE: magenta-violet glow, big mirror disco ball with light rays on top, sparkles, perspective checkered dance floor at the bottom #}
+{% block tcss %}
+:root{--bg:#2a0838;--ink:#fff2fb;--muted:#e8c6e6;--acc:#ffd36a;--hc:#ffffff;--hf:'Bungee';--hw:400;--sf:'Pacifico';--bf:'Fredoka';--df:'Fredoka';--sx:10vmin;--st:34vmin;--sb:26vmin}
+body{background:radial-gradient(ellipse at 50% 15%,#a3168a 0%,#5a0f6e 38%,#2a0838 72%,#14031c 100%)}
+.t-h{line-height:1.05;text-shadow:0 0 1.6vmin #ff4fd8,.5vmin .5vmin 0 #ff4fd8}
+.t-s{color:#ffd36a}
+.t-k,.t-l{color:#7ff3ff}
+.t-rule{background:linear-gradient(90deg,#ff4fd8,#ffd36a,#7ff3ff);height:.7vmin;border-radius:1vmin;width:26vmin}.t-rule:after{display:none}
+.ball{position:absolute;left:50%;top:-2vmin;transform:translateX(-50%);width:44vmin}
+.floor{position:absolute;left:0;bottom:0;width:100%}
+.sp{position:absolute;color:#fff;transform:translate(-50%,-50%);text-shadow:0 0 1.2vmin #ff9df0}
+.a-sheet .ball,.a-sheet .floor{display:none}
+.a-post .ball{width:30vmin}.m-post{top:26vmin!important;bottom:16vmin!important}
+.a-story .ball{width:56vmin;top:0}.m-story{top:52vmin!important;bottom:36vmin!important}
+.card{background:linear-gradient(160deg,#5a0f6e,#2a0838);color:#fff2fb;border:1px solid #ff4fd8}
+{% endblock %}
+{% block art %}
+{% for i in range(30) %}{% set x = (i*37+9)%100 %}{% set y = (i*53+5)%92 %}{% if x<12 or x>88 or y<8 %}<div class="sp" style="left:{{x}}%;top:{{ y + 4 }}%;font-size:{{ 1.4 + (i%3)*1.1 }}vmin;opacity:{{ 0.5 + (i%3)*0.2 }}">✦</div>{% endif %}{% endfor %}
+<svg class="ball" viewBox="0 0 200 200">
+<defs><radialGradient id="dg" cx=".38" cy=".35"><stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#c9c3d9"/><stop offset="1" stop-color="#4a3d63"/></radialGradient><clipPath id="dc"><circle cx="100" cy="112" r="62"/></clipPath></defs>
+{% for k in range(12) %}{% set a = 200 + k*12 %}<path d="M100 112 L{{ 100 + 140*cos(a-3) }} {{ 112 + 140*sin(a-3) * -1 }} L{{ 100 + 140*cos(a+3) }} {{ 112 + 140*sin(a+3) * -1 }}Z" fill="{{ ['#ff4fd8','#7ff3ff','#ffd36a'][k%3] }}" opacity=".12"/>{% endfor %}
+<line x1="100" y1="0" x2="100" y2="50" stroke="#c9c3d9" stroke-width="2"/>
+<circle cx="100" cy="112" r="62" fill="url(#dg)"/>
+<g clip-path="url(#dc)">{% for r in range(13) %}{% for c in range(13) %}{% set x = 38 + c*10 %}{% set y = 50 + r*10 %}{% set sh = ((r*7 + c*11) % 9) %}<rect x="{{x+0.6}}" y="{{y+0.6}}" width="8.8" height="8.8" fill="{{ ['#ffffff','#e6e1f0','#b9b0cc','#8a7fa3','#ff9df0','#9ff6ff','#d8d2e6','#6e6290','#fff3c4'][sh] }}" opacity=".55"/>{% endfor %}{% endfor %}</g>
+<circle cx="100" cy="112" r="62" fill="none" stroke="#2a0838" stroke-width="1.5" opacity=".5"/>
+<g fill="#fff"><path d="M72 84 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3Z"/><path d="M130 128 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2Z"/></g>
+</svg>
+<svg class="floor" viewBox="0 0 600 120" preserveAspectRatio="xMidYMax meet">
+{% for r in range(4) %}{% set y0 = 30 + r*22 %}{% set y1 = y0 + 22 %}{% for c in range(-6,7) %}{% set x0a = 300 + c*50*(1+r*0.35) %}{% set x0b = 300 + (c+1)*50*(1+r*0.35) %}{% set x1a = 300 + c*50*(1+(r+1)*0.35) %}{% set x1b = 300 + (c+1)*50*(1+(r+1)*0.35) %}
+<path d="M{{x0a}} {{y0}} L{{x0b}} {{y0}} L{{x1b}} {{y1}} L{{x1a}} {{y1}}Z" fill="{{ ['#ff4fd8','#7ff3ff','#ffd36a','#9b5cff'][(r+c)%4] }}" opacity="{{ 0.75 if (r+c)%2 else 0.35 }}"/>{% endfor %}{% endfor %}
+<rect x="0" y="28" width="600" height="3" fill="#fff" opacity=".5"/>
+</svg>
+{% endblock %}
+{% block cardart %}{% endblock %}

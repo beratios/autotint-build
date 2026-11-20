@@ -1,0 +1,13 @@
+{% extends theme %}
+{% block mode %}sheet{% endblock %}
+{% block lcss %}.m-sheet{top:6vmin!important;bottom:4vmin!important;justify-content:flex-start!important}
+table{width:100%;border-collapse:collapse;margin-top:3vmin;font-family:'Fredoka'}
+td{border-bottom:1px solid rgba(255,79,216,.55);height:5vmin;font-size:2.4vmin;text-align:left;padding:0 1vmin}
+td.n{width:6vmin;color:#ffd36a;font-weight:700}
+{% endblock %}
+{% block content %}
+<div class="t-k">{{ party }} · score sheet</div>
+<div class="t-h" style="font-size:6.4vmin;margin-top:1vmin">My Votes</div>
+<div style="font-family:'Fredoka';font-size:2.8vmin;margin-top:1.4vmin">Name: ___________________________</div>
+<table>{% for i in range(18) %}<tr><td class="n">{{ i+1 }}</td><td>{{ questions[i] if questions|length > i else '' }}</td><td style="width:30%"></td></tr>{% endfor %}</table>
+{% endblock %}

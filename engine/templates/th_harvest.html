@@ -1,0 +1,39 @@
+{% extends "mp_base.html" %}
+{# Thanksgiving harvest: warm cream paper, arch of maple + oak leaves on top, pumpkins, wheat sheaves, apples and acorns at the bottom #}
+{% block tcss %}
+:root{--bg:#fbf3e4;--ink:#4a2a18;--muted:#8a6a50;--acc:#b5651d;--hc:#8a3b1c;--hf:'Playfair Display';--hw:700;--sf:'Great Vibes';--bf:'Cormorant Garamond';--df:'Playfair Display';--sx:11vmin;--st:30vmin;--sb:30vmin}
+body{background:radial-gradient(ellipse at 50% 50%,#fdf7ec 0%,#f6e8cf 100%)}
+.t-s{color:#b5651d}
+.t-k,.t-l{color:#7a5a2a}
+.t-rule{background:#c9894a;height:1.5px;width:22vmin}.t-rule:after{background:#d9822b}
+.top{position:absolute;left:0;top:0;width:100%}
+.bot{position:absolute;left:0;bottom:0;width:100%}
+.a-detailed .top{left:15%;width:70%}.a-detailed .bot{left:25%;width:50%}.m-detailed{top:24vmin!important;bottom:24vmin!important}
+.a-post .top{left:18%;width:64%}.a-post .bot{left:24%;width:52%}.m-post{top:21vmin!important;bottom:18vmin!important}.m-post .crs{margin-top:1.3vmin!important}
+.a-story .top{top:3vmin}.m-story{top:38vmin!important;bottom:38vmin!important}
+.card{background:#fbf3e4;color:#4a2a18;border:1px solid #e3c9a4}
+.card .nm{font-family:'Great Vibes';font-size:7.5vmin!important;color:#8a3b1c}
+{% endblock %}
+{% macro maple(x, y, s, r, c) %}<path transform="translate({{x}} {{y}}) rotate({{r}}) scale({{s}}) translate(-20 -20)" d="M20 0 L23 9 L30 5 L28 14 L38 13 L32 20 L36 24 L26 25 L27 34 L21 29 L20.6 40 H19.4 L19 29 L13 34 L14 25 L4 24 L8 20 L2 13 L12 14 L10 5 L17 9Z" fill="{{c}}"/><path transform="translate({{x}} {{y}}) rotate({{r}}) scale({{s}}) translate(-20 -20)" d="M20 38 V8 M20 24 L30 14 M20 24 L10 14 M20 28 L28 25 M20 28 L12 25" stroke="#7a2a10" stroke-width="0.7" opacity=".5" fill="none"/>{% endmacro %}
+{% macro oak(x, y, s, r, c) %}<path transform="translate({{x}} {{y}}) rotate({{r}}) scale({{s}}) translate(-10 -24)" d="M10 48 L10 42 C4 42 2 38 6 36 C1 34 1 29 6 28 C1 25 2 20 7 20 C3 16 5 11 9 12 C8 6 10 2 10 0 C10 2 12 6 11 12 C15 11 17 16 13 20 C18 20 19 25 14 28 C19 29 19 34 14 36 C18 38 16 42 10 42Z" fill="{{c}}"/>{% endmacro %}
+{% macro pumpkin(x, y, s, c, c2) %}<g transform="translate({{x}} {{y}}) scale({{s}})"><path d="M0 -38 q2 -14 12 -18" stroke="#5b4a2a" stroke-width="5" fill="none" stroke-linecap="round"/>
+<ellipse cx="-26" cy="0" rx="20" ry="36" fill="{{c2}}"/><ellipse cx="26" cy="0" rx="20" ry="36" fill="{{c2}}"/><ellipse cx="-13" cy="0" rx="20" ry="38" fill="{{c}}"/><ellipse cx="13" cy="0" rx="20" ry="38" fill="{{c}}"/><ellipse cx="0" cy="0" rx="16" ry="39" fill="{{c}}"/>
+<path d="M-6 -30 q-4 30 0 64 M6 -30 q4 30 0 64" stroke="{{c2}}" stroke-width="1.6" fill="none" opacity=".7"/><ellipse cx="-14" cy="-14" rx="4" ry="12" fill="#fff" opacity=".18"/>
+<path d="M10 -40 q14 -6 18 4 q-10 0 -18 -4" fill="#6b8a3a"/></g>{% endmacro %}
+{% macro wheat(x, y, s, r) %}<g transform="translate({{x}} {{y}}) rotate({{r}}) scale({{s}})"><path d="M0 0 Q2 -60 0 -110" stroke="#c9a04a" stroke-width="2.2" fill="none"/>{% for k in range(8) %}<ellipse cx="-5" cy="{{ -70 - k*6 }}" rx="3.4" ry="6.5" transform="rotate(-25 -5 {{ -70 - k*6 }})" fill="#d9b25a"/><ellipse cx="5" cy="{{ -67 - k*6 }}" rx="3.4" ry="6.5" transform="rotate(25 5 {{ -67 - k*6 }})" fill="#c99a40"/>{% endfor %}<ellipse cx="0" cy="-120" rx="3" ry="6" fill="#d9b25a"/></g>{% endmacro %}
+{% block art %}
+<svg class="top" viewBox="0 0 600 170" preserveAspectRatio="xMidYMin meet">
+{% for i in range(22) %}{% set t = i/21 %}{% set x = -10 + 620*t %}{% set y = 10 + 80*(4*t*(1-t))**1.5 + (i%3)*10 %}{% set c = ['#c4501f','#e08a2c','#a8321c','#d9a03a','#8a3b1c','#b8641e'][i%6] %}{% set r = (i*67)%360 %}
+{% if i%3==1 %}{{ oak(x, y, 1.3 + (i%2)*0.3, r, c) }}{% else %}{{ maple(x, y, 1.3 + (i%4)*0.18, r, c) }}{% endif %}{% endfor %}
+{% for i in range(9) %}{% set t = (i+0.5)/9 %}{% set x = 620*t - 10 %}{% set y = 40 + 70*(4*t*(1-t))**1.5 %}{{ maple(x, y, 0.8, (i*41)%360, ['#e9b44c','#cf6a2a','#b13a1e'][i%3]) }}{% endfor %}
+{% for ax,ay in [(140,70),(470,70),(300,108)] %}<g transform="translate({{ax}} {{ay}})"><ellipse cx="0" cy="4" rx="7" ry="8.5" fill="#a8742e"/><path d="M-8 -1 q8 -10 16 0Z" fill="#6b4a22"/><line x1="0" y1="-5" x2="1" y2="-9" stroke="#6b4a22" stroke-width="2"/></g>{% endfor %}
+</svg>
+<svg class="bot" viewBox="0 0 600 190" preserveAspectRatio="xMidYMax meet">
+<ellipse cx="300" cy="190" rx="300" ry="26" fill="#e9d2a8" opacity=".7"/>
+{{ wheat(70, 186, 1.1, -24) }}{{ wheat(86, 186, 1.2, -10) }}{{ wheat(100, 186, 1.05, 6) }}{{ wheat(510, 186, 1.05, -6) }}{{ wheat(526, 186, 1.2, 10) }}{{ wheat(540, 186, 1.1, 24) }}
+{{ maple(40, 170, 1.2, 30, '#c4501f') }}{{ maple(570, 168, 1.2, -40, '#d9a03a') }}{{ oak(150, 178, 1.2, 70, '#a8321c') }}{{ oak(450, 178, 1.2, -70, '#e08a2c') }}
+{{ pumpkin(230, 140, 1.15, '#e2772a', '#c45d1c') }}{{ pumpkin(330, 132, 1.45, '#f08a2e', '#d16a1f') }}{{ pumpkin(410, 156, 0.85, '#f2ead6', '#d9ccae') }}{{ pumpkin(165, 160, 0.7, '#e8b04a', '#c9902a') }}
+{% for ax,c in [(280,'#b8261f'),(470,'#c9302a')] %}<g transform="translate({{ax}} 172)"><circle r="13" fill="{{c}}"/><circle cx="-4" cy="-4" r="4" fill="#fff" opacity=".3"/><path d="M0 -12 q2 -7 6 -9" stroke="#5b4a2a" stroke-width="2" fill="none"/><path d="M2 -14 q10 -6 14 2 q-8 2 -14 -2" fill="#6b8a3a"/></g>{% endfor %}
+</svg>
+{% endblock %}
+{% block cardart %}<svg width="12%" viewBox="0 0 40 40"><path d="M20 0 L23 9 L30 5 L28 14 L38 13 L32 20 L36 24 L26 25 L27 34 L21 29 L20.6 40 H19.4 L19 29 L13 34 L14 25 L4 24 L8 20 L2 13 L12 14 L10 5 L17 9Z" fill="#d9822b"/></svg>{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "mp_base.html" %}{% from "kd_macros.html" import ginger, cane %}
+{# Kids Christmas: icy mint with polka-dot snow, colorful bunting on top, cartoon gingerbread friends, candy canes and a snowman at the bottom #}
+{% block tcss %}
+:root{--bg:#dff3ee;--ink:#2a3a4a;--muted:#5a6a7a;--acc:#e23b4a;--hc:#e23b4a;--hf:'Fredoka';--hw:700;--sf:'Pacifico';--bf:'Fredoka';--df:'Fredoka';--sx:11vmin;--st:22vmin;--sb:33vmin}
+body{background-color:#dff3ee;background-image:radial-gradient(#fff 22%,transparent 24%),radial-gradient(#fff 22%,transparent 24%);background-size:7vmin 7vmin;background-position:0 0,3.5vmin 3.5vmin}
+.t-h{text-shadow:.5vmin .5vmin 0 #fff,-.2vmin -.2vmin 0 #fff}
+.t-s{color:#2fa36b}
+.t-k,.t-l{color:#2f7fbf}
+.t-b{font-weight:500}
+.t-rule{height:1.1vmin;width:24vmin;border-radius:1vmin;background:repeating-linear-gradient(90deg,#e23b4a 0 2.4vmin,#ffd23f 2.4vmin 4.8vmin,#2fa36b 4.8vmin 7.2vmin,#2f7fbf 7.2vmin 9.6vmin)}.t-rule:after{display:none}
+.panel{position:absolute;left:6vmin;right:6vmin;top:15vmin;bottom:14vmin;background:rgba(255,255,255,.88);border-radius:5vmin;border:.8vmin dashed #9ed8c8}
+.bunt{position:absolute;left:0;top:0;width:100%}
+.bot{position:absolute;left:0;bottom:0;width:100%}
+.a-detailed .bot{left:20%;width:60%}.m-detailed{top:24vmin!important;bottom:22vmin!important}.a-detailed .panel{bottom:6vmin}
+.a-post .bot{left:22%;width:56%}.m-post{top:17vmin!important;bottom:20vmin!important}.m-post .crs{margin-top:1.3vmin!important}.a-post .panel{top:11vmin;bottom:9vmin}
+.a-story .panel{top:22vmin;bottom:30vmin}.m-story{top:32vmin!important;bottom:40vmin!important}
+.card{background:#fff;color:#2a3a4a;border:.5vmin dashed #9ed8c8}
+.card .nm{font-family:'Fredoka';font-weight:700;color:#e23b4a}
+{% endblock %}
+{% block art %}{% set mode = self.mode()|trim %}
+<div class="panel"></div>
+<svg class="bunt" viewBox="0 0 600 70" preserveAspectRatio="xMidYMin meet"><path d="M0 8 Q300 50 600 8" stroke="#2a3a4a" stroke-width="1.6" fill="none"/>
+{% for i in range(15) %}{% set t = (i+0.5)/15 %}{% set x = 600*t %}{% set y = 8 + 42*(4*t*(1-t))*0.95 %}{% set c = ['#e23b4a','#ffd23f','#2fa36b','#2f7fbf','#ff8fb1'][i%5] %}<path d="M{{x-17}} {{y-2}} L{{x+17}} {{y+2}} L{{x}} {{y+36}}Z" fill="{{c}}"/><circle cx="{{x}}" cy="{{y+12}}" r="3" fill="#fff" opacity=".8"/>{% endfor %}</svg>
+<svg class="bot" viewBox="0 0 600 170" preserveAspectRatio="xMidYMax meet">
+<path d="M0 130 Q150 110 300 128 Q450 146 600 122 V170 H0Z" fill="#fff"/>
+<!-- snowman -->
+<g transform="translate(500 70)"><circle cx="0" cy="66" r="34" fill="#fff" stroke="#bfe3f0" stroke-width="3"/><circle cx="0" cy="18" r="24" fill="#fff" stroke="#bfe3f0" stroke-width="3"/><circle cx="-8" cy="12" r="3" fill="#2a3a4a"/><circle cx="8" cy="12" r="3" fill="#2a3a4a"/><path d="M0 18 l18 4 -18 3Z" fill="#ff8a2a"/><path d="M-24 0 h48 v-6 h-10 v-26 h-28 v26 h-10Z" fill="#2a3a4a"/><rect x="-14" y="-10" width="28" height="5" fill="#e23b4a"/><path d="M-22 36 q22 10 44 0 l2 8 q-24 10 -48 0Z" fill="#2fa36b"/><circle cx="0" cy="58" r="3" fill="#2a3a4a"/><circle cx="0" cy="72" r="3" fill="#2a3a4a"/></g>
+</svg>
+<div style="position:absolute;left:5%;bottom:3vmin;display:flex;align-items:flex-end;gap:1vmin;width:70%">
+<div>{{ cane('5vmin') }}</div><div>{{ ginger('16vmin') }}</div><div style="transform:rotate(8deg)">{{ ginger('11vmin','#d9954f') }}</div><div>{{ cane('4vmin') }}</div></div>
+{% endblock %}
+{% block cardart %}{{ ginger('7vmin') }}{% endblock %}

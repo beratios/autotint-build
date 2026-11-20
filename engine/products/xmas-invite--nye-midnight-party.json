@@ -1,0 +1,249 @@
+{
+ "template": "pi_invite.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "event title",
+  "host name",
+  "date",
+  "time",
+  "venue name",
+  "address",
+  "dress code",
+  "RSVP details",
+  "evening schedule",
+  "guest names for place cards (up to 24)",
+  "number of tables"
+ ],
+ "defaults": {
+  "theme": "th_nye.html",
+  "title": "New Years Eve Party",
+  "host": "Jess and Marco",
+  "date": "Thursday, December 31, 2026",
+  "time": "8:00 PM until 1:00 AM",
+  "place": "The Rooftop Lounge",
+  "address": "55 Front Street, Toronto",
+  "dress": "Glitter and Gold",
+  "rsvp": "to Jess by December 20",
+  "rsvp_by": "December 20",
+  "year": "2026",
+  "schedule": [
+   [
+    "8:00 PM",
+    "Cocktails and bites"
+   ],
+   [
+    "9:30 PM",
+    "Games and dancing"
+   ],
+   [
+    "11:30 PM",
+    "Champagne for everyone"
+   ],
+   [
+    "Midnight",
+    "Countdown and toast"
+   ],
+   [
+    "12:30 AM",
+    "Late night snacks"
+   ]
+  ],
+  "thanks_note": "Thank you for counting down with us! Here is to a sparkling 2027 full of joy, laughter and good friends.",
+  "guests": [
+   "Jess",
+   "Marco",
+   "Priya",
+   "Sam",
+   "Olivia",
+   "Ben",
+   "Zara",
+   "Nate",
+   "Lena",
+   "Chris",
+   "Maya",
+   "Theo"
+  ],
+  "place_sheets": [
+   0,
+   8,
+   16
+  ],
+  "tables": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8"
+  ],
+  "courses": [],
+  "family": "",
+  "host_line": "ring in 2027 with us at our"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#160b26",
+   "ink": "#f6ecdf",
+   "accent": "#e6c27a",
+   "hfont": "Great Vibes",
+   "hsize": 120
+  },
+  "size": "5x7 invite, 5x3.5 cards, 8x10 sign, 4x6 table numbers, Instagram post and story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.2,
+    "frac": 0.62,
+    "caption": "Midnight clock",
+    "sub": "Gold foil look on deep plum"
+   },
+   {
+    "x": 0.5,
+    "y": 0.86,
+    "frac": 0.62,
+    "caption": "Champagne toast scene",
+    "sub": "Popping bottle and clinking coupes"
+   }
+  ],
+  "fields": [
+   [
+    "Event title",
+    0.5,
+    0.38
+   ],
+   [
+    "Host",
+    0.5,
+    0.44
+   ],
+   [
+    "Date and time",
+    0.5,
+    0.52
+   ],
+   [
+    "Venue and address",
+    0.5,
+    0.58
+   ],
+   [
+    "Dress code",
+    0.5,
+    0.65
+   ],
+   [
+    "RSVP",
+    0.5,
+    0.69
+   ]
+  ],
+  "vtitle": "Countdown to 2027.",
+  "variants": [
+   {},
+   {
+    "title": "NYE Dinner Party",
+    "host": "the Kowalskis",
+    "date": "Thursday, December 31, 2026",
+    "time": "7:00 PM",
+    "place": "Our Home",
+    "address": "18 Cedar Road, Edmonton",
+    "dress": "Cocktail Attire",
+    "rsvp": "to Anna by December 22"
+   },
+   {
+    "title": "Midnight Bash",
+    "host": "Studio 9 Team",
+    "date": "Thursday, December 31, 2026",
+    "time": "9:00 PM",
+    "place": "Loft 21",
+    "address": "21 Queen Street, Montreal",
+    "dress": "Black and Gold",
+    "rsvp": "to events@studio9.com"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "rsvp",
+   "template": "pi_rsvp.html",
+   "w_in": 5,
+   "h_in": 3.5,
+   "png": true,
+   "label": "RSVP card 5x3.5"
+  },
+  {
+   "name": "details",
+   "template": "pi_details.html",
+   "w_in": 5,
+   "h_in": 3.5,
+   "png": true,
+   "label": "Details card 5x3.5"
+  },
+  {
+   "name": "welcome",
+   "template": "pi_welcome.html",
+   "w_in": 8,
+   "h_in": 10,
+   "png": true,
+   "label": "Welcome sign 8x10"
+  },
+  {
+   "name": "place",
+   "template": "mp_place.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "place_sheets",
+   "png": true,
+   "label": "Place cards"
+  },
+  {
+   "name": "table",
+   "template": "pi_table.html",
+   "w_in": 4,
+   "h_in": 6,
+   "repeat": "tables",
+   "png": true,
+   "label": "Table numbers 4x6"
+  },
+  {
+   "name": "thank-you",
+   "template": "pi_thanks.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true,
+   "label": "Thank-you card 5x7"
+  },
+  {
+   "name": "instagram-post",
+   "template": "pi_post.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true,
+   "label": "Instagram post"
+  },
+  {
+   "name": "instagram-story",
+   "template": "pi_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Instagram story"
+  }
+ ],
+ "main_label": "Invitation 5x7",
+ "hero": {
+  "headline": "New Years Eve Party Invitation",
+  "short": "NYE Party Invite Set",
+  "bullets": [
+   "Invite, RSVP and countdown schedule card",
+   "Welcome sign, table numbers, place cards",
+   "Thank-you card, Instagram post and story"
+  ]
+ },
+ "inside_sub": "9 designs \u00b7 12 table numbers \u00b7 24 place cards",
+ "detail_page": "welcome",
+ "detail_title": "Matching 8x10 welcome sign"
+}

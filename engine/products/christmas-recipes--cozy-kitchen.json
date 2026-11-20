@@ -1,0 +1,135 @@
+{
+ "template": "rc_cover.html",
+ "w_in": 8.5,
+ "h_in": 11,
+ "fields": [
+  "family name",
+  "kitchen name (e.g. Grandma Rose)",
+  "optional: tagline",
+  "optional: year your family tradition started",
+  "optional: section names"
+ ],
+ "defaults": {
+  "theme": "th_kitchen.html",
+  "family": "Morales",
+  "kitchen": "Grandma Rosa",
+  "tagline": "favorite holiday recipes, made with love and passed down with joy",
+  "est": "1978",
+  "sections": [
+   "Cookies",
+   "Mains",
+   "Sides",
+   "Desserts",
+   "Drinks"
+  ]
+ },
+ "gallery": {
+  "style": {
+   "bg": "#fffaf0",
+   "ink": "#3e2a20",
+   "accent": "#c62f3a",
+   "hfont": "Pacifico",
+   "hsize": 92
+  },
+  "size": "8.5x11 cover, dividers and recipe pages, 6x4 recipe cards, gift tag sheet",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.33,
+    "frac": 0.62,
+    "caption": "Your family name",
+    "sub": "Red gingham and holly"
+   },
+   {
+    "x": 0.5,
+    "y": 0.88,
+    "frac": 0.62,
+    "caption": "Illustrated baking scene",
+    "sub": "Mixing bowl, cookies and cookie jar"
+   }
+  ],
+  "fields": [
+   [
+    "Family name",
+    0.5,
+    0.33
+   ],
+   [
+    "Title",
+    0.5,
+    0.42
+   ],
+   [
+    "Your tagline",
+    0.5,
+    0.52
+   ],
+   [
+    "Year",
+    0.5,
+    0.58
+   ]
+  ],
+  "vtitle": "Keep your family recipes forever.",
+  "variants": [
+   {},
+   {
+    "family": "Sullivan",
+    "est": "1992"
+   },
+   {
+    "family": "Kim",
+    "est": "2015",
+    "tagline": "our holiday table, one recipe at a time"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "recipe-card",
+   "template": "rc_card.html",
+   "w_in": 6,
+   "h_in": 4,
+   "png": true,
+   "label": "6x4 recipe card with kitchen name"
+  },
+  {
+   "name": "recipe-page",
+   "template": "rc_page.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Full page recipe sheet"
+  },
+  {
+   "name": "divider",
+   "template": "rc_divider.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "sections",
+   "png": true,
+   "label": "5 section dividers"
+  },
+  {
+   "name": "gift-tags",
+   "template": "rc_tags.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Homemade gift tags"
+  }
+ ],
+ "main_label": "Recipe book cover",
+ "hero": {
+  "headline": "Family Christmas Recipe Book Kit",
+  "short": "Christmas Recipe Book Kit",
+  "bullets": [
+   "Cover with your family name",
+   "Recipe cards and full recipe pages",
+   "Section dividers and gift tags"
+  ]
+ },
+ "inside_sub": "5 designs \u00b7 cover, dividers, cards, pages, tags",
+ "detail_page": "recipe-card",
+ "detail_title": "6x4 recipe card with your kitchen name"
+}

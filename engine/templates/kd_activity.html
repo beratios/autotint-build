@@ -1,0 +1,26 @@
+{% extends "base.html" %}{% from "kd_macros.html" import ginger, cane, gift %}
+{% block css %}
+body{background:#fff;font-family:'Fredoka';color:#222;text-align:center}
+.b{position:absolute;inset:3vmin;border:.8vmin dashed #333;border-radius:4vmin}
+.w{position:absolute;inset:8vmin 9vmin;display:flex;flex-direction:column;align-items:center}
+.h{font-weight:700;font-size:6.6vmin;line-height:1;color:#fff;-webkit-text-stroke:.45vmin #222;paint-order:stroke fill}
+.s{font-size:2.4vmin;letter-spacing:.2em;text-transform:uppercase;margin-top:1.4vmin}
+table{border-collapse:collapse;margin-top:3vmin}
+td{width:6.2vmin;height:6.2vmin;border:.25vmin solid #222;font-size:3.8vmin;font-weight:600}
+.words{display:flex;flex-wrap:wrap;gap:1.4vmin 3vmin;justify-content:center;margin-top:2.6vmin;font-size:3vmin;max-width:76vmin}
+.words span:before{content:"";display:inline-block;width:2.4vmin;height:2.4vmin;border:.3vmin solid #222;border-radius:.6vmin;margin-right:1vmin;vertical-align:-.3vmin}
+.joke{margin-top:3vmin;border:.4vmin solid #222;border-radius:2.4vmin;padding:2vmin 3vmin;font-size:3vmin;max-width:80vmin}
+.dec{position:absolute;bottom:6vmin;left:0;right:0;display:flex;justify-content:space-between;padding:0 9vmin;align-items:flex-end}
+{% endblock %}
+{% block body %}
+<div class="b"></div>
+<div class="w">
+<div class="h">Christmas Word Search</div>
+<div class="s">{{ rep ~ ', ' if rep }}find all the hidden words!</div>
+<table>{% for row in ws_grid %}<tr>{% for ch in row %}<td>{{ ch }}</td>{% endfor %}</tr>{% endfor %}</table>
+<div class="words">{% for w in ws_words %}<span>{{ w }}</span>{% endfor %}</div>
+<div class="joke"><b>Joke time:</b> What do snowmen eat for breakfast? <br><span style="font-size:2.6vmin">Answer: Snowflakes!</span></div>
+
+</div>
+
+{% endblock %}

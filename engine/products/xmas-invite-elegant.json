@@ -7,8 +7,11 @@
   "host",
   "date",
   "time",
-  "address",
-  "rsvp"
+  "place + address",
+  "dress code (optional)",
+  "RSVP",
+  "evening schedule (optional)",
+  "guest names for place cards (optional, up to 24)"
  ],
  "defaults": {
   "kicker": "You are cordially invited to",
@@ -17,7 +20,46 @@
   "date": "Saturday, December 20",
   "time": "7:00 PM",
   "address": "24 Maple Grove Lane, Hamilton",
-  "rsvp": "to Sarah \u00b7 905 555 0142"
+  "rsvp": "to Sarah \u00b7 905 555 0142",
+  "theme": "th_emerald.html",
+  "place": "The Anderson Home",
+  "dress": "Festive Attire",
+  "rsvp_by": "December 12",
+  "year": "2026",
+  "schedule": [
+   [
+    "7:00 PM",
+    "Welcome drinks"
+   ],
+   [
+    "7:45 PM",
+    "Christmas dinner"
+   ],
+   [
+    "9:00 PM",
+    "Dessert by the tree"
+   ],
+   [
+    "9:30 PM",
+    "Carols and games"
+   ]
+  ],
+  "thanks_note": "Thank you for sharing our Christmas table. Your company made the evening warm and bright. Wishing you a joyful new year.",
+  "guests": [
+   "Sarah",
+   "Michael",
+   "Emma",
+   "Daniel",
+   "Grace",
+   "Henry",
+   "Lucy",
+   "Oliver"
+  ],
+  "place_sheets": [
+   0,
+   8,
+   16
+  ]
  },
  "gallery": {
   "style": {
@@ -27,7 +69,7 @@
    "hfont": "Playfair Display",
    "hsize": 96
   },
-  "size": "5x7 in",
+  "size": "5x7 invite, 5x3.5 cards, 8x10 sign, Instagram post and story",
   "zooms": [
    {
     "x": 0.5,
@@ -97,5 +139,66 @@
    "5x7 print-ready PDF + PNG",
    "Made for you within 24h"
   ]
- }
+ },
+ "extra_pages": [
+  {
+   "name": "rsvp",
+   "template": "pi_rsvp.html",
+   "w_in": 5,
+   "h_in": 3.5,
+   "png": true,
+   "label": "RSVP card 5x3.5"
+  },
+  {
+   "name": "details",
+   "template": "pi_details.html",
+   "w_in": 5,
+   "h_in": 3.5,
+   "png": true,
+   "label": "Evening schedule card"
+  },
+  {
+   "name": "welcome",
+   "template": "pi_welcome.html",
+   "w_in": 8,
+   "h_in": 10,
+   "png": true,
+   "label": "Welcome sign 8x10"
+  },
+  {
+   "name": "place",
+   "template": "mp_place.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "place_sheets",
+   "png": true,
+   "label": "24 place cards"
+  },
+  {
+   "name": "thank-you",
+   "template": "pi_thanks.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true,
+   "label": "Thank-you card 5x7"
+  },
+  {
+   "name": "instagram-post",
+   "template": "pi_post.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true,
+   "label": "Instagram post"
+  },
+  {
+   "name": "instagram-story",
+   "template": "pi_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Instagram story"
+  }
+ ],
+ "main_label": "Invitation 5x7",
+ "inside_sub": "8 designs \u00b7 RSVP, thank-you, Instagram post and story"
 }

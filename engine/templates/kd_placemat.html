@@ -1,0 +1,26 @@
+{% extends "base.html" %}{% from "kd_macros.html" import ginger, cane, tree, gift %}
+{% block css %}
+body{background:#fff;font-family:'Fredoka';color:#222}
+.b{position:absolute;inset:3vmin;border:.8vmin dashed #333;border-radius:4vmin}
+.h{position:absolute;left:0;right:0;top:6vmin;text-align:center;font-weight:700;font-size:9vmin;line-height:1;color:#fff;-webkit-text-stroke:.45vmin #222;paint-order:stroke fill;letter-spacing:.01em}
+.s{position:absolute;left:0;right:0;top:16.5vmin;text-align:center;font-size:2.6vmin;letter-spacing:.2em;text-transform:uppercase}
+.l{position:absolute;left:7vmin;width:60vmin;bottom:7vmin;display:flex;align-items:flex-end;justify-content:center;gap:1.4vmin}
+.r{position:absolute;right:8vmin;top:24vmin;width:52vmin;display:flex;flex-direction:column;gap:3vmin}
+.box{border:.4vmin solid #222;border-radius:2.4vmin;padding:2vmin 2.4vmin}
+.box b{display:block;font-size:2.4vmin;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1.4vmin}
+.ttt{display:flex;gap:4vmin;justify-content:center}
+.ttt svg{width:16vmin}
+.ln{border-bottom:.3vmin solid #222;height:5vmin}
+.find{display:flex;gap:2.4vmin;align-items:center;font-size:2.8vmin}
+{% endblock %}
+{% block body %}
+<div class="b"></div>
+<div class="h">{{ rep ~ "'s" if rep else 'My' }} Christmas Placemat</div>
+<div class="s">color me in · {{ title }} · {{ date }}</div>
+<div class="l"><div>{{ tree('52vmin') }}</div><div style="display:flex;flex-direction:column;align-items:center;gap:1vmin">{{ gift('13vmin') }}{{ ginger('15vmin','#fff','#222',3) }}</div></div>
+<div class="r">
+<div class="box"><b>Tic tac toe</b><div class="ttt">{% for k in range(2) %}<svg viewBox="0 0 90 90" stroke="#222" stroke-width="3"><path d="M30 4 V86 M60 4 V86 M4 30 H86 M4 60 H86"/></svg>{% endfor %}</div></div>
+<div class="box"><b>Count and circle</b><div class="find">Ornaments on the tree: ______</div><div class="find" style="margin-top:1.4vmin">Letters in my name: ______</div></div>
+<div class="box"><b>My favorite food tonight</b><div class="ln"></div><div class="ln"></div></div>
+</div>
+{% endblock %}

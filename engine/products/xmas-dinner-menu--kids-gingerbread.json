@@ -1,0 +1,257 @@
+{
+ "template": "mp_menu.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "title",
+  "family name",
+  "date",
+  "kids menu courses",
+  "kids drinks",
+  "kids names (each gets a menu, placemat and activity page)"
+ ],
+ "defaults": {
+  "theme": "th_kidsmenu.html",
+  "title": "Kids Christmas Menu",
+  "family": "Parker",
+  "family_line": "at the Parker kids table",
+  "date": "December 25, 2026",
+  "year": "2026",
+  "courses": [
+   [
+    "Starter",
+    "Cheesy snowman bread"
+   ],
+   [
+    "Main",
+    "Turkey bites, mashed potatoes, peas"
+   ],
+   [
+    "Treat",
+    "Gingerbread cookies"
+   ],
+   [
+    "Dessert",
+    "Candy cane ice cream"
+   ]
+  ],
+  "drinks_title": "Kids Drinks",
+  "drinks": [
+   [
+    "Hot Cocoa",
+    "with mini marshmallows"
+   ],
+   [
+    "Reindeer Punch",
+    "cranberry and sparkling apple"
+   ],
+   [
+    "Snowman Milk",
+    "cold milk with a candy cane"
+   ]
+  ],
+  "kids": [
+   "Ella",
+   "Jack",
+   "Mila",
+   "Leo"
+  ],
+  "guests": [
+   "Ella",
+   "Jack",
+   "Mila",
+   "Leo",
+   "Ava",
+   "Max"
+  ],
+  "place_sheets": [
+   0
+  ],
+  "ws_grid": [
+   "RPRRKCEDLI",
+   "CCRSFSSTAR",
+   "OAANSGSSME",
+   "ONTOLAASKY",
+   "KDCWEINSMF",
+   "IYMHITTTSL",
+   "EYEHGWAGHN",
+   "HGLSHBELLS",
+   "RMFTREEAAI",
+   "RGIFTIGWMP"
+  ],
+  "ws_words": [
+   "SANTA",
+   "TREE",
+   "STAR",
+   "SNOW",
+   "GIFT",
+   "ELF",
+   "COOKIE",
+   "BELLS",
+   "SLEIGH",
+   "CANDY"
+  ]
+ },
+ "gallery": {
+  "style": {
+   "bg": "#dff3ee",
+   "ink": "#2a3a4a",
+   "accent": "#e23b4a",
+   "hfont": "Fredoka",
+   "hsize": 96
+  },
+  "size": "5x7 menus, 11x8.5 placemats, 8.5x11 activity pages",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.25,
+    "frac": 0.62,
+    "caption": "Fun kids table menu",
+    "sub": "Colorful bunting and gingerbread"
+   },
+   {
+    "x": 0.35,
+    "y": 0.85,
+    "frac": 0.62,
+    "caption": "Cute cartoon friends",
+    "sub": "Gingerbread, candy canes, snowman"
+   }
+  ],
+  "fields": [
+   [
+    "Date",
+    0.5,
+    0.22
+   ],
+   [
+    "Title",
+    0.5,
+    0.28
+   ],
+   [
+    "Family name",
+    0.5,
+    0.35
+   ],
+   [
+    "Kids dishes",
+    0.5,
+    0.55
+   ]
+  ],
+  "vtitle": "The best seat is the kids table.",
+  "variants": [
+   {},
+   {
+    "title": "Little Elves Menu",
+    "family": "Nguyen",
+    "family_line": "for the Nguyen little elves",
+    "courses": [
+     [
+      "Starter",
+      "Mini pizza wreaths"
+     ],
+     [
+      "Main",
+      "Chicken nuggets, corn"
+     ],
+     [
+      "Treat",
+      "Grinch fruit skewers"
+     ],
+     [
+      "Dessert",
+      "Hot cocoa cupcakes"
+     ]
+    ]
+   },
+   {
+    "title": "Christmas Eve Kids Menu",
+    "family": "Brown",
+    "family_line": "at the Brown kids table",
+    "date": "December 24, 2026",
+    "courses": [
+     [
+      "Starter",
+      "Veggie Christmas tree"
+     ],
+     [
+      "Main",
+      "Mac and cheese, ham"
+     ],
+     [
+      "Treat",
+      "Reindeer pretzels"
+     ],
+     [
+      "Dessert",
+      "Sugar cookies"
+     ]
+    ]
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "placemat",
+   "template": "kd_placemat.html",
+   "w_in": 11,
+   "h_in": 8.5,
+   "repeat": "kids",
+   "png": true,
+   "label": "Coloring placemat for each kid 11x8.5"
+  },
+  {
+   "name": "activity",
+   "template": "kd_activity.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "kids",
+   "png": true,
+   "label": "Word search activity page"
+  },
+  {
+   "name": "guest-menu",
+   "template": "mp_guest.html",
+   "repeat": "kids",
+   "png": true,
+   "label": "Name menu for each kid"
+  },
+  {
+   "name": "drinks",
+   "template": "mp_drinks.html",
+   "png": true,
+   "label": "Kids drinks menu"
+  },
+  {
+   "name": "place",
+   "template": "mp_place.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "place_sheets",
+   "png": true,
+   "label": "Name place cards"
+  },
+  {
+   "name": "instagram-story",
+   "template": "mp_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Instagram story"
+  }
+ ],
+ "main_label": "Kids menu 5x7",
+ "hero": {
+  "headline": "Kids Christmas Dinner Menu and Placemat",
+  "short": "Kids Christmas Menu Set",
+  "bullets": [
+   "Kids menu with every kids name",
+   "Coloring placemat for each kid",
+   "Word search, place cards, drinks menu"
+  ]
+ },
+ "inside_sub": "7 designs \u00b7 placemat and activity page for every kid",
+ "detail_page": "placemat",
+ "detail_title": "Coloring placemat with your kids name"
+}

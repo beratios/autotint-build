@@ -1,0 +1,18 @@
+{% extends theme %}
+{% block mode %}place{% endblock %}
+{% block lcss %}
+body{background:#fff}.page{inset:0;display:block}
+.cut{position:absolute;top:1.8vmin;left:0;right:0;font-family:'Inter';font-size:1.4vmin;letter-spacing:.22em;color:#999}
+.g{position:absolute;left:4vmin;right:4vmin;top:4.5vmin;bottom:3.5vmin;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,1fr);gap:2vmin}
+.card{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2vmin 4vmin;border-radius:2vmin}
+.card .k{font-family:'Bungee';font-size:2.6vmin;color:#ffd36a;letter-spacing:.02em;line-height:1.1}
+.card .q{font-family:'Fredoka';font-weight:600;font-size:3.5vmin;line-height:1.25;margin-top:1.6vmin}
+.card .f{font-family:'Inter';font-size:1.3vmin;letter-spacing:.2em;color:#7ff3ff;margin-top:1.6vmin;text-transform:uppercase}
+{% endblock %}
+{% block content %}{% set off = rep|default(0) %}
+<div class="cut">✂ WHO'S MOST LIKELY TO · CUT ALONG THE EDGES</div>
+<div class="g">{% for i in range(8) %}{% set q = questions[off+i] if questions|length > off+i else '' %}<div class="card">
+<div class="k">Who's most<br>likely to...</div>
+{% if q %}<div class="q">{{ q }}</div>{% else %}<div style="width:80%;border-bottom:1px solid #ff4fd8;height:6vmin"></div><div style="width:80%;border-bottom:1px solid #ff4fd8;height:5vmin"></div>{% endif %}
+<div class="f">{{ party }} · {{ year|int + 1 }}</div></div>{% endfor %}</div>
+{% endblock %}

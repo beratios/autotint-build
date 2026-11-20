@@ -1,0 +1,37 @@
+{% extends "mp_base.html" %}
+{# Cozy Christmas kitchen: cream paper, red gingham band on top with scalloped edge, holly sprigs, illustrated baking scene (mixing bowl, whisk, rolling pin, star cookies, cookie jar) #}
+{% block tcss %}
+:root{--bg:#fffaf0;--ink:#3e2a20;--muted:#8a6a58;--acc:#c62f3a;--hc:#c62f3a;--hf:'Pacifico';--hw:400;--sf:'Caveat';--bf:'Fredoka';--df:'Fredoka';--sx:9vmin;--st:22vmin;--sb:9vmin}
+body{background:#fffaf0}
+.t-h{line-height:1.2}
+.t-s{color:#2f6b45;font-weight:700}
+.t-k,.t-l{color:#2f6b45}
+.t-rule{background:#c62f3a;height:.5vmin;width:22vmin;border-radius:1vmin}.t-rule:after{display:none}
+.ging{position:absolute;left:0;right:0;top:0;height:9vmin;background-color:#fff;background-image:linear-gradient(90deg,rgba(198,47,58,.55) 50%,transparent 50%),linear-gradient(rgba(198,47,58,.55) 50%,transparent 50%);background-size:3.2vmin 3.2vmin}
+.scal{position:absolute;left:0;right:0;top:8vmin;height:3vmin;background:radial-gradient(circle at 50% 0,#fff 0 1.45vmin,transparent 1.55vmin);background-size:3.2vmin 3vmin;background-repeat:repeat-x}
+.holly{position:absolute;top:6vmin;width:24vmin}
+.bake{position:absolute;left:0;right:0;bottom:0;width:100%}
+.a-card .bake{display:none}.a-card .ging{height:6vmin}.a-card .scal{top:5vmin}.a-card .holly{width:12vmin;top:2.6vmin}
+.a-page .bake{left:55%;width:45%}
+.card{background:#fffaf0;color:#3e2a20;border:1px dashed #c62f3a}
+{% endblock %}
+{% macro hollysvg() %}<svg viewBox="0 0 120 70"><path d="M60 40 C40 20 18 26 6 18 C14 30 8 40 20 46 C30 50 44 48 60 40Z" fill="#2f6b45"/><path d="M60 40 C80 20 102 26 114 18 C106 30 112 40 100 46 C90 50 76 48 60 40Z" fill="#3c8a5a"/><path d="M60 40 L14 24 M60 40 L106 24" stroke="#1f4a30" stroke-width="1.2"/><circle cx="52" cy="44" r="8" fill="#c62f3a"/><circle cx="66" cy="46" r="8" fill="#d8404a"/><circle cx="59" cy="34" r="8" fill="#b22432"/><circle cx="50" cy="41" r="2.4" fill="#fff" opacity=".6"/></svg>{% endmacro %}
+{% block art %}{% set mode = self.mode()|trim %}
+<div class="ging"></div><div class="scal"></div>
+<div class="holly" style="left:4vmin">{{ hollysvg() }}</div><div class="holly" style="right:4vmin;transform:scaleX(-1)">{{ hollysvg() }}</div>
+<svg class="bake" viewBox="0 0 600 150" preserveAspectRatio="xMidYMax meet">
+<rect x="0" y="136" width="600" height="14" fill="#e9d7bf"/>
+<!-- rolling pin -->
+<g transform="translate(40 120) rotate(-8)"><rect x="0" y="0" width="150" height="26" rx="13" fill="#e1b27a"/><rect x="-28" y="8" width="32" height="10" rx="5" fill="#b8844a"/><rect x="146" y="8" width="32" height="10" rx="5" fill="#b8844a"/><rect x="10" y="4" width="130" height="5" rx="2.5" fill="#fff" opacity=".35"/></g>
+<!-- bowl + whisk -->
+<g transform="translate(300 76)"><path d="M-12 -10 L22 -66" stroke="#9aa3ad" stroke-width="4"/><path d="M22 -66 q-14 -22 -2 -32 q14 6 8 30Z" fill="none" stroke="#9aa3ad" stroke-width="2.4"/>
+<path d="M-70 0 H70 Q66 60 0 60 Q-66 60 -70 0Z" fill="#c62f3a"/><ellipse cx="0" cy="0" rx="70" ry="12" fill="#f4e6d2"/><ellipse cx="0" cy="0" rx="62" ry="8" fill="#fff6e8"/>
+<path d="M-60 20 H60" stroke="#fff" stroke-width="5" stroke-dasharray="8 8"/></g>
+<!-- star cookies -->
+{% for cx,cy,r,c in [(430,128,16,'#d9a066'),(468,124,13,'#c98a4a'),(450,104,12,'#d9a066')] %}<path transform="translate({{cx}} {{cy}}) scale({{r/10}})" d="M0 -10 L2.6 -3.4 L9.5 -3.1 L4.1 1.3 L5.9 8.1 L0 4.2 L-5.9 8.1 L-4.1 1.3 L-9.5 -3.1 L-2.6 -3.4Z" fill="{{c}}" stroke="#fff" stroke-width="0.8"/>{% endfor %}
+<!-- cookie jar -->
+<g transform="translate(540 64)"><rect x="-30" y="0" width="60" height="72" rx="14" fill="#cfe7f2" opacity=".85" stroke="#9cc6da" stroke-width="2"/><rect x="-26" y="-12" width="52" height="14" rx="5" fill="#c62f3a"/><circle cx="0" cy="-16" r="6" fill="#c62f3a"/>
+{% for x,y in [(-12,50),(10,54),(-2,34),(14,30),(-14,20)] %}<circle cx="{{x}}" cy="{{y}}" r="10" fill="#d9a066"/><circle cx="{{x-3}}" cy="{{y-2}}" r="1.8" fill="#4a2a18"/><circle cx="{{x+3}}" cy="{{y+3}}" r="1.8" fill="#4a2a18"/>{% endfor %}</g>
+</svg>
+{% endblock %}
+{% block cardart %}{% endblock %}
