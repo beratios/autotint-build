@@ -31,3 +31,8 @@
 | 2026-11-20 | 4621675086 | xmas-invite--nye-midnight-party (catch-up 11-19, pi_* + th_nye) | 11.99 | minimal |
 | 2026-11-20 | 4621667939 | nye-games--most-likely-disco (catch-up 11-19, new family, ml_* + th_disco) | 7.99 | bold |
 | 2026-11-20 | 4621675110 | christmas-recipes--cozy-kitchen (catch-up 11-19, new family, rc_* + th_kitchen) | 8.99 | doodle |
+| 2026-11-21 | 4622614713 | xmas-dinner-menu--christmas-brunch (th_brunch, Christmas morning brunch) | 11.99 | colorful |
+| 2026-11-21 | 4622614727 | xmas-invite--watercolor-winter (pi_* + th_botanical) | 11.99 | calm |
+| 2026-11-21 | 4622623242 | xmas-invite--kids-north-pole (pi_* + th_northpole) | 10.99 | detailed |
+| 2026-11-21 | 4622614751 | xmas-bingo--cozy-plaid (new family, xb_*, named cards via pages_from) | 9.99 | minimal |
+| 2026-11-21 | 4622623262 | advent-countdown--gingerbread-village (new family, ad_*) | 8.99 | bold |

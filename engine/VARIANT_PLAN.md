@@ -42,18 +42,18 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 - [x] watercolor botanical: eucalyptus, berries, white (4621661003)
 - [x] cozy fireplace / cabin scene (4620388082)
 - [x] Christmas Eve dinner (navy + silver stars) (4620388102)
-- [ ] Christmas morning brunch menu
+- [x] Christmas morning brunch menu (4622614713, th_brunch)
 - [x] New Years Eve dinner menu, plum + gold midnight clock, champagne (4621668518)
 - [x] Thanksgiving dinner menu autumn harvest (4621675058)
 ### Christmas party invitation
 - [x] elegant green gold (4618250503)
-- [x] luxury black tie gala (4620388124), [x] cozy pajama party (4621661325), [x] NYE midnight party (4621675086), [ ] kids Christmas party, [ ] office holiday party (modern), [ ] watercolor winter wonderland
+- [x] luxury black tie gala (4620388124), [x] cozy pajama party (4621661325), [x] NYE midnight party (4621675086), [x] kids Christmas party north pole (4622623242), [ ] office holiday party (modern), [x] watercolor winter wonderland (4622614727)
 ### Letter from Santa pack
 - [x] watercolor (4618736968)
 - [ ] vintage North Pole parchment + wax seal, [ ] cute cartoon (toddlers), [ ] elf-on-the-shelf style arrival letter (generic elf, no brand)
 ### Kids wish list / activity
 - [x] colorful pack (4618730313)
-- [x] Christmas Eve box kit north pole (4621668530) – own family xmas-eve-box, [ ] kids Christmas placemat with name, [ ] Christmas countdown calendar with name
+- [x] Christmas Eve box kit north pole (4621668530) – own family xmas-eve-box, [ ] kids Christmas placemat with name, [x] Christmas countdown kit with name (4622623262, own family advent-countdown)
 ### Gift tags
 - [x] rustic kraft (4618256616)
 - [ ] luxury gold foil, [ ] cute kids characters, [ ] Scandi minimal, [ ] stocking name tags
@@ -75,3 +75,9 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 - New themes 11-20 catch-up: th_emerald (matches elegant_invite), th_harvest, th_kidsmenu (+kd_placemat, kd_activity), th_disco (ml_* most likely to), th_kitchen (rc_* recipes). th_disco can host other NYE games (trivia, bingo variant).
 - Invitation engine pi_* works with ANY th_* theme -> cheap invite variants: th_fireplace (cozy party), th_navy (Christmas Eve), th_wine, th_rustic.
 - Secret Santa ss_* can take a second theme (e.g. kraft/minimal office).
+
+### Christmas bingo with names (new family, 11-21)
+- [x] cozy red plaid gingerbread (4622614751) – xb_* standalone; [ ] watercolor/elegant adult version, [ ] kids picture bingo (icons instead of words), [ ] NYE version of xb_* engine
+### Advent countdown kit (new family, 11-21)
+- [x] gingerbread village night (4622623262) – ad_*; [ ] pastel/pink girly version, [ ] woodland animals version
+- 11-21 notes: new th_brunch (sunrise, star garland, pancake table) also fits a mimosa bar set. timeline_label var added to mp_detailed/pi_details. pack.py now handles pages_from products. Views are still ~0 across the shop (6 days) – no family signal yet.
