@@ -1,0 +1,243 @@
+{
+ "template": "pi_invite.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "event title",
+  "host name",
+  "date",
+  "time",
+  "venue name",
+  "address",
+  "dress code",
+  "RSVP details",
+  "evening schedule",
+  "guest names for place cards (up to 24)",
+  "number of tables"
+ ],
+ "defaults": {
+  "theme": "th_botanical.html",
+  "title": "Winter Wonderland Dinner",
+  "host": "the Whitmans",
+  "date": "Saturday, December 12, 2026",
+  "time": "6:30 PM",
+  "place": "The Whitman Home",
+  "address": "18 Cedar Ridge Road, Toronto",
+  "dress": "Cozy winter chic",
+  "rsvp": "to Claire by December 5",
+  "rsvp_by": "December 5",
+  "year": "2026",
+  "schedule": [
+   [
+    "6:30 PM",
+    "Mulled wine and appetizers"
+   ],
+   [
+    "7:30 PM",
+    "Christmas dinner"
+   ],
+   [
+    "9:00 PM",
+    "Dessert by the fire"
+   ],
+   [
+    "9:45 PM",
+    "Carols and gift swap"
+   ]
+  ],
+  "thanks_note": "Thank you for sharing a beautiful winter evening with us. Wishing you a peaceful and joyful holiday season!",
+  "guests": [
+   "Claire",
+   "James",
+   "Olivia",
+   "Henry",
+   "Grace",
+   "Oliver",
+   "Emma",
+   "Samuel",
+   "Ruby",
+   "Daniel",
+   "Hannah",
+   "Jack"
+  ],
+  "place_sheets": [
+   0,
+   8,
+   16
+  ],
+  "tables": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "courses": [],
+  "family": "",
+  "host_line": "please join us for a"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#fbf8f2",
+   "ink": "#2f4438",
+   "accent": "#a3364a",
+   "hfont": "DM Serif Display",
+   "hsize": 100
+  },
+  "size": "5x7 invite, 5x3.5 cards, 8x10 sign, 4x6 table signs, Instagram post and story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.18,
+    "frac": 0.6,
+    "caption": "Hand-painted look",
+    "sub": "Eucalyptus, pine and winter berries"
+   },
+   {
+    "x": 0.5,
+    "y": 0.55,
+    "frac": 0.6,
+    "caption": "Elegant serif type",
+    "sub": "Your names and details"
+   }
+  ],
+  "fields": [
+   [
+    "Event title",
+    0.5,
+    0.3
+   ],
+   [
+    "Host",
+    0.5,
+    0.38
+   ],
+   [
+    "Date and time",
+    0.5,
+    0.46
+   ],
+   [
+    "Venue and address",
+    0.5,
+    0.53
+   ],
+   [
+    "Dress code",
+    0.5,
+    0.6
+   ],
+   [
+    "RSVP",
+    0.5,
+    0.66
+   ]
+  ],
+  "vtitle": "One design, any winter gathering",
+  "variants": [
+   {},
+   {
+    "title": "Christmas Dinner Party",
+    "host": "Anna and Mark",
+    "date": "Friday, December 18, 2026",
+    "time": "7:00 PM",
+    "place": "The Loft",
+    "address": "220 King Street, Vancouver",
+    "dress": "Festive formal",
+    "rsvp": "to Anna by December 10"
+   },
+   {
+    "title": "Friendsmas Supper",
+    "host": "the Patels",
+    "date": "Sunday, December 20, 2026",
+    "time": "5:00 PM",
+    "place": "Our Place",
+    "address": "7 Willow Crescent, Ottawa",
+    "dress": "Ugly sweaters welcome",
+    "rsvp": "to Riya by December 14"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "rsvp",
+   "template": "pi_rsvp.html",
+   "w_in": 5,
+   "h_in": 3.5,
+   "png": true,
+   "label": "RSVP card 5x3.5"
+  },
+  {
+   "name": "details",
+   "template": "pi_details.html",
+   "w_in": 5,
+   "h_in": 3.5,
+   "png": true,
+   "label": "Details card 5x3.5"
+  },
+  {
+   "name": "welcome",
+   "template": "pi_welcome.html",
+   "w_in": 8,
+   "h_in": 10,
+   "png": true,
+   "label": "Welcome sign 8x10"
+  },
+  {
+   "name": "place",
+   "template": "mp_place.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "place_sheets",
+   "png": true,
+   "label": "Place cards"
+  },
+  {
+   "name": "table",
+   "template": "pi_table.html",
+   "w_in": 4,
+   "h_in": 6,
+   "repeat": "tables",
+   "png": true,
+   "label": "Table signs 4x6"
+  },
+  {
+   "name": "thank-you",
+   "template": "pi_thanks.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true,
+   "label": "Thank-you card 5x7"
+  },
+  {
+   "name": "instagram-post",
+   "template": "pi_post.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true,
+   "label": "Instagram post"
+  },
+  {
+   "name": "instagram-story",
+   "template": "pi_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Instagram story"
+  }
+ ],
+ "main_label": "Invitation 5x7",
+ "hero": {
+  "headline": "Watercolor Christmas Invitation Set",
+  "short": "Watercolor Invite Set",
+  "bullets": [
+   "Invite, RSVP and schedule cards",
+   "Welcome sign, table signs, name cards",
+   "Thank-you card, Instagram post and story"
+  ]
+ },
+ "inside_sub": "9 designs \u00b7 table signs \u00b7 24 name cards",
+ "detail_page": "welcome",
+ "detail_title": "Matching 8x10 welcome sign"
+}

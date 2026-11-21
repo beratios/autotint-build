@@ -1,0 +1,14 @@
+{% extends "ad_base.html" %}
+{% block css2 %}
+.g{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1.8vmin 2vmin;width:92%;margin-top:3.4vmin}
+.d{aspect-ratio:1;border-radius:50%;background:#fdf4e3;border:.6vmin dashed #e8424f;display:flex;align-items:center;justify-content:center;font-family:'Bungee';font-size:4.4vmin;color:#1b4558;box-shadow:0 .6vmin 0 #0b2230}
+.d:nth-child(3n+2){border-color:#4fc38a}.d:nth-child(3n){border-color:#ffd54a}
+.d.x{background:#e8424f;color:#fff;border:.6vmin solid #fff;font-size:3.4vmin}
+{% endblock %}
+{% block bg %}<div class="sky"></div>{{ snow(30, 40) }}<div style="position:absolute;left:0;right:0;bottom:0">{{ village() }}</div>{% endblock %}
+{% block content %}
+<div class="k" style="margin-top:3vmin">{{ year }} · color a circle every day</div>
+<div class="h" style="font-size:{{ 9 if child|length < 7 else 7.4 }}vmin;margin-top:1.4vmin">{{ child }}’s</div>
+<div class="hb" style="font-size:6.4vmin;margin-top:.6vmin">Countdown to Christmas</div>
+<div class="g">{% for n in range(1,25) %}<div class="d{{ ' x' if n == 24 else '' }}">{{ 'EVE' if n == 24 else n }}</div>{% endfor %}</div>
+{% endblock %}

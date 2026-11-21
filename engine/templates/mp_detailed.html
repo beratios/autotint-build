@@ -22,6 +22,6 @@
 <div class="two">
 <div style="flex:1.6"><div class="h2">The Menu</div>
 {% for c in courses[:5] %}<div class="crs"><div class="t-l">{{ c[0] }}</div><div class="d">{{ c[1] }}</div>{% if c|length > 2 and c[2] %}<div class="x">{{ c[2] }}</div>{% endif %}{% if c|length > 3 and c[3] %}<div class="p">Paired with · {{ c[3] }}</div>{% endif %}</div>{% endfor %}</div>
-<div><div class="h2">The Evening</div><div class="tl">{% for t,e in timeline[:7] %}<div><b>{{ t }}</b><span>{{ e }}</span></div>{% endfor %}</div></div>
+<div><div class="h2">{{ timeline_label|default("The Evening") }}</div><div class="tl">{% for t,e in timeline[:7] %}<div><b>{{ t }}</b><span>{{ e }}</span></div>{% endfor %}</div></div>
 </div>
 {% endblock %}

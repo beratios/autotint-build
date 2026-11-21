@@ -1,0 +1,187 @@
+{
+ "template": "xb_card.html",
+ "w_in": 8.5,
+ "h_in": 11,
+ "pages_from": "guests",
+ "blank_cards": 4,
+ "shuffle_field": "squares",
+ "fields": [
+  "party name (e.g. The Miller Family Christmas)",
+  "player names (one card each, up to 30)",
+  "date, time, place (for the invite story)",
+  "optional: your own bingo words (up to 40)"
+ ],
+ "defaults": {
+  "party": "The Miller Family Christmas 2026",
+  "family": "Miller",
+  "date": "Christmas Eve, December 24",
+  "time": "7:00 PM",
+  "place": "Grandmas House",
+  "guests": [
+   "Emma",
+   "Liam",
+   "Grandma Jo",
+   "Grandpa Bill",
+   "Aunt Lucy",
+   "Uncle Dave",
+   "Olivia",
+   "Ben",
+   "Chloe",
+   "Mom",
+   "Dad",
+   "Sophie"
+  ],
+  "squares": [
+   "Santa",
+   "Reindeer",
+   "Snowman",
+   "Candy Cane",
+   "Stocking",
+   "Gingerbread",
+   "Mistletoe",
+   "Sleigh",
+   "Elf",
+   "Star",
+   "Wreath",
+   "Hot Cocoa",
+   "Present",
+   "Snowflake",
+   "Bells",
+   "Ornament",
+   "Christmas Tree",
+   "Cookies",
+   "Mittens",
+   "Fireplace",
+   "Angel",
+   "North Pole",
+   "Holly",
+   "Eggnog",
+   "Carols",
+   "Nutcracker",
+   "Penguin",
+   "Polar Bear",
+   "Sled",
+   "Tinsel",
+   "Scarf",
+   "Bow",
+   "Lights",
+   "Chimney",
+   "Rudolph",
+   "Ugly Sweater",
+   "Popcorn String",
+   "Toy Train",
+   "Snow Globe",
+   "Marshmallows"
+  ]
+ },
+ "gallery": {
+  "style": {
+   "bg": "#c62a35",
+   "ink": "#fdf4e3",
+   "accent": "#ffd27a",
+   "hfont": "Bungee",
+   "hsize": 84
+  },
+  "size": "8.5x11 letter, A4 friendly, Instagram story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.13,
+    "frac": 0.55,
+    "caption": "Each card has a name",
+    "sub": "One card for every player"
+   },
+   {
+    "x": 0.5,
+    "y": 0.62,
+    "frac": 0.55,
+    "caption": "40 Christmas words",
+    "sub": "Every card shuffled differently"
+   }
+  ],
+  "fields": [
+   [
+    "Party name",
+    0.5,
+    0.1
+   ],
+   [
+    "Player name",
+    0.5,
+    0.2
+   ],
+   [
+    "Your own words (optional)",
+    0.5,
+    0.6
+   ]
+  ],
+  "vtitle": "A different card for everyone",
+  "variants": [
+   {
+    "guests": [
+     "Emma"
+    ]
+   },
+   {
+    "guests": [
+     "Grandpa Joe"
+    ],
+    "party": "The Rossi Christmas Eve 2026"
+   },
+   {
+    "guests": [
+     "Mr. Carter"
+    ],
+    "party": "Room 4 Holiday Party"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "calling-cards",
+   "template": "xb_calling.html",
+   "png": true,
+   "label": "40 calling cards"
+  },
+  {
+   "name": "caller-checklist",
+   "template": "xb_checklist.html",
+   "png": true,
+   "label": "Caller checklist"
+  },
+  {
+   "name": "how-to-play",
+   "template": "xb_howto.html",
+   "png": true,
+   "label": "How to play sign"
+  },
+  {
+   "name": "champion",
+   "template": "xb_cert.html",
+   "png": true,
+   "label": "Bingo champion certificate"
+  },
+  {
+   "name": "instagram-story",
+   "template": "xb_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Invite story"
+  }
+ ],
+ "hero": {
+  "headline": "Christmas Bingo With Your Names",
+  "short": "Christmas Bingo With Names",
+  "bullets": [
+   "A named card for every player",
+   "40 calling cards + caller checklist",
+   "How to play, winner certificate, invite"
+  ]
+ },
+ "main_label": "Named bingo cards",
+ "inside_sub": "Up to 30 named cards + 4 blank, 40 words, all personalized",
+ "detail_page": "calling-cards",
+ "detail_title": "40 matching calling cards"
+}

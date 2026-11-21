@@ -1,0 +1,18 @@
+{% extends "ad_base.html" %}
+{% block css2 %}
+body{background:#fff}.pg{inset:0;display:block}
+.cut{position:absolute;top:2vmin;left:0;right:0;font-family:'Inter';font-size:1.4vmin;letter-spacing:.25em;color:#999}
+.gr{position:absolute;left:4vmin;right:4vmin;top:5vmin;bottom:4vmin;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr);gap:2.4vmin}
+.c{position:relative;border-radius:2.4vmin;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,#2c6177,#173a4a 70%);display:flex;flex-direction:column;align-items:center;padding:3vmin 3.4vmin 0;border:.3vmin dashed #bbb}
+.n{font-family:'Bungee';color:#ffd98a;font-size:6vmin;line-height:1}
+.dl{font-family:'Inter';font-weight:700;letter-spacing:.3em;color:#9fd3e6;font-size:1.5vmin;margin-top:.6vmin}
+.nm{font-family:'Pacifico';color:#fff;font-size:3.6vmin;margin-top:1vmin}
+.t{background:#fdf4e3;border-radius:1.6vmin;padding:1.6vmin 2vmin;font-size:2.35vmin;line-height:1.25;color:#3b2418;margin-top:1.2vmin;width:100%;flex:1;display:flex;align-items:center;justify-content:center;margin-bottom:14.5vmin;position:relative;z-index:2}
+.c svg.vil{left:8%;width:84%}
+{% endblock %}
+{% block bg %}{% endblock %}
+{% block content %}<div class="cut">✂ {{ label|default('ADVENT ACTIVITY CARDS') }} · CUT ALONG THE DASHED LINES</div>
+<div class="gr">{% for i in range(rep, rep+6) %}{% set lst = cards_list|default('activities') %}{% set src = kindness if lst == 'kindness' else activities %}<div class="c">
+<div class="n">{{ i+1 if lst != 'kindness' else '♥' }}</div><div class="dl">{{ 'DECEMBER' if lst != 'kindness' else 'KINDNESS MISSION' }}</div>
+<div class="nm">Dear {{ child }},</div><div class="t">{{ src[i] if src|length > i else '' }}</div>{{ village() }}</div>{% endfor %}</div>
+{% endblock %}

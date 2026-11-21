@@ -1,0 +1,14 @@
+{% extends "ad_base.html" %}
+{% block css2 %}
+body{background:#fff}.pg{inset:0;display:block}
+.cut{position:absolute;top:2vmin;left:0;right:0;font-family:'Inter';font-size:1.4vmin;letter-spacing:.25em;color:#999}
+.gr{position:absolute;left:5vmin;right:5vmin;top:6vmin;bottom:5vmin;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(6,1fr);gap:1.6vmin;place-items:center}
+.t{height:100%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 30%,#2c6177,#173a4a 75%);border:.7vmin solid #fdf4e3;box-shadow:0 0 0 .3vmin #e8424f;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.t:nth-child(even){box-shadow:0 0 0 .3vmin #4fc38a}
+.n{font-family:'Bungee';color:#ffd98a;font-size:6vmin;line-height:1}
+.nm{font-family:'Pacifico';color:#fff;font-size:2.2vmin;margin-top:.4vmin}
+{% endblock %}
+{% block bg %}{% endblock %}
+{% block content %}<div class="cut">✂ ADVENT NUMBER TAGS 1 TO 24 · FOR BAGS, BOXES OR ENVELOPES</div>
+<div class="gr">{% for n in range(1,25) %}<div class="t"><div class="n">{{ n }}</div><div class="nm">{{ child }}</div></div>{% endfor %}</div>
+{% endblock %}

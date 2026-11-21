@@ -1,0 +1,12 @@
+{% extends "xb_base.html" %}
+{% block css2 %}.pg{justify-content:center}{% endblock %}
+{% block content %}
+<div>{{ gman('34vmin') }}</div>
+<div class="k" style="font-size:3vmin;margin-top:4vmin">you are invited to</div>
+<div class="h" style="font-size:12.5vmin;margin-top:3vmin">Christmas Bingo Night</div>
+<div class="s" style="font-size:8vmin;margin-top:3vmin">with the {{ family }} family</div>
+<div style="font-size:5.6vmin;margin-top:5vmin;font-weight:600">{{ date }}</div>
+<div style="font-size:5vmin">{{ time }}</div>
+<div style="font-size:4.4vmin;margin-top:2vmin;color:#8a6a50">{{ place }}</div>
+<div style="display:flex;gap:4vmin;margin-top:6vmin">{{ cane('9vmin',-12) }}{{ cane('9vmin',12) }}</div>
+{% endblock %}

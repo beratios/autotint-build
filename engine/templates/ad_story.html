@@ -1,0 +1,10 @@
+{% extends "ad_base.html" %}
+{% block bg %}<div class="sky"></div>{{ snow(30, 60) }}<div style="position:absolute;left:0;right:0;bottom:0">{{ village() }}</div>{% endblock %}
+{% block css2 %}.pg{justify-content:flex-start;top:30vmin}{% endblock %}
+{% block content %}
+<div class="k" style="font-size:3vmin">only</div>
+<div class="hb" style="font-size:34vmin;margin-top:2vmin">24</div>
+<div class="hb" style="font-size:7vmin;margin-top:1vmin">sleeps to go</div>
+<div class="h" style="font-size:13vmin;margin-top:5vmin">{{ child }}</div>
+<div class="k" style="font-size:2.6vmin;margin-top:4vmin">countdown to christmas {{ year }}</div>
+{% endblock %}

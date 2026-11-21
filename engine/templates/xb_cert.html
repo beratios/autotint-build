@@ -1,0 +1,11 @@
+{% extends "xb_base.html" %}
+{% block css2 %}.ln{width:70%;border-bottom:.35vmin solid #1f5c3f;height:10vmin;margin:3vmin auto 0}{% endblock %}
+{% block content %}
+<div style="margin-top:6vmin">{{ gman('24vmin') }}</div>
+<div class="k" style="margin-top:3vmin">{{ party }}</div>
+<div class="h" style="font-size:11vmin;margin-top:3vmin">Bingo Champion</div>
+<div class="s" style="font-size:5vmin;margin-top:1vmin">this certificate is proudly awarded to</div>
+<div class="ln"></div>
+<div style="display:flex;gap:6vmin;margin-top:4vmin">{{ cane('8vmin',-15) }}{{ cane('8vmin',15) }}</div><div style="font-size:3.4vmin;margin-top:3vmin">for the luckiest card at the table</div>
+<div class="k" style="margin-top:auto;margin-bottom:3vmin">{{ date }} · the {{ family }} family</div>
+{% endblock %}

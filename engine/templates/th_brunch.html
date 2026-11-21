@@ -1,0 +1,79 @@
+{% extends "mp_base.html" %}
+{# Christmas morning brunch: warm sunrise cream-to-blush sky, sun rays, hanging paper stars + pine sprigs on top, bottom table scene with pancake stack (berries, syrup), cinnamon rolls, coffee mug with steam, two mimosa flutes, orange slices and a small gift on a gingham cloth #}
+{% block tcss %}
+:root{--bg:#fff6ec;--ink:#4b3a2f;--muted:#8a7464;--acc:#c0623f;--hc:#2f5a46;--hf:'Playfair Display';--hw:700;--sf:'Caveat';--bf:'Cormorant Garamond';--df:'Playfair Display';--sx:11vmin;--st:30vmin;--sb:44vmin}
+body{background:linear-gradient(180deg,#fde7d3 0%,#fff6ec 38%,#fff9f2 70%,#fbe9dc 100%)}
+.t-h{line-height:1.02;font-style:italic}
+.t-s{font-weight:700;color:#c0623f}
+.t-k,.t-l{color:#2f5a46}
+.t-b{font-weight:600}
+.t-rule{background:#d9a441;height:2px}.t-rule:after{background:#c0623f}
+.rays{position:absolute;left:0;top:0;width:100%;height:60%}
+.top{position:absolute;left:0;right:0;top:0;width:100%}
+.scene{position:absolute;left:0;right:0;bottom:0;width:100%}
+.a-detailed .top{left:16%;width:68%}.a-detailed .scene{left:31%;width:38%}.m-detailed{top:19vmin!important;bottom:19vmin!important}
+.a-post .top{left:22%;width:56%}.a-post .scene{left:32%;width:36%}.m-post{top:17vmin!important;bottom:16vmin!important}.m-post .t-h{font-size:6.6vmin!important}
+.a-story .top{left:12%;width:76%}.a-story .scene{left:18%;width:64%}.m-story{top:30vmin!important;bottom:29vmin!important}.m-story .t-h{font-size:12vmin!important}
+.a-welcome .scene{left:6%;width:88%}
+.a-rsvp .scene{display:none}
+.card{background:#fff9f2;color:#4b3a2f;border:1px solid #e7c9b4}
+.card .nm{font-family:'Caveat';font-weight:700;font-size:7vmin!important;color:#2f5a46}
+{% endblock %}
+{% block art %}{% set mode = self.mode()|trim %}
+<svg class="rays" viewBox="0 0 600 400" preserveAspectRatio="xMidYMin slice"><defs><radialGradient id="sun" cx=".5" cy="0" r=".9"><stop offset="0" stop-color="#ffd9a0" stop-opacity=".9"/><stop offset=".5" stop-color="#ffe9cc" stop-opacity=".35"/><stop offset="1" stop-color="#fff6ec" stop-opacity="0"/></radialGradient></defs>
+<rect width="600" height="400" fill="url(#sun)"/>
+{% for a in range(-70,75,14) %}<path d="M300 -20 L{{ 300 + 520*sin(a-5) }} {{ -20 + 520*cos(a-5) }} L{{ 300 + 520*sin(a+2) }} {{ -20 + 520*cos(a+2) }}Z" fill="#fff" opacity=".22"/>{% endfor %}
+</svg>
+<svg class="top" viewBox="0 0 600 150" preserveAspectRatio="xMidYMin meet">
+<path d="M-10 10 Q150 46 300 22 Q450 46 610 10" stroke="#8a5a3c" stroke-width="1.6" fill="none"/>
+{% for i in range(11) %}{% set x = 20 + i*56 %}{% set y0 = 10 + 30*(1 - ((x-300)/300)**2) %}{% set len = [34,62,44,80,52,96,52,80,44,62,34][i] %}
+<line x1="{{x}}" y1="{{y0}}" x2="{{x}}" y2="{{y0+len}}" stroke="#b08868" stroke-width="1"/>
+{% if i % 2 == 0 %}{% set c = ['#d9a441','#c0623f','#e8b7a0','#2f5a46','#d9a441','#c0623f'][i//2] %}
+<g transform="translate({{x}} {{y0+len+14}})"><path d="M0 -15 L4.4 -5 L15 -4.6 L7 2.6 L9.4 13 L0 7.4 L-9.4 13 L-7 2.6 L-15 -4.6 L-4.4 -5Z" fill="{{c}}"/><path d="M0 -15 L0 7.4 M-15 -4.6 L7 2.6 M15 -4.6 L-7 2.6" stroke="#fff" stroke-width=".8" opacity=".55"/></g>
+{% else %}<g transform="translate({{x}} {{y0+len+4}})"><circle r="7" fill="{{ ['#2f5a46','#e8b7a0','#c0623f','#d9a441','#2f5a46'][i//2] }}"/><circle cx="-2.4" cy="-2.4" r="2" fill="#fff" opacity=".6"/><rect x="-2.6" y="-10" width="5.2" height="3.4" fill="#b08868"/></g>{% endif %}
+{% endfor %}
+{% for sx,dir in [(0,1),(600,-1)] %}<g transform="translate({{sx}} 6) scale({{dir}} 1)" stroke="#2f5a46" stroke-width="2" stroke-linecap="round">
+<path d="M0 0 Q40 30 96 34" fill="none" stroke="#6b4a2e" stroke-width="2.4"/>
+{% for k in range(14) %}{% set x = 6 + k*6.4 %}{% set y = 0.5*x - 0.0035*x*x %}<line x1="{{x}}" y1="{{y}}" x2="{{x+7}}" y2="{{y-11}}"/><line x1="{{x}}" y1="{{y}}" x2="{{x+9}}" y2="{{y+9}}" stroke="#3f7a5e"/>{% endfor %}
+<g stroke="none">{% for bx,by in [(40,22),(46,27),(36,28)] %}<circle cx="{{bx}}" cy="{{by}}" r="4" fill="#c0392b"/><circle cx="{{bx-1}}" cy="{{by-1.2}}" r="1.1" fill="#ff9a8a"/>{% endfor %}</g></g>{% endfor %}
+</svg>
+{% if mode != 'rsvp' %}
+<svg class="scene" viewBox="0 0 600 250" preserveAspectRatio="xMidYMax meet">
+<defs>
+<pattern id="ging" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="#fff"/><rect width="10" height="20" fill="#e9b4a3" opacity=".55"/><rect width="20" height="10" fill="#e9b4a3" opacity=".55"/></pattern>
+<linearGradient id="mim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffcf6b"/><stop offset="1" stop-color="#f39a2b"/></linearGradient>
+<linearGradient id="pc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9b56e"/><stop offset="1" stop-color="#c8843e"/></linearGradient>
+</defs>
+<path d="M0 196 H600 V250 H0Z" fill="url(#ging)"/><path d="M0 196 H600" stroke="#c0623f" stroke-width="2"/>
+<!-- mimosa flutes -->
+{% for fx,rot in [(70,-6),(112,5)] %}<g transform="translate({{fx}} 196) rotate({{rot}})">
+<path d="M-13 -150 L13 -150 L10 -78 Q0 -70 -10 -78Z" fill="rgba(255,255,255,.5)" stroke="#c9b6a4" stroke-width="1.6"/>
+<path d="M-12 -132 L12 -132 L10 -78 Q0 -70 -10 -78Z" fill="url(#mim)"/>
+{% for b in range(5) %}<circle cx="{{ -6 + b*3 }}" cy="{{ -88 - b*9 }}" r="1.4" fill="#fff" opacity=".8"/>{% endfor %}
+<rect x="-1.6" y="-74" width="3.2" height="70" fill="#d6c6b6"/><ellipse cx="0" cy="-3" rx="15" ry="3.6" fill="#d6c6b6"/>
+<g transform="translate(10 -150)"><circle r="12" fill="#f7a23b"/><circle r="9.5" fill="#ffd27a"/>{% for a in range(0,360,45) %}<line x1="0" y1="0" x2="{{ 9*cos(a) }}" y2="{{ 9*sin(a) }}" stroke="#f7a23b" stroke-width="1"/>{% endfor %}</g></g>{% endfor %}
+<!-- pancake stack -->
+<g transform="translate(270 196)">
+<ellipse cx="0" cy="-2" rx="92" ry="12" fill="#fff" stroke="#e1cfc0" stroke-width="2"/><ellipse cx="0" cy="-4" rx="70" ry="8" fill="none" stroke="#e8b7a0" stroke-width="1.6"/>
+{% for k in range(6) %}<ellipse cx="0" cy="{{ -12 - k*15 }}" rx="66" ry="12" fill="url(#pc)"/><ellipse cx="0" cy="{{ -16 - k*15 }}" rx="64" ry="10" fill="#f2c88a"/>{% endfor %}
+<path d="M-50 -98 Q-60 -70 -52 -60 Q-46 -72 -40 -84 Q-30 -60 -22 -66 Q-18 -84 -6 -96 Q4 -62 14 -70 Q18 -88 30 -96 Q40 -74 50 -78 Q52 -90 56 -100Z" fill="#9a4b1c" opacity=".85"/>
+<ellipse cx="0" cy="-104" rx="58" ry="9" fill="#a95a24"/>
+<rect x="-12" y="-122" width="24" height="16" rx="3" fill="#fff4cf"/><rect x="-12" y="-122" width="24" height="5" rx="2" fill="#fffbe8"/>
+{% for bx,by,c in [(-34,-112,'#c0392b'),(-24,-118,'#3a3f8f'),(26,-114,'#c0392b'),(36,-110,'#3a3f8f'),(16,-120,'#c0392b'),(-6,-128,'#c0392b')] %}<circle cx="{{bx}}" cy="{{by}}" r="6" fill="{{c}}"/><circle cx="{{bx-2}}" cy="{{by-2}}" r="1.6" fill="#fff" opacity=".6"/>{% endfor %}
+<path d="M-2 -134 q-6 -10 2 -14 q4 6 -2 14Z M2 -134 q8 -8 12 -2 q-6 4 -12 2Z" fill="#3f7a5e"/></g>
+<!-- coffee mug -->
+<g transform="translate(400 112)"><path d="M58 26 q26 0 24 22 q-2 20 -26 18" stroke="#2f5a46" stroke-width="9" fill="none"/>
+<rect x="0" y="12" width="62" height="72" rx="10" fill="#2f5a46"/><ellipse cx="31" cy="14" rx="31" ry="7" fill="#6b3f22"/>
+<path d="M10 40 h42 M10 58 h42" stroke="#fff" stroke-width="2" stroke-dasharray="4 5" opacity=".8"/>
+<path d="M20 4 q-8 -12 2 -22 q8 -10 0 -20 M40 4 q-8 -12 2 -22 q8 -10 0 -20" stroke="#cbb3a2" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/>
+<ellipse cx="31" cy="86" rx="44" ry="8" fill="#f1e4d8" stroke="#e1cfc0"/></g>
+<!-- cinnamon rolls -->
+<g transform="translate(520 176)"><ellipse cx="0" cy="18" rx="62" ry="10" fill="#fff" stroke="#e1cfc0" stroke-width="2"/>
+{% for cx,cy in [(-26,4),(22,6),(-2,-14)] %}<g transform="translate({{cx}} {{cy}})"><ellipse rx="24" ry="17" fill="#c98446"/><path d="M0 0 m-3 0 a3 3 0 1 1 6 0 a7 6 0 1 1 -13 0 a11 9 0 1 1 22 0 a15 12 0 1 1 -30 0" fill="none" stroke="#8a4b22" stroke-width="2.4"/><path d="M-18 -8 q8 6 14 -2 q6 8 14 0 q4 6 8 2" stroke="#fff8ee" stroke-width="3.4" fill="none" stroke-linecap="round"/></g>{% endfor %}</g>
+<!-- orange slices + gift -->
+<g transform="translate(160 214)">{% for ox in [0,22] %}<g transform="translate({{ox}} 0)"><circle r="11" fill="#f7a23b"/><circle r="8.6" fill="#ffd27a"/>{% for a in range(0,360,60) %}<line x1="0" y1="0" x2="{{ 8*cos(a) }}" y2="{{ 8*sin(a) }}" stroke="#f7a23b" stroke-width="1"/>{% endfor %}</g>{% endfor %}</g>
+<g transform="translate(16 150)"><rect x="0" y="12" width="34" height="34" rx="3" fill="#c0623f"/><rect x="-3" y="6" width="40" height="9" rx="2" fill="#d77a57"/><rect x="14" y="6" width="6" height="40" fill="#f4d58d"/><path d="M17 6 q-14 -14 -16 -2 q2 5 16 2 q14 -14 16 -2 q-2 5 -16 2Z" fill="#f4d58d"/></g>
+</svg>
+{% endif %}
+{% endblock %}
+{% block cardart %}<svg width="16%" viewBox="0 0 40 30"><path d="M20 3 L23 11 L31 11.4 L25 16.6 L27 24.6 L20 20 L13 24.6 L15 16.6 L9 11.4 L17 11Z" fill="#d9a441"/></svg>{% endblock %}

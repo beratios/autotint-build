@@ -12,7 +12,7 @@ ORDER = ["hero", "zoom1", "variants", "mockup", "zoom2", "fields", "inside", "ge
 
 
 def pages_for_inside(pid, p, sd):
-    out = [(str(sorted(sd.glob(f"{pid}.png"))[0].resolve()), p.get("main_label", "Main design"))]
+    out = [(str((sorted(sd.glob(f"{pid}.png")) or sorted(sd.glob(f"{pid}-*.png")))[0].resolve()), p.get("main_label", "Main design"))]
     seen = set()
     for f in sorted(sd.glob(f"{pid}_p*.png")):
         name = f.stem.split("_p", 1)[1][3:]

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{# Cozy plaid Christmas bingo: red buffalo-plaid page, cream rounded paper, holly corners, gingerbread man + candy canes in the header #}
+{% block css %}
+body{position:relative;background:#b3202c;font-family:'Fredoka';color:#3b2418;text-align:center}
+.plaid{position:absolute;inset:0;background:
+repeating-linear-gradient(90deg,rgba(0,0,0,.42) 0 4vmin,transparent 4vmin 8vmin),
+repeating-linear-gradient(0deg,rgba(0,0,0,.42) 0 4vmin,transparent 4vmin 8vmin),#c62a35}
+.paper{position:absolute;left:4vmin;right:4vmin;top:4vmin;bottom:4vmin;background:#fdf4e3;border-radius:3vmin;box-shadow:0 0 0 .8vmin #fdf4e3,0 0 0 1.3vmin #1f5c3f,0 1vmin 3vmin rgba(0,0,0,.35)}
+.holly{position:absolute;width:20vmin}
+.pg{position:absolute;left:8vmin;right:8vmin;top:7vmin;bottom:7vmin;display:flex;flex-direction:column;align-items:center}
+.k{font-family:'Inter';font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:#1f5c3f;font-size:1.9vmin}
+.h{font-family:'Bungee';color:#c62a35;line-height:1;text-shadow:.5vmin .5vmin 0 #f3c9a0}
+.s{font-family:'Pacifico';color:#1f5c3f}
+{% block css2 %}{% endblock %}
+{% endblock %}
+{% macro gman(w='12vmin') %}<svg style="width:{{w}}" viewBox="0 0 60 70"><circle cx="30" cy="13" r="11" fill="#b8733a"/><path d="M19 24 h22 l15 7 -3 8 -12 -4 v14 l9 15 -8 5 -12 -14 -12 14 -8 -5 9 -15 v-14 l-12 4 -3 -8Z" fill="#b8733a"/><circle cx="26" cy="11" r="1.8" fill="#3b2418"/><circle cx="34" cy="11" r="1.8" fill="#3b2418"/><path d="M25 16 q5 4 10 0" stroke="#fff" stroke-width="1.6" fill="none"/><circle cx="30" cy="30" r="2.2" fill="#c62a35"/><circle cx="30" cy="38" r="2.2" fill="#1f5c3f"/><path d="M8 30 l4 2 M52 30 l-4 2 M19 62 l4 -2 M41 62 l-4 -2" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>{% endmacro %}
+{% macro cane(w='6vmin',r=0) %}<svg style="width:{{w}};transform:rotate({{r}}deg)" viewBox="0 0 30 80"><path d="M8 78 V22 a8 8 0 0 1 16 0 v4" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M8 78 V22 a8 8 0 0 1 16 0 v4" stroke="#c62a35" stroke-width="7" fill="none" stroke-linecap="round" stroke-dasharray="6 6"/></svg>{% endmacro %}
+{% block body %}
+<div class="plaid"></div><div class="paper"></div>
+{% for x,y,r in [('2vmin','1vmin',0),('auto','1vmin',90)] %}{% endfor %}
+<svg class="holly" style="left:1.5vmin;top:1.5vmin" viewBox="0 0 80 60"><path d="M10 30 q14 -24 34 -18 q-6 8 -2 16 q-10 -4 -14 6 q-8 -8 -18 -4Z" fill="#1f5c3f"/><path d="M40 40 q8 -26 30 -26 q-4 10 2 16 q-12 -2 -14 10 q-8 -6 -18 0Z" fill="#2c7a54"/><circle cx="40" cy="34" r="5" fill="#c62a35"/><circle cx="48" cy="38" r="5" fill="#c62a35"/><circle cx="42" cy="43" r="5" fill="#a81d27"/></svg>
+<svg class="holly" style="right:1.5vmin;top:1.5vmin;transform:scaleX(-1)" viewBox="0 0 80 60"><path d="M10 30 q14 -24 34 -18 q-6 8 -2 16 q-10 -4 -14 6 q-8 -8 -18 -4Z" fill="#1f5c3f"/><path d="M40 40 q8 -26 30 -26 q-4 10 2 16 q-12 -2 -14 10 q-8 -6 -18 0Z" fill="#2c7a54"/><circle cx="40" cy="34" r="5" fill="#c62a35"/><circle cx="48" cy="38" r="5" fill="#c62a35"/><circle cx="42" cy="43" r="5" fill="#a81d27"/></svg>
+<div class="pg">{% block content %}{% endblock %}</div>
+{% endblock %}

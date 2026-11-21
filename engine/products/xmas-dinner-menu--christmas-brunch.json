@@ -1,0 +1,271 @@
+{
+ "template": "mp_menu.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "title",
+  "family",
+  "date",
+  "courses (with optional description + drink pairing)",
+  "drinks",
+  "evening timeline",
+  "guests (up to 24)"
+ ],
+ "defaults": {
+  "title": "Christmas Morning Brunch",
+  "family": "Sullivan",
+  "date": "December 25, 2026",
+  "year": "2026",
+  "courses": [
+   [
+    "Something sweet",
+    "Gingerbread pancakes, maple syrup, berries",
+    "Fluffy stacks with whipped cinnamon butter",
+    "Mimosa"
+   ],
+   [
+    "From the oven",
+    "Christmas morning egg bake, cheddar and herbs",
+    "Baked overnight, ready when the gifts are open",
+    "Fresh orange juice"
+   ],
+   [
+    "On the side",
+    "Crispy bacon, roasted potatoes, fruit salad",
+    "Something for everyone at the table",
+    ""
+   ],
+   [
+    "Treats",
+    "Cinnamon rolls with cream cheese icing",
+    "Warm from the oven with coffee and cocoa",
+    "Peppermint mocha"
+   ]
+  ],
+  "drinks": [
+   [
+    "Cranberry Mimosa",
+    "sparkling wine, cranberry, orange"
+   ],
+   [
+    "Peppermint Mocha",
+    "espresso, cocoa, whipped cream"
+   ],
+   [
+    "Fresh Orange Juice",
+    "squeezed this morning"
+   ],
+   [
+    "Kids Hot Cocoa",
+    "marshmallows and sprinkles"
+   ]
+  ],
+  "timeline": [
+   [
+    "8:00 AM",
+    "Stockings and coffee"
+   ],
+   [
+    "9:00 AM",
+    "Gift opening"
+   ],
+   [
+    "10:00 AM",
+    "Christmas brunch"
+   ],
+   [
+    "11:30 AM",
+    "Walk in the snow"
+   ],
+   [
+    "1:00 PM",
+    "Movies and leftovers"
+   ]
+  ],
+  "guests": [
+   "Mom",
+   "Dad",
+   "Ellie",
+   "Jack",
+   "Nana",
+   "Papa",
+   "Aunt Kate",
+   "Uncle Tom",
+   "Sophie",
+   "Max"
+  ],
+  "place_sheets": [
+   0,
+   8,
+   16
+  ],
+  "theme": "th_brunch.html",
+  "timeline_label": "The Morning"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#fff6ec",
+   "ink": "#4b3a2f",
+   "accent": "#c0623f",
+   "hfont": "Playfair Display",
+   "hsize": 100
+  },
+  "size": "5x7, 8x10, 8.5x11 + Instagram post and story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.86,
+    "frac": 0.62,
+    "caption": "Illustrated brunch table",
+    "sub": "Pancakes, mimosas, coffee and cinnamon rolls"
+   },
+   {
+    "x": 0.5,
+    "y": 0.12,
+    "frac": 0.62,
+    "caption": "Paper star garland",
+    "sub": "Warm Christmas morning light"
+   }
+  ],
+  "fields": [
+   [
+    "Title",
+    0.5,
+    0.33
+   ],
+   [
+    "Family name",
+    0.5,
+    0.4
+   ],
+   [
+    "Date",
+    0.5,
+    0.45
+   ],
+   [
+    "Your brunch menu",
+    0.5,
+    0.56
+   ]
+  ],
+  "vtitle": "Good morning, Merry Christmas",
+  "variants": [
+   {},
+   {
+    "title": "Christmas Eve Breakfast",
+    "family": "Park",
+    "date": "December 24, 2026",
+    "courses": [
+     [
+      "Sweet",
+      "French toast, berry compote"
+     ],
+     [
+      "Savory",
+      "Smoked salmon bagels"
+     ],
+     [
+      "Sides",
+      "Hash browns, fruit cups"
+     ],
+     [
+      "Treat",
+      "Mini gingerbread muffins"
+     ]
+    ]
+   },
+   {
+    "title": "Holiday Girls Brunch",
+    "family": "Friends",
+    "date": "December 20, 2026",
+    "courses": [
+     [
+      "Bubbles",
+      "Mimosa bar"
+     ],
+     [
+      "Brunch",
+      "Avocado toast, poached eggs"
+     ],
+     [
+      "Sides",
+      "Yogurt parfaits, croissants"
+     ],
+     [
+      "Sweet",
+      "Sugar cookie waffles"
+     ]
+    ]
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "detailed",
+   "template": "mp_detailed.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Detailed menu 8.5x11"
+  },
+  {
+   "name": "drinks",
+   "template": "mp_drinks.html",
+   "png": true,
+   "label": "Mimosa and coffee menu 5x7"
+  },
+  {
+   "name": "welcome",
+   "template": "mp_welcome.html",
+   "w_in": 8,
+   "h_in": 10,
+   "png": true,
+   "label": "Welcome sign 8x10"
+  },
+  {
+   "name": "place",
+   "template": "mp_place.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "place_sheets",
+   "png": true,
+   "label": "Place cards"
+  },
+  {
+   "name": "guest-menu",
+   "template": "mp_guest.html",
+   "repeat": "guests",
+   "label": "Guest name menus"
+  },
+  {
+   "name": "instagram-post",
+   "template": "mp_post.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true,
+   "label": "Instagram post"
+  },
+  {
+   "name": "instagram-story",
+   "template": "mp_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Instagram story"
+  }
+ ],
+ "hero": {
+  "headline": "Christmas Morning Brunch Menu",
+  "short": "Christmas Brunch Menu Set",
+  "bullets": [
+   "Brunch menu, detailed menu, drinks",
+   "24 place cards + guest menus",
+   "Instagram post and story"
+  ]
+ },
+ "main_label": "Brunch menu 5x7",
+ "inside_sub": "11 designs \u00b7 24 place cards \u00b7 a name menu for every guest",
+ "detail_page": "detailed",
+ "detail_title": "Detailed brunch menu with drinks and timeline"
+}

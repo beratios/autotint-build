@@ -1,0 +1,14 @@
+{% extends "xb_base.html" %}
+{% block css2 %}
+.st{display:flex;gap:3vmin;align-items:center;text-align:left;width:88%;margin-top:3vmin}
+.n{font-family:'Bungee';font-size:5vmin;color:#fff;background:#c62a35;border-radius:50%;width:9vmin;height:9vmin;display:flex;align-items:center;justify-content:center;flex:none}
+.st:nth-child(even) .n{background:#1f5c3f}
+.t{font-size:3vmin;line-height:1.25}
+{% endblock %}
+{% block content %}
+<div class="k" style="margin-top:3vmin">{{ party }}</div>
+<div class="h" style="font-size:8vmin;margin-top:1vmin">How to Play</div>
+<div style="margin-top:2vmin">{{ gman('14vmin') }}</div>
+{% for s in ['Give every player their own named bingo card and a pen or a handful of mini marshmallows.','The caller draws a calling card from a stocking and reads it out loud.','Players mark the square if they have it. The gingerbread square in the middle is free.','The first player with five in a row (across, down or diagonal) shouts NOEL and wins a prize.','Keep playing for a full card, four corners or an X shape for extra rounds.'] %}
+<div class="st"><div class="n">{{ loop.index }}</div><div class="t">{{ s }}</div></div>{% endfor %}
+{% endblock %}

@@ -1,0 +1,179 @@
+{
+ "template": "ad_poster.html",
+ "w_in": 8,
+ "h_in": 10,
+ "fields": [
+  "childs name (or several names)",
+  "year",
+  "optional: your own 24 activities",
+  "optional: your own kindness missions"
+ ],
+ "defaults": {
+  "child": "Mia",
+  "year": "2026",
+  "activities": [
+   "Write your letter to Santa and mail it to the North Pole",
+   "Decorate the Christmas tree with your family",
+   "Bake and decorate gingerbread cookies",
+   "Make paper snowflakes for the windows",
+   "Have a cozy Christmas movie night in pajamas",
+   "Make a bird feeder for the winter birds",
+   "Drive around and look at Christmas lights",
+   "Make hot cocoa with extra marshmallows",
+   "Build a blanket fort and read a Christmas story",
+   "Make a handmade card for someone you love",
+   "Have a Christmas dance party in the kitchen",
+   "Make reindeer food for Christmas Eve",
+   "Do a Christmas coloring page together",
+   "Go outside and build a snowman or have a snowball fight",
+   "Sing your favorite Christmas carols out loud",
+   "Make a paper chain for your bedroom door",
+   "Write down 5 things you are thankful for",
+   "Play a Christmas board game with the family",
+   "Make salt dough ornaments",
+   "Pick a toy to donate to a child in need",
+   "Have a picnic dinner under the Christmas tree",
+   "Make popcorn garland for the tree",
+   "Open a new pair of Christmas pajamas",
+   "Leave cookies and milk for Santa, then off to bed"
+  ],
+  "kindness": [
+   "Give someone a big hug for no reason",
+   "Help set the table for dinner",
+   "Draw a picture for a grandparent",
+   "Say thank you to your teacher",
+   "Share a toy with a friend or sibling",
+   "Leave a kind note on the bathroom mirror",
+   "Help carry in the groceries",
+   "Call a family member to say Merry Christmas",
+   "Feed the birds some seeds",
+   "Make your bed without being asked",
+   "Tell three people what you love about them",
+   "Help wrap a present for someone"
+  ],
+  "act_pages": [
+   0,
+   6,
+   12,
+   18
+  ],
+  "kind_pages": [
+   0,
+   6
+  ]
+ },
+ "gallery": {
+  "style": {
+   "bg": "#173a4a",
+   "ink": "#fdf4e3",
+   "accent": "#ffd98a",
+   "hfont": "Pacifico",
+   "hsize": 92
+  },
+  "size": "8x10 poster, 8.5x11 card sheets, Instagram story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.2,
+    "frac": 0.6,
+    "caption": "Your childs name",
+    "sub": "On every single page"
+   },
+   {
+    "x": 0.5,
+    "y": 0.88,
+    "frac": 0.6,
+    "caption": "Gingerbread village",
+    "sub": "Iced houses, candy canes and snow"
+   }
+  ],
+  "fields": [
+   [
+    "Childs name",
+    0.5,
+    0.17
+   ],
+   [
+    "Year",
+    0.5,
+    0.1
+   ],
+   [
+    "24 days to color",
+    0.5,
+    0.5
+   ]
+  ],
+  "vtitle": "Made for your little ones",
+  "variants": [
+   {},
+   {
+    "child": "Oliver"
+   },
+   {
+    "child": "Ava and Leo"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "activity-cards",
+   "template": "ad_cards.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "act_pages",
+   "png": true,
+   "label": "24 activity cards"
+  },
+  {
+   "name": "kindness-cards",
+   "template": "ad_cards.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "kind_pages",
+   "png": true,
+   "vars": {
+    "cards_list": "kindness",
+    "label": "KINDNESS MISSION CARDS"
+   },
+   "label": "12 kindness cards"
+  },
+  {
+   "name": "number-tags",
+   "template": "ad_tags.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Number tags 1 to 24"
+  },
+  {
+   "name": "paper-chain",
+   "template": "ad_chain.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Paper chain countdown"
+  },
+  {
+   "name": "instagram-story",
+   "template": "ad_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Instagram story"
+  }
+ ],
+ "hero": {
+  "headline": "Personalized Christmas Countdown Kit",
+  "short": "Advent Countdown Kit",
+  "bullets": [
+   "Name countdown poster to color",
+   "24 activity + 12 kindness cards",
+   "Number tags, paper chain, story"
+  ]
+ },
+ "main_label": "Countdown poster 8x10",
+ "inside_sub": "10 pages \u00b7 24 activities \u00b7 12 kindness missions \u00b7 all with your childs name",
+ "detail_page": "activity-cards",
+ "detail_title": "24 activity cards with your childs name"
+}

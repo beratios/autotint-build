@@ -1,0 +1,248 @@
+{
+ "template": "pi_invite.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "event title",
+  "host name",
+  "date",
+  "time",
+  "venue name",
+  "address",
+  "dress code",
+  "RSVP details",
+  "evening schedule",
+  "guest names for place cards (up to 24)",
+  "number of tables"
+ ],
+ "defaults": {
+  "theme": "th_northpole.html",
+  "title": "Mia’s North Pole Party",
+  "host": "the Johnsons",
+  "date": "Saturday, December 19, 2026",
+  "time": "2:00 to 5:00 PM",
+  "place": "The Johnson House",
+  "address": "56 Maple Drive, Edmonton",
+  "dress": "Christmas pjs or elf hats",
+  "rsvp": "to Sarah by December 12",
+  "rsvp_by": "December 12",
+  "year": "2026",
+  "schedule": [
+   [
+    "2:00 PM",
+    "Cookie decorating"
+   ],
+   [
+    "2:45 PM",
+    "Reindeer games"
+   ],
+   [
+    "3:30 PM",
+    "Pizza and cocoa"
+   ],
+   [
+    "4:15 PM",
+    "Craft corner"
+   ],
+   [
+    "4:45 PM",
+    "Special visit from Santa"
+   ]
+  ],
+  "thanks_note": "Thank you for coming to my North Pole party and for the wonderful gift. Merry Christmas!",
+  "guests": [
+   "Mia",
+   "Leo",
+   "Ava",
+   "Noah",
+   "Ella",
+   "Jack",
+   "Lily",
+   "Max",
+   "Zoe",
+   "Sam",
+   "Ruby",
+   "Finn"
+  ],
+  "place_sheets": [
+   0,
+   8,
+   16
+  ],
+  "tables": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "courses": [],
+  "family": "",
+  "host_line": "come celebrate at",
+  "timeline_label": "The Party"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#fdf6ea",
+   "ink": "#4a2a1c",
+   "accent": "#d2343f",
+   "hfont": "Fredoka",
+   "hsize": 96
+  },
+  "size": "5x7 invite, 5x3.5 cards, 8x10 sign, 4x6 table signs, Instagram post and story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.85,
+    "frac": 0.6,
+    "caption": "Cute cartoon scene",
+    "sub": "Reindeer, signpost, gifts and pines"
+   },
+   {
+    "x": 0.5,
+    "y": 0.35,
+    "frac": 0.6,
+    "caption": "Big playful title",
+    "sub": "With your childs name"
+   }
+  ],
+  "fields": [
+   [
+    "Event title",
+    0.5,
+    0.3
+   ],
+   [
+    "Host",
+    0.5,
+    0.38
+   ],
+   [
+    "Date and time",
+    0.5,
+    0.46
+   ],
+   [
+    "Venue and address",
+    0.5,
+    0.53
+   ],
+   [
+    "Dress code",
+    0.5,
+    0.6
+   ],
+   [
+    "RSVP",
+    0.5,
+    0.66
+   ]
+  ],
+  "vtitle": "Made for little elves",
+  "variants": [
+   {},
+   {
+    "title": "Elf Workshop Party",
+    "host": "the Moreaus",
+    "date": "Sunday, December 13, 2026",
+    "time": "1:00 PM",
+    "place": "Kids Play Cafe",
+    "address": "14 Main Street, Montreal",
+    "dress": "Elf hats on",
+    "rsvp": "to Julie by December 8"
+   },
+   {
+    "title": "Classroom Christmas Party",
+    "host": "Mrs. Lee and Grade 2",
+    "date": "Friday, December 18, 2026",
+    "time": "1:30 PM",
+    "place": "Room 12",
+    "address": "Pine Valley School",
+    "dress": "Christmas pjs day",
+    "rsvp": "to Mrs. Lee by December 15"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "rsvp",
+   "template": "pi_rsvp.html",
+   "w_in": 5,
+   "h_in": 3.5,
+   "png": true,
+   "label": "RSVP card 5x3.5"
+  },
+  {
+   "name": "details",
+   "template": "pi_details.html",
+   "w_in": 5,
+   "h_in": 3.5,
+   "png": true,
+   "label": "Details card 5x3.5"
+  },
+  {
+   "name": "welcome",
+   "template": "pi_welcome.html",
+   "w_in": 8,
+   "h_in": 10,
+   "png": true,
+   "label": "Welcome sign 8x10"
+  },
+  {
+   "name": "place",
+   "template": "mp_place.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "place_sheets",
+   "png": true,
+   "label": "Place cards"
+  },
+  {
+   "name": "table",
+   "template": "pi_table.html",
+   "w_in": 4,
+   "h_in": 6,
+   "repeat": "tables",
+   "png": true,
+   "label": "Table signs 4x6"
+  },
+  {
+   "name": "thank-you",
+   "template": "pi_thanks.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true,
+   "label": "Thank-you card 5x7"
+  },
+  {
+   "name": "instagram-post",
+   "template": "pi_post.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true,
+   "label": "Instagram post"
+  },
+  {
+   "name": "instagram-story",
+   "template": "pi_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Instagram story"
+  }
+ ],
+ "main_label": "Invitation 5x7",
+ "hero": {
+  "headline": "Kids Christmas Party Invitation",
+  "short": "Kids Party Invite Set",
+  "bullets": [
+   "Invite, RSVP and schedule cards",
+   "Welcome sign, table signs, name cards",
+   "Thank-you card, Instagram post and story"
+  ]
+ },
+ "inside_sub": "9 designs · table signs · 24 name cards",
+ "detail_page": "welcome",
+ "detail_title": "Matching 8x10 welcome sign"
+}
