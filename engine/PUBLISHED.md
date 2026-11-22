@@ -36,3 +36,8 @@
 | 2026-11-21 | 4622623242 | xmas-invite--kids-north-pole (pi_* + th_northpole) | 10.99 | detailed |
 | 2026-11-21 | 4622614751 | xmas-bingo--cozy-plaid (new family, xb_*, named cards via pages_from) | 9.99 | minimal |
 | 2026-11-21 | 4622623262 | advent-countdown--gingerbread-village (new family, ad_*) | 8.99 | bold |
+| 2026-11-22 | 4623268504 | xmas-invite--cozy-fireplace (pi_* + th_fireplace) | 11.99 | doodle |
+| 2026-11-22 | 4623259359 | xmas-invite--rustic-plaid (pi_* + th_rustic) | 10.99 | colorful |
+| 2026-11-22 | 4623268520 | xmas-games--nye-disco (gn_* + th_disco, NYE content) | 8.99 | calm |
+| 2026-11-22 | 4623259383 | christmas-hunt--north-pole-elves (new family, sh_* + th_northpole) | 8.99 | detailed |
+| 2026-11-22 | 4623259395 | christmas-coupons--cozy-pajama (new family, cp_* + th_pajama, taxonomy 1874) | 8.99 | minimal |

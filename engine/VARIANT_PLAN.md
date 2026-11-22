@@ -47,7 +47,7 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 - [x] Thanksgiving dinner menu autumn harvest (4621675058)
 ### Christmas party invitation
 - [x] elegant green gold (4618250503)
-- [x] luxury black tie gala (4620388124), [x] cozy pajama party (4621661325), [x] NYE midnight party (4621675086), [x] kids Christmas party north pole (4622623242), [ ] office holiday party (modern), [x] watercolor winter wonderland (4622614727)
+- [x] luxury black tie gala (4620388124), [x] cozy pajama party (4621661325), [x] NYE midnight party (4621675086), [x] kids Christmas party north pole (4622623242), [x] cozy fireplace party (4623268504), [x] rustic buffalo plaid barn party (4623259359), [ ] office holiday party (modern), [x] watercolor winter wonderland (4622614727)
 ### Letter from Santa pack
 - [x] watercolor (4618736968)
 - [ ] vintage North Pole parchment + wax seal, [ ] cute cartoon (toddlers), [ ] elf-on-the-shelf style arrival letter (generic elf, no brand)
@@ -68,7 +68,7 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 
 ### Christmas game night (new family, 11-18)
 - [x] frosty gingerbread game night (4620381127)
-- [ ] plaid cabin game night, [ ] NYE game night version, [ ] kids Christmas party games
+- [ ] plaid cabin game night, [x] NYE disco game night (4623268520, gn_* + th_disco), [ ] kids Christmas party games
 ### Notes for next runs
 - 11-20: new themes th_botanical (watercolor greenery), th_pajama (cute cozy), th_nye (plum midnight clock + champagne), th_northpole (kids cartoon). pi_* now use topicon(theme) macro (mugs for th_pajama, coupes otherwise). Cheap next variants: NYE party invite = pi_* + th_nye; Christmas Eve box 2nd concept = xe_* + new kid theme; watercolor invite = pi_* + th_botanical; time capsule kids-only bright version.
 - Upgrade backlog: only family-xmas-card-playful left (add Instagram post + story, gift tag set).
@@ -81,3 +81,9 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 ### Advent countdown kit (new family, 11-21)
 - [x] gingerbread village night (4622623262) – ad_*; [ ] pastel/pink girly version, [ ] woodland animals version
 - 11-21 notes: new th_brunch (sunrise, star garland, pancake table) also fits a mimosa bar set. timeline_label var added to mp_detailed/pi_details. pack.py now handles pages_from products. Views are still ~0 across the shop (6 days) – no family signal yet.
+
+### Christmas treasure hunt (new family, 11-22)
+- [x] north pole elves (4623259383) – sh_* (poster, 16 riddle clue cards + 8 blank, hiding guide, elf letter, tracker, found-it card, story); [ ] Christmas Eve PJ hunt (th_pajama), [ ] NYE countdown hunt / bag hunt, [ ] adult/teen version with harder riddles
+### Christmas coupon book (new family, 11-22)
+- [x] cozy pajama (4623259395) – cp_* (cover, 24 named coupons, 8 blank, tracker, square tag, phone story); [ ] romantic wine/candlelight love coupons (th_wine), [ ] luxury black gold (th_luxgold), [ ] kids north pole (th_northpole)
+- 11-22 notes: gn_* now theme-aware (CSS vars --gn-*, text vars trivia_title/scramble_title/sign_line/champ_title...) -> cheap game-night variants with any theme that defines --gn-* vars (th_disco does). th_fireplace: rsvp mode hides scene. sh_* and cp_* extend `theme`, so new concepts = new product json + theme. Competitor bestseller coupon book: 10 CAD, 11k views, 188 favs -> family worth more variants.
