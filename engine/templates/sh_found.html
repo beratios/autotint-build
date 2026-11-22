@@ -1,0 +1,12 @@
+{% extends theme %}{% from "pi_macros.html" import gifts %}
+{% block mode %}cert{% endblock %}
+{% block lcss %}.m-cert{top:9vmin!important;bottom:27vmin!important}.ln{width:70%;border-bottom:2px dashed #1f6b4e;height:6vmin;margin:1.6vmin auto 0;font-family:'Fredoka';font-size:3.6vmin;color:#4a2a1c;display:flex;align-items:flex-end;justify-content:center}{% endblock %}
+{% block content %}
+{{ gifts('30vmin') }}
+<div class="t-h" style="font-size:11vmin;margin-top:1vmin">You found it!</div>
+<div class="t-s" style="font-size:6vmin">well done, {{ kids }}!</div>
+<div class="t-rule"></div>
+<div class="t-b" style="font-size:3.4vmin">{{ final_note }}</div>
+<div class="ln">{{ final_spot }}</div>
+<div class="t-k" style="margin-top:2.2vmin">official treasure hunter · {{ year }} · {{ sender }}</div>
+{% endblock %}

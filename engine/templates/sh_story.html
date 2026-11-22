@@ -1,0 +1,11 @@
+{% extends theme %}{% from "sh_macros.html" import elf, map %}
+{% block mode %}story{% endblock %}
+{% block lcss %}.m-story{top:10vmin!important;bottom:40vmin!important}{% endblock %}
+{% block content %}
+<div style="display:flex;align-items:flex-end;gap:3vmin">{{ elf('24vmin') }}{{ map('30vmin') }}</div>
+<div class="t-k" style="font-size:3.2vmin;margin-top:3vmin">{{ kicker }}</div>
+<div class="t-h" style="font-size:12vmin;margin-top:2vmin">{{ kids }}</div>
+<div class="t-s" style="font-size:11vmin">{{ title }}</div>
+<div class="t-rule"></div>
+<div class="t-b" style="font-size:5vmin">Clue 1 is waiting for you!</div>
+{% endblock %}

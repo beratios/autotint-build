@@ -1,0 +1,11 @@
+{% extends theme %}{% from "pi_macros.html" import gifts %}
+{% block mode %}story{% endblock %}
+{% block lcss %}.page svg{flex-shrink:0}{% endblock %}{% block content %}
+{{ gifts('40vmin') }}
+<div class="t-k" style="font-size:3.2vmin;margin-top:3vmin">surprise! you have</div>
+<div class="t-h" style="font-size:16vmin;margin-top:1vmin">{{ coupons|length }} coupons</div>
+<div class="t-s" style="font-size:9vmin">for {{ to }}</div>
+<div class="t-rule"></div>
+<div class="t-b" style="font-size:5vmin">{{ story_note }}</div>
+<div class="t-k" style="font-size:3vmin;margin-top:3vmin">love, {{ from }}</div>
+{% endblock %}

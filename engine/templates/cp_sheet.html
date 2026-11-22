@@ -1,0 +1,22 @@
+{% extends theme %}
+{% block mode %}place{% endblock %}
+{% block lcss %}
+body{background:#fff}.page{inset:0;display:block}
+.cut{position:absolute;top:2vmin;left:0;right:0;font-family:'Inter';font-size:1.4vmin;letter-spacing:.25em;color:#999}
+.g{position:absolute;left:4vmin;right:4vmin;top:4.6vmin;bottom:3.6vmin;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,1fr);gap:1.8vmin}
+.c{position:relative;display:flex;border-radius:1.6vmin;overflow:hidden;background:#fff7ee;border:.4vmin solid var(--hc)}
+.stub{width:24%;background:var(--hc);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:700;border-right:.5vmin dashed #fff7ee}
+.stub b{font-size:4.6vmin;line-height:1}.stub small{font-size:1.4vmin;letter-spacing:.2em;font-weight:600;margin-top:.4vmin}
+.bd{flex:1;padding:1.4vmin 2vmin;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.k{font-family:'Fredoka';font-weight:600;font-size:1.55vmin;letter-spacing:.2em;color:var(--acc);text-transform:uppercase}
+.p{font-family:var(--hf);color:var(--hc);font-size:{{ 3.3 }}vmin;line-height:1.15;margin-top:.8vmin}
+.p.e{width:92%;height:6.6vmin;background:repeating-linear-gradient(180deg,transparent 0 3.1vmin,#d9bfb4 3.1vmin 3.25vmin)}
+.f{font-family:'Fredoka';font-size:1.5vmin;color:var(--muted);margin-top:.9vmin;letter-spacing:.04em}
+{% endblock %}
+{% block content %}{% set off = rep or 0 %}{% set blank = vars_blank|default(false) %}
+<div class="cut">✂ {{ book_title|upper }} · FOR {{ to|upper }} · CUT ON THE EDGES</div>
+<div class="g">{% for i in range(8) %}{% set k = off+i %}{% set it = coupons[k] if (not blank and coupons|length > k) else none %}<div class="c">
+<div class="stub"><b>{{ '%02d'|format(k+1) if it else '★' }}</b><small>COUPON</small></div>
+<div class="bd"><div class="k">this coupon is good for</div>{% if it %}<div class="p">{{ it }}</div>{% else %}<div class="p e"></div>{% endif %}
+<div class="f">to {{ to }} · from {{ from }} · valid until {{ valid }}</div></div></div>{% endfor %}</div>
+{% endblock %}

@@ -1,0 +1,243 @@
+{
+ "template": "pi_invite.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "event title",
+  "host name",
+  "date",
+  "time",
+  "venue name",
+  "address",
+  "dress code",
+  "RSVP details",
+  "evening schedule",
+  "guest names for place cards (up to 24)",
+  "number of tables"
+ ],
+ "defaults": {
+  "theme": "th_rustic.html",
+  "title": "Christmas Barn Party",
+  "host": "the Carters",
+  "date": "Saturday, December 12, 2026",
+  "time": "5:00 PM",
+  "place": "Carter Family Farm",
+  "address": "1150 Concession Road 4, Guelph",
+  "dress": "Flannel and boots",
+  "rsvp": "to Megan by December 8",
+  "rsvp_by": "December 8",
+  "year": "2026",
+  "schedule": [
+   [
+    "5:00 PM",
+    "Hot cider and hay ride"
+   ],
+   [
+    "6:00 PM",
+    "Potluck Christmas supper"
+   ],
+   [
+    "7:30 PM",
+    "Pie and s'mores bar"
+   ],
+   [
+    "8:30 PM",
+    "Line dancing and carols"
+   ]
+  ],
+  "thanks_note": "Thank you for coming out to the farm and celebrating with us. Merry Christmas from our family to yours!",
+  "guests": [
+   "Claire",
+   "James",
+   "Olivia",
+   "Henry",
+   "Grace",
+   "Oliver",
+   "Emma",
+   "Samuel",
+   "Ruby",
+   "Daniel",
+   "Hannah",
+   "Jack"
+  ],
+  "place_sheets": [
+   0,
+   8,
+   16
+  ],
+  "tables": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "courses": [],
+  "family": "",
+  "host_line": "please join us for a"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#d6b58a",
+   "ink": "#2a1d14",
+   "accent": "#a8232c",
+   "hfont": "Amatic SC",
+   "hsize": 130
+  },
+  "size": "5x7 invite, 5x3.5 cards, 8x10 sign, 4x6 table signs, Instagram post and story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.3,
+    "frac": 0.78,
+    "caption": "Hand-lettered look",
+    "sub": "Your title and host names"
+   },
+   {
+    "x": 0.5,
+    "y": 0.06,
+    "frac": 0.55,
+    "caption": "Buffalo plaid and kraft",
+    "sub": "Rustic farmhouse details"
+   }
+  ],
+  "fields": [
+   [
+    "Event title",
+    0.5,
+    0.3
+   ],
+   [
+    "Host",
+    0.5,
+    0.38
+   ],
+   [
+    "Date and time",
+    0.5,
+    0.46
+   ],
+   [
+    "Venue and address",
+    0.5,
+    0.53
+   ],
+   [
+    "Dress code",
+    0.5,
+    0.6
+   ],
+   [
+    "RSVP",
+    0.5,
+    0.66
+   ]
+  ],
+  "vtitle": "One rustic design, any country Christmas",
+  "variants": [
+   {},
+   {
+    "title": "Flannel and Friends",
+    "host": "Jess and Tyler",
+    "date": "Friday, December 18, 2026",
+    "time": "7:00 PM",
+    "place": "The Red Barn",
+    "address": "88 Mill Road, Kelowna",
+    "dress": "Plaid required",
+    "rsvp": "to Jess by December 12"
+   },
+   {
+    "title": "Christmas Potluck",
+    "host": "the Dubois family",
+    "date": "Sunday, December 20, 2026",
+    "time": "4:00 PM",
+    "place": "Grandma's House",
+    "address": "12 Orchard Lane, Moncton",
+    "dress": "Come as you are",
+    "rsvp": "to Claire by December 15"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "rsvp",
+   "template": "pi_rsvp.html",
+   "w_in": 5,
+   "h_in": 3.5,
+   "png": true,
+   "label": "RSVP card 5x3.5"
+  },
+  {
+   "name": "details",
+   "template": "pi_details.html",
+   "w_in": 5,
+   "h_in": 3.5,
+   "png": true,
+   "label": "Details card 5x3.5"
+  },
+  {
+   "name": "welcome",
+   "template": "pi_welcome.html",
+   "w_in": 8,
+   "h_in": 10,
+   "png": true,
+   "label": "Welcome sign 8x10"
+  },
+  {
+   "name": "place",
+   "template": "mp_place.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "place_sheets",
+   "png": true,
+   "label": "Place cards"
+  },
+  {
+   "name": "table",
+   "template": "pi_table.html",
+   "w_in": 4,
+   "h_in": 6,
+   "repeat": "tables",
+   "png": true,
+   "label": "Table signs 4x6"
+  },
+  {
+   "name": "thank-you",
+   "template": "pi_thanks.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true,
+   "label": "Thank-you card 5x7"
+  },
+  {
+   "name": "instagram-post",
+   "template": "pi_post.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true,
+   "label": "Instagram post"
+  },
+  {
+   "name": "instagram-story",
+   "template": "pi_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Instagram story"
+  }
+ ],
+ "main_label": "Invitation 5x7",
+ "hero": {
+  "headline": "Rustic Plaid Christmas Invitation",
+  "short": "Rustic Plaid Invite Set",
+  "bullets": [
+   "Invite, RSVP and schedule cards",
+   "Welcome sign, table signs, name cards",
+   "Thank-you card, Instagram post and story"
+  ]
+ },
+ "inside_sub": "9 designs \u00b7 table signs \u00b7 24 name cards",
+ "detail_page": "welcome",
+ "detail_title": "Matching 8x10 welcome sign"
+}

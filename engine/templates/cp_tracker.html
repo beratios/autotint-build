@@ -1,0 +1,14 @@
+{% extends theme %}
+{% block mode %}sheet{% endblock %}
+{% block lcss %}.scene,.lights{display:none}.page{top:9vmin;bottom:7vmin;left:10vmin;right:10vmin;justify-content:flex-start}
+table{width:100%;border-collapse:collapse;margin-top:2vmin;font-family:'Fredoka';font-size:2vmin;text-align:left}
+th{background:var(--acc);color:#fff;padding:.8vmin 1.2vmin;font-weight:600}
+td{padding:.62vmin 1.2vmin;border-bottom:1px solid #ecd6cc}tr:nth-child(even) td{background:#fdeee6}
+td.k{width:5vmin;font-weight:700;color:var(--hc)}td.d{width:18%}td.c{width:7vmin;text-align:center}{% endblock %}
+{% block content %}
+<div class="t-k" style="font-size:2vmin">{{ to }} · {{ year }}</div>
+<div class="t-h" style="font-size:6.6vmin;margin-top:.6vmin">Coupon Tracker</div>
+<div class="t-s" style="font-size:4.4vmin">tick it off when you cash one in!</div>
+<table><tr><th>#</th><th>Coupon</th><th>Date used</th><th>Done</th></tr>
+{% for c in coupons %}<tr><td class="k">{{ loop.index }}</td><td>{{ c }}</td><td class="d"></td><td class="c">☐</td></tr>{% endfor %}</table>
+{% endblock %}

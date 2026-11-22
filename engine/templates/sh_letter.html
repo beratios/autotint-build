@@ -1,0 +1,10 @@
+{% extends theme %}{% from "sh_macros.html" import elf %}
+{% block mode %}letter{% endblock %}
+{% block lcss %}.m-letter{top:7vmin!important;bottom:28vmin!important}.tx{font-family:'Fredoka';font-size:3.3vmin;line-height:1.45;color:#4a2a1c;margin-top:1.6vmin;max-width:88%}{% endblock %}
+{% block content %}
+{{ elf('16vmin') }}
+<div class="t-k" style="margin-top:1vmin">special delivery from the north pole</div>
+<div class="t-h" style="font-size:8vmin;margin-top:.6vmin">Dear {{ kids }},</div>
+<div class="tx">{{ letter_text }}</div>
+<div class="t-s" style="font-size:6vmin;margin-top:1.6vmin">{{ sender }}</div>
+{% endblock %}

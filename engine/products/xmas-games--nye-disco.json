@@ -1,0 +1,433 @@
+{
+ "template": "gn_sign.html",
+ "w_in": 8,
+ "h_in": 10,
+ "fields": [
+  "family or party name",
+  "date and time",
+  "player names for the scoreboard (up to 14)",
+  "up to 4 custom family trivia questions with answers (optional)"
+ ],
+ "defaults": {
+  "theme": "th_disco.html",
+  "title": "NYE Game Night",
+  "subtitle": "countdown to 2027",
+  "family": "Rivera",
+  "date": "Thursday, December 31",
+  "time": "8:00 PM",
+  "year": "2026",
+  "players": [
+   "Sam",
+   "Alex",
+   "Jordan",
+   "Priya",
+   "Marcus",
+   "Lena",
+   "Diego",
+   "Chloe"
+  ],
+  "game_names": [
+   "Trivia",
+   "Most Likely To",
+   "Would You Rather",
+   "Word Scramble"
+  ],
+  "trivia": [
+   [
+    "In which city does a famous crystal ball drop at midnight?",
+    "New York City"
+   ],
+   [
+    "How many seconds are in the final countdown?",
+    "Ten"
+   ],
+   [
+    "Which song is traditionally sung at midnight?",
+    "Auld Lang Syne"
+   ],
+   [
+    "Which country is one of the first to welcome the new year?",
+    "Kiribati"
+   ],
+   [
+    "In Spain, how many grapes do people eat at midnight?",
+    "Twelve"
+   ],
+   [
+    "What do many people write down for the new year?",
+    "Resolutions"
+   ],
+   [
+    "Which drink is most often used for a midnight toast?",
+    "Champagne"
+   ],
+   [
+    "What is the name for the first person to enter a home after midnight in Scotland?",
+    "First footer"
+   ],
+   [
+    "In which month did the Romans start the new year at first?",
+    "March"
+   ],
+   [
+    "What color underwear is worn for luck in Italy on NYE?",
+    "Red"
+   ],
+   [
+    "Which Roman god with two faces gave January its name?",
+    "Janus"
+   ],
+   [
+    "What is the Scottish name for New Years Eve?",
+    "Hogmanay"
+   ],
+   [
+    "What do people in Denmark throw at friends' doors?",
+    "Old plates"
+   ],
+   [
+    "Which country celebrates with lucky lentils at midnight?",
+    "Italy"
+   ],
+   [
+    "How many time zones does the new year pass through?",
+    "More than 24"
+   ],
+   [
+    "What year will it be after midnight tonight?",
+    "2027"
+   ],
+   [
+    "What is the most common resolution?",
+    "Exercise more"
+   ],
+   [
+    "Which city hosts a famous fireworks show over its Harbour Bridge?",
+    "Sydney"
+   ],
+   [
+    "What does Auld Lang Syne roughly mean?",
+    "Times long past"
+   ],
+   [
+    "In Brazil, what color do people wear for peace on NYE?",
+    "White"
+   ]
+  ],
+  "custom_questions": [],
+  "likely": [
+   "fall asleep before midnight",
+   "forget the countdown",
+   "break a resolution by January 2",
+   "kiss someone at midnight",
+   "spill their champagne",
+   "start the dance party",
+   "post 50 party photos",
+   "text an ex at 12:01",
+   "still be dancing at 2 AM",
+   "cry during Auld Lang Syne",
+   "make the most resolutions",
+   "miss the ball drop",
+   "lose their party hat",
+   "give the best toast",
+   "win tonight's game night",
+   "eat all the snacks",
+   "forget it is 2027 in March",
+   "plan next year's party",
+   "bring the loudest noisemaker",
+   "wear the most glitter",
+   "run a marathon in 2027",
+   "sing the loudest at midnight",
+   "take the first nap of 2027",
+   "be first to say Happy New Year"
+  ],
+  "rather": [
+   [
+    "count down in Times Square",
+    "count down at home in pajamas"
+   ],
+   [
+    "kiss at midnight",
+    "hug everyone at midnight"
+   ],
+   [
+    "skip champagne forever",
+    "skip dessert forever"
+   ],
+   [
+    "relive 2026",
+    "fast forward to 2028"
+   ],
+   [
+    "keep every resolution",
+    "keep none and be happy"
+   ],
+   [
+    "wear sequins",
+    "wear pajamas"
+   ],
+   [
+    "host the party",
+    "go to every party"
+   ],
+   [
+    "see fireworks in Sydney",
+    "see the ball drop in NYC"
+   ],
+   [
+    "dance all night",
+    "play games all night"
+   ],
+   [
+    "know your 2027 highlight now",
+    "be surprised"
+   ],
+   [
+    "get a year of free pizza",
+    "a year of free travel"
+   ],
+   [
+    "make one big resolution",
+    "make ten tiny ones"
+   ]
+  ],
+  "scramble": [
+   [
+    "MIDNIGHT",
+    "TNMIIDGH"
+   ],
+   [
+    "CHAMPAGNE",
+    "GPHNAMEAC"
+   ],
+   [
+    "COUNTDOWN",
+    "WODNUTCON"
+   ],
+   [
+    "FIREWORKS",
+    "SKROWIERF"
+   ],
+   [
+    "RESOLUTION",
+    "NOITULOSER"
+   ],
+   [
+    "CONFETTI",
+    "FINECTOT"
+   ],
+   [
+    "SPARKLER",
+    "RKLEPSAR"
+   ],
+   [
+    "CELEBRATE",
+    "BRECTALEE"
+   ],
+   [
+    "PARTY HAT",
+    "YTRAPHAT"
+   ],
+   [
+    "TOAST",
+    "SATOT"
+   ],
+   [
+    "CHEERS",
+    "SHEERC"
+   ],
+   [
+    "DISCO BALL",
+    "LLABOCSDI"
+   ],
+   [
+    "GLITTER",
+    "TIRGELT"
+   ],
+   [
+    "JANUARY",
+    "YARJUNA"
+   ],
+   [
+    "NOISEMAKER",
+    "KERMESIONA"
+   ],
+   [
+    "NEW YEAR",
+    "WRANEYE"
+   ]
+  ],
+  "likely_sheets": [
+   0,
+   12
+  ],
+  "key": false,
+  "season": "new years eve",
+  "trivia_title": "New Years Eve Trivia",
+  "scramble_title": "New Year Word Scramble",
+  "scramble_sub": "unscramble the party words before midnight!",
+  "sign_line": "play until the ball drops!",
+  "story_line": "bring your best party energy!",
+  "champ_title": "New Years Eve Games Champion",
+  "champ_line": "for quick thinking, big laughs and legendary party spirit"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#2a0838",
+   "ink": "#fff2fb",
+   "accent": "#ffd36a",
+   "hfont": "Bungee",
+   "hsize": 84
+  },
+  "size": "8x10 sign, 8.5x11 game sheets and card sheets, phone story invite",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.45,
+    "frac": 0.78,
+    "caption": "Your party name",
+    "sub": "Neon disco lettering"
+   },
+   {
+    "x": 0.5,
+    "y": 0.14,
+    "frac": 0.55,
+    "caption": "Mirror disco ball",
+    "sub": "Glowing retro party art"
+   }
+  ],
+  "fields": [
+   [
+    "Family or party name",
+    0.5,
+    0.38
+   ],
+   [
+    "Title",
+    0.5,
+    0.46
+   ],
+   [
+    "Date",
+    0.5,
+    0.62
+   ],
+   [
+    "Games list",
+    0.5,
+    0.7
+   ]
+  ],
+  "vtitle": "Your party. Your game night.",
+  "variants": [
+   {},
+   {
+    "family": "Thompson",
+    "title": "Midnight Games",
+    "subtitle": "ring in 2027 with us",
+    "date": "Thursday, December 31"
+   },
+   {
+    "family": "Nakamura",
+    "title": "Countdown Party",
+    "subtitle": "games until midnight",
+    "date": "Thursday, December 31"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "trivia",
+   "template": "gn_trivia.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "New Years Eve trivia 20 questions"
+  },
+  {
+   "name": "trivia-key",
+   "template": "gn_trivia.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "vars": {
+    "key": true
+   },
+   "label": "Trivia answer key"
+  },
+  {
+   "name": "most-likely",
+   "template": "gn_cards.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "likely_sheets",
+   "png": true,
+   "label": "24 Most Likely To cards"
+  },
+  {
+   "name": "would-you-rather",
+   "template": "gn_cards.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "vars": {
+    "vars_deck": "rather"
+   },
+   "png": true,
+   "label": "12 Would You Rather cards"
+  },
+  {
+   "name": "scramble",
+   "template": "gn_scramble.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Word scramble"
+  },
+  {
+   "name": "scramble-key",
+   "template": "gn_scramble.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "vars": {
+    "key": true
+   },
+   "label": "Scramble answer key"
+  },
+  {
+   "name": "scoreboard",
+   "template": "gn_score.html",
+   "w_in": 11,
+   "h_in": 8.5,
+   "png": true,
+   "label": "Scoreboard with names"
+  },
+  {
+   "name": "champion",
+   "template": "gn_cert.html",
+   "w_in": 11,
+   "h_in": 8.5,
+   "png": true,
+   "label": "Champion certificate"
+  },
+  {
+   "name": "story-invite",
+   "template": "gn_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Story invite for phones"
+  }
+ ],
+ "main_label": "Game night sign 8x10",
+ "hero": {
+  "headline": "NYE Game Night Pack",
+  "short": "NYE Game Night Pack",
+  "bullets": [
+   "Trivia, Most Likely To, Would You Rather",
+   "Word scramble, scoreboard with names",
+   "Champion certificate + phone invite"
+  ]
+ },
+ "inside_sub": "4 games \u00b7 36 cards \u00b7 answer keys \u00b7 scoreboard \u00b7 certificate",
+ "detail_page": "most-likely",
+ "detail_title": "24 Most Likely To cards"
+}

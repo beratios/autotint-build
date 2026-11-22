@@ -1,0 +1,14 @@
+{% extends theme %}{% from "pi_macros.html" import gifts %}
+{% block mode %}welcome{% endblock %}
+{% block lcss %}.m-welcome{top:{{ 13 if W_IN < 4 else 16 }}vmin!important;bottom:{{ 38 if W_IN < 4 else 34 }}vmin!important}
+.page svg{flex-shrink:0}.tk{display:inline-flex;align-items:center;gap:1.4vmin;margin-top:2.2vmin;padding:1vmin 3vmin;border:.4vmin dashed var(--hc);border-radius:99vmin;font-family:'Fredoka';font-weight:600;font-size:2.4vmin;color:var(--hc);letter-spacing:.12em;text-transform:uppercase}{% endblock %}
+{% block content %}
+{{ gifts('20vmin' if W_IN < 4 else '34vmin') }}
+<div class="t-k" style="margin-top:1.6vmin;font-size:2.2vmin">a christmas gift for</div>
+<div class="t-h" style="font-size:{{ (11 if W_IN < 4 else 13) if to|length < 10 else 8.4 if to|length < 18 else 6.6 }}vmin;margin-top:.6vmin">{{ to }}</div>
+<div class="t-s" style="font-size:7.8vmin;margin-top:1vmin">{{ book_title }}</div>
+<div class="t-rule"></div>
+<div class="t-b" style="font-size:3.9vmin">{{ cover_note }}</div>
+<div class="tk">✂ {{ coupons|length }} coupons inside</div>
+<div class="t-k" style="margin-top:2vmin">with love, {{ from }} · {{ year }}</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends theme %}
+{% block mode %}sheet{% endblock %}
+{% block lcss %}.scene,.sn{display:none}.page{top:6vmin;bottom:5vmin;left:8vmin;right:8vmin;justify-content:flex-start}
+table{width:100%;border-collapse:collapse;margin-top:2vmin;font-family:'Fredoka';font-size:2.15vmin;text-align:left}
+th{background:#1f6b4e;color:#fff;padding:.9vmin 1.2vmin;font-weight:600;letter-spacing:.06em}
+td{padding:.8vmin 1.4vmin;border-bottom:1px solid #e6d6c4;color:#4a2a1c;vertical-align:top}tr:nth-child(even) td{background:#fbefdc}
+td.k{width:6vmin;font-weight:700;color:#d2343f}td.h{width:36%;font-weight:600}td.c{width:9vmin;text-align:center}
+.tip{margin-top:2vmin;font-family:'Fredoka';font-size:1.9vmin;color:#8a6a58;text-align:left;line-height:1.35;width:100%}{% endblock %}
+{% block content %}
+<div class="t-k" style="font-size:2vmin">grown-ups only · keep this page secret</div>
+<div class="t-h" style="font-size:6vmin;margin-top:.8vmin">Hiding Guide</div>
+<div class="t-s" style="font-size:4.4vmin">{{ kids }} · {{ title }}</div>
+<table><tr><th>Give first</th><th>Hide this clue…</th><th>…at this spot</th><th>Done</th></tr>
+<tr><td class="k">1</td><td class="h">Hand Clue 1 to {{ kids }}</td><td>(start)</td><td class="c">☐</td></tr>
+{% for r,loc in clues %}{% if not loop.last %}<tr><td class="k">{{ loop.index+1 }}</td><td class="h">Clue {{ loop.index+1 }}</td><td>{{ loc }}</td><td class="c">☐</td></tr>{% endif %}{% endfor %}
+<tr><td class="k">★</td><td class="h">The surprise / gift</td><td>{{ clues[-1][1] }}</td><td class="c">☐</td></tr></table>
+<div class="tip">Tip: each clue describes where the NEXT clue is hidden. Hide them in reverse order, starting with the gift. Short on time? Use fewer clues and skip the rest.</div>
+{% endblock %}

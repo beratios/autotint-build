@@ -1,12 +1,12 @@
 {% extends theme %}{% from "frost_art.html" import gingerman %}
 {% block mode %}welcome{% endblock %}
-{% block lcss %}.ln{width:60%;border-bottom:2px solid #1c3b6e;height:9vmin;margin:2vmin auto 0;font-family:'Caveat';font-size:8vmin;color:#1c3b6e}{% endblock %}
+{% block lcss %}{% if theme == 'th_disco.html' %}.ball{width:26vmin}.page{top:20vmin!important;bottom:22vmin!important}{% endif %}.ln{width:60%;border-bottom:2px solid var(--gn-ink,#1c3b6e);height:9vmin;margin:2vmin auto 0;font-family:'Caveat';font-size:8vmin;color:var(--gn-ink,#1c3b6e)}{% endblock %}
 {% block content %}
 <svg style="width:12vmin" viewBox="0 0 40 40"><path d="M8 4h24v8a12 12 0 0 1-24 0Z" fill="#f2c14e"/><path d="M8 7H3v3a7 7 0 0 0 6 7M32 7h5v3a7 7 0 0 1-6 7" fill="none" stroke="#f2c14e" stroke-width="2.4"/><rect x="17" y="23" width="6" height="7" fill="#f2c14e"/><rect x="11" y="30" width="18" height="5" rx="1" fill="#d2363f"/></svg>
 <div class="t-k" style="letter-spacing:.3em;text-transform:uppercase;font-size:2.4vmin;margin-top:1vmin">{{ title }} {{ year }}</div>
-<div class="t-h" style="font-size:10vmin;margin-top:.6vmin">Christmas Games Champion</div>
+<div class="t-h" style="font-size:10vmin;margin-top:.6vmin">{{ champ_title|default('Christmas Games Champion') }}</div>
 <div class="t-s" style="font-size:5vmin">this certificate is proudly awarded to</div>
 <div class="ln"></div>
-<div class="t-b" style="font-size:3vmin;margin-top:2.4vmin;color:#4e6a96">for outstanding elf skills, quick thinking and festive spirit</div>
+<div class="t-b" style="font-size:3vmin;margin-top:2.4vmin;color:var(--gn-muted,#4e6a96)">{{ champ_line|default('for outstanding elf skills, quick thinking and festive spirit') }}</div>
 <div class="t-k" style="margin-top:2vmin;font-size:2.4vmin">the {{ family }} family · {{ date }}</div>
 {% endblock %}

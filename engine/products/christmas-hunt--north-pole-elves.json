@@ -1,0 +1,236 @@
+{
+ "template": "sh_poster.html",
+ "w_in": 8,
+ "h_in": 10,
+ "fields": [
+  "child name(s)",
+  "from (Santa, the Elves, Mom and Dad...)",
+  "number of clues (6 to 16)",
+  "where the gift will be hidden",
+  "optional: your own hiding spots or riddles"
+ ],
+ "defaults": {
+  "theme": "th_northpole.html",
+  "kids": "Ava and Liam",
+  "title": "Christmas Treasure Hunt",
+  "kicker": "the elves have hidden a surprise for",
+  "sender": "Santa's Elves",
+  "year": "2026",
+  "rules": [
+   "Read Clue 1 out loud together",
+   "Solve the riddle and run to the spot",
+   "Find the next clue and keep going",
+   "The last clue leads to your surprise!"
+  ],
+  "clues": [
+   [
+    "I wear twinkly lights and shiny balls, I stand so tall beside the walls. Peek under my branches green!",
+    "Under the Christmas tree"
+   ],
+   [
+    "I am cold inside and full of treats. Open my door for milk and eats!",
+    "In the fridge"
+   ],
+   [
+    "Splish and splash, I hold the bubbles for your bath. Look inside me!",
+    "In the bathtub"
+   ],
+   [
+    "Round and round I spin your clothes. Peek inside and see what shows!",
+    "In the washing machine"
+   ],
+   [
+    "At night you snuggle under me, dreaming of Santa. Look and see!",
+    "Under your pillow"
+   ],
+   [
+    "You wear me outside in the snow. Look inside where your toes go!",
+    "Inside a boot or shoe"
+   ],
+   [
+    "Santa's favorite snack lives here. Lift my lid, your clue is near!",
+    "In the cookie jar"
+   ],
+   [
+    "I am full of stories big and small. Look between my books along the wall!",
+    "On the bookshelf"
+   ],
+   [
+    "Mom and Dad love to sit on me. Look under my cushions and you will see!",
+    "Under a couch cushion"
+   ],
+   [
+    "Look at me and you will see the smiliest face there could be!",
+    "Taped to a mirror"
+   ],
+   [
+    "Brr! I am colder than the North Pole. I keep ice cream nice and cold!",
+    "In the freezer door"
+   ],
+   [
+    "I hang by the fireplace waiting for treats. Look inside me, from toe to heel!",
+    "In a stocking"
+   ],
+   [
+    "Coats and jackets hang in me. Open my door and look and see!",
+    "In the coat closet"
+   ],
+   [
+    "I hold your teddies, blocks and cars. Look inside, little superstar!",
+    "In the toy box"
+   ],
+   [
+    "Brush, brush, brush, twice a day. Look by your toothbrush, hip hip hooray!",
+    "By the toothbrush"
+   ],
+   [
+    "Last clue! Where do you hang your coat when you come in? Look there for your big win!",
+    "Behind the front door"
+   ]
+  ],
+  "clue_sheets": [
+   0,
+   8
+  ],
+  "final_note": "Santa's elves are so proud of you. Your surprise is hiding:",
+  "final_spot": "behind the front door",
+  "letter_text": "The elves have been very busy! We hid a special surprise somewhere in your house, but you will need to be clever to find it. Follow the clues, work together and do not peek at the end. Happy hunting!"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#fdf6ea",
+   "ink": "#4a2a1c",
+   "accent": "#d2343f",
+   "hfont": "Fredoka",
+   "hsize": 96
+  },
+  "size": "8x10 poster, 8.5x11 clue card sheets, 5x7 letter and certificate, phone story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.36,
+    "frac": 0.78,
+    "caption": "Your child's name",
+    "sub": "Big, bright cartoon lettering"
+   },
+   {
+    "x": 0.5,
+    "y": 0.12,
+    "frac": 0.55,
+    "caption": "Cute elf and treasure map",
+    "sub": "Original kid-friendly art"
+   }
+  ],
+  "fields": [
+   [
+    "Child name(s)",
+    0.5,
+    0.36
+   ],
+   [
+    "Hunt title",
+    0.5,
+    0.43
+   ],
+   [
+    "Hunt steps",
+    0.5,
+    0.56
+   ],
+   [
+    "Sender",
+    0.5,
+    0.68
+   ]
+  ],
+  "vtitle": "Any name, any family",
+  "variants": [
+   {},
+   {
+    "kids": "Noah",
+    "sender": "Santa",
+    "kicker": "Santa has hidden a gift for"
+   },
+   {
+    "kids": "Mia, Leo and Zara",
+    "sender": "Mom and Dad",
+    "title": "Christmas Morning Hunt"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "clue-cards",
+   "template": "sh_clues.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "clue_sheets",
+   "png": true,
+   "label": "16 riddle clue cards"
+  },
+  {
+   "name": "blank-clues",
+   "template": "sh_clues.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "vars": {
+    "vars_blank": true
+   },
+   "png": true,
+   "label": "8 blank clue cards"
+  },
+  {
+   "name": "hiding-guide",
+   "template": "sh_guide.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Grown-up hiding guide"
+  },
+  {
+   "name": "elf-letter",
+   "template": "sh_letter.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true,
+   "label": "Letter from the elves 5x7"
+  },
+  {
+   "name": "clue-tracker",
+   "template": "sh_tracker.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Kids clue tracker"
+  },
+  {
+   "name": "you-found-it",
+   "template": "sh_found.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true,
+   "label": "You found it card 5x7"
+  },
+  {
+   "name": "phone-story",
+   "template": "sh_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Phone story start screen"
+  }
+ ],
+ "main_label": "Hunt poster 8x10",
+ "hero": {
+  "headline": "Christmas Treasure Hunt With Name",
+  "short": "Kids Treasure Hunt",
+  "bullets": [
+   "16 riddle clue cards + 8 blank",
+   "Elf letter, tracker, found-it card",
+   "Hiding guide for grown-ups"
+  ]
+ },
+ "inside_sub": "16 riddles \u00b7 8 blank cards \u00b7 hiding guide \u00b7 letter \u00b7 certificate",
+ "detail_page": "clue-cards",
+ "detail_title": "16 riddle clue cards with name"
+}

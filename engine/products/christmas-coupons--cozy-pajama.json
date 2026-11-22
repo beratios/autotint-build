@@ -1,0 +1,199 @@
+{
+ "template": "cp_cover.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "recipient name",
+  "your name (from)",
+  "coupon set: kids, partner, or family (or up to 24 of your own coupon ideas)",
+  "valid until date (optional)"
+ ],
+ "defaults": {
+  "theme": "th_pajama.html",
+  "to": "Emma",
+  "from": "Mom and Dad",
+  "book_title": "Christmas Coupon Book",
+  "year": "2026",
+  "valid": "Dec 31, 2027",
+  "cover_note": "cut, staple and cash them in all year long!",
+  "story_note": "check under the tree for your coupon book",
+  "coupons": [
+   "One extra bedtime story",
+   "Pancake breakfast in bed",
+   "Stay up 30 minutes late",
+   "Pick the movie for family night",
+   "A trip to the park",
+   "Bake cookies together",
+   "One big bear hug",
+   "No-veggie dinner night",
+   "Choose what is for dinner",
+   "A day out, just you and me",
+   "Build a blanket fort together",
+   "Pajama day at home",
+   "Pick any dessert",
+   "Skip one chore",
+   "Ice cream date",
+   "Board game night of your choice",
+   "Dance party in the kitchen",
+   "A craft afternoon together",
+   "Breakfast for dinner",
+   "Sleepover in the living room",
+   "Ten minutes of tickles",
+   "Pick the music in the car",
+   "A new book from the store",
+   "One YES day (within reason)"
+  ],
+  "coupon_sheets": [
+   0,
+   8,
+   16
+  ]
+ },
+ "gallery": {
+  "style": {
+   "bg": "#fff7ee",
+   "ink": "#5a2a22",
+   "accent": "#c3273b",
+   "hfont": "Pacifico",
+   "hsize": 92
+  },
+  "size": "5x7 cover, 8.5x11 coupon sheets (24 + 8 blank), tracker, phone story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.42,
+    "frac": 0.78,
+    "caption": "Their name on the cover",
+    "sub": "Cozy hand-lettered look"
+   },
+   {
+    "x": 0.5,
+    "y": 0.88,
+    "frac": 0.55,
+    "caption": "Cozy Christmas art",
+    "sub": "Cocoa, slippers and string lights"
+   }
+  ],
+  "fields": [
+   [
+    "Recipient name",
+    0.5,
+    0.42
+   ],
+   [
+    "Book title",
+    0.5,
+    0.5
+   ],
+   [
+    "Your note",
+    0.5,
+    0.58
+   ],
+   [
+    "From",
+    0.5,
+    0.7
+   ]
+  ],
+  "vtitle": "For kids, partners or family",
+  "variants": [
+   {},
+   {
+    "to": "Daniel",
+    "from": "Sophie",
+    "book_title": "Love Coupons",
+    "coupons": [
+     "Breakfast in bed",
+     "A movie night, your pick",
+     "A full back massage",
+     "Dinner date, my treat",
+     "I do the dishes for a week",
+     "A lazy Sunday, no plans",
+     "Your favorite home cooked meal",
+     "One argument win, no questions",
+     "A picnic for two",
+     "Sleep in, I take the morning",
+     "Coffee delivered to you",
+     "A surprise date night",
+     "Car wash and gas, done by me",
+     "Dance with me in the kitchen",
+     "A bubble bath, candles and wine",
+     "Control of the remote for a day",
+     "Your favorite takeout night",
+     "A long walk and talk",
+     "Weekend getaway planning",
+     "Breakfast date",
+     "Stargazing night",
+     "A handwritten love letter",
+     "Board games and snacks",
+     "One YES day"
+    ]
+   },
+   {
+    "to": "Grandma Rose",
+    "from": "Lily and Max",
+    "book_title": "Coupons for Grandma"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "coupons",
+   "template": "cp_sheet.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "coupon_sheets",
+   "png": true,
+   "label": "24 personalized coupons"
+  },
+  {
+   "name": "blank-coupons",
+   "template": "cp_sheet.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "vars": {
+    "vars_blank": true
+   },
+   "png": true,
+   "label": "8 blank coupons"
+  },
+  {
+   "name": "tracker",
+   "template": "cp_tracker.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Coupon tracker"
+  },
+  {
+   "name": "gift-tag",
+   "template": "cp_cover.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true,
+   "label": "Square gift tag / post"
+  },
+  {
+   "name": "phone-story",
+   "template": "cp_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Phone surprise screen"
+  }
+ ],
+ "main_label": "Book cover 5x7",
+ "hero": {
+  "headline": "Personalized Christmas Coupon Book",
+  "short": "Christmas Coupon Book",
+  "bullets": [
+   "24 coupons with their name",
+   "8 blank coupons + tracker",
+   "Cover, gift tag, phone surprise"
+  ]
+ },
+ "inside_sub": "24 named coupons \u00b7 8 blank \u00b7 cover \u00b7 tracker \u00b7 gift tag",
+ "detail_page": "coupons",
+ "detail_title": "24 coupons with their name"
+}

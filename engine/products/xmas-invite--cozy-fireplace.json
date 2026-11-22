@@ -1,0 +1,243 @@
+{
+ "template": "pi_invite.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "event title",
+  "host name",
+  "date",
+  "time",
+  "venue name",
+  "address",
+  "dress code",
+  "RSVP details",
+  "evening schedule",
+  "guest names for place cards (up to 24)",
+  "number of tables"
+ ],
+ "defaults": {
+  "theme": "th_fireplace.html",
+  "title": "Cozy Christmas Party",
+  "host": "the Bennetts",
+  "date": "Saturday, December 19, 2026",
+  "time": "6:00 PM",
+  "place": "The Bennett Home",
+  "address": "42 Birch Hollow Lane, Calgary",
+  "dress": "Cozy sweaters and slippers",
+  "rsvp": "to Laura by December 10",
+  "rsvp_by": "December 10",
+  "year": "2026",
+  "schedule": [
+   [
+    "6:00 PM",
+    "Mulled cider by the fire"
+   ],
+   [
+    "7:00 PM",
+    "Christmas dinner"
+   ],
+   [
+    "8:30 PM",
+    "Cookies and cocoa"
+   ],
+   [
+    "9:15 PM",
+    "Gift swap and carols"
+   ]
+  ],
+  "thanks_note": "Thank you for filling our home with warmth and laughter. Wishing you a cozy and joyful Christmas!",
+  "guests": [
+   "Claire",
+   "James",
+   "Olivia",
+   "Henry",
+   "Grace",
+   "Oliver",
+   "Emma",
+   "Samuel",
+   "Ruby",
+   "Daniel",
+   "Hannah",
+   "Jack"
+  ],
+  "place_sheets": [
+   0,
+   8,
+   16
+  ],
+  "tables": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "courses": [],
+  "family": "",
+  "host_line": "please join us for a"
+ },
+ "gallery": {
+  "style": {
+   "bg": "#183528",
+   "ink": "#fbf1df",
+   "accent": "#f2a65a",
+   "hfont": "DM Serif Display",
+   "hsize": 100
+  },
+  "size": "5x7 invite, 5x3.5 cards, 8x10 sign, 4x6 table signs, Instagram post and story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.25,
+    "frac": 0.78,
+    "caption": "Your party details",
+    "sub": "Warm serif lettering"
+   },
+   {
+    "x": 0.5,
+    "y": 0.82,
+    "frac": 0.6,
+    "caption": "Illustrated fireplace",
+    "sub": "Stockings, fire and garland lights"
+   }
+  ],
+  "fields": [
+   [
+    "Event title",
+    0.5,
+    0.3
+   ],
+   [
+    "Host",
+    0.5,
+    0.38
+   ],
+   [
+    "Date and time",
+    0.5,
+    0.46
+   ],
+   [
+    "Venue and address",
+    0.5,
+    0.53
+   ],
+   [
+    "Dress code",
+    0.5,
+    0.6
+   ],
+   [
+    "RSVP",
+    0.5,
+    0.66
+   ]
+  ],
+  "vtitle": "One cozy design, any holiday gathering",
+  "variants": [
+   {},
+   {
+    "title": "Christmas Eve Supper",
+    "host": "Sofia and Ben",
+    "date": "Thursday, December 24, 2026",
+    "time": "5:30 PM",
+    "place": "Our Cabin",
+    "address": "9 Lakeview Road, Muskoka",
+    "dress": "Matching pajamas welcome",
+    "rsvp": "to Sofia by December 18"
+   },
+   {
+    "title": "Friendsmas by the Fire",
+    "host": "the Okafors",
+    "date": "Friday, December 11, 2026",
+    "time": "7:00 PM",
+    "place": "The Okafor Home",
+    "address": "301 Elm Street, Halifax",
+    "dress": "Ugly sweaters encouraged",
+    "rsvp": "to Ada by December 6"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "rsvp",
+   "template": "pi_rsvp.html",
+   "w_in": 5,
+   "h_in": 3.5,
+   "png": true,
+   "label": "RSVP card 5x3.5"
+  },
+  {
+   "name": "details",
+   "template": "pi_details.html",
+   "w_in": 5,
+   "h_in": 3.5,
+   "png": true,
+   "label": "Details card 5x3.5"
+  },
+  {
+   "name": "welcome",
+   "template": "pi_welcome.html",
+   "w_in": 8,
+   "h_in": 10,
+   "png": true,
+   "label": "Welcome sign 8x10"
+  },
+  {
+   "name": "place",
+   "template": "mp_place.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "place_sheets",
+   "png": true,
+   "label": "Place cards"
+  },
+  {
+   "name": "table",
+   "template": "pi_table.html",
+   "w_in": 4,
+   "h_in": 6,
+   "repeat": "tables",
+   "png": true,
+   "label": "Table signs 4x6"
+  },
+  {
+   "name": "thank-you",
+   "template": "pi_thanks.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true,
+   "label": "Thank-you card 5x7"
+  },
+  {
+   "name": "instagram-post",
+   "template": "pi_post.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true,
+   "label": "Instagram post"
+  },
+  {
+   "name": "instagram-story",
+   "template": "pi_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Instagram story"
+  }
+ ],
+ "main_label": "Invitation 5x7",
+ "hero": {
+  "headline": "Cozy Fireplace Christmas Invitation",
+  "short": "Cozy Fireplace Invite Set",
+  "bullets": [
+   "Invite, RSVP and schedule cards",
+   "Welcome sign, table signs, name cards",
+   "Thank-you card, Instagram post and story"
+  ]
+ },
+ "inside_sub": "9 designs \u00b7 table signs \u00b7 24 name cards",
+ "detail_page": "welcome",
+ "detail_title": "Matching 8x10 welcome sign"
+}

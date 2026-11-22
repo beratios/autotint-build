@@ -1,0 +1,20 @@
+{% extends theme %}
+{% block mode %}place{% endblock %}
+{% block lcss %}
+body{background:#fff}.page{inset:0;display:block}
+.cut{position:absolute;top:2vmin;left:0;right:0;font-family:'Inter';font-size:1.4vmin;letter-spacing:.25em;color:#999}
+.g{position:absolute;left:4vmin;right:4vmin;top:4.6vmin;bottom:3.6vmin;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,1fr);gap:1.8vmin}
+.c{position:relative;border-radius:2vmin;background:#fdf6ea;border:.5vmin dashed #1f6b4e;padding:2vmin 2.6vmin;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.c:before{content:"";position:absolute;left:0;right:0;top:0;height:1.4vmin;background:repeating-linear-gradient(45deg,#d2343f 0 1.2vmin,#fff 1.2vmin 2.4vmin)}
+.n{font-family:'Fredoka';font-weight:700;color:#d2343f;font-size:3.8vmin;line-height:1}.n small{font-size:1.7vmin;color:#1f6b4e;letter-spacing:.18em;text-transform:uppercase;display:block;margin-top:.5vmin;font-weight:600}
+.r{font-family:'Fredoka';font-size:2.75vmin;line-height:1.22;color:#4a2a1c;margin-top:1.2vmin}
+.r.e{width:90%;height:7vmin;background:repeating-linear-gradient(180deg,transparent 0 3.3vmin,#c9b6a4 3.3vmin 3.45vmin)}
+.f{font-family:'Amatic SC';font-weight:700;font-size:2.8vmin;color:#1f6b4e;margin-top:.8vmin}
+.st{position:absolute;right:1.6vmin;bottom:1.2vmin;font-size:2.6vmin;color:#ffd54a}
+{% endblock %}
+{% block content %}{% set off = rep or 0 %}{% set blank = vars_blank|default(false) %}
+<div class="cut">✂ {{ kids|upper }} · CLUE CARDS · CUT ON THE DASHED EDGE</div>
+<div class="g">{% for i in range(8) %}{% set k = off+i %}{% set it = clues[k] if (not blank and clues|length > k) else none %}<div class="c">
+{% if it %}<div class="n">Clue {{ k+1 }}<small>{{ 'last clue' if k+1 == clues|length else 'for ' ~ kids }}</small></div><div class="r">{{ it[0] }}</div>{% elif blank or k < 16 %}<div class="n">Clue ___<small>for {{ kids }}</small></div><div class="r e"></div>{% endif %}
+<div class="f">from {{ sender }}</div><div class="st">★</div></div>{% endfor %}</div>
+{% endblock %}

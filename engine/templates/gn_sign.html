@@ -1,13 +1,13 @@
 {% extends theme %}{% from "frost_art.html" import gingerman, trio, mug %}
 {% block mode %}menu{% endblock %}
-{% block lcss %}.gl{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4vmin 1.6vmin;margin-top:3vmin;max-width:80vmin}.gl span{background:#fff;border:.4vmin solid #bfe0f3;border-radius:99vmin;padding:.8vmin 2.6vmin;font-family:'Fredoka';font-weight:600;font-size:{{ 2.6 if W_IN < 6 else 2.4 }}vmin;color:#1c3b6e}{% endblock %}
+{% block lcss %}{% if theme == 'th_disco.html' %}.ball{width:32vmin}{% endif %}.gl{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4vmin 1.6vmin;margin-top:3vmin;max-width:80vmin}.gl span{background:var(--gn-chip,#fff);border:.4vmin solid var(--gn-soft2,#bfe0f3);border-radius:99vmin;padding:.8vmin 2.6vmin;font-family:'Fredoka';font-weight:600;font-size:{{ 2.6 if W_IN < 6 else 2.4 }}vmin;color:var(--gn-ink,#1c3b6e)}{% endblock %}
 {% block content %}
-{{ trio('46vmin') }}
+{% if theme == 'th_frost.html' %}{{ trio('46vmin') }}{% endif %}
 <div class="t-k" style="font-size:2.6vmin;letter-spacing:.3em;text-transform:uppercase">the {{ family }} family</div>
 <div class="t-h" style="font-size:{{ 12 if W_IN < 6 else 11 }}vmin;line-height:.95;margin-top:1.6vmin">{{ title }}</div>
 <div class="t-s" style="font-size:{{ 8 if W_IN < 6 else 7 }}vmin;margin-top:1vmin">{{ subtitle }}</div>
 <div class="t-rule"></div>
 <div class="t-b" style="font-size:3.8vmin;font-weight:500">{{ date }}</div>
 <div class="gl">{% for gname in game_names %}<span>{{ gname }}</span>{% endfor %}</div>
-<div style="margin-top:3vmin;display:flex;align-items:center;gap:2vmin;justify-content:center">{{ mug('11vmin') }}<div class="t-k" style="font-size:2.8vmin">may the best elf win!</div></div>
+<div style="margin-top:3vmin;display:flex;align-items:center;gap:2vmin;justify-content:center">{% if theme == 'th_frost.html' %}{{ mug('11vmin') }}{% endif %}<div class="t-k" style="font-size:2.8vmin">{{ sign_line|default('may the best elf win!') }}</div></div>
 {% endblock %}

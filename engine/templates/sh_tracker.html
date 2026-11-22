@@ -1,0 +1,13 @@
+{% extends theme %}{% from "sh_macros.html" import map %}
+{% block mode %}letter{% endblock %}
+{% block lcss %}.m-letter{top:9vmin!important;bottom:24vmin!important}
+.gr{display:grid;grid-template-columns:repeat(4,1fr);gap:1.8vmin;margin-top:2.4vmin;width:86%}
+.b{border:.45vmin solid #1f6b4e;border-radius:1.6vmin;height:9vmin;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;font-family:'Fredoka';font-weight:700;color:#d2343f;font-size:3.2vmin}
+.b small{font-size:1.5vmin;color:#8a6a58;font-weight:600;letter-spacing:.12em}{% endblock %}
+{% block content %}
+{{ map('22vmin') }}
+<div class="t-k" style="margin-top:1vmin">{{ kids }}</div>
+<div class="t-h" style="font-size:6.6vmin;margin-top:.6vmin">Clue Tracker</div>
+<div class="t-s" style="font-size:4.6vmin">color a star every time you find a clue!</div>
+<div class="gr">{% for i in range(clues|length) %}<div class="b">☆<small>CLUE {{ i+1 }}</small></div>{% endfor %}</div>
+{% endblock %}
