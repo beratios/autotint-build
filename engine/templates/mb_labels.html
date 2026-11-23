@@ -1,0 +1,21 @@
+{% extends theme %}{% from "mb_macros.html" import fruit %}
+{% block mode %}place{% endblock %}
+{% block lcss %}
+body{background:#fff}.page{inset:0;display:block}
+.cut{position:absolute;top:2.2vmin;left:0;right:0;font-family:'Inter';font-size:1.5vmin;letter-spacing:.25em;color:#999}
+.g{position:absolute;left:4vmin;right:4vmin;top:5vmin;bottom:4vmin;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,1fr);gap:2vmin}
+.c{position:relative;border-radius:2vmin;background:linear-gradient(180deg,#fde7d3,#fff6ec 60%);border:.35vmin solid #e7c9b4;display:flex;align-items:center;gap:2.4vmin;padding:0 3vmin;overflow:hidden}
+.c svg{flex-shrink:0}.c:after{content:"";position:absolute;inset:1vmin;border:1px dashed #d9a441;border-radius:1.4vmin;pointer-events:none}
+.tx{text-align:left;flex:1}
+.k{font-family:'Inter';font-weight:600;font-size:1.5vmin;letter-spacing:.16em;color:#2f5a46;text-transform:uppercase;white-space:nowrap}
+.n{font-family:'Playfair Display';font-style:italic;font-weight:700;font-size:{{ 4.4 }}vmin;color:#c0623f;line-height:1.05;margin-top:.5vmin}
+.d{font-family:'Caveat';font-size:3vmin;color:#4b3a2f;margin-top:.4vmin}
+.e{width:90%;height:4.5vmin;border-bottom:1.5px solid #c9b6a4}
+{% endblock %}
+{% block content %}{% set items = (garnishes if vars_garnish|default(false) else juices) %}{% set blank = vars_blank|default(false) %}
+<div class="cut">✂ {{ sign_title|upper }} · {{ 'GARNISH AND FOOD TENTS' if vars_garnish|default(false) else 'JUICE AND BUBBLY LABELS' }} · CUT ON THE EDGES</div>
+<div class="g">{% for i in range(8) %}{% set it = items[i] if (not blank and items|length > i) else none %}<div class="c">
+{{ fruit('12vmin', it[2] if it else '#d9a441') }}
+<div class="tx"><div class="k">{{ 'mimosa bar' if not vars_garnish|default(false) else 'add a little' }} · {{ family }}</div>
+{% if it %}<div class="n">{{ it[0] }}</div><div class="d">{{ it[1] }}</div>{% else %}<div class="e"></div><div class="e"></div>{% endif %}</div></div>{% endfor %}</div>
+{% endblock %}

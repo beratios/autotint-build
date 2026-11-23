@@ -1,0 +1,10 @@
+{% extends theme %}{% from "mb_macros.html" import flute %}
+{% block mode %}menu{% endblock %}
+{% block lcss %}.st{display:flex;align-items:center;gap:3vmin;width:100%;text-align:left;margin-top:2.6vmin}.st b{flex-shrink:0;width:8vmin;height:8vmin;border-radius:50%;background:#c0623f;color:#fff;font-family:'Playfair Display';font-size:4.6vmin;display:flex;align-items:center;justify-content:center}
+.st .t-h{font-size:4.6vmin}.st .t-b{font-size:3.3vmin;color:var(--muted);margin-top:.3vmin}{% endblock %}
+{% block content %}
+<div class="t-k">{{ sign_title }} · {{ family }}</div>
+<div class="t-h" style="font-size:8.6vmin;margin-top:1.4vmin">Build Your Mimosa</div>
+<div class="t-rule"></div>
+{% for t,d in howto[:4] %}<div class="st"><b>{{ loop.index }}</b><div><div class="t-h">{{ t }}</div><div class="t-b">{{ d }}</div></div></div>{% endfor %}
+{% endblock %}

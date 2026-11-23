@@ -1,0 +1,173 @@
+{
+ "template": "cp_cover.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "recipient name",
+  "your name (from)",
+  "coupon set: kids, partner, or family (or up to 24 of your own coupon ideas)",
+  "valid until date (optional)"
+ ],
+ "defaults": {
+  "theme": "th_northpole.html",
+  "to": "Leo",
+  "from": "Santa and the Elves",
+  "book_title": "North Pole Coupons",
+  "year": "2026",
+  "valid": "Dec 31, 2027",
+  "cover_note": "special elf-approved treats, good all year!",
+  "story_note": "the elves left something special for you",
+  "coupons": [
+   "Stay up 30 minutes late",
+   "Pick the movie for family night",
+   "One extra bedtime story",
+   "Pancake breakfast in bed",
+   "Build a snowman together",
+   "Hot cocoa with marshmallows",
+   "Skip one chore",
+   "Choose what is for dinner",
+   "Bake cookies with an elf helper",
+   "Sleepover in the living room",
+   "A trip to the park",
+   "Pajama day at home",
+   "Pick any dessert",
+   "Dance party in the kitchen",
+   "Ice cream date",
+   "Board game night of your choice",
+   "Craft afternoon together",
+   "Breakfast for dinner",
+   "Sledding day",
+   "Pick the music in the car",
+   "A new book from the store",
+   "Ten minutes of tickles",
+   "Make a blanket fort",
+   "One YES day (within reason)"
+  ],
+  "coupon_sheets": [
+   0,
+   8,
+   16
+  ]
+ },
+ "gallery": {
+  "style": {
+   "bg": "#dff1fb",
+   "ink": "#1f3a5f",
+   "accent": "#d62f3f",
+   "hfont": "Fredoka",
+   "hsize": 96
+  },
+  "size": "5x7 cover, 8.5x11 coupon sheets (24 + 8 blank), tracker, phone story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.42,
+    "frac": 0.78,
+    "caption": "Their name from the North Pole",
+    "sub": "Fun kid-friendly lettering"
+   },
+   {
+    "x": 0.5,
+    "y": 0.86,
+    "frac": 0.55,
+    "caption": "Cartoon North Pole art",
+    "sub": "Snowy village, reindeer and elves"
+   }
+  ],
+  "fields": [
+   [
+    "Recipient name",
+    0.5,
+    0.42
+   ],
+   [
+    "Book title",
+    0.5,
+    0.5
+   ],
+   [
+    "Your note",
+    0.5,
+    0.58
+   ],
+   [
+    "From",
+    0.5,
+    0.7
+   ]
+  ],
+  "vtitle": "For kids, grandkids or siblings",
+  "variants": [
+   {},
+   {
+    "to": "Ava and Mia",
+    "from": "Grandma",
+    "book_title": "Elf Coupons"
+   },
+   {
+    "to": "Noah",
+    "from": "Mom and Dad",
+    "book_title": "Christmas Treat Coupons"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "coupons",
+   "template": "cp_sheet.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "coupon_sheets",
+   "png": true,
+   "label": "24 personalized coupons"
+  },
+  {
+   "name": "blank-coupons",
+   "template": "cp_sheet.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "vars": {
+    "vars_blank": true
+   },
+   "png": true,
+   "label": "8 blank coupons"
+  },
+  {
+   "name": "tracker",
+   "template": "cp_tracker.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Coupon tracker"
+  },
+  {
+   "name": "gift-tag",
+   "template": "cp_cover.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true,
+   "label": "Square gift tag / post"
+  },
+  {
+   "name": "phone-story",
+   "template": "cp_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Phone surprise screen"
+  }
+ ],
+ "main_label": "Book cover 5x7",
+ "hero": {
+  "headline": "Kids North Pole Coupon Book",
+  "short": "Kids Coupon Book",
+  "bullets": [
+   "24 kid coupons with their name",
+   "8 blank coupons + tracker",
+   "Cover, gift tag, phone surprise"
+  ]
+ },
+ "inside_sub": "24 named kid coupons \u00b7 8 blank \u00b7 cover \u00b7 tracker \u00b7 gift tag",
+ "detail_page": "coupons",
+ "detail_title": "24 coupons with their name"
+}

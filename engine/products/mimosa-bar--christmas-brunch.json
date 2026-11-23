@@ -1,0 +1,354 @@
+{
+ "template": "mb_sign.html",
+ "w_in": 8,
+ "h_in": 10,
+ "fields": [
+  "family name",
+  "date",
+  "sign title (default: Mimosa Bar)",
+  "juices and bubbly (up to 8, or use ours)",
+  "garnishes / food (up to 8)",
+  "guest names for glass cards (up to 24)"
+ ],
+ "defaults": {
+  "theme": "th_brunch.html",
+  "family": "Sullivan",
+  "title": "Christmas Brunch",
+  "date": "December 25, 2026",
+  "year": "2026",
+  "sign_title": "Mimosa Bar",
+  "sign_sub": "Christmas morning bubbly",
+  "juices": [
+   [
+    "Classic Orange",
+    "freshly squeezed",
+    "#f7a23b"
+   ],
+   [
+    "Cranberry",
+    "tart and festive",
+    "#c8323f"
+   ],
+   [
+    "Pomegranate",
+    "jewel bright",
+    "#a3203a"
+   ],
+   [
+    "Peach",
+    "sweet and sunny",
+    "#f6a77d"
+   ],
+   [
+    "Pineapple",
+    "a tropical twist",
+    "#f2c443"
+   ],
+   [
+    "Pink Grapefruit",
+    "zesty and bright",
+    "#ef7d72"
+   ],
+   [
+    "Prosecco",
+    "the bubbly",
+    "#e8d38a"
+   ],
+   [
+    "Sparkling Cider",
+    "alcohol free",
+    "#d9a441"
+   ]
+  ],
+  "garnishes": [
+   [
+    "Fresh Berries",
+    "raspberries and blueberries",
+    "#b8324a"
+   ],
+   [
+    "Orange Slices",
+    "for the rim",
+    "#f7a23b"
+   ],
+   [
+    "Rosemary Sprigs",
+    "a wintry touch",
+    "#3f7a5e"
+   ],
+   [
+    "Sugared Cranberries",
+    "sweet sparkle",
+    "#c8323f"
+   ],
+   [
+    "Pomegranate Seeds",
+    "little jewels",
+    "#a3203a"
+   ],
+   [
+    "Mint Leaves",
+    "fresh and cool",
+    "#4f9a6a"
+   ],
+   [
+    "Cinnamon Rolls",
+    "warm from the oven",
+    "#c98446"
+   ],
+   [
+    "Fruit Skewers",
+    "grab and go",
+    "#e8b7a0"
+   ]
+  ],
+  "howto": [
+   [
+    "Pour the bubbly",
+    "fill your flute halfway with prosecco or cider"
+   ],
+   [
+    "Top with juice",
+    "pick a juice, or mix two together"
+   ],
+   [
+    "Add a garnish",
+    "berries, citrus or a sprig of rosemary"
+   ],
+   [
+    "Cheers!",
+    "raise a glass, Merry Christmas!"
+   ]
+  ],
+  "drinks_title": "Mimosa Recipes",
+  "drinks": [
+   [
+    "Classic Mimosa",
+    "prosecco, fresh orange juice"
+   ],
+   [
+    "Poinsettia",
+    "prosecco, cranberry, orange liqueur"
+   ],
+   [
+    "Winter Sunrise",
+    "prosecco, pomegranate, orange"
+   ],
+   [
+    "Bellini",
+    "prosecco, peach puree"
+   ],
+   [
+    "Rosemary Grapefruit",
+    "prosecco, pink grapefruit, rosemary"
+   ],
+   [
+    "Kids Fizz",
+    "sparkling cider, cranberry, berries"
+   ]
+  ],
+  "courses": [
+   [
+    "Bubbly",
+    "prosecco or sparkling cider"
+   ],
+   [
+    "Juices",
+    "orange, cranberry, pomegranate, peach"
+   ],
+   [
+    "Garnish",
+    "berries, citrus, rosemary"
+   ],
+   [
+    "Cheers",
+    "Merry Christmas!"
+   ]
+  ],
+  "guests": [
+   "Claire",
+   "James",
+   "Olivia",
+   "Henry",
+   "Grace",
+   "Oliver",
+   "Emma",
+   "Samuel",
+   "Ruby",
+   "Daniel",
+   "Hannah",
+   "Jack"
+  ],
+  "place_sheets": [
+   0,
+   8,
+   16
+  ]
+ },
+ "gallery": {
+  "style": {
+   "bg": "#fff6ec",
+   "ink": "#4b3a2f",
+   "accent": "#c0623f",
+   "hfont": "Playfair Display",
+   "hsize": 100
+  },
+  "size": "8x10 + 5x7 signs, juice labels, food tents, recipe card, glass name cards, Instagram post and story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.42,
+    "frac": 0.7,
+    "caption": "Your family name",
+    "sub": "Elegant brunch lettering"
+   },
+   {
+    "x": 0.5,
+    "y": 0.85,
+    "frac": 0.55,
+    "caption": "Christmas brunch scene",
+    "sub": "Mimosas, pancakes and cinnamon rolls"
+   }
+  ],
+  "fields": [
+   [
+    "Family name",
+    0.5,
+    0.34
+   ],
+   [
+    "Sign title",
+    0.5,
+    0.43
+   ],
+   [
+    "Subtitle",
+    0.5,
+    0.5
+   ],
+   [
+    "Date",
+    0.5,
+    0.6
+   ]
+  ],
+  "vtitle": "One sunny design, any holiday brunch",
+  "variants": [
+   {},
+   {
+    "family": "Martin",
+    "sign_title": "Bubbly Bar",
+    "sign_sub": "pop, pour, cheers",
+    "date": "December 24, 2026"
+   },
+   {
+    "family": "Rossi",
+    "sign_title": "Mimosa Bar",
+    "sign_sub": "New Years Day brunch",
+    "date": "January 1, 2027"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "table-sign",
+   "template": "mb_sign.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true,
+   "label": "Table sign 5x7"
+  },
+  {
+   "name": "juice-labels",
+   "template": "mb_labels.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "8 juice and bubbly labels"
+  },
+  {
+   "name": "garnish-tents",
+   "template": "mb_labels.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "vars": {
+    "vars_garnish": true
+   },
+   "png": true,
+   "label": "8 garnish and food tents"
+  },
+  {
+   "name": "blank-labels",
+   "template": "mb_labels.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "vars": {
+    "vars_blank": true
+   },
+   "png": true,
+   "label": "8 blank labels"
+  },
+  {
+   "name": "how-to",
+   "template": "mb_howto.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true,
+   "label": "Build your mimosa card"
+  },
+  {
+   "name": "recipes",
+   "template": "mp_drinks.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true,
+   "label": "Mimosa recipe menu 5x7"
+  },
+  {
+   "name": "welcome",
+   "template": "mp_welcome.html",
+   "w_in": 8,
+   "h_in": 10,
+   "png": true,
+   "label": "Brunch welcome sign 8x10"
+  },
+  {
+   "name": "glass-cards",
+   "template": "mp_place.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "place_sheets",
+   "png": true,
+   "label": "Glass / place name cards"
+  },
+  {
+   "name": "instagram-post",
+   "template": "mp_post.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true,
+   "label": "Instagram post"
+  },
+  {
+   "name": "instagram-story",
+   "template": "mp_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Instagram story"
+  }
+ ],
+ "main_label": "Mimosa bar sign 8x10",
+ "hero": {
+  "headline": "Christmas Mimosa Bar Sign Set",
+  "short": "Mimosa Bar Set",
+  "bullets": [
+   "8x10 and 5x7 signs with your name",
+   "16 juice, garnish and blank labels",
+   "Recipe card, glass cards, post, story"
+  ]
+ },
+ "inside_sub": "2 signs \u00b7 24 labels \u00b7 recipe card \u00b7 24 glass cards \u00b7 social",
+ "detail_page": "juice-labels",
+ "detail_title": "Matching juice and bubbly labels"
+}

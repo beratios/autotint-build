@@ -17,6 +17,7 @@ body{background:linear-gradient(180deg,#081230 0%,#0f2150 45%,#1b3470 78%,#263f7
 .a-post .moon,.a-detailed .moon{width:11vmin}
 .card{background:linear-gradient(180deg,#0b1838,#1b3470);color:#fff;border:1px solid #c9d3e6}
 .card .nm{font-family:'Great Vibes';font-size:7.5vmin!important;color:#fff}
+.a-rsvp .scene{display:none}.m-rsvp{top:9vmin!important;bottom:9vmin!important}
 {% endblock %}
 {% block art %}{% set mode = self.mode()|trim %}
 {% for i in range(60) %}{% set x = (i*37+13)%100 %}{% set y = (i*53+7)%62 %}{% if x<13 or x>87 or y<13 %}<div class="dot" style="left:{{x}}%;top:{{y}}%;width:{{ 0.25 + (i%3)*0.18 }}vmin;height:{{ 0.25 + (i%3)*0.18 }}vmin;opacity:{{ 0.35 + (i%4)*0.15 }}"></div>{% endif %}{% endfor %}

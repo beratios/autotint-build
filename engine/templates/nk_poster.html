@@ -1,0 +1,14 @@
+{% extends theme %}
+{% block mode %}welcome{% endblock %}
+{% block lcss %}.m-welcome{top:{{ 22 if H_IN>9 else 20 }}vmin!important;bottom:{{ 36 if H_IN>9 else 34 }}vmin!important}
+.sch{width:100%;margin-top:2vmin;display:grid;grid-template-columns:1fr 1fr;gap:1.2vmin 2.4vmin}
+.r{display:flex;align-items:center;gap:1.6vmin;background:rgba(255,255,255,.09);border-radius:99vmin;padding:.8vmin 2vmin .8vmin .8vmin;text-align:left}
+.r b{flex-shrink:0;font-family:'Bungee';font-size:2.1vmin;color:#1b2a6b;background:#ffd23f;border-radius:99vmin;padding:.9vmin 1.4vmin}
+.r span{font-family:'Fredoka';font-size:2.6vmin;line-height:1.1}{% endblock %}
+{% block content %}
+<div class="t-k" style="font-size:2.4vmin">{{ names }}'s</div>
+<div class="t-h" style="font-size:9vmin;margin-top:1vmin">{{ poster_title }}</div>
+<div class="t-s" style="font-size:7vmin;margin-top:.6vmin">to {{ new_year }}!</div>
+<div class="t-rule" style="margin:2vmin auto"></div>
+<div class="sch">{% for t,a in hours[:8] %}<div class="r"><b>{{ t }}</b><span>{{ a }}</span></div>{% endfor %}</div>
+{% endblock %}

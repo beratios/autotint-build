@@ -1,0 +1,22 @@
+{% extends theme %}
+{% block mode %}place{% endblock %}
+{% block lcss %}
+body{background:#fff}.page{inset:0;display:block}
+.cut{position:absolute;top:2.2vmin;left:0;right:0;font-family:'Inter';font-size:1.5vmin;letter-spacing:.25em;color:#999}
+.g{position:absolute;left:4vmin;right:4vmin;top:5vmin;bottom:4vmin;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,1fr);gap:2vmin}
+.c{position:relative;border-radius:2vmin;overflow:hidden;display:flex;align-items:center;gap:2vmin;padding:0 2.6vmin;color:#fff}
+.c:before{content:"";position:absolute;right:2.2vmin;top:50%;width:2.6vmin;height:2.6vmin;margin-top:-1.3vmin;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 .4vmin rgba(0,0,0,.15)}
+.tm{flex-shrink:0;width:15vmin;height:15vmin;border-radius:50%;background:#fff;color:#1b2a6b;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Bungee';box-shadow:0 0 0 .7vmin rgba(255,255,255,.35)}
+.tm b{font-size:4.6vmin;line-height:1;font-weight:400}.tm small{font-size:1.7vmin;margin-top:.4vmin}
+.tx{flex:1;text-align:left;padding-right:4vmin}
+.k{font-family:'Inter';font-weight:700;font-size:1.5vmin;letter-spacing:.22em;text-transform:uppercase;opacity:.9}
+.a{font-family:'Fredoka';font-weight:600;font-size:3.3vmin;line-height:1.1;margin-top:.6vmin}
+.n{font-family:'Pacifico';font-size:2.4vmin;margin-top:.6vmin;opacity:.95}
+.e{border-bottom:1.5px solid rgba(255,255,255,.8);height:4vmin;width:90%}
+{% endblock %}
+{% block content %}{% set blank = vars_blank|default(false) %}{% set cols = ['#ff5d8f','#7c5cff','#14b8a6','#ff8a3d','#e0447a','#3b82f6','#f59e0b','#1b2a6b'] %}
+<div class="cut">✂ COUNTDOWN BAG TAGS · {{ names|upper }} · CUT, PUNCH THE DOT, TIE TO EACH BAG</div>
+<div class="g">{% for i in range(8) %}{% set it = hours[i] if (not blank and hours|length > i) else none %}<div class="c" style="background:linear-gradient(135deg,{{ cols[i%8] }},{{ cols[(i+3)%8] }})">
+<div class="tm">{% if it %}<b>{{ it[0].split(' ')[0] }}</b><small>{{ it[0].split(' ')[1] if ' ' in it[0] else '' }}</small>{% else %}<b>☆</b>{% endif %}</div>
+<div class="tx"><div class="k">open me at {{ it[0] if it else '____' }}</div>{% if it %}<div class="a">{{ it[1] }}</div>{% else %}<div class="e"></div><div class="e"></div>{% endif %}<div class="n">for {{ names }}</div></div></div>{% endfor %}</div>
+{% endblock %}

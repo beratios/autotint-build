@@ -1,0 +1,13 @@
+{% extends theme %}
+{% block mode %}menu{% endblock %}
+{% block lcss %}body{background:#fff}.art{display:none}.page{top:6vmin!important;bottom:6vmin!important;left:7vmin!important;right:7vmin!important;justify-content:flex-start;color:#1b2a6b}
+.t-h{color:#1b2a6b;text-shadow:.45vmin .45vmin 0 #ffd23f}.t-k{color:#e0447a}
+.q{width:100%;text-align:left;margin-top:1.9vmin;font-family:'Fredoka';font-weight:600;font-size:2.4vmin;color:#1b2a6b}
+.q i{display:block;border-bottom:2px dotted #a78bfa;height:3.6vmin}.q b{display:inline-block;width:3.4vmin;height:3.4vmin;line-height:3.4vmin;text-align:center;border-radius:50%;color:#fff;margin-right:1.2vmin;font-size:1.8vmin}
+.bx{display:flex;gap:2vmin;width:100%;margin-top:2.4vmin}.bx div{flex:1;border:.4vmin dashed #ff5d8f;border-radius:2vmin;height:17vmin;font-family:'Fredoka';font-size:1.9vmin;color:#e0447a;padding:1vmin;text-align:left}{% endblock %}
+{% block content %}{% set kid = rep or names %}{% set cols = ['#ff5d8f','#7c5cff','#14b8a6','#ff8a3d','#3b82f6','#f59e0b'] %}
+<div class="t-k" style="font-size:2vmin">{{ kid }} · New Years Eve {{ year }}</div>
+<div class="t-h" style="font-size:6.6vmin;margin-top:1vmin">My {{ year }} in Review</div>
+{% for q in questions %}<div class="q"><b style="background:{{ cols[loop.index0 % 6] }}">{{ loop.index }}</b>{{ q }}<i></i></div>{% endfor %}
+<div class="bx"><div>draw your favorite memory</div><div>my wish for {{ new_year }}</div></div>
+{% endblock %}

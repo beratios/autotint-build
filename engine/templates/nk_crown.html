@@ -1,0 +1,16 @@
+{% extends theme %}
+{% block mode %}place{% endblock %}
+{% block lcss %}body{background:#fff}.page{inset:0;display:block}
+.cut{position:absolute;top:2vmin;left:0;right:0;font-family:'Inter';font-size:1.5vmin;letter-spacing:.25em;color:#999}
+.cr{position:absolute;left:4vmin;right:4vmin;height:40%}{% endblock %}
+{% block content %}{% set kid = rep or names %}
+<div class="cut">✂ PARTY CROWN · CUT OUT BOTH STRIPS, TAPE THE ENDS TOGETHER TO FIT</div>
+{% for top,flip in [('6%',0),('52%',1)] %}
+<svg class="cr" style="top:{{top}}" viewBox="0 0 1000 300" preserveAspectRatio="none">
+<defs><linearGradient id="cg{{flip}}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1b2a6b"/><stop offset=".5" stop-color="#2c3f9a"/><stop offset="1" stop-color="#1b2a6b"/></linearGradient></defs>
+<path d="M0 300 V110 L80 30 L160 110 L250 10 L340 110 L420 40 L500 110 L580 40 L660 110 L750 10 L840 110 L920 30 L1000 110 V300Z" fill="url(#cg{{flip}})" stroke="#ffd23f" stroke-width="6"/>
+{% for x,y in [(80,30),(250,10),(420,40),(580,40),(750,10),(920,30)] %}<circle cx="{{x}}" cy="{{y+12}}" r="16" fill="{{ ['#ff5d8f','#ffd23f','#4fd1c5','#a78bfa','#ff8a3d','#7fe3ff'][loop.index0] }}"/>{% endfor %}
+{% for i in range(30) %}<rect x="{{ (i*67)%980+10 }}" y="{{ 150 + (i*23)%130 }}" width="10" height="5" fill="{{ ['#ff5d8f','#ffd23f','#4fd1c5','#a78bfa'][i%4] }}" transform="rotate({{ (i*37)%90 }} {{ (i*67)%980+10 }} {{ 150 + (i*23)%130 }})" opacity=".8"/>{% endfor %}
+<text x="500" y="{{ 215 }}" text-anchor="middle" font-family="{{ 'Bungee' if not flip else 'Pacifico' }}" font-size="{{ 66 if kid|length < 12 else 48 }}" fill="#fff" stroke="#ff5d8f" stroke-width="2">{{ kid if not flip else 'Happy ' ~ new_year ~ '!' }}</text>
+</svg>{% endfor %}
+{% endblock %}

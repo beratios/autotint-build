@@ -1,0 +1,13 @@
+{% extends theme %}{% from "mb_macros.html" import flute %}
+{% block mode %}welcome{% endblock %}
+{% block lcss %}.m-welcome{top:{{ 24 if H_IN > 9 else 22 }}vmin!important;bottom:{{ 40 if H_IN > 9 else 36 }}vmin!important}.fl{display:flex;gap:3vmin;justify-content:center;align-items:flex-end;margin-bottom:1.6vmin}
+.steps{display:flex;gap:2.4vmin;margin-top:2.4vmin;font-family:'Inter';font-weight:600;font-size:2vmin;letter-spacing:.3em;color:#2f5a46;text-transform:uppercase}.steps i{color:#c0623f;font-style:normal}{% endblock %}
+{% block content %}
+<div class="fl">{{ flute('7vmin','#e0525e','#f7a1a8') }}{{ flute('8.6vmin') }}{{ flute('7vmin','#f2b84b','#fde08a') }}</div>
+<div class="t-k" style="font-size:2.4vmin">the {{ family }} family</div>
+<div class="t-h" style="font-size:{{ 15 if sign_title|length < 12 else 11 }}vmin;margin-top:1.4vmin">{{ sign_title }}</div>
+<div class="t-s" style="font-size:7vmin;margin-top:.6vmin">{{ sign_sub }}</div>
+<div class="t-rule"></div>
+<div class="steps"><span>pour</span><i>✦</i><span>mix</span><i>✦</i><span>garnish</span><i>✦</i><span>sip</span></div>
+<div class="t-k" style="margin-top:2.6vmin;font-size:2.2vmin">{{ date }}</div>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "mp_base.html" %}
+{# Kids New Years Eve balloon party: deep midnight-blue sky with stars, colorful balloon bunches in the top corners, curly streamers and confetti, bottom scene: cartoon alarm clock at 11:59 with a party hat, gifts, noisemakers, a cupcake and a cheerful stack of party hats on a confetti floor #}
+{% block tcss %}
+:root{--bg:#1b2a6b;--ink:#ffffff;--muted:#cfd8ff;--acc:#ffd23f;--hc:#ffffff;--hf:'Bungee';--hw:400;--sf:'Pacifico';--bf:'Fredoka';--df:'Fredoka';--sx:12vmin;--st:24vmin;--sb:38vmin;--cp:#ff5d8f;--cpk:#ff5d8f}
+body{background:radial-gradient(ellipse at 50% 30%,#2c3f9a 0%,#1b2a6b 45%,#101a48 100%)}
+.t-h{line-height:1.05;text-shadow:.5vmin .5vmin 0 #ff5d8f,1vmin 1vmin 0 rgba(0,0,0,.25)}
+.t-s{color:#ffd23f;line-height:1.1}
+.t-k,.t-l{color:#7fe3ff}
+.t-b{font-weight:400}
+.t-rule{height:1vmin;width:26vmin;border-radius:1vmin;background:linear-gradient(90deg,#ff5d8f 0 25%,#ffd23f 25% 50%,#4fd1c5 50% 75%,#a78bfa 75%)}
+.t-rule:after{display:none}
+.st{position:absolute;color:#fff;transform:translate(-50%,-50%)}
+.cf{position:absolute;border-radius:.3vmin}
+.bl{position:absolute;top:0;width:30vmin}
+.scene{position:absolute;left:0;right:0;bottom:0;width:100%}
+.a-cert .scene{left:22%;width:56%}.a-cert .bl{width:22vmin}
+.a-menu .scene{left:14%;width:72%}
+.a-story .bl{width:34vmin}.a-story .scene{left:0;width:100%}.m-story{top:32vmin!important;bottom:44vmin!important}
+.a-rsvp .scene{display:none}
+.card{background:#1b2a6b;color:#fff;border:1px solid #ffd23f}
+.card .nm{font-family:'Bungee';color:#ffd23f}
+{% endblock %}
+{% block art %}{% set mode = self.mode()|trim %}
+{% for i in range(40) %}{% set x = (i*37+11)%100 %}{% set y = (i*53+7)%80 %}<div class="st" style="left:{{x}}%;top:{{y}}%;font-size:{{ 0.8 + (i%3)*0.6 }}vmin;opacity:{{ 0.35 + (i%4)*0.15 }}">✦</div>{% endfor %}
+{% set cols = ['#ff5d8f','#ffd23f','#4fd1c5','#a78bfa','#ff8a3d','#7fe3ff'] %}
+{% for i in range(46) %}{% set x = (i*41+5)%100 %}{% set y = (i*29+13)%92 %}{% if x<16 or x>84 or y<14 %}<div class="cf" style="left:{{x}}%;top:{{y}}%;width:{{ 0.8 + (i%3)*0.5 }}vmin;height:{{ 1.6 + (i%2)*0.8 }}vmin;background:{{ cols[i%6] }};transform:rotate({{ (i*47)%180 }}deg)"></div>{% endif %}{% endfor %}
+{% for side in ['l','r'] %}
+<svg class="bl" style="{{ 'left:-2vmin' if side=='l' else 'right:-2vmin;transform:scaleX(-1)' }}" viewBox="0 0 200 230">
+<defs>{% for c in cols %}<radialGradient id="b{{side}}{{loop.index}}" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset=".25" stop-color="{{c}}"/><stop offset="1" stop-color="{{c}}" stop-opacity=".9"/></radialGradient>{% endfor %}</defs>
+{% for bx,by,r,ci in [(40,40,30,1),(95,30,34,2),(150,55,28,3),(70,90,32,4),(125,105,30,5),(30,120,24,6)] %}
+<path d="M{{bx}} {{by+r+4}} Q{{bx+12}} {{by+r+40}} {{ 100 }} 225" stroke="#e8ecff" stroke-width="1.4" fill="none" opacity=".8"/>
+<ellipse cx="{{bx}}" cy="{{by}}" rx="{{r*0.86}}" ry="{{r}}" fill="url(#b{{side}}{{ci}})"/>
+<path d="M{{bx-4}} {{by+r}} L{{bx+4}} {{by+r}} L{{bx}} {{by+r+6}}Z" fill="{{ cols[ci-1] }}"/>
+<ellipse cx="{{bx-r*0.35}}" cy="{{by-r*0.4}}" rx="{{r*0.16}}" ry="{{r*0.28}}" fill="#fff" opacity=".55" transform="rotate(-20 {{bx-r*0.35}} {{by-r*0.4}})"/>
+{% endfor %}
+<path d="M0 8 Q30 30 20 60 Q10 90 40 110" stroke="#ffd23f" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M180 0 Q160 30 185 60 Q205 85 175 120" stroke="#4fd1c5" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>{% endfor %}
+{% if mode not in ['rsvp'] %}
+<svg class="scene" viewBox="0 0 600 240" preserveAspectRatio="xMidYMax meet">
+<defs><linearGradient id="clk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff7aa5"/><stop offset="1" stop-color="#e0447a"/></linearGradient>
+<linearGradient id="flr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a3a8c"/><stop offset="1" stop-color="#16225c"/></linearGradient></defs>
+<path d="M0 200 Q300 180 600 200 V240 H0Z" fill="url(#flr)"/>
+{% for i in range(40) %}<rect x="{{ (i*53)%600 }}" y="{{ 204 + (i*7)%30 }}" width="5" height="3" fill="{{ cols[i%6] }}" transform="rotate({{ (i*31)%90 }} {{ (i*53)%600 }} {{ 204 + (i*7)%30 }})"/>{% endfor %}
+<!-- alarm clock -->
+<g transform="translate(300 118)">
+<path d="M-48 70 L-62 92 M48 70 L62 92" stroke="#c23466" stroke-width="9" stroke-linecap="round"/>
+<circle cx="-50" cy="-62" r="20" fill="#ffd23f"/><circle cx="50" cy="-62" r="20" fill="#ffd23f"/><rect x="-6" y="-92" width="12" height="16" rx="3" fill="#c23466"/>
+<circle r="80" fill="url(#clk)"/><circle r="66" fill="#fff"/><circle r="66" fill="none" stroke="#ffd23f" stroke-width="5"/>
+{% for h in range(12) %}<circle cx="{{ 54*sin(h*30) }}" cy="{{ -54*cos(h*30) }}" r="{{ 5 if h%3==0 else 2.6 }}" fill="{{ '#1b2a6b' if h%3==0 else '#a78bfa' }}"/>{% endfor %}
+<text x="0" y="-24" text-anchor="middle" font-family="Bungee" font-size="15" fill="#1b2a6b">12</text>
+<line x1="0" y1="0" x2="{{ 38*sin(-6) }}" y2="{{ -38*cos(-6) }}" stroke="#1b2a6b" stroke-width="7" stroke-linecap="round"/>
+<line x1="0" y1="0" x2="{{ 50*sin(-4) }}" y2="{{ -50*cos(-4) }}" stroke="#ff5d8f" stroke-width="4" stroke-linecap="round"/>
+<circle r="6" fill="#ffd23f"/>
+<circle cx="-24" cy="22" r="5" fill="#1b2a6b"/><circle cx="24" cy="22" r="5" fill="#1b2a6b"/><path d="M-14 36 Q0 48 14 36" stroke="#1b2a6b" stroke-width="4" fill="none" stroke-linecap="round"/>
+<circle cx="-38" cy="34" r="7" fill="#ff9fbf" opacity=".7"/><circle cx="38" cy="34" r="7" fill="#ff9fbf" opacity=".7"/>
+<g transform="translate(28 -104) rotate(18)"><path d="M-22 26 L0 -30 L22 26Z" fill="#4fd1c5"/><path d="M-14 6 L14 6 M-18 16 L18 16" stroke="#fff" stroke-width="4"/><circle cy="-32" r="8" fill="#ffd23f"/><ellipse cy="27" rx="25" ry="5" fill="#a78bfa"/></g>
+</g>
+<!-- gifts -->
+{% for gx,w,h,c,rb in [(92,58,48,'#a78bfa','#ffd23f'),(150,44,62,'#ff8a3d','#fff'),(470,52,56,'#4fd1c5','#ff5d8f')] %}
+<g transform="translate({{gx}} {{205-h}})"><rect width="{{w}}" height="{{h}}" rx="4" fill="{{c}}"/><rect x="{{w/2-4}}" width="8" height="{{h}}" fill="{{rb}}"/><rect x="-3" y="-8" width="{{w+6}}" height="12" rx="3" fill="{{c}}"/><rect x="{{w/2-4}}" y="-8" width="8" height="12" fill="{{rb}}"/>
+<path d="M{{w/2}} -8 q-18 -18 -22 -4 q4 8 22 4 q18 -18 22 -4 q-4 8 -22 4Z" fill="{{rb}}"/></g>{% endfor %}
+<!-- cupcake -->
+<g transform="translate(540 168)"><path d="M-20 0 L20 0 L15 36 H-15Z" fill="#ff8a3d"/><path d="M-14 0 V36 M-5 0 V36 M5 0 V36 M14 0 V36" stroke="#e06c1f" stroke-width="2"/>
+<path d="M-24 2 Q-26 -18 -8 -20 Q-4 -34 8 -28 Q24 -26 22 -10 Q30 -2 24 4Z" fill="#ffe0ef"/>{% for k in range(6) %}<rect x="{{ -16 + k*6 }}" y="{{ -14 + (k%2)*8 }}" width="4" height="2" fill="{{ cols[k] }}" transform="rotate({{ k*30 }} {{ -16+k*6 }} {{ -14 }})"/>{% endfor %}
+<rect x="-1.5" y="-48" width="3" height="20" fill="#7fe3ff"/><path d="M0 -58 q5 6 0 10 q-5 -4 0 -10Z" fill="#ffd23f"/></g>
+<!-- noisemakers -->
+<g transform="translate(40 196) rotate(-20)"><rect x="0" y="-5" width="18" height="10" rx="2" fill="#ffd23f"/><path d="M18 -6 L70 -10 L70 10 L18 6Z" fill="#ff5d8f"/><path d="M30 -7 L30 7 M44 -8 L44 8 M58 -9 L58 9" stroke="#fff" stroke-width="3"/></g>
+<g transform="translate(400 200) rotate(-160)"><path d="M0 0 q20 -14 40 0 q20 14 40 0" stroke="#4fd1c5" stroke-width="8" fill="none" stroke-linecap="round"/><circle cx="-6" r="7" fill="#a78bfa"/></g>
+</svg>
+{% endif %}
+{% endblock %}
+{% block cardart %}<svg width="14%" viewBox="0 0 40 50"><ellipse cx="20" cy="18" rx="14" ry="17" fill="#ff5d8f"/><path d="M17 35 L23 35 L20 39Z" fill="#ff5d8f"/><path d="M20 39 q4 6 0 11" stroke="#fff" fill="none"/><ellipse cx="14" cy="11" rx="3" ry="5" fill="#fff" opacity=".5"/></svg>{% endblock %}

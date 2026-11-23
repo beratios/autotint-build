@@ -1,0 +1,245 @@
+{
+ "template": "nk_poster.html",
+ "w_in": 8,
+ "h_in": 10,
+ "fields": [
+  "kids names (up to 4)",
+  "family name",
+  "countdown start time (or use our 5 PM to midnight plan)",
+  "your own activity for each hour (optional)"
+ ],
+ "defaults": {
+  "theme": "th_balloon.html",
+  "names": "Lily and Max",
+  "kids": [
+   "Lily",
+   "Max"
+  ],
+  "family": "Parker",
+  "year": "2026",
+  "new_year": "2027",
+  "poster_title": "Countdown",
+  "title": "New Years Eve",
+  "date": "December 31, 2026",
+  "hours": [
+   [
+    "5 PM",
+    "Make party crowns"
+   ],
+   [
+    "6 PM",
+    "Pizza picnic dinner"
+   ],
+   [
+    "7 PM",
+    "Glow stick dance party"
+   ],
+   [
+    "8 PM",
+    "New Year bingo"
+   ],
+   [
+    "9 PM",
+    "Movie and popcorn"
+   ],
+   [
+    "10 PM",
+    "Write wishes for 2027"
+   ],
+   [
+    "11 PM",
+    "Ice cream sundae bar"
+   ],
+   [
+    "12 AM",
+    "Confetti and noisemakers!"
+   ]
+  ],
+  "questions": [
+   "My favorite thing I did this year",
+   "The best book or movie I saw",
+   "My best friend this year",
+   "Something new I learned",
+   "The funniest thing that happened",
+   "I am proud that I",
+   "Next year I want to try",
+   "My new year wish"
+  ]
+ },
+ "gallery": {
+  "style": {
+   "bg": "#1b2a6b",
+   "ink": "#ffffff",
+   "accent": "#ffd23f",
+   "hfont": "Bungee",
+   "hsize": 84
+  },
+  "size": "8x10 + 5x7 posters, 8 bag tags, crowns, certificates, interview pages, phone story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.3,
+    "frac": 0.7,
+    "caption": "Their names on the poster",
+    "sub": "Bright balloon party lettering"
+   },
+   {
+    "x": 0.5,
+    "y": 0.86,
+    "frac": 0.55,
+    "caption": "Cute midnight clock art",
+    "sub": "Balloons, gifts and confetti"
+   }
+  ],
+  "fields": [
+   [
+    "Kids names",
+    0.5,
+    0.23
+   ],
+   [
+    "Countdown title",
+    0.5,
+    0.29
+   ],
+   [
+    "New year",
+    0.5,
+    0.35
+   ],
+   [
+    "Hourly plan",
+    0.5,
+    0.5
+   ]
+  ],
+  "vtitle": "For one kid, siblings or a whole party",
+  "variants": [
+   {},
+   {
+    "names": "Noah",
+    "kids": [
+     "Noah"
+    ],
+    "family": "Silva",
+    "hours": [
+     [
+      "6 PM",
+      "Build a blanket fort"
+     ],
+     [
+      "7 PM",
+      "Taco night"
+     ],
+     [
+      "8 PM",
+      "Board game battle"
+     ],
+     [
+      "9 PM",
+      "Balloon pop surprises"
+     ],
+     [
+      "10 PM",
+      "Dance party"
+     ],
+     [
+      "11 PM",
+      "Hot cocoa toast"
+     ],
+     [
+      "12 AM",
+      "Happy New Year!"
+     ]
+    ]
+   },
+   {
+    "names": "Ava, Mia and Leo",
+    "kids": [
+     "Ava",
+     "Mia",
+     "Leo"
+    ],
+    "family": "Chen",
+    "poster_title": "Noon Years Eve"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "poster-5x7",
+   "template": "nk_poster.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true,
+   "label": "Countdown poster 5x7"
+  },
+  {
+   "name": "bag-tags",
+   "template": "nk_tags.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "8 hourly countdown bag tags"
+  },
+  {
+   "name": "blank-tags",
+   "template": "nk_tags.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "vars": {
+    "vars_blank": true
+   },
+   "png": true,
+   "label": "8 blank bag tags"
+  },
+  {
+   "name": "crown",
+   "template": "nk_crown.html",
+   "w_in": 11,
+   "h_in": 8.5,
+   "repeat": "kids",
+   "png": true,
+   "label": "Name party crown (per kid)"
+  },
+  {
+   "name": "certificate",
+   "template": "nk_cert.html",
+   "w_in": 11,
+   "h_in": 8.5,
+   "repeat": "kids",
+   "png": true,
+   "label": "Made it to midnight certificate (per kid)"
+  },
+  {
+   "name": "interview",
+   "template": "nk_interview.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "kids",
+   "png": true,
+   "label": "Year in review interview (per kid)"
+  },
+  {
+   "name": "phone-story",
+   "template": "nk_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Phone story to share"
+  }
+ ],
+ "main_label": "Countdown poster 8x10",
+ "hero": {
+  "headline": "Kids New Years Eve Countdown",
+  "short": "Kids NYE Countdown",
+  "bullets": [
+   "Poster with names and hourly plan",
+   "8 bag tags + 8 blank tags",
+   "Crowns, certificates, interview pages"
+  ]
+ },
+ "inside_sub": "posters \u00b7 16 bag tags \u00b7 crowns \u00b7 certificates \u00b7 interviews \u00b7 story",
+ "detail_page": "bag-tags",
+ "detail_title": "Hourly countdown bag tags"
+}
