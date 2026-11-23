@@ -47,7 +47,7 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 - [x] Thanksgiving dinner menu autumn harvest (4621675058)
 ### Christmas party invitation
 - [x] elegant green gold (4618250503)
-- [x] luxury black tie gala (4620388124), [x] cozy pajama party (4621661325), [x] NYE midnight party (4621675086), [x] kids Christmas party north pole (4622623242), [x] cozy fireplace party (4623268504), [x] rustic buffalo plaid barn party (4623259359), [ ] office holiday party (modern), [x] watercolor winter wonderland (4622614727)
+- [x] luxury black tie gala (4620388124), [x] cozy pajama party (4621661325), [x] NYE midnight party (4621675086), [x] kids Christmas party north pole (4622623242), [x] cozy fireplace party (4623268504), [x] rustic buffalo plaid barn party (4623259359), [ ] office holiday party (modern), [x] watercolor winter wonderland (4622614727), [x] Christmas Eve dinner starry navy (4624022462)
 ### Letter from Santa pack
 - [x] watercolor (4618736968)
 - [ ] vintage North Pole parchment + wax seal, [ ] cute cartoon (toddlers), [ ] elf-on-the-shelf style arrival letter (generic elf, no brand)
@@ -62,9 +62,9 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 - [ ] elegant photo-less typography, [ ] watercolor wreath, [ ] funny family card
 ### NYE party
 - [x] retro bingo (4618256700)
-- [ ] NYE trivia with party name, [x] NYE "who's most likely to" disco (4621667939, family nye-games), [ ] NYE dinner/cocktail menu, [x] 2027 family time capsule incl. resolution cards (4621668536, family nye-time-capsule), [ ] NYE countdown kids pack
+- [ ] NYE trivia with party name, [x] NYE "who's most likely to" disco (4621667939, family nye-games), [ ] NYE dinner/cocktail menu, [x] 2027 family time capsule incl. resolution cards (4621668536, family nye-time-capsule), [x] NYE countdown kids pack (4624022486, family nye-kids-countdown)
 ### Other holiday families to start
-- [x] hot cocoa bar candy cane (4619552325) / [ ] mimosa bar sign set, [x] Secret Santa kit modern red (4620381113), [ ] Christmas place cards only (cheap entry item), [x] Christmas movie night retro cinema (4619552347), [x] Christmas recipe book kit cozy kitchen (4621675110, family christmas-recipes)
+- [x] hot cocoa bar candy cane (4619552325) / [x] mimosa bar sign set (4624022480, family mimosa-bar), [x] Secret Santa kit modern red (4620381113), [ ] Christmas place cards only (cheap entry item), [x] Christmas movie night retro cinema (4619552347), [x] Christmas recipe book kit cozy kitchen (4621675110, family christmas-recipes)
 
 ### Christmas game night (new family, 11-18)
 - [x] frosty gingerbread game night (4620381127)
@@ -85,5 +85,11 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 ### Christmas treasure hunt (new family, 11-22)
 - [x] north pole elves (4623259383) – sh_* (poster, 16 riddle clue cards + 8 blank, hiding guide, elf letter, tracker, found-it card, story); [ ] Christmas Eve PJ hunt (th_pajama), [ ] NYE countdown hunt / bag hunt, [ ] adult/teen version with harder riddles
 ### Christmas coupon book (new family, 11-22)
-- [x] cozy pajama (4623259395) – cp_* (cover, 24 named coupons, 8 blank, tracker, square tag, phone story); [ ] romantic wine/candlelight love coupons (th_wine), [ ] luxury black gold (th_luxgold), [ ] kids north pole (th_northpole)
+- [x] cozy pajama (4623259395) – cp_* (cover, 24 named coupons, 8 blank, tracker, square tag, phone story); [x] romantic wine/candlelight love coupons (4624022436), [ ] luxury black gold (th_luxgold), [x] kids north pole (4624015527)
 - 11-22 notes: gn_* now theme-aware (CSS vars --gn-*, text vars trivia_title/scramble_title/sign_line/champ_title...) -> cheap game-night variants with any theme that defines --gn-* vars (th_disco does). th_fireplace: rsvp mode hides scene. sh_* and cp_* extend `theme`, so new concepts = new product json + theme. Competitor bestseller coupon book: 10 CAD, 11k views, 188 favs -> family worth more variants.
+
+### Notes 11-23
+- New: mb_* (mimosa bar: sign, juice/garnish labels, how-to) works with any mp_base theme; nk_* (kids NYE countdown: poster, hourly bag tags, crown, certificate, interview, story) + new th_balloon (kids midnight balloon party). Cheap next: nye-kids-countdown 2nd theme (e.g. th_disco teen version), mimosa bar with th_nye (NYE bubbly bar) or th_luxgold.
+- cp_sheet/cp_tracker now take optional theme vars --cp/--cpz/--cpb/--cpk/--cpm (dark themes like th_wine define them) -> coupon variants on dark themes are readable.
+- th_navy: RSVP/details mode hides the village scene. th_brunch: drinks mode uses smaller scene.
+- Competitors: love coupon bestsellers are 5-6 USD editable templates (45k views); NYE kids countdown market is flooded with 2-6 USD instant downloads this week -> our edge = names on every page, done for you.

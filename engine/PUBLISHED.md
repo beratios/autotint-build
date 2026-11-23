@@ -41,3 +41,8 @@
 | 2026-11-22 | 4623268520 | xmas-games--nye-disco (gn_* + th_disco, NYE content) | 8.99 | calm |
 | 2026-11-22 | 4623259383 | christmas-hunt--north-pole-elves (new family, sh_* + th_northpole) | 8.99 | detailed |
 | 2026-11-22 | 4623259395 | christmas-coupons--cozy-pajama (new family, cp_* + th_pajama, taxonomy 1874) | 8.99 | minimal |
+| 2026-11-23 | 4624022436 | christmas-coupons--wine-candlelight (cp_* + th_wine, love coupons) | 8.99 | bold |
+| 2026-11-23 | 4624015527 | christmas-coupons--kids-north-pole (cp_* + th_northpole) | 8.99 | doodle |
+| 2026-11-23 | 4624022462 | xmas-invite--christmas-eve-navy (pi_* + th_navy) | 11.99 | colorful |
+| 2026-11-23 | 4624022480 | mimosa-bar--christmas-brunch (new family, mb_* + th_brunch, taxonomy 1334) | 8.99 | calm |
+| 2026-11-23 | 4624022486 | nye-kids-countdown--balloon-party (new family, nk_* + new th_balloon) | 7.99 | detailed |
