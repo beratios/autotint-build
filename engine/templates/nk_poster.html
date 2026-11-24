@@ -1,6 +1,6 @@
 {% extends theme %}
 {% block mode %}welcome{% endblock %}
-{% block lcss %}.m-welcome{top:{{ 22 if H_IN>9 else 20 }}vmin!important;bottom:{{ 36 if H_IN>9 else 34 }}vmin!important}
+{% block lcss %}{% if theme == 'th_disco.html' %}.ball{width:30vmin}{% endif %}.m-welcome{top:{{ (31 if theme == 'th_disco.html' else 22) if H_IN>9 else (29 if theme == 'th_disco.html' else 20) }}vmin!important;bottom:{{ 36 if H_IN>9 else 34 }}vmin!important}
 .sch{width:100%;margin-top:2vmin;display:grid;grid-template-columns:1fr 1fr;gap:1.2vmin 2.4vmin}
 .r{display:flex;align-items:center;gap:1.6vmin;background:rgba(255,255,255,.09);border-radius:99vmin;padding:.8vmin 2vmin .8vmin .8vmin;text-align:left}
 .r b{flex-shrink:0;font-family:'Bungee';font-size:2.1vmin;color:#1b2a6b;background:#ffd23f;border-radius:99vmin;padding:.9vmin 1.4vmin}

@@ -1,0 +1,16 @@
+{% extends "tg_base.html" %}{% from "tg_macros.html" import mug, pencil, apple, snowman, tree %}
+{% block lcss %}body{background:#fffaf3}.fr{position:absolute;inset:3vmin;border:.6vmin solid #d93b48;border-radius:3vmin}.fr2{position:absolute;inset:4.6vmin;border:.3vmin dashed #7cc6b5;border-radius:2.2vmin}
+.bgd{position:absolute;inset:0;opacity:.45}
+.pg{position:absolute;left:9vmin;right:9vmin;top:{{ 9 if H_IN > W_IN else 7 }}vmin;bottom:{{ 9 if H_IN > W_IN else 6 }}vmin;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.row{display:flex;gap:2vmin;align-items:flex-end;justify-content:center}
+.ln{width:80%;border-bottom:1.5px solid #e2cfc0;height:{{ 6 if H_IN > W_IN else 0 }}vmin}{% endblock %}
+{% block body %}{% set sq = H_IN <= W_IN %}<div class="bgd dots"></div><div class="fr"></div><div class="fr2"></div>
+<div class="pg">
+<div class="row">{{ pencil('13vmin' if not sq else '11vmin') }}{{ mug('20vmin' if not sq else '17vmin') }}{{ apple('13vmin' if not sq else '11vmin') }}</div>
+<div class="k" style="font-size:{{ 2 if not sq else 2.4 }}vmin;margin-top:2.4vmin">merry christmas</div>
+<div class="nm" style="font-size:{{ (12 if recipients[0]|length < 13 else 9) if not sq else (11 if recipients[0]|length < 13 else 8.5) }}vmin;margin-top:1vmin">{{ recipients[0] }}</div>
+<div class="h" style="font-size:{{ 6.2 if not sq else 6 }}vmin;margin-top:1.4vmin">{{ card_line }}</div>
+<div class="t-b" style="font-size:{{ 3.3 if not sq else 3.4 }}vmin;line-height:1.4;margin-top:1.6vmin;max-width:{{ 70 if not sq else 74 }}vmin">{{ card_note }}</div>
+{% if not sq %}<div class="ln"></div><div class="ln"></div>{% endif %}
+<div class="nm" style="font-size:{{ 7 if not sq else 6.6 }}vmin;color:#d93b48;margin-top:{{ 2.6 if not sq else 1.6 }}vmin">love, {{ kid }}</div>
+</div>{% endblock %}

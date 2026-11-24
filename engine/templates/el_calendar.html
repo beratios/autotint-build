@@ -1,0 +1,17 @@
+{% extends theme %}
+{% block mode %}menu{% endblock %}
+{% block lcss %}.page{top:13vmin!important;bottom:6vmin!important;left:7vmin!important;right:7vmin!important;justify-content:flex-start}
+.cg{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3vmin;width:100%;margin-top:2vmin}
+.c{background:#fff;border:.35vmin solid #1e6b45;border-radius:1.4vmin;min-height:14.6vmin;padding:1vmin 1vmin 1.2vmin;display:flex;flex-direction:column;align-items:center;position:relative}
+.c:nth-child(odd){border-color:#c62b35}
+.c .no{font-family:'DM Serif Display';font-size:4vmin;color:#c62b35;line-height:1}
+.c:nth-child(odd) .no{color:#1e6b45}
+.c .tx{font-family:'Fredoka';font-size:2.2vmin;line-height:1.2;margin-top:.6vmin;color:#3b2a1a}
+.c .bx{position:absolute;right:1vmin;bottom:1vmin;width:2.4vmin;height:2.4vmin;border:.3vmin solid #c9b48a;border-radius:.5vmin}
+{% endblock %}
+{% block content %}
+<div class="t-k">{{ elf }}'s kindness challenge</div>
+<div class="t-h" style="font-size:6.2vmin;margin-top:.8vmin">24 Days of Elf Magic</div>
+<div class="t-s" style="font-size:4.4vmin;margin-top:.4vmin">for {{ kids|join(' and ') }} · tick a box each day!</div>
+<div class="cg">{% for t in kindness[:24] %}<div class="c"><div class="no">{{ loop.index }}</div><div class="tx">{{ t }}</div><div class="bx"></div></div>{% endfor %}</div>
+{% endblock %}

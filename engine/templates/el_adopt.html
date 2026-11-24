@@ -1,0 +1,12 @@
+{% extends theme %}
+{% block mode %}cert{% endblock %}
+{% block lcss %}.page{top:{{ 17 }}vmin!important;bottom:27vmin!important;left:16vmin!important;right:16vmin!important}
+.row{display:flex;justify-content:space-between;width:100%;margin-top:2.6vmin}.row div{flex:1;text-align:center}.sg{font-family:'Caveat';font-weight:700;font-size:4.6vmin;color:#1e6b45;border-bottom:1.5px solid #3b2a1a;margin:0 4vmin;line-height:1.1}.sl{font-family:'Inter';font-size:1.5vmin;letter-spacing:.2em;text-transform:uppercase;color:#7d6450;margin-top:.6vmin}{% endblock %}
+{% block content %}
+<div class="t-k" style="font-size:2.1vmin">north pole adoption office · elf id np-{{ year }}-{{ (elf|length * 271 + 1000) }}</div>
+<div class="t-h" style="font-size:7.4vmin;margin-top:1vmin">Official Elf Adoption</div>
+<div class="t-b" style="font-size:2.8vmin;margin-top:1.4vmin">this certifies that the Scout Elf named</div>
+<div class="t-s" style="font-size:{{ 10 if elf|length < 12 else 7.5 }}vmin;margin-top:.4vmin">{{ elf }}</div>
+<div class="t-b" style="font-size:2.8vmin;margin-top:.6vmin">has been lovingly adopted by <b>{{ kids|join(' and ') }}</b> and the {{ family }} family<br>and arrived from the North Pole on {{ arrival }}</div>
+<div class="row"><div><div class="sg">Santa Claus</div><div class="sl">Santa</div></div><div><div class="sg">{{ kids|join(' & ') }}</div><div class="sl">elf keeper{{ 's' if kids|length > 1 }}</div></div></div>
+{% endblock %}

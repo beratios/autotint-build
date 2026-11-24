@@ -1,0 +1,174 @@
+{
+ "template": "cp_cover.html",
+ "w_in": 5,
+ "h_in": 7,
+ "fields": [
+  "recipient name",
+  "your name (from)",
+  "book title (e.g. Love Coupons)",
+  "up to 24 of your own coupon ideas (or use our 24 romantic ones)",
+  "valid until date (optional)"
+ ],
+ "defaults": {
+  "theme": "th_luxgold.html",
+  "to": "James",
+  "from": "Emma",
+  "book_title": "Christmas Gift Coupons",
+  "year": "2026",
+  "valid": "Dec 31, 2027",
+  "cover_note": "a year of little luxuries, just for you",
+  "story_note": "your golden Christmas gift is waiting",
+  "coupons": [
+   "Breakfast in bed",
+   "A fancy dinner out, my treat",
+   "A full back massage",
+   "Movie night, your pick",
+   "A day with no chores",
+   "A spa night at home",
+   "Your favorite dessert, homemade",
+   "A weekend lie-in",
+   "Champagne and cheese night",
+   "A surprise date",
+   "Coffee delivered to you",
+   "One YES day",
+   "Cocktail night, I make them",
+   "A long scenic drive",
+   "Your favorite takeout",
+   "A night of board games",
+   "Car cleaned inside and out",
+   "A shopping trip together",
+   "Dance with me at home",
+   "A candlelit bath",
+   "A picnic in the park",
+   "Control of the remote",
+   "Brunch date",
+   "A handwritten love letter"
+  ],
+  "coupon_sheets": [
+   0,
+   8,
+   16
+  ]
+ },
+ "gallery": {
+  "style": {
+   "bg": "#0c0c0e",
+   "ink": "#efe6d2",
+   "accent": "#d6b46a",
+   "hfont": "Playfair Display",
+   "hsize": 96
+  },
+  "size": "5x7 cover, 8.5x11 coupon sheets (24 + 8 blank), tracker, phone story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.42,
+    "frac": 0.78,
+    "caption": "Their name in gold",
+    "sub": "Gold foil look lettering"
+   },
+   {
+    "x": 0.5,
+    "y": 0.12,
+    "frac": 0.42,
+    "caption": "Art deco fan and frame",
+    "sub": "Black and gold, gift box art"
+   }
+  ],
+  "fields": [
+   [
+    "Recipient name",
+    0.5,
+    0.42
+   ],
+   [
+    "Book title",
+    0.5,
+    0.5
+   ],
+   [
+    "Your note",
+    0.5,
+    0.58
+   ],
+   [
+    "From",
+    0.5,
+    0.7
+   ]
+  ],
+  "vtitle": "For him, for her, for anyone special",
+  "variants": [
+   {},
+   {
+    "to": "Olivia",
+    "from": "Noah",
+    "book_title": "Coupons for My Love"
+   },
+   {
+    "to": "Mom",
+    "from": "Ava and Leo",
+    "book_title": "Mom's Gift Coupons"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "coupons",
+   "template": "cp_sheet.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "coupon_sheets",
+   "png": true,
+   "label": "24 personalized coupons"
+  },
+  {
+   "name": "blank-coupons",
+   "template": "cp_sheet.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "vars": {
+    "vars_blank": true
+   },
+   "png": true,
+   "label": "8 blank coupons"
+  },
+  {
+   "name": "tracker",
+   "template": "cp_tracker.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "Coupon tracker"
+  },
+  {
+   "name": "gift-tag",
+   "template": "cp_cover.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true,
+   "label": "Square gift tag / post"
+  },
+  {
+   "name": "phone-story",
+   "template": "cp_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Phone surprise screen"
+  }
+ ],
+ "main_label": "Book cover 5x7",
+ "hero": {
+  "headline": "Luxury Gold Christmas Coupons",
+  "short": "Gold Coupon Book",
+  "bullets": [
+   "24 gift coupons with their name",
+   "8 blank coupons + tracker",
+   "Cover, gift tag, phone surprise"
+  ]
+ },
+ "inside_sub": "24 named gift coupons \u00b7 8 blank \u00b7 cover \u00b7 tracker \u00b7 gift tag \u00b7 phone story",
+ "detail_page": "coupons",
+ "detail_title": "24 gift coupons with their name"
+}

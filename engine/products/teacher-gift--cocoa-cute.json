@@ -1,0 +1,165 @@
+{
+ "template": "tg_tags.html",
+ "w_in": 8.5,
+ "h_in": 11,
+ "fields": [
+  "child name",
+  "teacher names (up to 6: teacher, aide, coach, bus driver...)",
+  "card message (optional, or use ours)"
+ ],
+ "defaults": {
+  "kid": "Emma",
+  "year": "2026",
+  "recipients": [
+   "Mrs. Lopez",
+   "Mr. Bennett",
+   "Ms. Kim"
+  ],
+  "sayings": [
+   "You make learning merry and bright!",
+   "Thanks for helping me grow!",
+   "Snow much thanks for this year!",
+   "Teachers like you are a gift!",
+   "Thank you for a sweet year!",
+   "Cocoa nuts about my teacher!"
+  ],
+  "labels": [
+   "Cocoa for my favorite teacher",
+   "A sweet treat for a sweet teacher",
+   "Snow much thanks!",
+   "Merry and bright, just like you"
+  ],
+  "card_line": "Thank you for a merry year!",
+  "card_note": "Thank you for being so kind, patient and fun. I love learning in your class!",
+  "about": [
+   "My teacher's name is {t}",
+   "{t} is really good at",
+   "{t} always says",
+   "{t}'s favorite thing is",
+   "The best thing we did this year was",
+   "I want to tell {t}"
+  ],
+  "tag_sheets": [
+   9
+  ]
+ },
+ "gallery": {
+  "style": {
+   "bg": "#fffaf3",
+   "ink": "#3b2a1a",
+   "accent": "#d93b48",
+   "hfont": "Pacifico",
+   "hsize": 84
+  },
+  "size": "8.5x11 tag sheets (18 tags), 5x7 card, round labels, All About My Teacher page, square post",
+  "zooms": [
+   {
+    "x": 0.17,
+    "y": 0.2,
+    "frac": 0.32,
+    "caption": "Teacher name on every tag",
+    "sub": "Cute cocoa, pencil and apple art"
+   },
+   {
+    "x": 0.5,
+    "y": 0.53,
+    "frac": 0.32,
+    "caption": "Sweet holiday sayings",
+    "sub": "6 teacher thank you lines"
+   }
+  ],
+  "fields": [
+   [
+    "Saying",
+    0.5,
+    0.09
+   ],
+   [
+    "Teacher names",
+    0.17,
+    0.43
+   ],
+   [
+    "Child name",
+    0.17,
+    0.76
+   ]
+  ],
+  "vtitle": "Tags for every teacher, aide and coach",
+  "variants": [
+   {},
+   {
+    "kid": "Liam",
+    "recipients": [
+     "Ms. Carter",
+     "Coach Dan",
+     "Mrs. Patel"
+    ]
+   },
+   {
+    "kid": "Ava and Noah",
+    "recipients": [
+     "Mr. Silva",
+     "Miss Rose",
+     "Mrs. Grant"
+    ]
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "tags-2",
+   "template": "tg_tags.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "tag_sheets",
+   "png": true,
+   "label": "9 more gift tags (18 total)"
+  },
+  {
+   "name": "card",
+   "template": "tg_card.html",
+   "w_in": 5,
+   "h_in": 7,
+   "png": true,
+   "label": "Thank you card 5x7"
+  },
+  {
+   "name": "labels",
+   "template": "tg_labels.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "6 round mug and treat labels"
+  },
+  {
+   "name": "all-about",
+   "template": "tg_about.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "All About My Teacher page"
+  },
+  {
+   "name": "square-card",
+   "template": "tg_card.html",
+   "w_in": 3.6,
+   "h_in": 3.6,
+   "png": true,
+   "label": "Square card / message image"
+  }
+ ],
+ "main_label": "9 gift tags with names",
+ "hero": {
+  "headline": "Teacher Christmas Gift Tags",
+  "short": "Teacher Gift Tags",
+  "bullets": [
+   "18 tags with teacher and child names",
+   "Thank you card + round treat labels",
+   "All About My Teacher page"
+  ]
+ },
+ "inside_sub": "18 named tags \u00b7 thank you card \u00b7 6 round labels \u00b7 fill-in page \u00b7 square card",
+ "detail_page": "card",
+ "detail_title": "Matching thank you card 5x7"
+}

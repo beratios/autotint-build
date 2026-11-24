@@ -1,0 +1,14 @@
+{% extends theme %}
+{% block mode %}letter{% endblock %}
+{% block lcss %}.ltr{font-family:'Fredoka';font-size:{{ 2.5 if (letters[li|default(0)].body|join(' '))|length > 480 else 2.8 }}vmin;line-height:1.55;text-align:left;margin-top:1.6vmin}.ltr p{margin-top:1.5vmin}.sig{font-family:'Caveat';font-weight:700;font-size:7vmin;color:#c62b35;text-align:right;margin-top:.6vmin;width:100%;line-height:1}.ps{font-family:'Caveat';font-size:3.6vmin;color:#1e6b45;text-align:left;width:100%;margin-top:.8vmin}{% endblock %}
+{% block content %}{% set L = letters[li|default(0)] %}{% set who = kids|join(' and ') %}
+<div class="t-k">{{ L.kicker }}</div>
+<div class="t-h" style="font-size:7.4vmin;margin-top:1.2vmin">{{ L.title }}</div>
+<div class="t-rule" style="margin:1.8vmin auto"></div>
+<div class="ltr">
+<p>Dear {{ who }},</p>
+{% for para in L.body %}<p>{{ para|replace('{elf}', elf)|replace('{family}', family)|replace('{kids}', who)|replace('{date}', arrival)|replace('{deed}', deed) }}</p>{% endfor %}
+</div>
+<div class="sig">love, {{ elf }}</div>
+{% if L.ps %}<div class="ps">P.S. {{ L.ps|replace('{elf}', elf)|replace('{kids}', who) }}</div>{% endif %}
+{% endblock %}

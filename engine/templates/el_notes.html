@@ -1,0 +1,23 @@
+{% extends theme %}
+{% block mode %}place{% endblock %}
+{% block lcss %}
+body{background:#fff}
+.page{inset:0;display:block}
+.cut{position:absolute;top:2.2vmin;left:0;right:0;font-family:'Inter';font-size:1.5vmin;letter-spacing:.25em;color:#999}
+.g{position:absolute;left:4vmin;right:4vmin;top:5vmin;bottom:4vmin;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,1fr);gap:2.2vmin}
+.n{position:relative;background:#fff8ec;border-radius:2vmin;border:.5vmin solid #1e6b45;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3.4vmin 3vmin 1.6vmin}
+.n:before{content:"";position:absolute;left:0;right:0;top:0;height:2.2vmin;background:repeating-linear-gradient(90deg,#c62b35 0 2.2vmin,#1e6b45 2.2vmin 4.4vmin)}
+.n .d{font-family:'Inter';font-weight:700;font-size:1.6vmin;letter-spacing:.28em;color:#c62b35;text-transform:uppercase}
+.n .x{font-family:'Caveat';font-weight:700;font-size:{{ 3.7 }}vmin;line-height:1.08;color:#3b2a1a;margin-top:.8vmin}
+.n .s{font-family:'Caveat';font-size:3vmin;color:#1e6b45;align-self:flex-end;margin-top:.6vmin}
+.n .h{position:absolute;right:1.6vmin;top:3vmin;width:5vmin;opacity:.9}
+.ln{width:90%;border-bottom:1.5px solid #d9c9a8;height:4.2vmin}
+{% endblock %}
+{% block content %}{% set off = rep|default(0) %}
+<div class="cut">✂ ELF NOTES · FROM {{ elf|upper }} · CUT ON THE EDGES</div>
+<div class="g">{% for i in range(8) %}{% set t = '' if vars_blank else (notes[off+i] if notes|length > off+i else '') %}
+<div class="n">{{ self.cardart()|replace('width="14%"','class="h"')|safe }}
+<div class="d">{% if vars_blank %}a note from {{ elf }}{% else %}day {{ off+i+1 }} · for {{ kids|join(' & ') }}{% endif %}</div>
+{% if t %}<div class="x">{{ t|replace('{kids}', kids|join(' and '))|replace('{elf}', elf) }}</div>{% else %}<div class="ln"></div><div class="ln"></div><div class="ln"></div>{% endif %}
+<div class="s">~ {{ elf }}</div></div>{% endfor %}</div>
+{% endblock %}

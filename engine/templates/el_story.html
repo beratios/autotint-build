@@ -1,0 +1,10 @@
+{% extends theme %}
+{% block mode %}story{% endblock %}
+{% block lcss %}.page{top:42vmin!important;bottom:40vmin!important;left:10vmin!important;right:10vmin!important}{% endblock %}
+{% block content %}
+<div class="t-k" style="font-size:3vmin">guess who is back!</div>
+<div class="t-s" style="font-size:{{ 15 if elf|length < 10 else 11 }}vmin;margin-top:1.4vmin">{{ elf }}</div>
+<div class="t-h" style="font-size:8vmin;margin-top:1vmin">has arrived!</div>
+<div class="t-rule" style="margin:3vmin auto"></div>
+<div class="t-b" style="font-size:4.6vmin;line-height:1.4">straight from the North Pole to the {{ family }} home, to watch over {{ kids|join(' and ') }} until Christmas</div>
+{% endblock %}

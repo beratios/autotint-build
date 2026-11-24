@@ -1,0 +1,17 @@
+{% extends "tg_base.html" %}{% from "tg_macros.html" import mug, snowman, tree, apple %}
+{% block lcss %}.stripe.t{top:0}.stripe.b{bottom:0}
+.pg{position:absolute;left:8vmin;right:8vmin;top:6vmin;bottom:6vmin;display:flex;flex-direction:column;align-items:center}
+.q{width:100%;text-align:left;margin-top:2.1vmin}
+.q .p{font-family:'Fredoka';font-weight:600;font-size:2.6vmin;color:#2f7d5b}
+.q .ln{border-bottom:1.6px solid #e2cfc0;height:4.6vmin}
+.dr{width:100%;flex:1;margin-top:2.4vmin;border:.4vmin dashed #d93b48;border-radius:2vmin;position:relative;min-height:18vmin}
+.dr span{position:absolute;left:2vmin;top:1.2vmin;font-family:'Caveat';font-size:3vmin;color:#d93b48}
+{% endblock %}
+{% block body %}<div class="stripe t"></div><div class="stripe b"></div>
+<div class="pg">
+<div style="display:flex;gap:2vmin;align-items:flex-end">{{ snowman('9vmin') }}{{ mug('12vmin') }}{{ tree('9vmin') }}</div>
+<div class="h" style="font-size:6.4vmin;margin-top:.6vmin;line-height:1.4">All About My Teacher</div>
+<div class="k" style="font-size:1.9vmin;margin-top:1.2vmin">by {{ kid }} · christmas {{ year }}</div>
+{% for q in about %}<div class="q"><div class="p">{{ q|replace('{t}', recipients[0]) }}</div><div class="ln"></div></div>{% endfor %}
+<div class="dr"><span>here is a drawing of {{ recipients[0] }} and me</span></div>
+</div>{% endblock %}

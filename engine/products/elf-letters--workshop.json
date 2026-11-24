@@ -1,0 +1,273 @@
+{
+ "template": "el_letter.html",
+ "w_in": 8.5,
+ "h_in": 11,
+ "fields": [
+  "childrens names (up to 4)",
+  "elf name (or we can pick one)",
+  "family name",
+  "elf arrival date",
+  "one good thing your child did this year (optional, used in the letter)"
+ ],
+ "defaults": {
+  "theme": "th_elfshop.html",
+  "kids": [
+   "Sophie",
+   "Jack"
+  ],
+  "elf": "Jingles",
+  "family": "Carter",
+  "arrival": "December 1",
+  "year": "2026",
+  "deed": "helped your little brother when he was sad",
+  "letters": [
+   {
+    "kicker": "north pole \u00b7 arrival letter",
+    "title": "I Have Arrived!",
+    "body": [
+     "Hello from the North Pole! My name is {elf}, and Santa sent me to the {family} home to be your very own Scout Elf this Christmas.",
+     "Every night, while you are sleeping, I fly back to the North Pole to tell Santa all about your day. Every morning I hide somewhere new, so look carefully!",
+     "Santa already told me something special: he heard that you {deed}. That made his cheeks glow even rosier!",
+     "There is just one rule: please do not touch me, or my Christmas magic might fade. You can talk to me and tell me your wishes any time."
+    ],
+    "ps": "I left you a little kindness challenge. Can you finish all 24 days?"
+   },
+   {
+    "kicker": "north pole \u00b7 goodbye letter",
+    "title": "Time to Fly Home",
+    "body": [
+     "Tonight is Christmas Eve, and it is time for me to fly home with Santa. I am a little sad to go, because I had the best time with the {family} family!",
+     "I loved our mornings and seeing your happy faces when you found me. I told Santa about every kind thing you did, and he is so proud of you.",
+     "Keep being kind, helpful and full of Christmas spirit all year long. I will be watching from the North Pole and counting the days until next December.",
+     "Merry Christmas, sweet friends!"
+    ],
+    "ps": "Look under the tree in the morning. Santa was here!"
+   },
+   {
+    "kicker": "north pole \u00b7 elf report",
+    "title": "A Friendly Reminder",
+    "body": [
+     "Santa asked me to send you a little note today. The North Pole has been extra busy, and Santa is checking his list twice!",
+     "I know how wonderful you are. Let us try extra hard to listen, share and use kind words this week, so I can bring Santa the very best report.",
+     "I believe in you! Every kind thing you do makes Christmas magic stronger, and the reindeer can fly even higher."
+    ],
+    "ps": "I will be watching and cheering for you!"
+   }
+  ],
+  "notes": [
+   "Good morning {kids}! I flew all night to be here. Can you find me every day?",
+   "I peeked at the workshop list. Your names are on it!",
+   "Today let us share a toy or a game with someone.",
+   "I made snow angels on the roof last night. Brrr!",
+   "Santa says thank you for being so kind this week.",
+   "Can you draw a picture for Santa today? I will take it to him.",
+   "Hot cocoa is my favorite. What is yours?",
+   "I counted the cookies. Just checking! Ha ha.",
+   "Today is a great day to say thank you to someone.",
+   "The reindeer say hello. Dasher sneezed glitter!",
+   "Please help set the table today, Santa loves helpers.",
+   "I read your wish list. Very good choices!",
+   "Let us make a card for a grandparent or a friend.",
+   "My elf hat lost its bell. Can you help me look?",
+   "I am so proud of you. Santa will be too!",
+   "Tonight is a perfect night for a Christmas movie.",
+   "Can you give someone a big hug today?",
+   "I heard you were extra helpful yesterday. Way to go!",
+   "Let us pick one toy to donate to a child in need.",
+   "The North Pole is very busy. Only 6 more sleeps!",
+   "Sing a Christmas song for me today, nice and loud!",
+   "Leave a note for Santa and I will deliver it tonight.",
+   "Tomorrow is Christmas Eve. I am so excited!",
+   "Tonight I fly home with Santa. I will miss you, {kids}!"
+  ],
+  "note_sheets": [
+   0,
+   8,
+   16
+  ],
+  "kindness": [
+   "Make your bed",
+   "Hug someone you love",
+   "Share a toy",
+   "Draw a picture for Santa",
+   "Say three thank yous",
+   "Help set the table",
+   "Make a card for a friend",
+   "Read a book together",
+   "Tidy your room",
+   "Give someone a compliment",
+   "Help bake cookies",
+   "Feed the birds",
+   "Call a grandparent",
+   "Pick a toy to donate",
+   "Write a nice note",
+   "Help carry groceries",
+   "Sing a Christmas song",
+   "Make someone laugh",
+   "Clean up without asking",
+   "Watch a holiday movie",
+   "Make a snowflake",
+   "Leave a treat for Santa",
+   "Tell someone you love them",
+   "Be extra kind all day"
+  ]
+ },
+ "gallery": {
+  "style": {
+   "bg": "#1e6b45",
+   "ink": "#fff8ec",
+   "accent": "#e8b84a",
+   "hfont": "DM Serif Display",
+   "hsize": 96
+  },
+  "size": "8.5x11 letters, 11x8.5 certificates, 24 daily elf notes, kindness calendar, phone story",
+  "zooms": [
+   {
+    "x": 0.5,
+    "y": 0.22,
+    "frac": 0.6,
+    "caption": "Elf hat and collar art",
+    "sub": "Red, green and gold bells"
+   },
+   {
+    "x": 0.5,
+    "y": 0.88,
+    "frac": 0.55,
+    "caption": "Elf workshop shelf",
+    "sub": "Toys, drum, train and curly elf shoes"
+   }
+  ],
+  "fields": [
+   [
+    "Kids names",
+    0.3,
+    0.29
+   ],
+   [
+    "Elf name",
+    0.7,
+    0.84
+   ],
+   [
+    "Family name",
+    0.5,
+    0.38
+   ],
+   [
+    "Good deed",
+    0.5,
+    0.55
+   ]
+  ],
+  "vtitle": "Your kids, your elf name, your story",
+  "variants": [
+   {},
+   {
+    "kids": [
+     "Lucas"
+    ],
+    "elf": "Sprinkles",
+    "family": "Moreno"
+   },
+   {
+    "kids": [
+     "Ava",
+     "Mia",
+     "Leo"
+    ],
+    "elf": "Twinkle",
+    "family": "Patel"
+   }
+  ]
+ },
+ "extra_pages": [
+  {
+   "name": "goodbye-letter",
+   "template": "el_letter.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "vars": {
+    "li": 1
+   },
+   "png": true,
+   "label": "Christmas Eve goodbye letter"
+  },
+  {
+   "name": "reminder-letter",
+   "template": "el_letter.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "vars": {
+    "li": 2
+   },
+   "png": true,
+   "label": "Friendly reminder letter"
+  },
+  {
+   "name": "adoption",
+   "template": "el_adopt.html",
+   "w_in": 11,
+   "h_in": 8.5,
+   "png": true,
+   "label": "Elf adoption certificate"
+  },
+  {
+   "name": "nice-list",
+   "template": "el_nice.html",
+   "w_in": 11,
+   "h_in": 8.5,
+   "repeat": "kids",
+   "png": true,
+   "label": "Nice List certificate (per child)"
+  },
+  {
+   "name": "elf-notes",
+   "template": "el_notes.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "repeat": "note_sheets",
+   "png": true,
+   "label": "24 daily elf notes"
+  },
+  {
+   "name": "blank-notes",
+   "template": "el_notes.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "vars": {
+    "vars_blank": true
+   },
+   "png": true,
+   "label": "8 blank elf notes"
+  },
+  {
+   "name": "kindness",
+   "template": "el_calendar.html",
+   "w_in": 8.5,
+   "h_in": 11,
+   "png": true,
+   "label": "24 day kindness challenge"
+  },
+  {
+   "name": "phone-story",
+   "template": "el_story.html",
+   "w_in": 3.6,
+   "h_in": 6.4,
+   "png": true,
+   "label": "Elf has arrived phone story"
+  }
+ ],
+ "main_label": "Elf arrival letter",
+ "hero": {
+  "headline": "Elf Arrival Letter Pack",
+  "short": "Elf Letter Pack",
+  "bullets": [
+   "Arrival, goodbye and reminder letters",
+   "24 daily elf notes with names",
+   "Adoption + Nice List certificates"
+  ]
+ },
+ "inside_sub": "3 letters \u00b7 24 elf notes \u00b7 2 certificates \u00b7 kindness calendar \u00b7 phone story",
+ "detail_page": "elf-notes",
+ "detail_title": "24 daily elf notes with their names"
+}

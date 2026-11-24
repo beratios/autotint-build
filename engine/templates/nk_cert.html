@@ -1,6 +1,6 @@
 {% extends theme %}
 {% block mode %}cert{% endblock %}
-{% block lcss %}.page{top:9vmin!important;bottom:30vmin!important;left:14vmin!important;right:14vmin!important}
+{% block lcss %}{% if theme == 'th_disco.html' %}.ball{width:24vmin;top:-3vmin}{% endif %}.page{top:{{ 22 if theme == 'th_disco.html' else 9 }}vmin!important;bottom:30vmin!important;left:14vmin!important;right:14vmin!important}
 .fr{position:absolute;inset:3vmin;border:.6vmin solid #ffd23f;border-radius:3vmin;box-shadow:inset 0 0 0 1.4vmin rgba(255,255,255,.06)}{% endblock %}
 {% block content %}{% set kid = rep or names %}
 <div class="t-k" style="font-size:2.4vmin">certificate of awesome</div>

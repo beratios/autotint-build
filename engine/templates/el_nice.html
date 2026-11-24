@@ -1,0 +1,12 @@
+{% extends theme %}
+{% block mode %}cert{% endblock %}
+{% block lcss %}.page{top:17vmin!important;bottom:27vmin!important;left:16vmin!important;right:16vmin!important}{% endblock %}
+{% block content %}{% set kid = rep or kids[0] %}
+<div class="t-k" style="font-size:2.2vmin">elf report · officially checked twice</div>
+<div class="t-h" style="font-size:8vmin;margin-top:1vmin">Nice List {{ year }}</div>
+<div class="t-b" style="font-size:2.9vmin;margin-top:1.4vmin">{{ elf }} has reported to Santa that</div>
+<div class="t-s" style="font-size:{{ 11 if kid|length < 12 else 8 }}vmin;margin-top:.4vmin">{{ kid }}</div>
+<div class="t-rule" style="margin:1.6vmin auto"></div>
+<div class="t-b" style="font-size:2.9vmin">has been kind, helpful and full of Christmas spirit,<br>and is officially on Santa's Nice List!</div>
+<div class="t-k" style="margin-top:2vmin;font-size:1.9vmin">signed at the north pole · december {{ year }}</div>
+{% endblock %}

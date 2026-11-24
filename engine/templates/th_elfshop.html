@@ -1,0 +1,61 @@
+{% extends "mp_base.html" %}
+{# Elf workshop: green harlequin diamond frame, cream stitched paper, red/green elf-collar zigzag with gold bells on top, curly elf hat, bottom wooden workshop shelf with toy blocks, drum, gift, train and curly elf shoes #}
+{% block tcss %}
+:root{--bg:#fff8ec;--ink:#3b2a1a;--muted:#7d6450;--acc:#c62b35;--hc:#1e6b45;--hf:'DM Serif Display';--hw:400;--sf:'Caveat';--bf:'Fredoka';--df:'Fredoka';--sx:12vmin;--st:18vmin;--sb:30vmin;--cp:#1e6b45;--cpz:#f3ecd8;--cpb:#e3d5b5;--cpk:#c62b35;--cpm:#7d6450}
+body{background-color:#1e6b45;background-image:linear-gradient(45deg,#155034 25%,transparent 25%,transparent 75%,#155034 75%),linear-gradient(45deg,#155034 25%,transparent 25%,transparent 75%,#155034 75%);background-size:6vmin 6vmin;background-position:0 0,3vmin 3vmin}
+.t-h{line-height:1.02}
+.t-s{font-weight:700;color:#c62b35;line-height:1}
+.t-k,.t-l{color:#c62b35}
+.t-b{font-weight:400}
+.t-rule{height:.9vmin;width:26vmin;border-radius:1vmin;background:repeating-linear-gradient(90deg,#c62b35 0 2.4vmin,#fff8ec 2.4vmin 3vmin,#1e6b45 3vmin 5.4vmin,#fff8ec 5.4vmin 6vmin)}
+.t-rule:after{display:none}
+.paper{position:absolute;inset:3vmin;background:#fff8ec;border-radius:2.4vmin;box-shadow:0 .6vmin 0 #0e3a25}
+.stitch{position:absolute;inset:4.6vmin;border:.35vmin dashed #c62b35;border-radius:1.8vmin;opacity:.55}
+.collar{position:absolute;left:3vmin;right:3vmin;top:3vmin;width:calc(100% - 6vmin);border-radius:2.4vmin 2.4vmin 0 0}
+.hat{position:absolute;left:50%;transform:translateX(-50%);top:6.5vmin;width:15vmin}
+.shelf{position:absolute;left:3vmin;bottom:3vmin;width:calc(100% - 6vmin);border-radius:0 0 2.4vmin 2.4vmin}
+.dot{position:absolute;border-radius:50%;background:#e8b84a;opacity:.55}
+.a-letter .shelf{left:18%;width:64%}.a-letter .hat{width:11vmin;top:5.2vmin}
+.a-cert .shelf{left:22%;width:56%}
+.a-cert .hat{width:10vmin;top:5vmin}
+.a-menu .hat{display:none}
+.a-story .hat{width:26vmin;top:12vmin}.a-story .collar{top:3vmin}
+.m-letter{top:22vmin!important;bottom:22vmin!important}
+.card{background:#fff8ec;color:#3b2a1a;border:.3vmin dashed #c62b35}
+.card .nm{font-family:'DM Serif Display';color:#1e6b45}
+{% endblock %}
+{% block art %}{% set mode = self.mode()|trim %}
+<div class="paper"></div><div class="stitch"></div>
+<svg class="collar" viewBox="0 0 400 34" preserveAspectRatio="none">
+{% for i in range(20) %}<path d="M{{ i*20 }} 0 L{{ i*20+20 }} 0 L{{ i*20+10 }} 26 Z" fill="{{ '#c62b35' if i%2==0 else '#1e6b45' }}"/>{% endfor %}
+</svg>
+<svg class="collar" viewBox="0 0 400 34" preserveAspectRatio="none" style="pointer-events:none">
+{% for i in range(20) %}<circle cx="{{ i*20+10 }}" cy="28" r="3.6" fill="#e8b84a" stroke="#b07f1c" stroke-width=".8"/>{% endfor %}
+</svg>
+{% if mode in ['letter','cert','welcome','story'] %}
+<svg class="hat" viewBox="0 0 120 110">
+<path d="M18 92 C30 60 52 22 88 14 C100 12 110 20 104 30 C98 38 88 30 92 26" fill="none" stroke="#155034" stroke-width="0"/>
+<path d="M20 90 C34 58 56 30 84 22 C96 19 108 24 106 34 C104 42 94 44 92 38 C88 46 70 66 64 90 Z" fill="#1e6b45"/>
+<path d="M30 72 C40 56 54 40 70 32" fill="none" stroke="#2f8a5b" stroke-width="4" stroke-linecap="round"/>
+<rect x="12" y="84" width="62" height="16" rx="8" fill="#c62b35"/>
+<path d="M14 92 H72" stroke="#e8505a" stroke-width="2" stroke-dasharray="4 4"/>
+<circle cx="97" cy="44" r="9" fill="#e8b84a" stroke="#b07f1c" stroke-width="1.6"/><path d="M92 46 H102" stroke="#8a5d10" stroke-width="1.6"/><circle cx="97" cy="49" r="1.6" fill="#8a5d10"/>
+</svg>
+{% endif %}
+{% if mode not in ['menu'] %}
+<svg class="shelf" viewBox="0 0 400 100" preserveAspectRatio="xMidYMax meet">
+<rect x="0" y="86" width="400" height="14" fill="#9a6235"/><rect x="0" y="84" width="400" height="5" fill="#b87a47"/>
+<g transform="translate(26 50)"><rect width="22" height="22" rx="2" fill="#c62b35"/><text x="11" y="17" font-family="Fredoka" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">E</text></g>
+<g transform="translate(50 50)"><rect width="22" height="22" rx="2" fill="#e8b84a"/><text x="11" y="17" font-family="Fredoka" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">L</text></g>
+<g transform="translate(38 28)"><rect width="22" height="22" rx="2" fill="#1e6b45"/><text x="11" y="17" font-family="Fredoka" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">F</text></g>
+<g transform="translate(92 44)"><rect width="38" height="28" rx="3" fill="#2f8a5b"/><rect x="16" width="6" height="28" fill="#e8b84a"/><path d="M19 0 C10 -10 4 -4 12 0 M19 0 C28 -10 34 -4 26 0" fill="none" stroke="#e8b84a" stroke-width="3"/></g>
+<g transform="translate(148 46)"><ellipse cx="20" cy="6" rx="20" ry="6" fill="#f3e4c4"/><rect y="6" width="40" height="22" fill="#c62b35"/><path d="M0 6 L10 28 L20 6 L30 28 L40 6" fill="none" stroke="#e8b84a" stroke-width="2.4"/><ellipse cx="20" cy="28" rx="20" ry="5" fill="#a5202a"/><path d="M8 -6 L20 4 M34 -8 L24 3" stroke="#7a4a24" stroke-width="2.4" stroke-linecap="round"/></g>
+<g transform="translate(206 52)"><rect x="0" y="6" width="34" height="18" rx="3" fill="#1e6b45"/><rect x="22" y="-6" width="12" height="14" fill="#1e6b45"/><rect x="4" y="0" width="6" height="8" fill="#c62b35"/><rect x="36" y="10" width="30" height="14" rx="3" fill="#c62b35"/><rect x="40" y="13" width="9" height="6" fill="#fff8ec"/><rect x="53" y="13" width="9" height="6" fill="#fff8ec"/>{% for cx in [8,26,44,60] %}<circle cx="{{cx}}" cy="27" r="5" fill="#3b2a1a"/><circle cx="{{cx}}" cy="27" r="2" fill="#e8b84a"/>{% endfor %}</g>
+<g transform="translate(288 62)"><path d="M0 18 C0 8 10 6 18 8 C28 10 32 2 40 4 C46 6 44 14 38 12" fill="#c62b35" stroke="#8e1c24" stroke-width="1.4"/><rect x="0" y="16" width="26" height="6" rx="2" fill="#1e6b45"/><circle cx="40" cy="6" r="3.4" fill="#e8b84a"/>
+<g transform="translate(30 4)"><path d="M0 18 C0 8 10 6 18 8 C28 10 32 2 40 4 C46 6 44 14 38 12" fill="#1e6b45" stroke="#0e3a25" stroke-width="1.4"/><rect x="0" y="16" width="26" height="6" rx="2" fill="#c62b35"/><circle cx="40" cy="6" r="3.4" fill="#e8b84a"/></g></g>
+<g transform="translate(368 22)"><path d="M6 62 V12 C6 2 22 2 22 12" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/><path d="M6 62 V12 C6 2 22 2 22 12" fill="none" stroke="#c62b35" stroke-width="7" stroke-dasharray="5 5" stroke-linecap="butt"/></g>
+</svg>
+{% endif %}
+{% for i in range(18) %}{% set x = (i*37+9)%100 %}{% set y = (i*53+5)%80 %}{% if (x<12 or x>88) and y>12 %}<div class="dot" style="left:{{x}}%;top:{{ y + 6 }}%;width:{{ 0.8 + (i%3)*0.5 }}vmin;height:{{ 0.8 + (i%3)*0.5 }}vmin"></div>{% endif %}{% endfor %}
+{% endblock %}
+{% block cardart %}<svg width="14%" viewBox="0 0 120 110"><path d="M20 90 C34 58 56 30 84 22 C96 19 108 24 106 34 C104 42 94 44 92 38 C88 46 70 66 64 90 Z" fill="#1e6b45"/><rect x="12" y="84" width="62" height="16" rx="8" fill="#c62b35"/><circle cx="97" cy="44" r="9" fill="#e8b84a"/></svg>{% endblock %}
