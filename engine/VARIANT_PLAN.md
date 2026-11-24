@@ -50,7 +50,7 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 - [x] luxury black tie gala (4620388124), [x] cozy pajama party (4621661325), [x] NYE midnight party (4621675086), [x] kids Christmas party north pole (4622623242), [x] cozy fireplace party (4623268504), [x] rustic buffalo plaid barn party (4623259359), [ ] office holiday party (modern), [x] watercolor winter wonderland (4622614727), [x] Christmas Eve dinner starry navy (4624022462)
 ### Letter from Santa pack
 - [x] watercolor (4618736968)
-- [ ] vintage North Pole parchment + wax seal, [ ] cute cartoon (toddlers), [ ] elf-on-the-shelf style arrival letter (generic elf, no brand)
+- [ ] vintage North Pole parchment + wax seal, [ ] cute cartoon (toddlers), [x] elf workshop arrival letter pack (4624801764) – own family elf-letters
 ### Kids wish list / activity
 - [x] colorful pack (4618730313)
 - [x] Christmas Eve box kit north pole (4621668530) – own family xmas-eve-box, [ ] kids Christmas placemat with name, [x] Christmas countdown kit with name (4622623262, own family advent-countdown)
@@ -85,7 +85,7 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 ### Christmas treasure hunt (new family, 11-22)
 - [x] north pole elves (4623259383) – sh_* (poster, 16 riddle clue cards + 8 blank, hiding guide, elf letter, tracker, found-it card, story); [ ] Christmas Eve PJ hunt (th_pajama), [ ] NYE countdown hunt / bag hunt, [ ] adult/teen version with harder riddles
 ### Christmas coupon book (new family, 11-22)
-- [x] cozy pajama (4623259395) – cp_* (cover, 24 named coupons, 8 blank, tracker, square tag, phone story); [x] romantic wine/candlelight love coupons (4624022436), [ ] luxury black gold (th_luxgold), [x] kids north pole (4624015527)
+- [x] cozy pajama (4623259395) – cp_* (cover, 24 named coupons, 8 blank, tracker, square tag, phone story); [x] romantic wine/candlelight love coupons (4624022436), [x] luxury black gold (4624802986), [x] kids north pole (4624015527)
 - 11-22 notes: gn_* now theme-aware (CSS vars --gn-*, text vars trivia_title/scramble_title/sign_line/champ_title...) -> cheap game-night variants with any theme that defines --gn-* vars (th_disco does). th_fireplace: rsvp mode hides scene. sh_* and cp_* extend `theme`, so new concepts = new product json + theme. Competitor bestseller coupon book: 10 CAD, 11k views, 188 favs -> family worth more variants.
 
 ### Notes 11-23
@@ -93,3 +93,13 @@ render.py: extra_pages accept "w_in"/"h_in" per page (social sizes); all pages a
 - cp_sheet/cp_tracker now take optional theme vars --cp/--cpz/--cpb/--cpk/--cpm (dark themes like th_wine define them) -> coupon variants on dark themes are readable.
 - th_navy: RSVP/details mode hides the village scene. th_brunch: drinks mode uses smaller scene.
 - Competitors: love coupon bestsellers are 5-6 USD editable templates (45k views); NYE kids countdown market is flooded with 2-6 USD instant downloads this week -> our edge = names on every page, done for you.
+
+### Elf letters (new family, 11-24)
+- [x] elf workshop (4624801764) – el_* (arrival/goodbye/reminder letters via `letters` list + vars li, adoption cert, nice list per kid, 24 daily notes + blank, kindness calendar, story) + new th_elfshop (green harlequin, elf collar, toy shelf). [ ] vintage parchment elf letters, [ ] elf goodbye/retiring letter only (cheap), [ ] pastel girly elf
+### Teacher gift (new family, 11-24)
+- [x] cute cocoa (4624802348) – tg_* standalone (tg_macros icons: mug, pencil, apple w/ santa hat, snowman, tree), 18 tags, card 5x7, round labels, All About My Teacher, square card. [ ] rustic kraft teacher tags, [ ] classmate candy cane tags (kid to classmates, 24 names), [ ] bus driver/coach/staff version
+### Notes 11-24
+- Variants: nye-kids-countdown neon disco (nk_poster/nk_cert have th_disco tweaks), mimosa-bar NYE bubbly (th_nye: drinks mode now smaller clock + tighter .dr), th_luxgold now defines --cp* vars (coupons readable on luxgold).
+- Personalization instructions: Etsy rejects words with 3+ caps (e.g. PICK ONE) -> keep lowercase.
+- Competitors: elf letters 3-6 GBP single letters (22k views bestseller) -> our edge is the 3-letter + 24 notes pack; teacher tags 2.5-8.5 USD.
+- Shop views still ~0 after 9 days; no family signal yet.

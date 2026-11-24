@@ -46,3 +46,8 @@
 | 2026-11-23 | 4624022462 | xmas-invite--christmas-eve-navy (pi_* + th_navy) | 11.99 | colorful |
 | 2026-11-23 | 4624022480 | mimosa-bar--christmas-brunch (new family, mb_* + th_brunch, taxonomy 1334) | 8.99 | calm |
 | 2026-11-23 | 4624022486 | nye-kids-countdown--balloon-party (new family, nk_* + new th_balloon) | 7.99 | detailed |
+| 2026-11-24 | 4624801764 | elf-letters--workshop (new family, el_* + new th_elfshop, taxonomy 1874) | 8.99 | doodle |
+| 2026-11-24 | 4624802348 | teacher-gift--cocoa-cute (new family, tg_* standalone, taxonomy 1294) | 6.99 | colorful |
+| 2026-11-24 | 4624802986 | christmas-coupons--luxury-gold (cp_* + th_luxgold, gift coupons) | 8.99 | minimal |
+| 2026-11-24 | 4624803564 | nye-kids-countdown--neon-disco (nk_* + th_disco) | 7.99 | bold |
+| 2026-11-24 | 4624804146 | mimosa-bar--nye-bubbly (mb_* + th_nye, NYE bubbly bar) | 8.99 | calm |
